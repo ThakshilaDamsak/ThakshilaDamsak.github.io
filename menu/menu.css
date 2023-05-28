@@ -1,0 +1,225 @@
+/* Home */
+
+ .home {
+    height: 100vh;
+    background-size: cover;
+    background:var(--home-bg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home a {
+    text-decoration: none;
+    color: var(--home-a);
+    font-size: 25px;
+}
+
+.menus {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 15px;
+    align-items:center;
+    justify-content:center;
+    font-family: Work Sans;
+    font-size: large;
+    animation: up-down-fall 1s forwards;
+}
+
+.close-button {
+    display: flex;
+    margin-right: 10px;
+    margin-left: 20px;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.color-chooser {
+    display: flex;
+    margin-left: auto;
+    margin-right: 1px;
+}
+
+@keyframes up-down-fall {
+    0% {transform: translateY(-50px); opacity: 0;}
+    100% {transform: translateY(0px); opacity: 1;}
+}
+
+
+/* Footer */
+
+@keyframes down-up {
+    0% {transform: translateY(50px); opacity: 0;}
+    100% {transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes scaley {
+    0% {transform:translateY(50px);}
+    100% {transform:translateY(0px);}
+}
+
+@keyframes up-down {
+    0% {transform: translateY(-50px); opacity: 0;}
+    100% {transform: translateY(0px); opacity: 1;}
+}
+
+.footer {
+    background-color: var(--footer-bg);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px -8px 12px 0px rgba(0, 0, 0, 0.048);
+    animation: scaley 1s forwards;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--footer-a);
+    font-size: 20px;
+}
+
+.social-links {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    column-gap: 15px;
+    padding: 10px 0;
+    animation: down-up 1s forwards;
+}
+
+.social-links i {
+    transition: 1s;
+}
+
+.social-links i:hover, .email a:hover {
+    color: var(--footer-social-links-i-hover);
+    transition: 0.2s;
+}
+
+.email {
+    margin-left: 2px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    animation: down-up 0.5s forwards;
+}
+
+.email a {
+    text-decoration: none;
+    color: var(--footer-a);
+    font-family: Work Sans;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+
+.copyright {
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    animation: up-down 0.7s forwards;
+}
+
+.copyright p {
+    font-family: Work Sans;
+    font-size: 19px;
+    color: var(--footer-copyright-p);
+    cursor: help;
+}
+
+.copyright a {
+    font-family: Work Sans;
+    font-size: 19px;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+    .footer {
+        flex-direction: column;
+    }
+    .copyright {
+        margin-right: auto;
+        margin-top: 10px;
+    }
+
+    .copyright a, .copyright p{
+        font-size: 15px;
+    }
+    .copyright {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+#site-info {
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    width: 100%;
+    height: 25px;
+    transform: translateX(-50%);
+    background-color: var(--footer-site-info-color-bg);
+    color: var(--footer-site-info-color);
+    padding: 10px;
+    font-family: Open Sans;
+    font-size: 15px;
+    animation: fadein 0.5s, fadeout 0.5s 5.5s;
+    text-align: center;
+ }
+
+    @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      @keyframes fadeout {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+            
+  
+  .hidden {
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+
+.show a{
+    font-size: 15px;
+    font-family: Open Sans;
+    text-decoration: underline;
+}
+
+.show span {
+    color: var(--footer-show-span);
+}
+
+.site-info p {
+    margin: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    #site-info {
+        height: 80px;
+    }
+}

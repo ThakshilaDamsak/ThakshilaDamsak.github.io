@@ -1,0 +1,697 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root,
+:root.light {
+
+    --root-grayscale: 0%;
+
+    --bg-image:url(../images/bg3.svg);
+    --header-bg-color: rgba(255, 255, 255, 0.795);
+    --header-a: black;
+    --header-links-a-color: rgb(107, 107, 107);
+    --header-links-a-hover-color: rgb(0, 0, 0);
+    --header-links-a-bg-color: rgba(0, 46, 49, 0);
+    --header-links-a-hover-bg-color:rgba(68, 68, 68, 0.048);
+    --logo-filter: 0%;
+    --logo-opacity: 65%;
+
+    --home-heading-background: rgb(225, 245, 247);
+    --home-name-color: rgb(6, 143, 197);
+    --home-bio-color: rgb(122, 181, 236);
+    --home-heading-button-color: rgb(218, 238, 255);
+    --home-heading-button-background: rgb(39, 173, 226);
+    --home-heading-button-color-hover: white;
+    --home-heading-button-background-hover: rgb(0, 119, 255);
+    --home-heading-svg-filter: none;
+    --home-heading-svg-opacity: 40%;
+
+    --home-about-bg: rgb(245, 235, 248);
+    --home-about-p-a-color: rgb(107, 0, 102);
+    --home-about-span-color: rgb(185, 0, 176);
+    --home-umma-overlay-bg: rgb(255, 223, 255);
+
+    --home-projects-bg: rgb(185, 248, 210);
+    --home-projects-title-bg: rgba(255, 255, 255, 0.63);
+    --home-projects-title-p-color: rgb(0, 107, 66);
+    --home-projects-project-bg: rgba(255, 255, 255, 0.473);
+    --home-projects-project-hover-background: rgba(255, 255, 255, 0.589);
+    --home-projects-logo-img-bg: rgba(255, 255, 255, 0.377);
+    --home-projects-project-name-color:rgb(0, 107, 32) ;
+    --home-projects-project-text-color: rgb(0, 107, 9);
+
+    --footer-bg: rgba(255, 255, 255, 0.795);
+    --footer-a: rgba(0, 0, 0, 0.747);
+    --footer-social-links-i-hover: rgb(0, 0, 0);
+    --footer-copyright-p:rgba(0, 40, 85, 0.747);
+    --footer-site-info-color:rgb(88, 88, 88) ;
+    --footer-site-info-color-bg:rgb(255, 255, 255);
+    --footer-tooltip-footer-color: rgb(102, 102, 102);
+    --footer-tooltip-footer-bg: rgb(247, 247, 247);
+    --footer-show-span:rgb(114, 114, 114);
+
+    --bg-bg:rgba(245, 248, 248, 0.671);
+    --bg-backdrop-filter: 0%;
+
+    --home-bg: linear-gradient(to left bottom, rgba(242, 253, 255, 0.6), rgba(238, 248, 255, 0.6));
+    --home-a:black;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --root-grayscale: 0%;
+
+      --bg-image:url(../images/bg3.svg);
+      --header-bg-color: rgba(78, 78, 78, 0.76);
+      --header-a: rgb(185, 185, 185);
+      --header-links-a-color: rgb(185, 185, 185);
+      --header-links-a-hover-color:rgb(255, 255, 255);
+      --header-links-a-hover-bg-color:rgba(212, 212, 212, 0.11);
+      --logo-filter: 100%;
+      --logo-opacity: 70%;
+      
+      --home-heading-background: rgb(48, 98, 102);
+      --home-name-color: rgb(112, 189, 224);
+      --home-bio-color: rgb(112, 189, 224);
+      --home-heading-button-color: rgb(35, 83, 105);
+      --home-heading-button-background: rgb(112, 189, 224);
+      --home-heading-button-color-hover: rgb(0, 0, 0);
+      --home-heading-button-background-hover: rgb(155, 243, 255);
+      --home-heading-svg-filter: grayscale(100%);
+      --home-heading-svg-opacity: 25%;
+  
+      --home-about-bg: rgb(104, 57, 100);
+      --home-about-p-a-color: rgb(253, 180, 255);
+      --home-about-span-color: rgb(254, 214, 255);
+      --home-umma-overlay-bg: rgb(117, 84, 117);
+  
+      --home-projects-bg: rgb(25, 90, 79);
+      --home-projects-title-bg: rgba(35, 173, 132, 0.329);
+      --home-projects-title-p-color: rgb(129, 255, 217);
+      --home-projects-project-bg: rgba(79, 255, 188, 0.171);
+      --home-projects-project-hover-background: rgba(79, 255, 188, 0.253);
+      --home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
+      --home-projects-project-name-color: rgb(143, 255, 221);
+      --home-projects-project-text-color: rgb(200, 255, 232);
+
+      --footer-bg:rgba(78, 78, 78, 0.76);
+      --footer-a:rgb(185, 185, 185);
+      --footer-social-links-i-hover:rgb(255, 255, 255);
+      --footer-copyright-p:rgb(185, 185, 185);
+      --footer-site-info-color:rgb(194, 194, 194);
+      --footer-site-info-color-bg:rgb(56, 56, 56);
+      --footer-tooltip-footer-color:rgb(212, 212, 212);
+      --footer-tooltip-footer-bg:rgb(68, 68, 68);
+      --footer-show-span:rgb(230, 230, 230);
+
+      --bg-bg:rgba(31, 31, 31, 0.753);
+      --bg-backdrop-filter:70%;
+
+      --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
+      --home-a:rgb(163, 175, 177);
+    }
+  }
+
+  :root.dark {
+    --root-grayscale: 0%;
+
+    --bg-image:url(../images/bg3.svg);
+    --header-bg-color: rgba(78, 78, 78, 0.76);
+    --header-a: rgb(185, 185, 185);
+    --header-links-a-color: rgb(185, 185, 185);
+    --header-links-a-hover-color:rgb(255, 255, 255);
+    --header-links-a-hover-bg-color:rgba(212, 212, 212, 0.11);
+    --logo-filter: 100%;
+    --logo-opacity: 70%;
+
+    --home-heading-background: rgb(48, 98, 102);
+    --home-name-color: rgb(112, 189, 224);
+    --home-bio-color: rgb(112, 189, 224);
+    --home-heading-button-color: rgb(35, 83, 105);
+    --home-heading-button-background: rgb(112, 189, 224);
+    --home-heading-button-color-hover: rgb(0, 0, 0);
+    --home-heading-button-background-hover: rgb(155, 243, 255);
+    --home-heading-svg-filter: grayscale(100%);
+    --home-heading-svg-opacity: 25%;
+
+    --home-about-bg: rgb(104, 57, 100);
+    --home-about-p-a-color: rgb(253, 180, 255);
+    --home-about-span-color: rgb(254, 214, 255);
+    --home-umma-overlay-bg: rgb(117, 84, 117);
+
+    --home-projects-bg: rgb(25, 90, 79);
+    --home-projects-title-bg: rgba(35, 173, 132, 0.329);
+    --home-projects-title-p-color: rgb(129, 255, 217);
+    --home-projects-project-bg: rgba(79, 255, 188, 0.171);
+    --home-projects-project-hover-background: rgba(79, 255, 188, 0.253);
+    --home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
+    --home-projects-project-name-color: rgb(143, 255, 221);
+    --home-projects-project-text-color: rgb(200, 255, 232);
+
+    --footer-bg:rgba(78, 78, 78, 0.76);
+    --footer-a:rgb(185, 185, 185);
+    --footer-social-links-i-hover:rgb(255, 255, 255);
+    --footer-copyright-p:rgb(185, 185, 185);
+    --footer-site-info-color:rgb(194, 194, 194);
+    --footer-site-info-color-bg:rgb(56, 56, 56);
+    --footer-tooltip-footer-color:rgb(212, 212, 212);
+    --footer-tooltip-footer-bg:rgb(68, 68, 68);
+    --footer-show-span:rgb(230, 230, 230);
+
+    --bg-bg:rgba(31, 31, 31, 0.753);
+    --bg-backdrop-filter:70%;
+
+    --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
+    --home-a:rgb(163, 175, 177);
+  }
+
+
+  :root.human {
+
+    --root-grayscale: 0%;
+
+    --bg-image:url(../images/bg3.svg);
+    --header-bg-color: rgba(255, 255, 255, 0.795);
+    --header-a: black;
+    --header-links-a-color: rgb(107, 107, 107);
+    --header-links-a-hover-color: rgb(0, 0, 0);
+    --header-links-a-bg-color: rgba(0, 46, 49, 0);
+    --header-links-a-hover-bg-color:rgba(68, 68, 68, 0.048);
+    --logo-filter: 0%;
+    --logo-opacity: 65%;
+
+    --home-heading-background: rgb(225, 245, 247);
+    --home-name-color: rgb(6, 143, 197);
+    --home-bio-color: rgb(85, 164, 255);
+    --home-heading-button-color: rgb(218, 238, 255);
+    --home-heading-button-background: rgb(39, 173, 226);
+    --home-heading-button-color-hover: white;
+    --home-heading-button-background-hover: rgb(0, 119, 255);
+    --home-heading-svg-filter: none;
+    --home-heading-svg-opacity: 40%;
+
+    --home-about-bg: var(--home-heading-background);
+    --home-about-p-a-color: var(--home-name-color);
+    --home-about-span-color: var(--home-bio-color);
+    --home-umma-overlay-bg: var(--home-heading-background);
+
+    --home-projects-title-bg: rgba(255, 255, 255, 0.63);
+    --home-projects-project-bg: rgba(255, 255, 255, 0.473);
+    --home-projects-project-hover-background: rgba(255, 255, 255, 0.589);
+    --home-projects-logo-img-bg: rgba(255, 255, 255, 0.377);
+    --home-projects-bg: var(--home-heading-background);
+    --home-projects-title-p-color: var(--home-name-color);
+    --home-projects-project-name-color:var(--home-name-color) ;
+    --home-projects-project-text-color: var(--home-name-color);
+
+
+    --footer-bg: rgba(255, 255, 255, 0.795);
+    --footer-a: rgba(0, 0, 0, 0.747);
+    --footer-social-links-i-hover: rgb(0, 0, 0);
+    --footer-copyright-p:rgba(0, 40, 85, 0.747);
+    --footer-site-info-color:rgb(88, 88, 88) ;
+    --footer-site-info-color-bg:rgb(255, 255, 255);
+    --footer-tooltip-footer-color: rgb(102, 102, 102);
+    --footer-tooltip-footer-bg: rgb(247, 247, 247);
+    --footer-show-span:rgb(114, 114, 114);
+
+    --bg-bg:rgba(245, 248, 248, 0.671);
+    --bg-backdrop-filter: 0%;
+
+    --home-bg: linear-gradient(to left bottom, rgba(242, 253, 255, 0.6), rgba(238, 248, 255, 0.6));
+    --home-a:black;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root.human {
+      --root-grayscale: 0%;
+
+      --bg-image:url(../images/bg3.svg);
+      --header-bg-color: rgba(78, 78, 78, 0.76);
+      --header-a: rgb(185, 185, 185);
+      --header-links-a-color: rgb(185, 185, 185);
+      --header-links-a-hover-color:rgb(255, 255, 255);
+      --header-links-a-hover-bg-color:rgba(212, 212, 212, 0.11);
+      --logo-filter: 100%;
+      --logo-opacity: 70%;
+      
+      --home-heading-background: rgb(48, 98, 102);
+      --home-name-color: rgb(112, 189, 224);
+      --home-bio-color: rgb(112, 189, 224);
+      --home-heading-button-color: rgb(35, 83, 105);
+      --home-heading-button-background: rgb(112, 189, 224);
+      --home-heading-button-color-hover: rgb(0, 0, 0);
+      --home-heading-button-background-hover: rgb(155, 243, 255);
+      --home-heading-svg-filter: grayscale(100%);
+      --home-heading-svg-opacity: 25%;
+  
+      --home-about-bg: var(--home-heading-background);
+      --home-about-p-a-color: var(--home-name-color);
+      --home-about-span-color: var(--home-bio-color);
+      --home-umma-overlay-bg: var(--home-heading-background);
+      --home-projects-bg: var(--home-heading-background);
+      --home-projects-title-p-color: var(--home-name-color);
+      --home-projects-project-name-color:var(--home-name-color) ;
+      --home-projects-project-text-color: var(--home-name-color);
+  
+      --home-projects-title-bg: rgba(35, 173, 132, 0.329);
+      --home-projects-project-bg: rgba(79, 255, 188, 0.171);
+      --home-projects-project-hover-background: rgba(79, 255, 188, 0.253);
+      --home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
+
+      --footer-bg:rgba(78, 78, 78, 0.76);
+      --footer-a:rgb(185, 185, 185);
+      --footer-social-links-i-hover:rgb(255, 255, 255);
+      --footer-copyright-p:rgb(185, 185, 185);
+      --footer-site-info-color:rgb(194, 194, 194);
+      --footer-site-info-color-bg:rgb(56, 56, 56);
+      --footer-tooltip-footer-color:rgb(212, 212, 212);
+      --footer-tooltip-footer-bg:rgb(68, 68, 68);
+      --footer-show-span:rgb(230, 230, 230);
+
+      --bg-bg:rgba(31, 31, 31, 0.753);
+      --bg-backdrop-filter:70%;
+
+      --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
+      --home-a:rgb(163, 175, 177);
+    }
+  }
+  
+
+
+  :root.charcoal{
+
+    --root-grayscale: 100%;
+
+    --bg-image:url(../images/bg3.svg);
+    --header-bg-color: rgba(255, 255, 255, 0.795);
+    --header-a: black;
+    --header-links-a-color: rgb(107, 107, 107);
+    --header-links-a-hover-color: rgb(0, 0, 0);
+    --header-links-a-bg-color: rgba(0, 46, 49, 0);
+    --header-links-a-hover-bg-color:rgba(68, 68, 68, 0.048);
+    --logo-filter: 0%;
+    --logo-opacity: 65%;
+
+    --home-heading-background: rgb(225, 245, 247);
+    --home-name-color: rgb(6, 143, 197);
+    --home-bio-color: rgb(122, 181, 236);
+    --home-heading-button-color: rgb(218, 238, 255);
+    --home-heading-button-background: rgb(39, 173, 226);
+    --home-heading-button-color-hover: white;
+    --home-heading-button-background-hover: rgb(0, 119, 255);
+    --home-heading-svg-filter: none;
+    --home-heading-svg-opacity: 40%;
+
+    --home-about-bg: rgb(245, 235, 248);
+    --home-about-p-a-color: rgb(107, 0, 102);
+    --home-about-span-color: rgb(185, 0, 176);
+    --home-umma-overlay-bg: rgb(255, 223, 255);
+
+    --home-projects-bg: rgb(185, 248, 210);
+    --home-projects-title-bg: rgba(255, 255, 255, 0.63);
+    --home-projects-title-p-color: rgb(0, 107, 66);
+    --home-projects-project-bg: rgba(255, 255, 255, 0.473);
+    --home-projects-project-hover-background: rgba(255, 255, 255, 0.589);
+    --home-projects-logo-img-bg: rgba(255, 255, 255, 0.377);
+    --home-projects-project-name-color:rgb(0, 107, 32) ;
+    --home-projects-project-text-color: rgb(0, 107, 9);
+
+    --footer-bg: rgba(255, 255, 255, 0.795);
+    --footer-a: rgba(0, 0, 0, 0.747);
+    --footer-social-links-i-hover: rgb(0, 0, 0);
+    --footer-copyright-p:rgba(0, 40, 85, 0.747);
+    --footer-site-info-color:rgb(88, 88, 88) ;
+    --footer-site-info-color-bg:rgb(255, 255, 255);
+    --footer-tooltip-footer-color: rgb(102, 102, 102);
+    --footer-tooltip-footer-bg: rgb(247, 247, 247);
+    --footer-show-span:rgb(114, 114, 114);
+
+    --bg-bg:rgba(245, 248, 248, 0.671);
+    --bg-backdrop-filter: 0%;
+
+    --home-bg: linear-gradient(to left bottom, rgba(242, 253, 255, 0.6), rgba(238, 248, 255, 0.6));
+    --home-a:black;
+  }
+
+
+  @media (prefers-color-scheme: dark) {
+    :root.charcoal{
+
+        --bg-image:url(../images/bg3.svg);
+        --root-grayscale: 100%;
+    
+        --header-bg-color: rgba(78, 78, 78, 0.76);
+        --header-a: rgb(185, 185, 185);
+        --header-links-a-color: rgb(185, 185, 185);
+        --header-links-a-hover-color:rgb(255, 255, 255);
+        --header-links-a-hover-bg-color:rgba(212, 212, 212, 0.11);
+        --logo-filter: 100%;
+        --logo-opacity: 70%;
+    
+        --home-heading-background: rgb(48, 98, 102);
+        --home-name-color: rgb(112, 189, 224);
+        --home-bio-color: rgb(112, 189, 224);
+        --home-heading-button-color: rgb(35, 83, 105);
+        --home-heading-button-background: rgb(112, 189, 224);
+        --home-heading-button-color-hover: rgb(0, 0, 0);
+        --home-heading-button-background-hover: rgb(155, 243, 255);
+        --home-heading-svg-filter: grayscale(100%);
+        --home-heading-svg-opacity: 25%;
+    
+        --home-about-bg: rgb(104, 57, 100);
+        --home-about-p-a-color: rgb(253, 180, 255);
+        --home-about-span-color: rgb(254, 214, 255);
+        --home-umma-overlay-bg: rgb(117, 84, 117);
+    
+        --home-projects-bg: rgb(25, 90, 79);
+        --home-projects-title-bg: rgba(35, 173, 132, 0.329);
+        --home-projects-title-p-color: rgb(129, 255, 217);
+        --home-projects-project-bg: rgba(79, 255, 188, 0.171);
+        --home-projects-project-hover-background: rgba(79, 255, 188, 0.253);
+        --home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
+        --home-projects-project-name-color: rgb(143, 255, 221);
+        --home-projects-project-text-color: rgb(200, 255, 232);
+    
+        --footer-bg:rgba(78, 78, 78, 0.76);
+        --footer-a:rgb(185, 185, 185);
+        --footer-social-links-i-hover:rgb(255, 255, 255);
+        --footer-copyright-p:rgb(185, 185, 185);
+        --footer-site-info-color:rgb(194, 194, 194);
+        --footer-site-info-color-bg:rgb(56, 56, 56);
+        --footer-tooltip-footer-color:rgb(212, 212, 212);
+        --footer-tooltip-footer-bg:rgb(68, 68, 68);
+        --footer-show-span:rgb(230, 230, 230);
+    
+        --bg-bg:rgba(31, 31, 31, 0.753);
+        --bg-backdrop-filter:70%;
+    
+        --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
+        --home-a:rgb(163, 175, 177);
+      }
+  }
+
+
+  :root.cyberthenuk{
+
+    --root-grayscale: 0%;
+
+    --bg-image:url(../images/cyberthenuk.png);
+    --header-bg-color: rgba(255, 255, 255, 0.795);
+    --header-a: black;
+    --header-links-a-color: rgb(107, 107, 107);
+    --header-links-a-hover-color: rgb(0, 0, 0);
+    --header-links-a-bg-color: rgba(0, 46, 49, 0);
+    --header-links-a-hover-bg-color:rgba(68, 68, 68, 0.048);
+    --logo-filter: 0%;
+    --logo-opacity: 65%;
+
+    --home-heading-background: rgb(255, 252, 224);
+    --home-name-color: rgb(255, 145, 0);
+    --home-bio-color: rgb(255, 166, 0);
+    --home-heading-button-color: rgb(255, 242, 218);
+    --home-heading-button-background: rgb(255, 174, 0);
+    --home-heading-button-color-hover: white;
+    --home-heading-button-background-hover: rgb(255, 115, 0);
+    --home-heading-svg-filter: grayscale(100%);
+    --home-heading-svg-opacity: 20%;
+
+    --home-about-bg: var(--home-heading-background);
+    --home-about-p-a-color: var(--home-name-color);
+    --home-about-span-color: var(--home-bio-color);
+    --home-umma-overlay-bg: var(--home-heading-background);
+
+    --home-projects-bg: var(--home-heading-background);
+    --home-projects-title-bg: rgba(255, 204, 109, 0.281);
+    --home-projects-title-p-color: var(--home-name-color);
+    --home-projects-project-bg: rgba(255, 234, 189, 0.473);
+    --home-projects-project-hover-background: rgba(255, 212, 131, 0.479);
+    --home-projects-logo-img-bg: rgba(255, 255, 255, 0.377);
+    --home-projects-project-name-color:var(--home-name-color) ;
+    --home-projects-project-text-color: var(--home-name-color);
+
+    --footer-bg: var(--header-bg-color);
+    --footer-a: rgba(0, 0, 0, 0.747);
+    --footer-social-links-i-hover: rgb(0, 0, 0);
+    --footer-copyright-p:rgba(0, 40, 85, 0.747);
+    --footer-site-info-color:rgb(88, 88, 88) ;
+    --footer-site-info-color-bg:rgb(255, 255, 255);
+    --footer-tooltip-footer-color: rgb(102, 102, 102);
+    --footer-tooltip-footer-bg: rgb(247, 247, 247);
+    --footer-show-span:rgb(114, 114, 114);
+
+    --bg-bg:rgba(254, 255, 236, 0.938);
+    --bg-backdrop-filter: 0%;
+
+    --home-bg: linear-gradient(to left bottom, rgba(255, 251, 242, 0.6), rgba(255, 246, 238, 0.6));
+    --home-a:black;
+  }
+
+
+  :root {
+    filter: grayscale(var(--root-grayscale));
+    transition: 1s;
+  }
+
+.container {
+    position: relative;
+}
+
+p, img, svg, span {
+    cursor:default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@keyframes site-tab-animation {
+    0% {transform: translateY(50px); opacity: 0;}
+    100% {transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes site-bat-animation {
+    0% {transform: translateY(-20px); opacity: 1;}
+    100% {transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes site-zoom-animation {
+    0% {transform:scale(90%); opacity: 1;}
+    100% {transform:scale(100%); opacity: 1;}
+}
+
+@keyframes lr {
+    0% {transform:translateX(-100px); opacity: 1;}
+    100% {transform:translateX(0px); opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+/* Navigation bar */
+
+.header {
+    background-color: var(--header-bg-color);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.048);
+    transition: 1s;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--header-a);
+    font-size: 20px;
+}
+
+.menu {
+    display: flex;
+    margin-left: 20px;
+    padding: 0 0;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    column-gap: 5px;
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--header-links-a-color);
+    font-family: Work Sans;
+    font-size: 19px;
+    transition: 0.2s;
+    padding: 5px 10px;
+    background-color: var(--header-links-a-bg-color);
+    background-position: 100%;
+    border-radius: 5px;
+}
+
+.links a:hover {
+    color: var(--header-links-a-hover-color);
+    transition: 0.2s;
+    background-color: var(--header-links-a-hover-bg-color);
+}
+
+.logo {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 5px 30px;
+    padding-bottom: 1px;
+    transition: 0.5s;
+}
+
+.logo img {
+    width: 130px;
+    justify-content: left;
+    object-fit:contain;
+    opacity: var(--logo-opacity);
+    transition: 0.5s;
+    filter: invert(var(--logo-filter));
+}
+
+.logo img:hover{
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.logo span {
+    font-size: 24px;
+    font-family: Work Sans;
+    font-weight: bold;
+}
+
+.color-chooser-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 15px;
+    transition: 0.5s;
+}
+
+.color-chooser-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-chooser-name span{
+    font-family: Work Sans;
+    font-size: 15px;
+    color: var(--header-links-a-color);
+    text-align: center;
+    transition: 0.5s;
+}
+
+.color-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ham {
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.color-selector select{
+    display: flex;
+    text-align: center;
+    margin: 2px;
+
+    color: var(--header-links-a-color); 
+    background-color: var(--header-links-a-hover-bg-color); /* background color */
+    padding: 3px 5px;
+    border: Solid 1px rgba(138, 138, 138, 0.226);
+    border-radius: 30px; 
+    font-size: 13px; 
+    appearance: none; 
+    transition: 0.2s;
+}
+
+.color-selector select:hover{
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.13);
+}
+
+@media screen and (max-width: 360px) {
+    
+    .logo {
+        padding: 5px 10px;
+    }
+    
+    .logo img{
+        width: 120px;
+        margin-top: 4px;
+        margin-bottom: -4px;
+    }
+    .color-chooser-name span{
+        font-size: 13px;
+    }
+
+    .color-selector select{
+        font-size: 11px;
+    }
+
+}
+
+/* tooltips */
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

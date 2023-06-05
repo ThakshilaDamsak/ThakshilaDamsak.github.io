@@ -84,15 +84,15 @@ html{
       --logo-filter: 100%;
       --logo-opacity: 70%;
       
-      --home-heading-background: rgb(48, 98, 102);
-      --home-name-color: rgb(112, 189, 224);
-      --home-bio-color: rgb(112, 189, 224);
+      --home-heading-background: rgb(38, 81, 87);
+      --home-name-color: rgb(138, 218, 255);
+      --home-bio-color: rgb(118, 211, 255);
       --home-heading-button-color: rgb(35, 83, 105);
-      --home-heading-button-background: rgb(112, 189, 224);
+      --home-heading-button-background: rgb(125, 212, 255);
       --home-heading-button-color-hover: rgb(0, 0, 0);
       --home-heading-button-background-hover: rgb(155, 243, 255);
       --home-heading-svg-filter: grayscale(100%);
-      --home-heading-svg-opacity: 25%;
+      --home-heading-svg-opacity: 20%;
   
       --home-about-bg: rgb(104, 57, 100);
       --home-about-p-a-color: rgb(253, 180, 255);
@@ -138,15 +138,15 @@ html{
     --logo-filter: 100%;
     --logo-opacity: 70%;
 
-    --home-heading-background: rgb(48, 98, 102);
-    --home-name-color: rgb(112, 189, 224);
-    --home-bio-color: rgb(112, 189, 224);
+    --home-heading-background: rgb(38, 81, 87);
+    --home-name-color: rgb(138, 218, 255);
+    --home-bio-color: rgb(118, 211, 255);
     --home-heading-button-color: rgb(35, 83, 105);
-    --home-heading-button-background: rgb(112, 189, 224);
+    --home-heading-button-background: rgb(125, 212, 255);
     --home-heading-button-color-hover: rgb(0, 0, 0);
     --home-heading-button-background-hover: rgb(155, 243, 255);
     --home-heading-svg-filter: grayscale(100%);
-    --home-heading-svg-opacity: 25%;
+    --home-heading-svg-opacity: 20%;
 
     --home-about-bg: rgb(104, 57, 100);
     --home-about-p-a-color: rgb(253, 180, 255);
@@ -180,7 +180,7 @@ html{
   }
 
 
-  :root.human {
+  :root.aqua {
 
     --root-grayscale: 0%;
 
@@ -237,7 +237,7 @@ html{
   }
 
   @media (prefers-color-scheme: dark) {
-    :root.human {
+    :root.aqua {
       --root-grayscale: 0%;
 
       --bg-image:url(../images/bg3.svg);
@@ -249,15 +249,15 @@ html{
       --logo-filter: 100%;
       --logo-opacity: 70%;
       
-      --home-heading-background: rgb(48, 98, 102);
-      --home-name-color: rgb(112, 189, 224);
-      --home-bio-color: rgb(112, 189, 224);
+      --home-heading-background: rgb(38, 81, 87);
+      --home-name-color: rgb(138, 218, 255);
+      --home-bio-color: rgb(118, 211, 255);
       --home-heading-button-color: rgb(35, 83, 105);
-      --home-heading-button-background: rgb(112, 189, 224);
+      --home-heading-button-background: rgb(125, 212, 255);
       --home-heading-button-color-hover: rgb(0, 0, 0);
       --home-heading-button-background-hover: rgb(155, 243, 255);
       --home-heading-svg-filter: grayscale(100%);
-      --home-heading-svg-opacity: 25%;
+      --home-heading-svg-opacity: 20%;
   
       --home-about-bg: var(--home-heading-background);
       --home-about-p-a-color: var(--home-name-color);
@@ -268,9 +268,9 @@ html{
       --home-projects-project-name-color:var(--home-name-color) ;
       --home-projects-project-text-color: var(--home-name-color);
   
-      --home-projects-title-bg: rgba(35, 173, 132, 0.329);
-      --home-projects-project-bg: rgba(79, 255, 188, 0.171);
-      --home-projects-project-hover-background: rgba(79, 255, 188, 0.253);
+      --home-projects-title-bg: rgba(35, 152, 173, 0.329);
+      --home-projects-project-bg: rgba(79, 220, 255, 0.171);
+      --home-projects-project-hover-background: rgba(79, 243, 255, 0.253);
       --home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
 
       --footer-bg:rgba(78, 78, 78, 0.76);
@@ -363,15 +363,15 @@ html{
         --logo-filter: 100%;
         --logo-opacity: 70%;
     
-        --home-heading-background: rgb(48, 98, 102);
-        --home-name-color: rgb(112, 189, 224);
-        --home-bio-color: rgb(112, 189, 224);
+        --home-heading-background: rgb(38, 81, 87);
+        --home-name-color: rgb(138, 218, 255);
+        --home-bio-color: rgb(118, 211, 255);
         --home-heading-button-color: rgb(35, 83, 105);
-        --home-heading-button-background: rgb(112, 189, 224);
+        --home-heading-button-background: rgb(125, 212, 255);
         --home-heading-button-color-hover: rgb(0, 0, 0);
         --home-heading-button-background-hover: rgb(155, 243, 255);
         --home-heading-svg-filter: grayscale(100%);
-        --home-heading-svg-opacity: 25%;
+        --home-heading-svg-opacity: 20%;
     
         --home-about-bg: rgb(104, 57, 100);
         --home-about-p-a-color: rgb(253, 180, 255);
@@ -538,11 +538,16 @@ a {
     margin-left: 20px;
     padding: 0 0;
     align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .links {
     display: flex;
     column-gap: 5px;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .links a {
@@ -555,6 +560,7 @@ a {
     background-color: var(--header-links-a-bg-color);
     background-position: 100%;
     border-radius: 5px;
+    text-align: center;
 }
 
 .links a:hover {
@@ -567,12 +573,12 @@ a {
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding: 5px 30px;
-    padding-bottom: 1px;
+    padding: 1px 30px;
     transition: 0.5s;
 }
 
 .logo img {
+    padding-top: 3px;
     width: 130px;
     justify-content: left;
     object-fit:contain;

@@ -127,6 +127,8 @@
     align-items: center;
     column-gap: 10px;
     animation: up-down 0.7s forwards;
+    padding-left: 20px;
+    transition: 1s;
 }
 
 .copyright p {
@@ -134,12 +136,14 @@
     font-size: 19px;
     color: var(--footer-copyright-p);
     cursor: help;
+    transition: 0.5s;
 }
 
 .copyright a {
     font-family: Work Sans;
     font-size: 19px;
     text-decoration: underline;
+    transition: 0.5s;
 }
 
 @media screen and (max-width: 700px) {
@@ -215,7 +219,34 @@
 }
 
 .site-info p {
-    margin: 10px;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 770px){
+    .show a, .show p{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+
+    .copyright a, .copyright p{
+        font-size: 15px;
+    }
+
+    .social-links{
+        column-gap: 10px;
+    }
+
+    .social-links i{
+        font-size: 18px;
+    }
+
+    .show a, .show p{
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 700px) {

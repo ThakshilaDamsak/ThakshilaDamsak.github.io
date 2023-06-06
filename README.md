@@ -1,6 +1,7 @@
-# www.thakshiladamsak.ml
-This is the source code of my [website](https://www.thakshiladamsak.ml).
+# My website
+This is the source code of my website.
+#### www.thakshiladamsak.ml
 
-#### note
-- I got help from ChatGPT and Bing AI to write js.
+### Note
+- I took help from ChatGPT and Bing AI to write the js.
 - Also I got the custom tooltip code from [W3schools](https://www.w3schools.com/css/css_tooltip.asp).

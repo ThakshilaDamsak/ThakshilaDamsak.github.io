@@ -187,14 +187,21 @@
 
 .about-title span {
     position: absolute;
-    padding-left: 5px;
-    transition: 0.5s;
+    padding-left: 8px;
+    transition: 1s;
+    animation: heartBeat 2s infinite;
 }
 
 .about-title span:hover {
-    scale: 120%;
-    transition: 0.2s;
+    filter: invert(100%);
+    transition: 0.5s;
+    animation: heartBeat 2s infinite;
 }
+
+@keyframes heartBeat {
+    0%, 20% { transform: scale(1); }
+    70% { transform: scale(1.2); }
+  }
 
 #umma-overlay {
     position: fixed;
@@ -297,8 +304,18 @@
 }
 
 .about a {
-    font-weight: 300;
     font-family: Open Sans;
+    color: var(--home-about-span-color);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.377);
+    transition: 1s;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.about a:hover{
+    text-decoration: underline;
+    filter: sepia(100%);
 }
 
 /* Projects */

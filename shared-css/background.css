@@ -11,7 +11,13 @@
     transition: 1s;
 }
 
+.page-stuff {
+    display: flex;
+    height: 100vh;
+}
+
 .overlay {
+    z-index: 0;
     background: var(--bg-bg);
     position: absolute;
     top: 0;

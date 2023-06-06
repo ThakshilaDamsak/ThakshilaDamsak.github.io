@@ -11,6 +11,7 @@
     box-shadow: 0px -8px 12px 0px rgba(0, 0, 0, 0.048);
     transition: 1s;
     text-align: center;
+    z-index: 99;
 }
 
 .footer a {
@@ -59,6 +60,8 @@
     column-gap: 10px;
     transition: 1s;
     cursor: help;
+    padding-left: 20px;
+    transition: 1s;
 }
 
 .copyright p {
@@ -66,12 +69,14 @@
     font-size: 19px;
     color: var(--footer-copyright-p);
     cursor: help;
+    transition: 0.5s;
 }
 
 .copyright a {
     font-family: Work Sans;
     font-size: 19px;
     text-decoration: underline;
+    transition: 0.5s;
 }
 
 
@@ -126,6 +131,31 @@
 
 .show span {
     color: var(--footer-show-span);
+}
+
+@media screen and (max-width: 770px){
+    .show a, .show p{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+
+    .copyright a, .copyright p{
+        font-size: 15px;
+    }
+
+    .social-links{
+        column-gap: 10px;
+    }
+
+    .social-links i{
+        font-size: 18px;
+    }
+
+    .show a, .show p{
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 700px) {

@@ -93,7 +93,7 @@
     padding: 10px;
     font-family: Open Sans;
     font-size: 15px;
-    animation: fadein 0.5s, fadeout 0.5s 5.5s;
+    animation: fadein 0.5s 0s, fadeout 1s 5.72s;
  }
 
     @keyframes fadein {
@@ -239,7 +239,7 @@
     padding: 5px 0;
     border-radius: 10px;
     font-size: 15px;
-    font-family: Open Sans;
+    font-family: Work Sans;
    
     position: absolute;
     z-index: 1;

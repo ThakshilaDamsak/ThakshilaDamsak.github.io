@@ -751,3 +751,7 @@ a {
     visibility: visible;
     opacity: 1;
 } 
+
+.mastodon-verify {
+    display: none;
+}

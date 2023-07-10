@@ -127,7 +127,7 @@
     align-items: center;
     column-gap: 10px;
     animation: up-down 0.7s forwards;
-    padding-left: 20px;
+    padding-left: 0px;
     transition: 1s;
 }
 

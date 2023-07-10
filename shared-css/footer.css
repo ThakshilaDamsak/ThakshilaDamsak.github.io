@@ -165,6 +165,7 @@
     .copyright {
         margin-right: auto;
         margin-top: 10px;
+        padding-left: 0px;
     }
     .social-links, .eml {
         display: none;

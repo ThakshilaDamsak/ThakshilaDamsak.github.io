@@ -142,8 +142,8 @@
     border: Solid 1px rgba(138, 138, 138, 0.226);
     transition: 1s;
     max-width: 800px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
     width: fit-content;
     
 }
@@ -193,13 +193,13 @@
     position: absolute;
     padding-left: 8px;
     transition: 1s;
-    animation: heartBeat 2s infinite;
+    animation: heartBeat 2s ease infinite;
 }
 
 .about-title span:hover {
     filter: invert(100%);
     transition: 0.5s;
-    animation: heartBeat 2s infinite;
+    animation: heartBeat 2s ease infinite;
 }
 
 @keyframes heartBeat {
@@ -474,6 +474,13 @@
 
 
 /* heading card responsive*/
+
+@media  (max-width: 835px) {
+    .about {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
 
 @media screen and (max-width: 786px) {
 

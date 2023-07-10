@@ -1,14 +1,35 @@
 .home {
-    background: var(--bg-image);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: 1s;
+}
+
+.background-img {
+    background: var(--bg-image);
+    background-size:110vw;
+    background-position-x: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    z-index: -1;
+    background-color: var(--bg-bg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    overflow: hidden;
+    animation: bg-blur-animation 5s ease;
+}
+
+@keyframes bg-blur-animation {
+    0% {opacity: 0; filter: blur(20px);}
+    70% {opacity: 1; filter: blur(10px); }
+    100% {opacity: 1; filter: blur(0px);}
 }
 
 .page-stuff {
@@ -18,7 +39,7 @@
 
 .overlay {
     z-index: 0;
-    background: var(--bg-bg);
+    background-color: var(--bg-bg);
     position: absolute;
     top: 0;
     bottom: 0;

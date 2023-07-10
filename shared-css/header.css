@@ -26,7 +26,7 @@ html{
 
     --root-grayscale: 0%;
 
-    --bg-image:url(../images/bg3.svg);
+    --bg-image:url(../images/background-4.svg);
     --header-bg-color: rgba(255, 255, 255, 0.795);
     --header-a: black;
     --header-links-a-color: rgb(107, 107, 107);
@@ -81,7 +81,7 @@ html{
     :root {
       --root-grayscale: 0%;
 
-      --bg-image:url(../images/bg3.svg);
+      --bg-image:url(../images/background-4.svg);
       --header-bg-color: rgba(78, 78, 78, 0.76);
       --header-a: rgb(185, 185, 185);
       --header-links-a-color: rgb(185, 185, 185);
@@ -135,7 +135,7 @@ html{
   :root.dark {
     --root-grayscale: 0%;
 
-    --bg-image:url(../images/bg3.svg);
+    --bg-image:url(../images/background-4.svg);
     --header-bg-color: rgba(78, 78, 78, 0.76);
     --header-a: rgb(185, 185, 185);
     --header-links-a-color: rgb(185, 185, 185);
@@ -190,7 +190,7 @@ html{
 
     --root-grayscale: 0%;
 
-    --bg-image:url(../images/bg3.svg);
+    --bg-image:url(../images/background-4.svg);
     --header-bg-color: rgba(255, 255, 255, 0.795);
     --header-a: black;
     --header-links-a-color: rgb(107, 107, 107);
@@ -246,7 +246,7 @@ html{
     :root.aqua {
       --root-grayscale: 0%;
 
-      --bg-image:url(../images/bg3.svg);
+      --bg-image:url(../images/background-4.svg);
       --header-bg-color: rgba(78, 78, 78, 0.76);
       --header-a: rgb(185, 185, 185);
       --header-links-a-color: rgb(185, 185, 185);
@@ -303,7 +303,7 @@ html{
 
     --root-grayscale: 100%;
 
-    --bg-image:url(../images/bg3.svg);
+    --bg-image:url(../images/background-4.svg);
     --header-bg-color: rgba(255, 255, 255, 0.795);
     --header-a: black;
     --header-links-a-color: rgb(107, 107, 107);
@@ -358,7 +358,7 @@ html{
   @media (prefers-color-scheme: dark) {
     :root.charcoal{
 
-        --bg-image:url(../images/bg3.svg);
+        --bg-image:url(../images/background-4.svg);
         --root-grayscale: 100%;
     
         --header-bg-color: rgba(78, 78, 78, 0.76);
@@ -472,6 +472,43 @@ html{
     filter: grayscale(var(--root-grayscale));
     transition: 1s;
   }
+
+::-webkit-scrollbar {
+  width: 10px;
+  border: Solid 2px rgba(138, 138, 138, 0.226);
+
+}
+
+::-webkit-scrollbar-track {
+  background: var(--home-about-bg);
+  border: Solid 1px rgba(138, 138, 138, 0.226);
+  transition: 0.2s;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--home-about-p-a-color);  
+  border: Solid 1px rgba(138, 138, 138, 0.226);
+  transition: 0.2s;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--home-about-span-color);
+  transition: 0.2s;
+}
+
+::-webkit-scrollbar-button {
+  background: var(--home-about-p-a-color);
+  border: Solid 1px rgba(138, 138, 138, 0.226);
+  transition: 0.2s;
+}
+
+::-webkit-scrollbar-button:hover {
+  background: var(--home-about-span-color);
+  border: Solid 1px rgba(138, 138, 138, 0.226);
+  transition: 0.2s;
+}
 
 .container {
     position: relative;

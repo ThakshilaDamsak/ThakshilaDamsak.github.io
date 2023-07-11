@@ -12,7 +12,7 @@
     background-position-x: center;
     background-repeat: repeat;
     background-attachment: fixed;
-    z-index: -1;
+    z-index: -2;
     background-color: var(--bg-bg);
     position: absolute;
     top: 0;
@@ -38,7 +38,7 @@
 }
 
 .overlay {
-    z-index: 0;
+    z-index: -1;
     background-color: var(--bg-bg);
     position: absolute;
     top: 0;

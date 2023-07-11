@@ -1,0 +1,95 @@
+.home {
+    height: 100vh;
+    background-size: cover;
+    background:var(--home-bg);
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-content {
+    height: max-content;
+}
+
+.js-disabled-page {
+    align-items: center;
+    justify-content: center;
+}
+
+.js-disabled-page-stuff {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    transition: 0.5s;
+    width:fit-content;
+    max-width: 1100px;
+    border-radius: 24px;
+    padding: 20px;
+    animation: bg-blur-animation 3s ease;
+}
+
+.js-disabled-page-title {
+    display: flex;
+    font-family: Open Sans;
+    font-size: 40px;
+    font-weight:700;
+    color: var(--header-links-a-hover-color);
+    transition: 0.5s;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.178);
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.js-disabled-page-split {
+    display: flex;
+    flex-direction: row;
+    transition: 0.5s;
+}
+
+.js-disabled-page-description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: left;
+    font-family: Open Sans;
+    font-size: 20px;
+    color: var(--header-links-a-color);
+    transition: 0.5s;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.185);
+    margin-top: 35px;
+}
+
+.js-disabled-page-description p{
+    font-weight: bold;
+    text-align: left;
+    transition: 0.5s;
+    margin-bottom: 10px;
+}
+
+.js-disabled-page-description li{
+    text-decoration: dashed;
+    transition: 0.5s;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.js-disabled-page-stuff img {
+    display:flex;
+    width: 350px;
+    transition: 0.5s;
+    padding: 0px;    
+    margin: -30px;
+    margin-left: -50px;
+}
+
+@keyframes bg-blur-animation {
+    0% {opacity: 0; filter: blur(10px);}
+    40% {opacity: 0; filter: blur(10px);}
+    70% {opacity: 1; filter: blur(10px); }
+    100% {opacity: 1; filter: blur(0px);}
+}

@@ -681,3 +681,77 @@
 
 
 }
+
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100vw;
+  perspective: 10px;
+  scroll-behavior: smooth;
+}
+
+.hddr {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.hddr svg{
+    position: absolute;
+    bottom: 0px;
+    width: 110%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.background {
+  transform: translateZ(-7px) scale(2);
+  object-fit: cover;
+}
+
+.foreground {
+  transform: translateZ(-3px) scale(1);
+}
+
+.deep {
+    transform: translateZ(-10px) scale(2);
+}
+
+.evenDeeper {
+    transform: translateZ(-10px) scale(2);
+}
+
+.background,
+.foreground,
+.deep,
+.evenDeeper {
+  position: absolute;
+  height: 100%;
+  width: 140%;
+  z-index: -1;
+}
+
+.title {
+  font-size: 7rem;
+  color: white;
+  text-shadow: 0 0 5px black;;
+}
+
+.blank {
+    height: 20vh;
+}
+
+.separator-bg {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 138, 255, 1), rgb(0, 138, 255, 1),rgb(111, 0, 255));
+}

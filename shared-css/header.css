@@ -18,7 +18,6 @@ html{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    scrollbar-color: auto;
 }
 
 :root,
@@ -476,6 +475,8 @@ html{
 ::-webkit-scrollbar {
   width: 10px;
   border: Solid 2px rgba(138, 138, 138, 0.226);
+  z-index: 999999;
+  margin-top: 50px;
 
 }
 

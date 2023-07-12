@@ -18,7 +18,8 @@ html{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    scrollbar-color: auto;
+    scrollbar-color: var(--home-about-p-a-color) var(--home-about-bg);
+    scrollbar-width: thin;
 }
 
 :root,

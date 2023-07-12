@@ -40,14 +40,14 @@
     <meta name="twitter:description" content="I am a human." />
     <meta name="twitter:image" content="https://i.imgur.com/KwAPx6l.png" />
 
-    <link rel="stylesheet" type="text/css" href="../shared-css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../shared-css/header.css">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="../shared-css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../../shared-css/footer.css">
 
-    <script src="../theme.js"></script>
+    <script src="../../theme.js"></script>
 
-    <link rel="icon" href="../images/favicon2.svg" type="image/svg+xml">
-    <link rel="icon" href="../images/favicon2.png" type="image/png">
+    <link rel="icon" href="../../images/favicon2.svg" type="image/svg+xml">
+    <link rel="icon" href="../../images/favicon2.png" type="image/png">
 
 </head>
 
@@ -62,14 +62,14 @@
         <!--Navigation bar-->
         <div class="header">
             <div class="logo">
-                <a href="../#"><img src="../images/logo-long-bk.svg" loading="eager" alt="Thakshila Damsak [logo]" ></a>
+                <a href="../../#"><img src="../../images/logo-long-bk.svg" loading="eager" alt="Thakshila Damsak [logo]" ></a>
                 <div class="menu">
                     <div class="links">
-                        <a href="../#">Home</a>
-                        <a href="../#about">About</a>
-                        <a href="../#projects">Projects</a>
+                        <a href="../../#">Home</a>
+                        <a href="../../#about">About</a>
+                        <a href="../../#projects">Projects</a>
                     </div>
-                    <div class="color-chooser">
+                    <div class="color-chooser" style="display: none;">
                         <main class="color-chooser-container">
                             <div class="color-chooser-name"><span>Theme</span></div>
                             <div class="color-selector">
@@ -85,7 +85,7 @@
                           </main>
                     </div>
                     <div class="ham">
-                        <a href="../menu/">
+                        <a href="../../menu/">
                             <i class="fa-solid fa-bars"></i>
                         </a>
                 </div>
@@ -110,30 +110,39 @@
                 <div class="page-content">
 
                     <div class="js-disabled-page">
-                        <div class="js-disabled-page-stuff">
+                        <div id="js-page-stuff" class="js-disabled-page-stuff">
                             <div class="name js-disabled-page-title">
                                 <p>Oops! Javascript is Unavailable.</p>
                             </div>
                             <div class="js-disabled-page-split">
-                                <img src="../images/js-disabled-logo.svg" alt="">
+                                <img src="../../images/js-disabled-logo.svg" alt="">
                             <div class="js-disabled-page-description">
                                 <p>Unfortunately, it seems that JavaScript is currently unavailable in your browser.</p>
                                 <div class="js-disabled-page-list">
                                     <ul>
                                 <li>Please ensure that JavaScript is enabled in your browser settings to use this website.</li>
                                 <li>If you are using an older or unsupported browser, it may not support JavaScript. Consider upgrading to a newer browser version to access this website.</li>
-                                <li>Additionally, if you have an ad blocker or tracker blocker enabled, it can sometimes interfere with JavaScript. You may need to temporarily disable or whitelist this website in your blocker settings.</li> 
+                                <li>Additionally, if you have an ad blocker or tracker blocker enabled, it can sometimes interfere with JavaScript. You may need to temporarily disable or whitelist this website in your blocker settings and refresh the page.</li> 
                             </ul> 
-                            </div>                          
+                            </div>     
                             </div>
                         </div>
                         </div>
+                        <div id="go-back" class="no-js">
+                            <p>Yeah baby! It's enabled now.</p>
+                            <button onclick="history.back()">Go back</button>
+                        </div> 
                     </div>
 
                 </div>
 
+                <script>
+                    var element = document.getElementById("go-back");
+                    element.className = "js";
 
-
+                    var element = document.getElementById("js-page-stuff");
+                    element.className = "no-page-stuff";
+                </script>
 
 <!--Footer-->
                     <div class="footer">

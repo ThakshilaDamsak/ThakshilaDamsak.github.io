@@ -52,12 +52,12 @@
     justify-content: center;
 }
 
-.js-disabled-page {
+.error-page {
     align-items: center;
     justify-content: center;
 }
 
-.js-disabled-page-stuff {
+.error-page-stuff {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -70,7 +70,7 @@
     margin-top: auto;
 }
 
-.js-disabled-page-title {
+.error-page-title {
     display: flex;
     font-family: Open Sans;
     font-size: 40px;
@@ -83,7 +83,7 @@
     margin-bottom: 30px;
 }
 
-.js-disabled-page-split {
+.error-page-split {
     display: flex;
     flex-direction: row;
     transition: 0.5s;
@@ -91,7 +91,7 @@
     align-items: center;
 }
 
-.js-disabled-page-description {
+.error-page-description {
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -105,20 +105,20 @@
     gap: 10px;
 }
 
-.js-disabled-page-description p{
+.error-page-description p{
     font-weight: bold;
     text-align: left;
     transition: 0.5s;
 }
 
-.js-disabled-page-description ul{
+.error-page-description ul{
     transition: 0.5s;
     margin-top: 10px;
     margin-left: 30px;
     transition: 0.5s;
 }
 
-.js-disabled-page-stuff img {
+.error-page-stuff img {
     display:flex;
     width: 500px;
     transition: 0.5s;
@@ -187,22 +187,22 @@
 }
 
 @media screen and (max-width: 840px) {
-    .js-disabled-page-title {
+    .error-page-title {
         margin-bottom: 20px;
         font-size: 30px;
     }
 
-    .js-disabled-page-description {
+    .error-page-description {
         font-size: 17px;
     }
 
-    .js-disabled-page-stuff img {
+    .error-page-stuff img {
         width: 350px;
         margin: -60px;
         margin-top: -100px;
     }
 
-    .js-disabled-page {
+    .error-page {
         margin-left: 0px;
         margin-right: 0px;
     }
@@ -210,27 +210,27 @@
 }
 
 @media screen and (max-width: 680px) {
-    .js-disabled-page-title {
+    .error-page-title {
         margin-bottom: 20px;
         font-size: 30px;
     }
 
-    .js-disabled-page-description {
+    .error-page-description {
         font-size: 17px;
         margin-top: 0px;
     }
 
-    .js-disabled-page-stuff img {
+    .error-page-stuff img {
         width: 350px;
         margin: -30px;
         margin-top: -50px;
     }
 
-    .js-disabled-page-split {
+    .error-page-split {
         flex-direction: column;
     }
 
-    .js-disabled-page {
+    .error-page {
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -238,30 +238,30 @@
 }
 
 @media screen and (max-width: 430px) {
-    .js-disabled-page-title {
+    .error-page-title {
         margin-bottom: 0px;
         font-size: 28px;
     }
 
-    .js-disabled-page-description {
+    .error-page-description {
         font-size: 15px;
         margin-top: 0px;
     }
 
-    .js-disabled-page-stuff img {
+    .error-page-stuff img {
         width: 350px;
         margin-left: -30px;
     }
 
-    .js-disabled-page-description ul{
+    .error-page-description ul{
         margin-left: 20px;
     }
 
-    .js-disabled-page-split {
+    .error-page-split {
         flex-direction: column;
     }
 
-    .js-disabled-page {
+    .error-page {
         margin-left: 0px;
         margin-right: 0px;
     }

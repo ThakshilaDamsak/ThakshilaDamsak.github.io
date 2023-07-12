@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://www.thakshiladamsak.ml">
 
-    <title>Javascript not available | Thakshila Damsak</title>
+    <title>Nothing to see here :0</title>
 
     <meta name="description" content="Boo! Check out my damn website. Click here, come on, hurry. I have proof that I'm a human. Click! Click! What the hell are you waiting for?">
     <meta name="keywords" content="Thakshila Damsak, a real human, human verification, not an alien, web development, illustration,  portfolio, blog, I am a human, i'm a human, damscuck, thuckshiller, twod.ml, thakshila, damsak, Damsuck, Thakshila, Damsak, built from scratch, tdamsak, tdamsak.ml, thakshiladamsak.tk, css, html, javascript, why am i doing this?, how many words should i add?, i think thats enough">
@@ -110,16 +110,16 @@
 
                 <div class="page-content">
 
-                    <div class="js-disabled-page">
-                        <div id="js-page-stuff" class="js-disabled-page-stuff">
-                            <div class="name js-disabled-page-title">
-                                <p>Oops! Nothing to see here.</p>
+                    <div class="error-page">
+                        <div id="js-page-stuff" class="error-page-stuff">
+                            <div class="name error-page-title">
+                                <p>Whoops! You've found a non-existent page.</p>
                             </div>
-                            <div class="js-disabled-page-split">
+                            <div class="error-page-split">
                                 <img src="../../images/404.svg" alt="404 illustration">
-                            <div class="js-disabled-page-description">
+                            <div class="error-page-description">
                                 <p>The page you are looking for is gone. No idea why. Anyway, here's what you can do,</p>
-                                <div class="js-disabled-page-list">
+                                <div class="error-page-list">
                                     <ul>
                                 <li>Please make sure you typed the URL correctly and try again. Maybe you'll get lucky and find it.</li>
                                 <li>If you are sure that the URL is correct, it may be that the page has been deleted or renamed.</li>
@@ -136,14 +136,27 @@
                 </div>
                 <script>
                     var button = document.getElementById("go-home");
-                    button.innerHTML = "Sweet Home Alabama";
-                    setTimeout(function() {
-                    button.innerHTML = "Return Home";
+                        button.innerHTML = "Sweet Home Alabama";
+                        setTimeout(function() {
+                        button.innerHTML = "Return Home";
                     }, 3000);
 
-                    window.onload = function() {
-                    history.replaceState({}, null, "/?404");
-                    };
+
+  window.onload = function() {
+    var currentURL = window.location.href;
+    if (!currentURL.endsWith("#no-page-like-that")) {
+      var newURL = currentURL + "#no-page-like-that";
+      history.replaceState({}, null, newURL);
+    }
+  };
+
+  window.onpopstate = function(event) {
+    var currentURL = window.location.href;
+    if (currentURL.endsWith("#no-page-like-that")) {
+      var newURL = currentURL.replace("#no-page-like-that", "");
+      history.replaceState({}, null, newURL);
+    }
+  };
                 </script>
 <!--Footer-->
                     <div class="footer">

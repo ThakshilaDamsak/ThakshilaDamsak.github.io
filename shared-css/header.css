@@ -563,7 +563,7 @@ a {
 
 .header {
     background-color: var(--header-bg-color);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px) contrast(0.75) saturate(5);
     position: fixed;
     width: 100%;
     z-index: 99;

@@ -2,7 +2,7 @@
 
 .footer {
     background-color: var(--footer-bg);
-    backdrop-filter: blur(20px) contrast(0.75) saturate(5);
+    backdrop-filter: blur(15px) contrast(0.75) saturate(5);
     width: 100%;
     position: fixed;
     bottom: 0;

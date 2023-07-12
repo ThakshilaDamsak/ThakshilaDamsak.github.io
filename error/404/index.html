@@ -45,6 +45,7 @@
     <link rel="stylesheet" type="text/css" href="../../shared-css/footer.css">
 
     <script src="../../theme.js"></script>
+    <noscript> <META HTTP-EQUIV="Refresh" CONTENT="0;URL=../js-disabled/"> </noscript>
 
     <link rel="icon" href="../../images/favicon2.svg" type="image/svg+xml">
     <link rel="icon" href="../../images/favicon2.png" type="image/png">
@@ -69,7 +70,7 @@
                         <a href="../../#about">About</a>
                         <a href="../../#projects">Projects</a>
                     </div>
-                    <div class="color-chooser" style="display: none;">
+                    <div class="color-chooser">
                         <main class="color-chooser-container">
                             <div class="color-chooser-name"><span>Theme</span></div>
                             <div class="color-selector">
@@ -112,41 +113,41 @@
                     <div class="js-disabled-page">
                         <div id="js-page-stuff" class="js-disabled-page-stuff">
                             <div class="name js-disabled-page-title">
-                                <p>Oh no! JavaScript is Unavailable.</p>
+                                <p>Oops! Nothing to see here.</p>
                             </div>
                             <div class="js-disabled-page-split">
-                                <img src="../../images/js-disabled-logo.svg" alt="">
+                                <img src="../../images/404.svg" alt="404 illustration">
                             <div class="js-disabled-page-description">
-                                <p>Oops, but it seems like JavaScript is not enabled in your browser. That's a shame, because our website requires it to work and you'll miss out on all the fun.</p>
+                                <p>The page you are looking for is gone. No idea why. Anyway, here's what you can do,</p>
                                 <div class="js-disabled-page-list">
                                     <ul>
-                                <li>If JavaScript is disabled in your browser, please enable it in your browser settings to enjoy this website.</li>
-                                <li>If you are using an ancient or sucky browser, it may not support JavaScript. How about upgrading to a newer browser version to access this website and many others.</li>
-                                <li>Additionally, if you have an ad blocker or tracker blocker enabled, it can sometimes interfere with JavaScript. You may need to temporarily disable or whitelist this website in your blocker settings and refresh the page.</li> 
+                                <li>Please make sure you typed the URL correctly and try again. Maybe you'll get lucky and find it.</li>
+                                <li>If you are sure that the URL is correct, it may be that the page has been deleted or renamed.</li>
+                                <li>You can go back to the home page and find something that actually exists. Just click on anything that looks fun on this website. You never know what you might get.</li> 
                             </ul> 
+                            <div class="js">
+                                <button onclick="window.location.href='../../'" id="go-home"></button>
+                            </div> 
                             </div>     
                             </div>
                         </div>
                         </div>
-                        <div id="go-back" class="no-js">
-                            <p>Yeah baby! It's enabled now.</p>
-                            <button onclick="history.back()">Go back</button>
-                        </div> 
                     </div>
-
                 </div>
-
                 <script>
-                    var element = document.getElementById("go-back");
-                    element.className = "js";
+                    var button = document.getElementById("go-home");
+                    button.innerHTML = "Sweet Home Alabama";
+                    setTimeout(function() {
+                    button.innerHTML = "Return Home";
+                    }, 3000);
 
-                    var element = document.getElementById("js-page-stuff");
-                    element.className = "no-page-stuff";
-                </script>  
-
+                    window.onload = function() {
+                    history.replaceState({}, null, "/?404");
+                    };
+                </script>
 <!--Footer-->
                     <div class="footer">
-                        <div class="no-social-links" style="display: none;">
+                        <div class="social-links">
                             <div class="social-link1 tooltip-footer">
                                 <a href="https://www.youtube.com/channel/UCQmB571Z3-ECIbbf4vesKNw">
                                     <i class="fa-brands fa-youtube"></i>
@@ -197,7 +198,7 @@
                             </div>
 
                         </div>
-                        <div class="eml" style="margin-left: 20px;">
+                        <div class="eml">
                         <div class="email tooltip-footer">
                             <a href="mailto:thakshiladamsak@hotmail.com" target="_blank">thakshiladamsak@hotmail.com</a>
                             <span class="tooltiptext-footer">E-Mail me</span>

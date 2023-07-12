@@ -37,8 +37,9 @@
         transition: 0.5s;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(to left top, rgba(160, 59, 0, 0.158), rgba(255, 246, 238, 0));
+        background: linear-gradient(to left top, rgba(183, 0, 255, 0.158), rgba(255, 246, 238, 0));
     }
+
 
 .no-page-stuff {
     display: none;
@@ -119,11 +120,11 @@
 
 .js-disabled-page-stuff img {
     display:flex;
-    width: 350px;
+    width: 500px;
     transition: 0.5s;
     padding: 0px;    
-    margin: -30px;
-    margin-left: -50px;
+    margin: -90px;
+    margin-top: -120px;
 }
 
 .no-js {
@@ -133,8 +134,8 @@
 .js {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: left;
     margin-top: 30px;
     font-size: 25px;
     font-weight: bolder;
@@ -144,7 +145,6 @@
     font-family: Open Sans;
     color: var(--home-name-color);
     transition: 0.5s;
-    padding: 20px;
 }
 
 .js button {
@@ -152,13 +152,13 @@
     font-size: 20px;
     text-align: center;
     font-style: normal;
-    color: var(--home-heading-button-color);
+    color: var(--home-about-p-a-color);
     font-weight: lighter;
     transition: 0.2s;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.075);
+    box-shadow: 0px 0px 10px 1px rgba(234, 0, 255, 0.616);
     border: none;
-    background: var(--home-heading-button-background);
-    border-radius: 15px;
+    background: linear-gradient(to right, rgb(255, 0, 255), rgba(255, 0, 234, 0.6));
+    border-radius: 10px;
     cursor: pointer;
     font-weight: normal;
     margin-left: 10px;
@@ -167,18 +167,15 @@
     justify-content: center;
     text-align: center;
     transition: 1s;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(138, 138, 138, 0.226);
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 .js button:hover {
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
-    color: var(--home-heading-button-color-hover);
-    background: var(--home-heading-button-background-hover);
+    box-shadow: 0px 0px 15px 2px rgba(234, 0, 255, 0.76);
+    color: var(--header-links-a-hover-color);
+    background: linear-gradient(to right, rgb(255, 0, 255), rgba(255, 0, 234, 0.6));
     transition:0.2s;
 }
 
@@ -200,7 +197,9 @@
     }
 
     .js-disabled-page-stuff img {
-        width: 300px;
+        width: 350px;
+        margin: -60px;
+        margin-top: -100px;
     }
 
     .js-disabled-page {
@@ -210,7 +209,7 @@
 
 }
 
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 680px) {
     .js-disabled-page-title {
         margin-bottom: 20px;
         font-size: 30px;
@@ -222,7 +221,9 @@
     }
 
     .js-disabled-page-stuff img {
-        width: 300px;
+        width: 350px;
+        margin: -30px;
+        margin-top: -50px;
     }
 
     .js-disabled-page-split {
@@ -248,7 +249,7 @@
     }
 
     .js-disabled-page-stuff img {
-        width: 300px;
+        width: 350px;
         margin-left: -30px;
     }
 

@@ -114,11 +114,12 @@
     font-family: Open Sans;
     color: var(--home-name-color);
     transition: 0.5s;
+    padding: 20px;
 }
 
 .js button {
     font-family: open Sans;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     font-style: normal;
     color: var(--home-heading-button-color);

@@ -214,6 +214,10 @@
     .ham {
         display: flex;
     }
+
+    .tooltiptext-footer {
+        display: none;
+    }
 }
 
 

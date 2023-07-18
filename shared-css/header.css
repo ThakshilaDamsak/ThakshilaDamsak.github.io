@@ -71,11 +71,15 @@ html{
     --footer-tooltip-footer-bg: rgb(247, 247, 247);
     --footer-show-span:rgb(114, 114, 114);
 
-    --bg-bg:rgba(245, 248, 248, 0.671);
+    --bg-bg:rgba(255, 255, 255, 0.671);
     --bg-backdrop-filter: 0%;
 
     --home-bg: linear-gradient(to left bottom, rgba(242, 253, 255, 0.6), rgba(238, 248, 255, 0.6));
     --home-a:black;
+    --error-about-p-a-color: rgb(107, 0, 102);
+
+    --ambient-opacity: 70%;
+    --ambient-size: 105%;
   }
   
   @media (prefers-color-scheme: dark) {
@@ -91,13 +95,13 @@ html{
       --logo-filter: 100%;
       --logo-opacity: 70%;
       
-      --home-heading-background: rgb(38, 81, 87);
-      --home-name-color: rgb(138, 218, 255);
-      --home-bio-color: rgb(118, 211, 255);
+      --home-heading-background: rgb(34, 80, 99);
+      --home-name-color: rgb(89, 189, 255);
+      --home-bio-color: rgb(91, 203, 255);
       --home-heading-button-color: rgb(35, 83, 105);
-      --home-heading-button-background: rgb(125, 212, 255);
+      --home-heading-button-background: rgb(85, 198, 255);
       --home-heading-button-color-hover: rgb(0, 0, 0);
-      --home-heading-button-background-hover: rgb(155, 243, 255);
+      --home-heading-button-background-hover: rgb(46, 171, 255);
       --home-heading-svg-filter: grayscale(100%);
       --home-heading-svg-opacity: 20%;
   
@@ -130,6 +134,10 @@ html{
 
       --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
       --home-a:rgb(163, 175, 177);
+      --error-about-p-a-color: rgb(253, 180, 255);
+
+      --ambient-opacity: 50%;
+      --ambient-size: 100%;
     }
   }
 
@@ -145,13 +153,13 @@ html{
     --logo-filter: 100%;
     --logo-opacity: 70%;
 
-    --home-heading-background: rgb(38, 81, 87);
-    --home-name-color: rgb(138, 218, 255);
-    --home-bio-color: rgb(118, 211, 255);
+    --home-heading-background: rgb(34, 80, 99);
+    --home-name-color: rgb(89, 189, 255);
+    --home-bio-color: rgb(91, 203, 255);
     --home-heading-button-color: rgb(35, 83, 105);
-    --home-heading-button-background: rgb(125, 212, 255);
+    --home-heading-button-background: rgb(85, 198, 255);
     --home-heading-button-color-hover: rgb(0, 0, 0);
-    --home-heading-button-background-hover: rgb(155, 243, 255);
+    --home-heading-button-background-hover: rgb(46, 171, 255);
     --home-heading-svg-filter: grayscale(100%);
     --home-heading-svg-opacity: 20%;
 
@@ -184,6 +192,10 @@ html{
 
     --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
     --home-a:rgb(163, 175, 177);
+    --error-about-p-a-color: rgb(253, 180, 255);
+
+    --ambient-opacity: 50%;
+    --ambient-size: 100%;
   }
 
 
@@ -236,11 +248,14 @@ html{
     --footer-tooltip-footer-bg: rgb(247, 247, 247);
     --footer-show-span:rgb(114, 114, 114);
 
-    --bg-bg:rgba(245, 248, 248, 0.671);
+    --bg-bg:rgba(255, 255, 255, 0.671);
     --bg-backdrop-filter: 0%;
 
     --home-bg: linear-gradient(to left bottom, rgba(242, 253, 255, 0.6), rgba(238, 248, 255, 0.6));
     --home-a:black;
+
+    --ambient-opacity: 70%;
+    --ambient-size: 105%;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -256,13 +271,13 @@ html{
       --logo-filter: 100%;
       --logo-opacity: 70%;
       
-      --home-heading-background: rgb(38, 81, 87);
-      --home-name-color: rgb(138, 218, 255);
-      --home-bio-color: rgb(118, 211, 255);
+      --home-heading-background: rgb(34, 80, 99);
+      --home-name-color: rgb(89, 189, 255);
+      --home-bio-color: rgb(91, 203, 255);
       --home-heading-button-color: rgb(35, 83, 105);
-      --home-heading-button-background: rgb(125, 212, 255);
+      --home-heading-button-background: rgb(85, 198, 255);
       --home-heading-button-color-hover: rgb(0, 0, 0);
-      --home-heading-button-background-hover: rgb(155, 243, 255);
+      --home-heading-button-background-hover: rgb(46, 171, 255);
       --home-heading-svg-filter: grayscale(100%);
       --home-heading-svg-opacity: 20%;
   
@@ -275,9 +290,9 @@ html{
       --home-projects-project-name-color:var(--home-name-color) ;
       --home-projects-project-text-color: var(--home-name-color);
   
-      --home-projects-title-bg: rgba(35, 152, 173, 0.329);
-      --home-projects-project-bg: rgba(79, 220, 255, 0.171);
-      --home-projects-project-hover-background: rgba(79, 243, 255, 0.253);
+      --home-projects-title-bg: rgba(65, 138, 187, 0.329);
+      --home-projects-project-bg: rgba(65, 138, 187, 0.329);
+      --home-projects-project-hover-background: rgba(79, 170, 255, 0.253);
       --home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
 
       --footer-bg:rgba(78, 78, 78, 0.76);
@@ -295,6 +310,9 @@ html{
 
       --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
       --home-a:rgb(163, 175, 177);
+
+      --ambient-opacity: 50%;
+      --ambient-size: 100%;
     }
   }
   
@@ -353,6 +371,9 @@ html{
 
     --home-bg: linear-gradient(to left bottom, rgba(242, 253, 255, 0.6), rgba(238, 248, 255, 0.6));
     --home-a:black;
+
+    --ambient-opacity: 0%;
+    --ambient-size: 1%;
   }
 
 
@@ -409,6 +430,9 @@ html{
     
         --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
         --home-a:rgb(163, 175, 177);
+
+        --ambient-opacity: 0%;
+        --ambient-size: 1%;
       }
   }
 
@@ -466,6 +490,10 @@ html{
 
     --home-bg: linear-gradient(to left bottom, rgba(255, 251, 242, 0.6), rgba(255, 246, 238, 0.6));
     --home-a:black;
+    --error-about-p-a-color: rgb(107, 0, 102);
+
+    --ambient-opacity: 70%;
+    --ambient-size: 105%;
   }
 
 

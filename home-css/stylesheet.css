@@ -1,12 +1,32 @@
 .page-content {
-    margin-top: 28vh;
-    margin-bottom: 28vh;
+    padding-top: 28vh;
+    padding-bottom: 28vh;
 }
 
-/* heading card */
+
+.duplicate {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    filter: blur(40px);
+    overflow: hidden;
+    opacity: var(--ambient-opacity);
+}
+
+.scale {
+    scale: var(--ambient-size);
+}
+
+
 .h-card {
     align-items: center;
     justify-content: center;
+
 }
 
 .heading {
@@ -19,7 +39,6 @@
     justify-content: center;
     background: var(--home-heading-background);
     border-radius: 25px;
-    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.13);
     margin: auto;
     animation: site-zoom-animation 1s forwards;
     transition: 0.5s;
@@ -41,7 +60,7 @@
     z-index: 2;
     margin-bottom: 2px;
     transition: 0.5s;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.178);
+    text-shadow: 1px 1px 10px rgba(0, 132, 255, 0.438);
 }
 
 .bio {
@@ -60,7 +79,7 @@
     z-index: 2;
     margin-top: -5px;
     transition: 0.5s;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.185);
+    text-shadow: 1px 1px 10px rgba(0, 204, 255, 0.692);
 }
 
 .heading svg {
@@ -84,7 +103,7 @@
     color: var(--home-heading-button-color);
     font-weight: lighter;
     transition: 0.2s;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.075);
+    box-shadow: 0px 0px 10px 1px rgba(0, 162, 255, 0.342);
 }
 
 .heading button {
@@ -106,7 +125,7 @@
 }
 
 .heading button:hover {
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 15px 0px rgba(0, 174, 255, 0.479);
     color: var(--home-heading-button-color-hover);
     background: var(--home-heading-button-background-hover);
     transition:0.2s;
@@ -135,7 +154,6 @@
     flex-direction: row;
     background: var(--home-about-bg);
     border-radius: 25px;
-    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.13);
     animation: site-tab-animation 0.5s forwards;
     font-family: Open Sans;
     margin-top: 50vh;
@@ -145,7 +163,6 @@
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
-    
 }
 
 .about-content {
@@ -155,6 +172,7 @@
     transition: 1s;
     width: auto;
     justify-content: center;
+    
 }
 
 .about-logo {
@@ -173,7 +191,7 @@
     padding: 0px;
     margin: 0px;
     transition: 0.2s;
-    opacity: 60%;
+    opacity: 70%;
 }
 
 .about-title {
@@ -184,7 +202,6 @@
     padding-left: 20px;
     padding-bottom: 0px;
     padding-top: 5px;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.295);
 }
 
 /* Ummaaaa! */
@@ -258,7 +275,7 @@
     color: rgb(255, 218, 255);
     font-weight: lighter;
     transition: 0.2s;
-    box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.027);
+    box-shadow: 0px 2px 15px 0px rgba(212, 0, 202, 0.603);
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -274,7 +291,7 @@
 }
 
 .umma-text button:hover {
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 20px 0px rgba(255, 0, 242, 0.692);
     color: white;
     background: rgb(255, 0, 191);
     transition:0.2s;
@@ -298,7 +315,7 @@
 
 .about p, .about a {
     color: var(--home-about-p-a-color);
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.377);
+    text-shadow: 1px 1px 15px rgba(195, 0, 255, 0.418);
     transition: 1s;
 }
 
@@ -339,7 +356,6 @@
     margin-right: auto;
     background: var(--home-projects-bg);
     border-radius: 24px;
-    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.13);
     border: Solid 1px rgba(138, 138, 138, 0.226);
     transition: 1s;
 }
@@ -370,10 +386,9 @@
     text-align: center;
     font-size: 25px;
     padding: 5px;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.164);
     color: var(--home-projects-title-p-color);
     transition: 1s;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.377);
+    text-shadow: 1px 1px 10px rgba(5, 139, 0, 0.555);
 }
 
 .my-projects {

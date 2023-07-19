@@ -419,99 +419,26 @@
 
 
 <!--Footer-->
-                    <div class="footer">
-                        <div class="social-links">
-                            <div class="social-link1 tooltip-footer">
-                                <a href="https://www.youtube.com/channel/UCQmB571Z3-ECIbbf4vesKNw">
-                                    <i class="fa-brands fa-youtube"></i>
-                                    <span class="tooltiptext-footer">Youtube Channel</span>
-                                </a>
-                            </div>
-                            
-                            <div class="social-link2 tooltip-footer">
-                                <a href="https://www.facebook.com/Thakshiladamsak" target="_blank">
-                                    <i class="fa-brands fa-facebook"></i>
-                                    <span class="tooltiptext-footer">Facebook</span>
-                                </a>
-                            </div>
-                            
-                            <div class="social-link3 tooltip-footer">
-                                <a href="https://www.instagram.com/thakshiladamsak/" target="_blank">
-                                    <i class="fa-brands fa-instagram"></i>
-                                    <span class="tooltiptext-footer">Instagram</span>
-                                </a>
-                            </div>
-                            
-                            <div class="social-link4 tooltip-footer">
-                                <a href="https://www.reddit.com/u/thakshila_damsak" target="_blank">
-                                    <i class="fa-brands fa-reddit"></i>
-                                    <span class="tooltiptext-footer">Reddit</span>
-                                </a>
-                            </div>
-                            
-                            <div class="social-link5 tooltip-footer">
-                                <a href="https://www.github.com/thakshiladamsak" target="_blank">
-                                    <i class="fa-brands fa-github"></i>
-                                    <span class="tooltiptext-footer">Github</span>
-                                </a>
-                            </div>
-                            
-                            <div class="social-link6 tooltip-footer">
-                                <a href="https://discord.gg/YryrKZTQh7" target="_blank">
-                                    <i class="fa-brands fa-discord"></i>
-                                    <span class="tooltiptext-footer">Discord Server</span>
-                                </a>
-                            </div>
-                            
-                            <div class="social-link7 tooltip-footer">
-                                <a rel="me" href="https://mastodon.social/@thakshiladamsak" target ="blank">
-                                    <i class="fa-brands fa-mastodon"></i>
-                                    <span class="tooltiptext-footer">Mastodon</span>
-                                </a>
-                            </div>
-
-                        </div>
-                        <div class="eml">
-                        <div class="email tooltip-footer">
-                            <a href="mailto:thakshiladamsak@hotmail.com" target="_blank">thakshiladamsak@hotmail.com</a>
-                            <span class="tooltiptext-footer">E-Mail me</span>
-                        </div></div>
-
-                        <div class="copyright">
-                            <div class="tooltip-footer">
-                                <p id="cpyrt">&copy; <span id="year"></span> Thakshila Damsak</p>
-                                  <span class="tooltiptext-footer">Click to see site info.</span>
-                              </div>
-                        </div>
+                    <div class="footer" id="footer">
 
                         <script>
-                            var currentYear = new Date().getFullYear();
-                            document.getElementById("year").innerHTML = currentYear;
-                        </script>
+                            // Fetch the content of the footer HTML file
+                            fetch('shared-css/footer.html')
+                                .then(response => response.text())
+                                .then(html => {
+                                // Insert the footer HTML into the container
+                                document.getElementById('footer').innerHTML = html;
 
-                        <div id="site-info" class="hidden">
-                            <p><a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io">v8.1 </a>| <a href="https://thakshiladamsak.github.io/">beta</a> | This website is designed and developed by <span title="It's me"> Thakshila Damsak.</span> Also special thanks to <a href="https://www.kaveeshasandaruwan.tk" target="_blank" title="Visit his Website">KAVEESHA</a>.</p>
-                        </div>
-
-                        <script>
-                            const copyright = document.getElementById("cpyrt");
-                            const tooltip = document.getElementById("site-info");
-
-                            copyright.addEventListener("click", function() {
-                            if (tooltip.classList.contains("hidden")) {
-                                tooltip.classList.remove("hidden");
-                                tooltip.classList.add("show");
-                                setTimeout(function() {
-                                tooltip.classList.add("hidden");
-                                tooltip.classList.remove("show");
-                                }, 6000);
-                            } else {
-                                tooltip.classList.add("hidden");
-                                tooltip.classList.remove("show");
-                            }
-                            });
-                        </script>
-
+                                // Execute JavaScript code within the footer
+                                const scriptElements = Array.from(document.getElementById('footer').getElementsByTagName('script'));
+                                scriptElements.forEach(script => {
+                                    const newScript = document.createElement('script');
+                                    newScript.textContent = script.textContent;
+                                    document.body.appendChild(newScript);
+                                });
+                                });
+                          </script>
+                          
                     </div>
             </div>
         </div>

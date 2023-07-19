@@ -82,86 +82,26 @@
     </div>
 
  <!--Footer-->
- <div class="footer">
-    <div class="social-links">
-        <div class="social-link1" title="Youtube Channel">
-            <a href="https://www.youtube.com/channel/UCQmB571Z3-ECIbbf4vesKNw">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-        </div>
-        
-        <div class="social-link2" title="Facebook">
-            <a href="https://www.facebook.com/Thakshiladamsak" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-        </div>
-        
-        <div class="social-link3" title="Instagram">
-            <a href="https://www.instagram.com/thakshiladamsak/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-        </div>
-        
-        <div class="social-link4" title="Reddit">
-            <a href="https://www.reddit.com/u/thakshila_damsak" target="_blank">
-                <i class="fa-brands fa-reddit"></i>
-            </a>
-        </div>
-        
-        <div class="social-link5" title="Github">
-            <a href="https://www.github.com/thakshiladamsak" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        
-        <div class="social-link6" title="Discord Server">
-            <a href="https://discord.gg/YryrKZTQh7" target="_blank">
-                <i class="fa-brands fa-discord"></i>
-            </a>
-        </div>
-        
-        <div class="social-link7" title="Mastodon">
-            <a rel="me" href="https://mastodon.social/@thakshiladamsak" target ="blank">
-                <i class="fa-brands fa-mastodon"></i>
-            </a>
-        </div>
-
-    </div>
-    <div class="email">
-        <a href="mailto:thakshiladamsak@hotmail.com" target="_blank" title="E-Mail me">thakshiladamsak@hotmail.com</a>
-    </div>
-    <div class="copyright">
-            <p id="cpyrt">&copy; <span id="year"></span> Thakshila Damsak</p>
-    </div>
+ <di                    <div class="footer" id="footer">
 
     <script>
-        var currentYear = new Date().getFullYear();
-        document.getElementById("year").innerHTML = currentYear;
-    </script>
+        // Fetch the content of the footer HTML file
+        fetch('../shared-css/footer.html')
+            .then(response => response.text())
+            .then(html => {
+            // Insert the footer HTML into the container
+            document.getElementById('footer').innerHTML = html;
 
-    <div id="site-info" class="hidden">
-        <p><a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io">v8.1 </a>| <a href="https://thakshiladamsak.github.io/">beta</a> | This website is designed and developed by <span title="It's me"> Thakshila Damsak.</span> Also special thanks to <a href="https://www.kaveeshasandaruwan.tk" target="_blank" title="Visit his Website">KAVEESHA</a>.</p>
-    </div>
-
-    <script>
-        const copyright = document.getElementById("cpyrt");
-        const tooltip = document.getElementById("site-info");
-
-        copyright.addEventListener("click", function() {
-        if (tooltip.classList.contains("hidden")) {
-            tooltip.classList.remove("hidden");
-            tooltip.classList.add("show");
-            setTimeout(function() {
-            tooltip.classList.add("hidden");
-            tooltip.classList.remove("show");
-            }, 6000);
-        } else {
-            tooltip.classList.add("hidden");
-            tooltip.classList.remove("show");
-        }
-        });
-    </script>
-
+            // Execute JavaScript code within the footer
+            const scriptElements = Array.from(document.getElementById('footer').getElementsByTagName('script'));
+            scriptElements.forEach(script => {
+                const newScript = document.createElement('script');
+                newScript.textContent = script.textContent;
+                document.body.appendChild(newScript);
+            });
+            });
+      </script>
+      
 </div>
 
 <div class="mastodon-verify">

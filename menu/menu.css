@@ -213,6 +213,7 @@
     font-size: 15px;
     font-family: Open Sans;
     text-decoration: underline;
+
 }
 
 .show span {
@@ -255,3 +256,44 @@
         height: 80px;
     }
 }
+
+/* footer-tooltips */
+
+/* Tooltip container */
+.tooltip-footer {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .tooltip-footer .tooltiptext-footer {
+    visibility: hidden;
+    width: 100px;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -40px;
+    margin-bottom: 10px;
+    background-color: var(--footer-tooltip-footer-bg);
+    color: var(--footer-tooltip-footer-color);
+    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.116);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: Work Sans;
+
+    border-width: 1px;
+    border: Solid 1px rgba(138, 138, 138, 0.226);
+    border-style: solid;
+   
+    position: absolute;
+    z-index: 1;
+    
+    opacity: 0;
+    transition: 0.2s;
+  }
+  
+  .tooltip-footer:hover .tooltiptext-footer {
+    visibility: visible;
+    opacity: 1;
+} 

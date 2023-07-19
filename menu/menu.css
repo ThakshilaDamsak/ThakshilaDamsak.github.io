@@ -37,6 +37,7 @@
     margin-left: 20px;
     align-items: center;
     transition: 0.5s;
+    cursor:pointer;
 }
 
 .color-chooser {

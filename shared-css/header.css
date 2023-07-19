@@ -80,6 +80,8 @@ html{
 
     --ambient-opacity: 70%;
     --ambient-size: 105%;
+
+    --human-ambient-opacity: 100%;
   }
   
   @media (prefers-color-scheme: dark) {
@@ -138,6 +140,8 @@ html{
 
       --ambient-opacity: 50%;
       --ambient-size: 100%;
+
+      --human-ambient-opacity: 70%;
     }
   }
 
@@ -196,6 +200,8 @@ html{
 
     --ambient-opacity: 50%;
     --ambient-size: 100%;
+    
+    --human-ambient-opacity: 70%;
   }
 
 
@@ -256,6 +262,8 @@ html{
 
     --ambient-opacity: 70%;
     --ambient-size: 105%;
+
+    --human-ambient-opacity: 100%;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -313,6 +321,8 @@ html{
 
       --ambient-opacity: 50%;
       --ambient-size: 100%;
+      
+      --human-ambient-opacity: 70%;
     }
   }
   
@@ -374,6 +384,8 @@ html{
 
     --ambient-opacity: 0%;
     --ambient-size: 1%;
+
+    --human-ambient-opacity: 100%;
   }
 
 
@@ -433,6 +445,8 @@ html{
 
         --ambient-opacity: 0%;
         --ambient-size: 1%;
+
+        --human-ambient-opacity: 70%;
       }
   }
 
@@ -494,6 +508,8 @@ html{
 
     --ambient-opacity: 70%;
     --ambient-size: 105%;
+
+    --human-ambient-opacity: 100%;
   }
 
 
@@ -591,7 +607,7 @@ a {
 
 .header {
     background-color: var(--header-bg-color);
-    backdrop-filter: blur(15px) saturate(3);
+    backdrop-filter: blur(20px) saturate(3);
     position: fixed;
     width: 100%;
     z-index: 99;
@@ -769,6 +785,10 @@ a {
     border-radius: 10px;
     font-size: 15px;
     font-family: Work Sans;
+
+    border-width: 1px;
+    border: Solid 1px rgba(138, 138, 138, 0.226);
+    border-style: solid;
    
     position: absolute;
     z-index: 2;

@@ -2,7 +2,7 @@
 
 .footer {
     background-color: var(--footer-bg);
-    backdrop-filter: blur(15px) saturate(3);
+    backdrop-filter: blur(20px) saturate(3);
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -245,6 +245,10 @@
     border-radius: 10px;
     font-size: 15px;
     font-family: Work Sans;
+
+    border-width: 1px;
+    border: Solid 1px rgba(138, 138, 138, 0.226);
+    border-style: solid;
    
     position: absolute;
     z-index: 1;

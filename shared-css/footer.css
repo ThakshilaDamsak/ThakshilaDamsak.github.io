@@ -12,6 +12,7 @@
     transition: 1s;
     text-align: center;
     z-index: 99;
+    animation: footer-animation 1.5s ease;
 }
 
 .footer a {

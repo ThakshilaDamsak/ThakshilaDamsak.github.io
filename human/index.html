@@ -119,15 +119,15 @@
                                 <h2>Look! I have some emotions.</h2>
                                 <h2>That means I'm a human, right?</h2>
                                 <div class="human-page-list">
-                                    <p>Disclaimer: These are not my real emotions. These are emojis that mimic the emotions I guess I might have sometimes.
-                                    Alright, alright, there's no more to see. Go back, hurry!
+                                    <p>Disclaimer: These are not my real emotions. These are emojis that mimic the emotions I guess I might have sometimes.</p>
+                                    <p>Alright, alright, there's no more to see. Go back, hurry!
                                     Yes, go back to whatever crap you came from by clicking the button below.
                                     Come again later if you want.</p>
                             <div class="js">
 
                                 <span class="tooltip">
                                     <span>
-                                        <button onclick="history.back()" id="go-home">Go back</button>
+                                        <button onclick="goBack()" id="go-home">Go back</button>
                                     </span>
                                     <span class="tooltiptext">That's right. <b>Good human!</b></span>
                                 </span>
@@ -139,6 +139,18 @@
                         </div>
                     </div>
                 </div>
+
+                <script>
+                    function goBack() {
+                      if (history.length > 1) {
+                        history.back();
+                      } else {
+                        document.getElementById("go-home").innerHTML = "Close The tab!";
+                        window.close();
+                      }
+                    }
+                  </script>
+
 
                 <div class="page-content-ambient">
 

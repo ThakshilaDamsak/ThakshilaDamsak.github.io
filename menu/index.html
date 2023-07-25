@@ -31,7 +31,8 @@
     <link rel="stylesheet" type="text/css" href="../shared-css/header.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
 
-    <script src="../theme.js"></script>
+    <script src="/theme.js"></script>
+    <script src="/commons.js"></script>
     <noscript> <META HTTP-EQUIV="Refresh" CONTENT="0;URL=error/js-disabled/"> </noscript>
     
     <link rel="icon" href="../images/favicon2.svg" type="image/svg+xml">
@@ -42,6 +43,11 @@
 </head>
 <body>
 
+    <script>
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.className = theme;
+      </script>
+
     <div class="header">
         <div class="logo">
             <a href="../#"><img src="../images/logo-long-bk.svg" alt="Thakshila Damsak [logo]" title="Home"></a>
@@ -51,11 +57,12 @@
                     <div class="color-chooser-name"><span>Theme</span></div>
                     <div class="color-selector">
                     <select name="theme-select" id="theme-select">
-                      <option value="auto" title="Follows system color scheme">Pastel &diams;</option>
-                      <option value="light">Pastel Light</option>
-                      <option value="dark">Pastel Dark</option>
-                      <option value="charcoal" title="Follows system color scheme">Charcoal &diams;</option>
-                      <option value="cyberthenuk">THENUK</option>
+                        <option value="auto" title="Follows system color scheme">Pastel &diams;</option>
+                        <option value="light">Pastel Light</option>
+                        <option value="dark">Pastel Dark</option>
+                        <option value="charcoal" title="Follows system color scheme">Charcoal &diams;</option>
+                        <option value="aqua" title="Follows system color scheme">Aqua &diams;</option>
+                        <option value="cyberthenuk">THENUK</option>
                     </select>
                 </div>
                   </main>
@@ -72,35 +79,13 @@
     </div>
 
     <div class="home">
-        <div class="menus">
-            <a href="../#">Home</a>
-            <br>
-            <a href="../#about">About</a>
-            <br>
-            <a href="../#projects">Projects</a>
+        <div class="menus" id="menubar">
+
         </div>
     </div>
 
  <!--Footer-->
- <di                    <div class="footer" id="footer">
-
-    <script>
-        // Fetch the content of the footer HTML file
-        fetch('../shared-css/footer.html')
-            .then(response => response.text())
-            .then(html => {
-            // Insert the footer HTML into the container
-            document.getElementById('footer').innerHTML = html;
-
-            // Execute JavaScript code within the footer
-            const scriptElements = Array.from(document.getElementById('footer').getElementsByTagName('script'));
-            scriptElements.forEach(script => {
-                const newScript = document.createElement('script');
-                newScript.textContent = script.textContent;
-                document.body.appendChild(newScript);
-            });
-            });
-      </script>
+ <div class="footer" id="footer">
       
 </div>
 

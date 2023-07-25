@@ -44,7 +44,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="stylesheet" type="text/css" href="../shared-css/footer.css">
 
-    <script src="../theme.js"></script>
+    <script src="/theme.js"></script>
+    <script src="/commons.js"></script>
     <noscript> <META HTTP-EQUIV="Refresh" CONTENT="0;URL=../error/js-disabled/"> </noscript>
 
     <link rel="icon" href="../images/favicon2.svg" type="image/svg+xml">
@@ -53,6 +54,12 @@
 </head>
 
 <body>
+
+    <script>
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.className = theme;
+      </script>
+
     <div class="container">
 
         <div class="bg">
@@ -61,31 +68,31 @@
         </div>
 
         <!--Navigation bar-->
-        <div class="header">
+        <div class="header" id="header">
             <div class="logo">
-                <a href="../#"><img src="../images/logo-long-bk.svg" loading="eager" alt="Thakshila Damsak [logo]" ></a>
+                <a href="/#"><img src="/images/logo-long-bk.svg" loading="eager" alt="Thakshila Damsak [logo]" ></a>
+                
                 <div class="menu">
-                    <div class="links">
-                        <a href="../#">Home</a>
-                        <a href="../#about">About</a>
-                        <a href="../#projects">Projects</a>
+                    <div class="links" id="menubar">
+
                     </div>
                     <div class="color-chooser">
                         <main class="color-chooser-container">
                             <div class="color-chooser-name"><span>Theme</span></div>
                             <div class="color-selector">
                             <select name="theme-select" id="theme-select">
-                              <option value="auto" title="Follows system color scheme">Pastel &diams;</option>
-                              <option value="light">Pastel Light</option>
-                              <option value="dark">Pastel Dark</option>
-                              <option value="charcoal" title="Follows system color scheme">Charcoal &diams;</option>
-                              <option value="cyberthenuk">THENUK</option>
+                                <option value="auto" title="Follows system color scheme">Pastel &diams;</option>
+                                <option value="light">Pastel Light</option>
+                                <option value="dark">Pastel Dark</option>
+                                <option value="charcoal" title="Follows system color scheme">Charcoal &diams;</option>
+                                <option value="aqua" title="Follows system color scheme">Aqua &diams;</option>
+                                <option value="cyberthenuk">THENUK</option>
                             </select>
                         </div>
                           </main>
                     </div>
                     <div class="ham">
-                        <a href="../menu/">
+                        <a href="/menu/">
                             <i class="fa-solid fa-bars"></i>
                         </a>
                 </div>
@@ -93,6 +100,7 @@
                 </div>
             </div>
         </div>
+
 
 
 

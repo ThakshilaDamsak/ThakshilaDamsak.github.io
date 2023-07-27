@@ -8,6 +8,6 @@
 I hope you enjoy my website and find out what I like and do. You can contact me if you want to say something or ask something. Thanks for visiting!
 
 
-~<b title="The domain not working anymore due to freenom having some technical issues">www.thakshiladamsak.ml</b>~
+~<b title="The domain is not working anymore due to Freenom issues.">www.thakshiladamsak.ml</b>~
 <br>
-<b title="Visit this until main domain get fixed">https://thakshiladamsak.github.io</b>
+<b title="Visit this until the main domain gets fixed.">https://thakshiladamsak.github.io</b>

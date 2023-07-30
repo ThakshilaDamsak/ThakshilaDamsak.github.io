@@ -10,4 +10,4 @@ I hope you enjoy my website. You can contact me if you want to say something or 
 
 ~<b title="The domain is not working anymore due to Freenom issues.">www.thakshiladamsak.ml</b>~
 <br>
-<b title="Visit this until the main domain gets fixed.">https://thakshiladamsak.github.io</b>
+<b title="Visit this until the main domain gets fixed." target="_blank">https://thakshiladamsak.github.io</b>

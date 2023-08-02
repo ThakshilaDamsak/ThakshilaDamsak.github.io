@@ -60,7 +60,7 @@
     z-index: 2;
     margin-bottom: 2px;
     transition: 0.5s;
-    text-shadow: 1px 1px 10px rgba(0, 132, 255, 0.438);
+    text-shadow: 1px 1px 10px var(--heading-text-shadow);
 }
 
 .bio {
@@ -79,7 +79,7 @@
     z-index: 2;
     margin-top: -5px;
     transition: 0.5s;
-    text-shadow: 1px 1px 10px rgba(0, 204, 255, 0.692);
+    text-shadow: 1px 1px 10px var(--heading-text-shadow);
 }
 
 .heading svg {
@@ -103,7 +103,7 @@
     color: var(--home-heading-button-color);
     font-weight: lighter;
     transition: 0.2s;
-    box-shadow: 0px 0px 10px 1px rgba(0, 162, 255, 0.342);
+    box-shadow: 0px 0px 10px 1px var(--heading-text-shadow);
 }
 
 .heading button {
@@ -125,7 +125,7 @@
 }
 
 .heading button:hover {
-    box-shadow: 0px 3px 15px 0px rgba(0, 174, 255, 0.479);
+    box-shadow: 0px 5px 15px 0px var(--heading-text-shadow);
     color: var(--home-heading-button-color-hover);
     background: var(--home-heading-button-background-hover);
     transition:0.2s;
@@ -388,7 +388,7 @@
     padding: 5px;
     color: var(--home-projects-title-p-color);
     transition: 1s;
-    text-shadow: 1px 1px 10px rgba(5, 139, 0, 0.555);
+    text-shadow: 1px 1px 10px var(--projects-text-shadow);
 }
 
 .my-projects {
@@ -417,7 +417,7 @@
 }
 
 .project:hover {
-    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.13);
     background: var(--home-projects-project-hover-background);
     transition: 0.2s;
 }
@@ -434,7 +434,7 @@
 }
 
 .project-logo img {
-    width: 100%;
+    width: 60px;
     height: 100%;
     object-fit:contain;
     background-color: var(--home-projects-logo-img-bg);
@@ -442,6 +442,8 @@
     border-radius: 14px 0 0 14px;
     box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.027);
     padding: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
     margin: 0px;
     transition: 0.2s;
 }
@@ -451,6 +453,7 @@
     flex-direction: column;
     gap: 1px;
     transition: 1s;
+    overflow-y:auto;
 }
 
 .project-name {
@@ -459,7 +462,7 @@
     font-size: 20px;
     padding: 10px;
     padding-bottom: 0px;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.377);
+    text-shadow: 1px 1px 10px var(--projects-text-shadow);
     color: var(--home-projects-project-name-color);
     transition: 1s;
 }
@@ -471,7 +474,7 @@
     padding: 10px;
     padding-top: 0px;
     padding-right: 15px;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.377);
+    text-shadow: 1px 1px 10px var(--projects-text-shadow);
     color: var(--home-projects-project-text-color);
     transition: 1s;
 }

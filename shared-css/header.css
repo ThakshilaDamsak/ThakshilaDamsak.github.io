@@ -46,6 +46,7 @@ html{
     --home-heading-button-background-hover: rgb(0, 119, 255);
     --home-heading-svg-filter: none;
     --home-heading-svg-opacity: 40%;
+    --heading-text-shadow: rgba(0, 132, 255, 0.438);
 
     --home-about-bg: rgb(245, 235, 248);
     --home-about-p-a-color: rgb(107, 0, 102);
@@ -60,6 +61,7 @@ html{
     --home-projects-logo-img-bg: rgba(255, 255, 255, 0.377);
     --home-projects-project-name-color:rgb(0, 107, 32) ;
     --home-projects-project-text-color: rgb(0, 107, 9);
+    --projects-text-shadow: rgba(5, 139, 0, 0.555);
 
     --footer-bg: rgba(255, 255, 255, 0.795);
     --footer-a: rgba(0, 0, 0, 0.747);
@@ -106,6 +108,7 @@ html{
       --home-heading-button-background-hover: rgb(46, 171, 255);
       --home-heading-svg-filter: grayscale(100%);
       --home-heading-svg-opacity: 20%;
+      --heading-text-shadow: rgba(0, 162, 255, 0.281);
   
       --home-about-bg: rgb(104, 57, 100);
       --home-about-p-a-color: rgb(253, 180, 255);
@@ -120,6 +123,7 @@ html{
       --home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
       --home-projects-project-name-color: rgb(143, 255, 221);
       --home-projects-project-text-color: rgb(200, 255, 232);
+      --projects-text-shadow: rgba(5, 139, 0, 0.555);
 
       --footer-bg:rgba(78, 78, 78, 0.76);
       --footer-a:rgb(185, 185, 185);
@@ -166,6 +170,7 @@ html{
     --home-heading-button-background-hover: rgb(46, 171, 255);
     --home-heading-svg-filter: grayscale(100%);
     --home-heading-svg-opacity: 20%;
+    --heading-text-shadow: rgba(0, 162, 255, 0.281);
 
     --home-about-bg: rgb(104, 57, 100);
     --home-about-p-a-color: rgb(253, 180, 255);
@@ -180,6 +185,7 @@ html{
     --home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
     --home-projects-project-name-color: rgb(143, 255, 221);
     --home-projects-project-text-color: rgb(200, 255, 232);
+    --projects-text-shadow: rgba(5, 139, 0, 0.555);
 
     --footer-bg:rgba(78, 78, 78, 0.76);
     --footer-a:rgb(185, 185, 185);
@@ -228,6 +234,7 @@ html{
     --home-heading-button-background-hover: rgb(0, 119, 255);
     --home-heading-svg-filter: none;
     --home-heading-svg-opacity: 40%;
+    --heading-text-shadow: rgba(0, 132, 255, 0.438);
 
     --home-about-bg: var(--home-heading-background);
     --home-about-p-a-color: var(--home-name-color);
@@ -242,7 +249,7 @@ html{
     --home-projects-title-p-color: var(--home-name-color);
     --home-projects-project-name-color:var(--home-name-color) ;
     --home-projects-project-text-color: var(--home-name-color);
-
+    --projects-text-shadow: var(--heading-text-shadow);
 
     --footer-bg: rgba(255, 255, 255, 0.795);
     --footer-a: rgba(0, 0, 0, 0.747);
@@ -288,6 +295,7 @@ html{
       --home-heading-button-background-hover: rgb(46, 171, 255);
       --home-heading-svg-filter: grayscale(100%);
       --home-heading-svg-opacity: 20%;
+      --heading-text-shadow: rgba(0, 162, 255, 0.281);
   
       --home-about-bg: var(--home-heading-background);
       --home-about-p-a-color: var(--home-name-color);
@@ -297,6 +305,7 @@ html{
       --home-projects-title-p-color: var(--home-name-color);
       --home-projects-project-name-color:var(--home-name-color) ;
       --home-projects-project-text-color: var(--home-name-color);
+      --projects-text-shadow: var(--heading-text-shadow);
   
       --home-projects-title-bg: rgba(65, 138, 187, 0.329);
       --home-projects-project-bg: rgba(65, 138, 187, 0.329);
@@ -351,10 +360,11 @@ html{
     --home-heading-button-background-hover: rgb(0, 119, 255);
     --home-heading-svg-filter: none;
     --home-heading-svg-opacity: 40%;
+    --heading-text-shadow: rgba(0, 132, 255, 0.438);
 
-    --home-about-bg: rgb(245, 235, 248);
-    --home-about-p-a-color: rgb(107, 0, 102);
-    --home-about-span-color: rgb(185, 0, 176);
+    --home-about-bg: rgb(238, 238, 238);
+    --home-about-p-a-color: rgb(31, 31, 31);
+    --home-about-span-color: rgb(70, 70, 70);
     --home-umma-overlay-bg: rgb(255, 223, 255);
 
     --home-projects-bg: rgb(185, 248, 210);
@@ -365,6 +375,7 @@ html{
     --home-projects-logo-img-bg: rgba(255, 255, 255, 0.377);
     --home-projects-project-name-color:rgb(0, 107, 32) ;
     --home-projects-project-text-color: rgb(0, 107, 9);
+    --projects-text-shadow: rgba(5, 139, 0, 0.555);
 
     --footer-bg: rgba(255, 255, 255, 0.795);
     --footer-a: rgba(0, 0, 0, 0.747);
@@ -412,10 +423,11 @@ html{
         --home-heading-button-background-hover: rgb(155, 243, 255);
         --home-heading-svg-filter: grayscale(100%);
         --home-heading-svg-opacity: 20%;
+        --heading-text-shadow: rgba(0, 162, 255, 0.281);
     
-        --home-about-bg: rgb(104, 57, 100);
-        --home-about-p-a-color: rgb(253, 180, 255);
-        --home-about-span-color: rgb(254, 214, 255);
+        --home-about-bg: rgb(70, 70, 70);
+        --home-about-p-a-color: rgb(231, 231, 231);
+        --home-about-span-color: rgb(231, 231, 231);
         --home-umma-overlay-bg: rgb(117, 84, 117);
     
         --home-projects-bg: rgb(25, 90, 79);
@@ -426,6 +438,7 @@ html{
         --home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
         --home-projects-project-name-color: rgb(143, 255, 221);
         --home-projects-project-text-color: rgb(200, 255, 232);
+        --projects-text-shadow: rgba(5, 139, 0, 0.555);
     
         --footer-bg:rgba(78, 78, 78, 0.76);
         --footer-a:rgb(185, 185, 185);
@@ -474,6 +487,7 @@ html{
     --home-heading-button-background-hover: rgb(255, 115, 0);
     --home-heading-svg-filter: grayscale(100%);
     --home-heading-svg-opacity: 20%;
+    --heading-text-shadow: rgba(255, 145, 0, 0.438);
 
     --home-about-bg: var(--home-heading-background);
     --home-about-p-a-color: var(--home-name-color);
@@ -488,6 +502,7 @@ html{
     --home-projects-logo-img-bg: rgba(255, 255, 255, 0.377);
     --home-projects-project-name-color:var(--home-name-color) ;
     --home-projects-project-text-color: var(--home-name-color);
+    --projects-text-shadow: var(--heading-text-shadow);
 
     --footer-bg: var(--header-bg-color);
     --footer-a: rgba(0, 0, 0, 0.747);
@@ -521,37 +536,25 @@ html{
 ::-webkit-scrollbar {
   width: 10px;
   border: Solid 2px rgba(138, 138, 138, 0.226);
-
+  margin: -10px;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
   background: var(--home-about-bg);
   border: Solid 1px rgba(138, 138, 138, 0.226);
   transition: 0.2s;
-
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--home-about-p-a-color);  
   border: Solid 1px rgba(138, 138, 138, 0.226);
   transition: 0.2s;
-
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--home-about-span-color);
-  transition: 0.2s;
-}
-
-::-webkit-scrollbar-button {
-  background: var(--home-about-p-a-color);
-  border: Solid 1px rgba(138, 138, 138, 0.226);
-  transition: 0.2s;
-}
-
-::-webkit-scrollbar-button:hover {
-  background: var(--home-about-span-color);
-  border: Solid 1px rgba(138, 138, 138, 0.226);
   transition: 0.2s;
 }
 
@@ -739,8 +742,9 @@ a {
     margin: 2px;
 
     color: var(--header-links-a-color); 
-    background-color: var(--header-links-a-hover-bg-color); /* background color */
-    padding: 3px 5px;
+    background-color: var(--header-links-a-hover-bg-color);
+    padding: 3px 6px;
+    width: auto;
     border: Solid 1px rgba(138, 138, 138, 0.226);
     border-radius: 30px; 
     font-size: 13px; 

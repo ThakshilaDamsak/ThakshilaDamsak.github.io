@@ -301,9 +301,10 @@
 .about-about {
     text-align: justify;
     font-family: Work Sans;
-    padding: 20px;
+    padding: 15px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
     font-size: 18px;
     transition: 1s;
 }
@@ -313,16 +314,21 @@
     transition: 1s;
 }
 
-.about p, .about a {
+.about p, .about a{
     color: var(--home-about-p-a-color);
     text-shadow: 1px 1px 15px rgba(195, 0, 255, 0.418);
     transition: 1s;
 }
 
-.about span {
+.about span, .about u {
     color: var(--home-about-span-color);
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.377);
     transition: 1s;
+}
+
+.about u{
+    text-decoration-line:underline;
+    text-decoration-style:dotted;
 }
 
 .about a {

@@ -29,3 +29,27 @@ fetch('/shared-css/footer.html')
         document.body.appendChild(newScript);
     });
     });
+
+
+
+
+
+window.onload = function() {
+    // Get the toggle switch element
+    var toggle = document.getElementById("ambientToggle");
+
+    // Get the element to show or hide
+    var element = document.getElementById("ambient");
+    
+    // Add an event listener to the toggle switch
+    toggle.addEventListener("change", function() {
+      // Check if the toggle switch is checked or not
+      if (toggle.checked) {
+        // If checked, change the class of the element to show
+        element.className = "ambientShow";
+      } else {
+        // If not checked, change the class of the element to hide
+        element.className = "ambientHide";
+      }
+    });
+  };

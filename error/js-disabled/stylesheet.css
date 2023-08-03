@@ -104,6 +104,15 @@
     gap: 10px;
 }
 
+.js-disabled-page-description a{
+    color: var(--header-links-a-color);
+    transition: 0.5s;
+} 
+
+.js-disabled-page-description a:hover{
+    color: var(--header-links-a-hover-color);
+} 
+
 .js-disabled-page-description p{
     font-weight: bold;
     text-align: left;

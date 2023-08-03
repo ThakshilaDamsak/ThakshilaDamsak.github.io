@@ -176,7 +176,7 @@
 }
 
 .about-logo {
-    width:200%;
+    width:250%;
     height: auto;
     transition: 0.5s;
 }
@@ -645,23 +645,23 @@
 
 /* about responsive */
 
-@media screen and (max-width: 750px) {
-    .about-logo {
-        width: 250%;
-    }
-
-}
-
-@media screen and (max-width: 705px) {
+@media screen and (max-width: 790px) {
     .about-logo {
         width: 350%;
     }
+
 }
 
-@media screen and (max-width: 655px) {
+@media screen and (max-width: 720px) {
+    .about-logo {
+        width: 400%;
+    }
+}
+
+@media screen and (max-width: 715px) {
 
     .about-logo {
-        width: auto;
+        width: 350%;
     }
 
     .about-logo img {

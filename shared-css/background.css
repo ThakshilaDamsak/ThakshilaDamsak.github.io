@@ -9,7 +9,7 @@
 .background-img {
     background: var(--bg-image);
     background-size:110vw;
-    background-position-x: center;
+    background-position: center;
     background-repeat: repeat;
     z-index: -3;
     background-color: var(--bg-bg);

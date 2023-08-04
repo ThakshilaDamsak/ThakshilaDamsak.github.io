@@ -740,7 +740,6 @@ a {
     display: flex;
     text-align: center;
     margin: 2px;
-
     color: var(--header-links-a-color); 
     background-color: var(--header-links-a-hover-bg-color);
     padding: 3px 6px;
@@ -758,6 +757,10 @@ a {
 
 
 /* toggle from w3schools */
+
+.ambient-switch {
+  display: flex;
+}
 
 .ambient-toggle{
   margin: -3px;
@@ -777,6 +780,7 @@ a {
   width: 60px;
   height: 34px;
   scale: 0.7;
+  transition: 1s;
 }
 
 /* Hide default HTML checkbox */
@@ -870,7 +874,52 @@ input:checked + .slider:before {
         font-size: 11px;
     }
 
+    .switch {
+      scale: 0.6;
+    }
+
+    .color-chooser-container {
+      margin-left: 0px;
+    }
+
+
 }
+
+
+@media screen and (max-width: 340px) {
+  .ham {
+    padding-left: 10px;
+  }
+
+  .switch {
+    scale: 0.5;
+    padding: -20px;
+  }
+
+  .color-chooser-name span{
+    font-size: 11px;
+}
+
+.color-selector select{
+    font-size: 8px;
+}
+
+.ambient-toggle {
+  margin: -8px;
+}
+}
+
+@media screen and (max-width: 310px) {
+
+  .ambient-switch {
+    display: none;
+  }
+
+}
+
+
+
+
   /* tooltips */
 
 /* Tooltip container */

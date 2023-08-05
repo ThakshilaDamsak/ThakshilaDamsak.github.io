@@ -4,6 +4,7 @@
 - I used HTML and CSS to make the website. **I did not use any frameworks or templates.**
 - **I designed the images and icons by myself** in Inkscape. But I used Font Awesome for the social media and hamburger menu icons.
 - However, **I got help from Bing chat and ChatGPT to write the JavaScript code.**
+- Also, **I got the [Tooltip](https://www.w3schools.com/css/css_tooltip.asp) and [Toggle Switch](https://www.w3schools.com/howto/howto_css_switch.asp) from w3schools.**
 
 I hope you enjoy my website. You can contact me if you want to say something or ask something. Thanks for visiting!
 

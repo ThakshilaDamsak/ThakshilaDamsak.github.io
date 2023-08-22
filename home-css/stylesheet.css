@@ -705,3 +705,7 @@
 
 
 }
+
+.no-display {
+    opacity: 0%;
+}

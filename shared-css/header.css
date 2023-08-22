@@ -683,6 +683,7 @@ a {
 .logo img {
     padding-top: 3px;
     width: 130px;
+    height: auto;
     justify-content: left;
     object-fit:contain;
     opacity: var(--logo-opacity);

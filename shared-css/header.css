@@ -550,7 +550,7 @@ html{
   background: var(--home-about-p-a-color);  
   border: Solid 1px rgba(138, 138, 138, 0.226);
   transition: 0.2s;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

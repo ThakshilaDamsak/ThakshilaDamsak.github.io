@@ -52,6 +52,13 @@
     justify-content: center;
 }
 
+.emoji-effect {
+    position: absolute;
+    filter: blur(40px);
+    z-index: -1;
+    opacity: var(--human-ambient-opacity);
+}
+
 .human-page {
     align-items: center;
     justify-content: center;
@@ -254,15 +261,4 @@
         margin-left: 0px;
         margin-right: 0px;
     }
-}
-
-.page-content-ambient {
-    margin-top: 70px;
-    margin-bottom: 40px;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    filter: blur(40px);
-    z-index: -1;
-    opacity: var(--human-ambient-opacity);
 }

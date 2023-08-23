@@ -48,14 +48,14 @@ html{
     --home-heading-svg-opacity: 40%;
     --heading-text-shadow: rgba(0, 132, 255, 0.438);
 
-    --home-about-bg: rgb(245, 235, 248);
+    --home-about-bg: rgb(247, 239, 250);
     --home-about-p-a-color: rgb(107, 0, 102);
     --home-about-span-color: rgb(185, 0, 176);
     --home-umma-overlay-bg: rgb(255, 223, 255);
     --home-about-text-shadow : rgba(195, 0, 255, 0.418);
     --home-about-span-shadow : rgba(0, 0, 0, 0.377);
 
-    --home-projects-bg: rgb(185, 248, 210);
+    --home-projects-bg: rgb(202, 253, 223);
     --home-projects-title-bg: rgba(255, 255, 255, 0.63);
     --home-projects-title-p-color: rgb(0, 107, 66);
     --home-projects-project-bg: rgba(255, 255, 255, 0.473);

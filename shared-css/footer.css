@@ -18,7 +18,7 @@
     text-decoration: none;
     color: var(--footer-a);
     font-size: 20px;
-    transition: 1s;
+    transition: .2s;
 }
 
 .social-links {
@@ -29,9 +29,12 @@
     padding: 7px 0;
 }
 
+.social-links i{
+    transition: 0.2s;
+}
+
 .social-links i:hover, .email a:hover {
     color: var(--footer-social-links-i-hover);
-    transition: 0.2s;
 }
 
 .email {

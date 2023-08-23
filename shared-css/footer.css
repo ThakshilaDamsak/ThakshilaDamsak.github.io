@@ -29,10 +29,6 @@
     padding: 7px 0;
 }
 
-.social-links i {
-    transition: 1s;
-}
-
 .social-links i:hover, .email a:hover {
     color: var(--footer-social-links-i-hover);
     transition: 0.2s;

@@ -52,6 +52,8 @@ html{
     --home-about-p-a-color: rgb(107, 0, 102);
     --home-about-span-color: rgb(185, 0, 176);
     --home-umma-overlay-bg: rgb(255, 223, 255);
+    --home-about-text-shadow : rgba(195, 0, 255, 0.418);
+    --home-about-span-shadow : rgba(0, 0, 0, 0.377);
 
     --home-projects-bg: rgb(185, 248, 210);
     --home-projects-title-bg: rgba(255, 255, 255, 0.63);
@@ -73,15 +75,16 @@ html{
     --footer-tooltip-footer-bg: rgb(247, 247, 247);
     --footer-show-span:rgb(114, 114, 114);
 
-    --bg-bg:rgba(255, 255, 255, 0.671);
+    --bg-bg:rgba(243, 243, 243, 0.671);
     --bg-backdrop-filter: 0%;
 
     --home-bg: linear-gradient(to left bottom, rgba(242, 253, 255, 0.6), rgba(238, 248, 255, 0.6));
     --home-a:black;
     --error-about-p-a-color: rgb(107, 0, 102);
 
-    --ambient-opacity: 70%;
-    --ambient-size: 105%;
+    --home-heading-shadow:rgba(0, 150, 187, 0.192);
+    --home-about-shadow:rgba(187, 0, 171, 0.192);
+    --home-projects-shadow:rgba(0, 187, 93, 0.24);
 
     --human-ambient-opacity: 100%;
   }
@@ -114,7 +117,8 @@ html{
       --home-about-p-a-color: rgb(253, 180, 255);
       --home-about-span-color: rgb(254, 214, 255);
       --home-umma-overlay-bg: rgb(117, 84, 117);
-  
+      --home-about-span-shadow : var(--home-about-text-shadow);
+
       --home-projects-bg: rgb(25, 90, 79);
       --home-projects-title-bg: rgba(35, 173, 132, 0.329);
       --home-projects-title-p-color: rgb(129, 255, 217);
@@ -141,9 +145,6 @@ html{
       --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
       --home-a:rgb(163, 175, 177);
       --error-about-p-a-color: rgb(253, 180, 255);
-
-      --ambient-opacity: 50%;
-      --ambient-size: 100%;
 
       --human-ambient-opacity: 70%;
     }
@@ -176,6 +177,7 @@ html{
     --home-about-p-a-color: rgb(253, 180, 255);
     --home-about-span-color: rgb(254, 214, 255);
     --home-umma-overlay-bg: rgb(117, 84, 117);
+    --home-about-span-shadow : var(--home-about-text-shadow);
 
     --home-projects-bg: rgb(25, 90, 79);
     --home-projects-title-bg: rgba(35, 173, 132, 0.329);
@@ -203,9 +205,6 @@ html{
     --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
     --home-a:rgb(163, 175, 177);
     --error-about-p-a-color: rgb(253, 180, 255);
-
-    --ambient-opacity: 50%;
-    --ambient-size: 100%;
     
     --human-ambient-opacity: 70%;
   }
@@ -213,90 +212,29 @@ html{
 
   :root.aqua {
 
-    --root-grayscale: 0%;
-
-    --bg-image:url(../images/background-4.svg);
-    --header-bg-color: rgba(255, 255, 255, 0.795);
-    --header-a: black;
-    --header-links-a-color: rgb(107, 107, 107);
-    --header-links-a-hover-color: rgb(0, 0, 0);
-    --header-links-a-bg-color: rgba(0, 46, 49, 0);
-    --header-links-a-hover-bg-color:rgba(68, 68, 68, 0.048);
-    --logo-filter: 0%;
-    --logo-opacity: 65%;
-
-    --home-heading-background: rgb(225, 245, 247);
-    --home-name-color: rgb(6, 143, 197);
-    --home-bio-color: rgb(85, 164, 255);
-    --home-heading-button-color: rgb(218, 238, 255);
-    --home-heading-button-background: rgb(39, 173, 226);
-    --home-heading-button-color-hover: white;
-    --home-heading-button-background-hover: rgb(0, 119, 255);
-    --home-heading-svg-filter: none;
-    --home-heading-svg-opacity: 40%;
-    --heading-text-shadow: rgba(0, 132, 255, 0.438);
+    --home-bio-color: rgb(108, 156, 201);
 
     --home-about-bg: var(--home-heading-background);
     --home-about-p-a-color: var(--home-name-color);
     --home-about-span-color: var(--home-bio-color);
     --home-umma-overlay-bg: var(--home-heading-background);
+    --home-about-text-shadow : var(--heading-text-shadow);
 
-    --home-projects-title-bg: rgba(255, 255, 255, 0.63);
-    --home-projects-project-bg: rgba(255, 255, 255, 0.473);
-    --home-projects-project-hover-background: rgba(255, 255, 255, 0.589);
-    --home-projects-logo-img-bg: rgba(255, 255, 255, 0.377);
     --home-projects-bg: var(--home-heading-background);
     --home-projects-title-p-color: var(--home-name-color);
     --home-projects-project-name-color:var(--home-name-color) ;
     --home-projects-project-text-color: var(--home-name-color);
     --projects-text-shadow: var(--heading-text-shadow);
+    --home-about-span-shadow : var(--heading-text-shadow);
 
-    --footer-bg: rgba(255, 255, 255, 0.795);
-    --footer-a: rgba(0, 0, 0, 0.747);
-    --footer-social-links-i-hover: rgb(0, 0, 0);
-    --footer-copyright-p:rgba(0, 40, 85, 0.747);
-    --footer-site-info-color:rgb(88, 88, 88) ;
-    --footer-site-info-color-bg:rgb(255, 255, 255);
-    --footer-tooltip-footer-color: rgb(102, 102, 102);
-    --footer-tooltip-footer-bg: rgb(247, 247, 247);
-    --footer-show-span:rgb(114, 114, 114);
-
-    --bg-bg:rgba(255, 255, 255, 0.671);
-    --bg-backdrop-filter: 0%;
-
-    --home-bg: linear-gradient(to left bottom, rgba(242, 253, 255, 0.6), rgba(238, 248, 255, 0.6));
-    --home-a:black;
-
-    --ambient-opacity: 70%;
-    --ambient-size: 105%;
-
-    --human-ambient-opacity: 100%;
+    --home-about-shadow:var(--home-heading-shadow);
+    --home-projects-shadow:var(--home-heading-shadow);
   }
 
   @media (prefers-color-scheme: dark) {
     :root.aqua {
-      --root-grayscale: 0%;
-
-      --bg-image:url(../images/background-4.svg);
-      --header-bg-color: rgba(78, 78, 78, 0.76);
-      --header-a: rgb(185, 185, 185);
-      --header-links-a-color: rgb(185, 185, 185);
-      --header-links-a-hover-color:rgb(255, 255, 255);
-      --header-links-a-hover-bg-color:rgba(212, 212, 212, 0.11);
-      --logo-filter: 100%;
-      --logo-opacity: 70%;
-      
-      --home-heading-background: rgb(34, 80, 99);
-      --home-name-color: rgb(89, 189, 255);
       --home-bio-color: rgb(91, 203, 255);
-      --home-heading-button-color: rgb(35, 83, 105);
-      --home-heading-button-background: rgb(85, 198, 255);
-      --home-heading-button-color-hover: rgb(0, 0, 0);
-      --home-heading-button-background-hover: rgb(46, 171, 255);
-      --home-heading-svg-filter: grayscale(100%);
-      --home-heading-svg-opacity: 20%;
-      --heading-text-shadow: rgba(0, 162, 255, 0.281);
-  
+
       --home-about-bg: var(--home-heading-background);
       --home-about-p-a-color: var(--home-name-color);
       --home-about-span-color: var(--home-bio-color);
@@ -306,160 +244,19 @@ html{
       --home-projects-project-name-color:var(--home-name-color) ;
       --home-projects-project-text-color: var(--home-name-color);
       --projects-text-shadow: var(--heading-text-shadow);
-  
-      --home-projects-title-bg: rgba(65, 138, 187, 0.329);
-      --home-projects-project-bg: rgba(65, 138, 187, 0.329);
-      --home-projects-project-hover-background: rgba(79, 170, 255, 0.253);
-      --home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
-
-      --footer-bg:rgba(78, 78, 78, 0.76);
-      --footer-a:rgb(185, 185, 185);
-      --footer-social-links-i-hover:rgb(255, 255, 255);
-      --footer-copyright-p:rgb(185, 185, 185);
-      --footer-site-info-color:rgb(194, 194, 194);
-      --footer-site-info-color-bg:rgb(56, 56, 56);
-      --footer-tooltip-footer-color:rgb(212, 212, 212);
-      --footer-tooltip-footer-bg:rgb(68, 68, 68);
-      --footer-show-span:rgb(230, 230, 230);
-
-      --bg-bg:rgba(31, 31, 31, 0.753);
-      --bg-backdrop-filter:70%;
-
-      --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
-      --home-a:rgb(163, 175, 177);
-
-      --ambient-opacity: 50%;
-      --ambient-size: 100%;
-      
-      --human-ambient-opacity: 70%;
     }
   }
   
 
 
   :root.charcoal{
-
     --root-grayscale: 100%;
-
-    --bg-image:url(../images/background-4.svg);
-    --header-bg-color: rgba(255, 255, 255, 0.795);
-    --header-a: black;
-    --header-links-a-color: rgb(107, 107, 107);
-    --header-links-a-hover-color: rgb(0, 0, 0);
-    --header-links-a-bg-color: rgba(0, 46, 49, 0);
-    --header-links-a-hover-bg-color:rgba(68, 68, 68, 0.048);
-    --logo-filter: 0%;
-    --logo-opacity: 65%;
-
-    --home-heading-background: rgb(225, 245, 247);
-    --home-name-color: rgb(6, 143, 197);
-    --home-bio-color: rgb(122, 181, 236);
-    --home-heading-button-color: rgb(218, 238, 255);
-    --home-heading-button-background: rgb(39, 173, 226);
-    --home-heading-button-color-hover: white;
-    --home-heading-button-background-hover: rgb(0, 119, 255);
-    --home-heading-svg-filter: none;
-    --home-heading-svg-opacity: 40%;
-    --heading-text-shadow: rgba(0, 132, 255, 0.438);
-
-    --home-about-bg: rgb(238, 238, 238);
-    --home-about-p-a-color: rgb(31, 31, 31);
-    --home-about-span-color: rgb(70, 70, 70);
-    --home-umma-overlay-bg: rgb(255, 223, 255);
-
-    --home-projects-bg: rgb(185, 248, 210);
-    --home-projects-title-bg: rgba(255, 255, 255, 0.63);
-    --home-projects-title-p-color: rgb(0, 107, 66);
-    --home-projects-project-bg: rgba(255, 255, 255, 0.473);
-    --home-projects-project-hover-background: rgba(255, 255, 255, 0.589);
-    --home-projects-logo-img-bg: rgba(255, 255, 255, 0.377);
-    --home-projects-project-name-color:rgb(0, 107, 32) ;
-    --home-projects-project-text-color: rgb(0, 107, 9);
-    --projects-text-shadow: rgba(5, 139, 0, 0.555);
-
-    --footer-bg: rgba(255, 255, 255, 0.795);
-    --footer-a: rgba(0, 0, 0, 0.747);
-    --footer-social-links-i-hover: rgb(0, 0, 0);
-    --footer-copyright-p:rgba(0, 40, 85, 0.747);
-    --footer-site-info-color:rgb(88, 88, 88) ;
-    --footer-site-info-color-bg:rgb(255, 255, 255);
-    --footer-tooltip-footer-color: rgb(102, 102, 102);
-    --footer-tooltip-footer-bg: rgb(247, 247, 247);
-    --footer-show-span:rgb(114, 114, 114);
-
-    --bg-bg:rgba(245, 248, 248, 0.671);
-    --bg-backdrop-filter: 0%;
-
-    --home-bg: linear-gradient(to left bottom, rgba(242, 253, 255, 0.6), rgba(238, 248, 255, 0.6));
-    --home-a:black;
-
-    --ambient-opacity: 0%;
-    --ambient-size: 1%;
-
-    --human-ambient-opacity: 100%;
   }
 
 
   @media (prefers-color-scheme: dark) {
     :root.charcoal{
-
-        --bg-image:url(../images/background-4.svg);
         --root-grayscale: 100%;
-    
-        --header-bg-color: rgba(78, 78, 78, 0.76);
-        --header-a: rgb(185, 185, 185);
-        --header-links-a-color: rgb(185, 185, 185);
-        --header-links-a-hover-color:rgb(255, 255, 255);
-        --header-links-a-hover-bg-color:rgba(212, 212, 212, 0.11);
-        --logo-filter: 100%;
-        --logo-opacity: 70%;
-    
-        --home-heading-background: rgb(38, 81, 87);
-        --home-name-color: rgb(138, 218, 255);
-        --home-bio-color: rgb(118, 211, 255);
-        --home-heading-button-color: rgb(35, 83, 105);
-        --home-heading-button-background: rgb(125, 212, 255);
-        --home-heading-button-color-hover: rgb(0, 0, 0);
-        --home-heading-button-background-hover: rgb(155, 243, 255);
-        --home-heading-svg-filter: grayscale(100%);
-        --home-heading-svg-opacity: 20%;
-        --heading-text-shadow: rgba(0, 162, 255, 0.281);
-    
-        --home-about-bg: rgb(70, 70, 70);
-        --home-about-p-a-color: rgb(231, 231, 231);
-        --home-about-span-color: rgb(231, 231, 231);
-        --home-umma-overlay-bg: rgb(117, 84, 117);
-    
-        --home-projects-bg: rgb(25, 90, 79);
-        --home-projects-title-bg: rgba(35, 173, 132, 0.329);
-        --home-projects-title-p-color: rgb(129, 255, 217);
-        --home-projects-project-bg: rgba(79, 255, 188, 0.171);
-        --home-projects-project-hover-background: rgba(79, 255, 188, 0.253);
-        --home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
-        --home-projects-project-name-color: rgb(143, 255, 221);
-        --home-projects-project-text-color: rgb(200, 255, 232);
-        --projects-text-shadow: rgba(5, 139, 0, 0.555);
-    
-        --footer-bg:rgba(78, 78, 78, 0.76);
-        --footer-a:rgb(185, 185, 185);
-        --footer-social-links-i-hover:rgb(255, 255, 255);
-        --footer-copyright-p:rgb(185, 185, 185);
-        --footer-site-info-color:rgb(194, 194, 194);
-        --footer-site-info-color-bg:rgb(56, 56, 56);
-        --footer-tooltip-footer-color:rgb(212, 212, 212);
-        --footer-tooltip-footer-bg:rgb(68, 68, 68);
-        --footer-show-span:rgb(230, 230, 230);
-    
-        --bg-bg:rgba(31, 31, 31, 0.753);
-        --bg-backdrop-filter:70%;
-    
-        --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
-        --home-a:rgb(163, 175, 177);
-
-        --ambient-opacity: 0%;
-        --ambient-size: 1%;
-
-        --human-ambient-opacity: 70%;
       }
   }
 
@@ -521,8 +318,9 @@ html{
     --home-a:black;
     --error-about-p-a-color: rgb(107, 0, 102);
 
-    --ambient-opacity: 70%;
-    --ambient-size: 105%;
+    --home-heading-shadow:rgba(212, 138, 0, 0.199);
+    --home-about-shadow:var(--home-heading-shadow);
+    --home-projects-shadow:var(--home-heading-shadow);
 
     --human-ambient-opacity: 100%;
   }

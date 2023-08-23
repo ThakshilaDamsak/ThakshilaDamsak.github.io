@@ -244,6 +244,11 @@ html{
       --home-projects-project-name-color:var(--home-name-color) ;
       --home-projects-project-text-color: var(--home-name-color);
       --projects-text-shadow: var(--heading-text-shadow);
+
+      --home-projects-title-bg: rgba(65, 138, 187, 0.329);
+      --home-projects-project-bg: rgba(65, 138, 187, 0.329);
+      --home-projects-project-hover-background: rgba(79, 170, 255, 0.253);
+      --home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
     }
   }
   

@@ -187,21 +187,21 @@
 
 /* Ummaaaa! */
 
-.about-title span {
+.about-title b {
     position: absolute;
     padding-left: 8px;
     transition: 1s;
     animation: heartBeat 2s ease infinite;
 }
 
-.about-title span:hover {
+.about-title b:hover {
     filter: invert(100%);
     transition: 0.5s;
     animation: heartBeat 2s ease infinite;
 }
 
 @keyframes heartBeat {
-    0%, 20% { transform: scale(1);   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.295);}
+    0%, 20% { transform: scale(1);   text-shadow: 1px 1px 15px var(--home-about-text-shadow);}
     70% { transform: scale(1.2);     text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.295);}
   }
 
@@ -308,8 +308,8 @@
 }
 
 .about u{
-    text-decoration-line:underline;
     text-decoration-style:dotted;
+    text-decoration-thickness: 2px;
 }
 
 .about a {

@@ -200,7 +200,6 @@
     flex-direction: column;
     row-gap: 4px;
     cursor: pointer;
-    animation: opacy 1s forwards;
 }
 
 .ham div {

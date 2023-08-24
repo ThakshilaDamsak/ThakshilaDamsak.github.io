@@ -29,11 +29,11 @@
     padding: 7px 0;
 }
 
-.social-links i{
+.social-links iconify-icon{
     transition: 0.2s;
 }
 
-.social-links i:hover, .email a:hover {
+.social-links iconify-icon:hover, .email a:hover {
     color: var(--footer-social-links-i-hover);
 }
 

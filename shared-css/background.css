@@ -24,10 +24,23 @@
     animation: bg-blur-animation 3s ease;
 }
 
+@media screen and (max-width: 750px) {
+    .background-img {
+        background-size:150vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .background-img {
+        background-size:250vw;
+    }
+}
+
+
 @keyframes bg-blur-animation {
-    0% {opacity: 0; filter: blur(20px);}
-    70% {opacity: 1; filter: blur(10px); }
-    100% {opacity: 1; filter: blur(0px);}
+    0% {opacity: 0; filter: blur(10px); background-size: 115vw;}
+    70% {opacity: 0; filter: blur(10px); background-size: 115vw;}
+    100% {opacity: 1; filter: blur(0px); background-size: 110vw;}
 }
 
 .page-stuff {

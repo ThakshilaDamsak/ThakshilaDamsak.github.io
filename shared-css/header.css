@@ -45,7 +45,7 @@ html{
     --home-heading-button-color-hover: white;
     --home-heading-button-background-hover: rgb(0, 119, 255);
     --home-heading-svg-filter: none;
-    --home-heading-svg-opacity: 40%;
+    --home-heading-svg-opacity: 35%;
     --heading-text-shadow: rgba(0, 132, 255, 0.438);
 
     --home-about-bg: rgb(247, 239, 250);
@@ -288,7 +288,7 @@ html{
     --home-heading-button-color-hover: white;
     --home-heading-button-background-hover: rgb(255, 115, 0);
     --home-heading-svg-filter: grayscale(100%);
-    --home-heading-svg-opacity: 20%;
+    --home-heading-svg-opacity: 35%;
     --heading-text-shadow: rgba(255, 145, 0, 0.438);
 
     --home-about-bg: var(--home-heading-background);
@@ -807,3 +807,7 @@ input:checked + .slider:before {
     display: none;
 }
 
+iconify-icon {
+  margin-bottom: -2px;
+  scale: 1.1;
+}

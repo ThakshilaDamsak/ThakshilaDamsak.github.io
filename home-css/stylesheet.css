@@ -6,6 +6,7 @@
 .h-card {
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .heading {
@@ -414,6 +415,15 @@
     cursor:pointer;
 }
 
+.project-ambient {
+    position: absolute;
+    filter: blur(10px) brightness(.9) saturate(3) opacity(.6);
+    z-index: -1;
+}
+
+.project-ambient:hover{
+    filter: blur(2px) saturate(1) opacity(1);
+}
 
 .project-logo {
     height: auto;

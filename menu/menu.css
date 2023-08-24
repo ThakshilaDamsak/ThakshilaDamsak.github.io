@@ -93,7 +93,7 @@
     margin-right: 20px;
     column-gap: 15px;
     padding: 10px 0;
-    animation: down-up 1s forwards;
+    animation: down-up .5s forwards;
 }
 
 .social-links i {
@@ -127,7 +127,6 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
-    animation: up-down 0.7s forwards;
     padding-left: 0px;
     transition: 1s;
 }

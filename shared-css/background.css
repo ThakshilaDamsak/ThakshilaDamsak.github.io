@@ -38,9 +38,9 @@
 
 
 @keyframes bg-blur-animation {
-    0% {opacity: 0; filter: blur(10px); background-size: 115vw;}
-    70% {opacity: 0; filter: blur(10px); background-size: 115vw;}
-    100% {opacity: 1; filter: blur(0px); background-size: 110vw;}
+    0% {opacity: 0; filter: blur(10px); scale:1.08;}
+    70% {opacity: 0; filter: blur(10px); scale:1.08;}
+    100% {opacity: 1; filter: blur(0px); scale:1;}
 }
 
 .page-stuff {

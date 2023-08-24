@@ -351,7 +351,7 @@
 .projects-title-bg {
     background: var(--home-projects-title-bg);
     border-radius: 24px 24px 0 0;
-    width: 534px;
+    width:100%;
     display: flex;
     flex-grow: 1;
     transition: 1s;
@@ -398,8 +398,8 @@
     font-family: Open Sans;
     border: Solid 1px rgba(138, 138, 138, 0.226);
     transition: 1s;
-    width: 250px;
-    height: 70px;
+    width: 280px;
+    height: 80px;
     box-shadow: none;
     transition: 0.7s;
 }
@@ -416,24 +416,23 @@
 
 
 .project-logo {
-    width:75px;
     height: auto;
     transition: 0.5s;
+    background-color: var(--home-projects-logo-img-bg);
+    height: 100%;
+    object-fit:contain;
+    object-position:center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 14px 0 0 14px;
+    box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.027);
+    transition: 0.2s;
 }
 
 .project-logo img {
-    width: 60px;
-    height: 100%;
-    object-fit:contain;
-    background-color: var(--home-projects-logo-img-bg);
-    object-position:center;
-    border-radius: 14px 0 0 14px;
-    box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.027);
-    padding: 0px;
-    padding-left: 2px;
-    padding-right: 2px;
-    margin: 0px;
-    transition: 0.2s;
+    width: 70px;
+    padding: 5px;
+
 }
 
 .project-content {
@@ -442,14 +441,18 @@
     gap: 1px;
     transition: 1s;
     overflow-y:auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .project-name {
     display: flex;
     font-weight: bold;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 0px;
+    padding-top: auto;
     text-shadow: 1px 1px 10px var(--projects-text-shadow);
     color: var(--home-projects-project-name-color);
     transition: 1s;
@@ -459,21 +462,18 @@
     display: flex;
     font-weight: 100;
     font-size: 15px;
-    padding: 10px;
-    padding-top: 0px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-top: auto;
     text-shadow: 1px 1px 10px var(--projects-text-shadow);
     color: var(--home-projects-project-text-color);
     transition: 1s;
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 660px) {
     .my-projects {
         flex-direction: column;
-    }
-
-    .projects-title-bg {
-        width: 272px;
     }
 }
 

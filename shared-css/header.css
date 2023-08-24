@@ -334,6 +334,7 @@ html{
   :root {
     filter: grayscale(var(--root-grayscale));
     transition: 1s;
+    overflow-x: hidden;
   }
 
 ::-webkit-scrollbar {
@@ -735,10 +736,10 @@ input:checked + .slider:before {
   /* Tooltip text */
   .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 150px;
     bottom: 100%;
     left: 50%; 
-    margin-left: -70px;
+    margin-left: -85px;
     margin-bottom: 7px;
     background-color: var(--footer-tooltip-footer-bg);
     color: var(--footer-tooltip-footer-color);

@@ -1,6 +1,7 @@
 .page-content {
     padding-top: 28vh;
     padding-bottom: 28vh;
+    transform: translateZ(0)
 }
 
 .h-card {

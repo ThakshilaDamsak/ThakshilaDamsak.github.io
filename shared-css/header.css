@@ -337,6 +337,11 @@ html{
     overflow-x: hidden;
   }
 
+
+  body {
+    background: white;
+  }
+
 ::-webkit-scrollbar {
   width: 10px;
   border: Solid 2px rgba(138, 138, 138, 0.226);

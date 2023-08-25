@@ -1,7 +1,14 @@
 .page-content {
     padding-top: 28vh;
     padding-bottom: 28vh;
-    transform: translateZ(0)
+    transform: translateZ(0);
+}
+
+@keyframes element-blur-animation {
+    0% {opacity: 0; filter: blur(5px); scale:1.08;}
+    10% {opacity: 0; filter: blur(5px); scale:1.08;}
+    90% {opacity: 1; filter: blur(0px); scale:1;}
+    100% {}
 }
 
 .h-card {
@@ -20,7 +27,7 @@
     background: var(--home-heading-background);
     border-radius: 25px;
     margin: auto;
-    animation: site-zoom-animation 1s forwards;
+    animation: element-blur-animation .6s forwards;
     transition: 0.5s;
     border-style: solid;
     border-width: 1px;
@@ -32,7 +39,7 @@
 .name {
     grid-area: name;
     padding: 5px 10px;
-    animation: site-tab-animation 0.5s ease;
+    animation: element-blur-animation 1s forwards;
     font-family: Open Sans;
     font-size: 60px;
     font-weight:700;
@@ -51,7 +58,7 @@
     grid-area: bio;
     border-radius: 20px;
     width: auto;
-    animation: site-tab-animation 0.7s ease;
+    animation: element-blur-animation 1s forwards;
     font-family: Open Sans;
     font-size: 30px;
     font-weight: lighter;
@@ -117,7 +124,7 @@
     justify-content: center;
     padding-right: 0px;
     margin-right: 90px;
-    animation: site-bat-animation 0.6s forwards;
+    animation: element-blur-animation 1s forwards;
     z-index: 2;
     transition: 0.2s;
 }
@@ -135,7 +142,7 @@
     flex-direction: row;
     background: var(--home-about-bg);
     border-radius: 25px;
-    animation: site-tab-animation 0.5s forwards;
+    animation: element-blur-animation .6s forwards;
     font-family: Open Sans;
     margin-top: 50vh;
     border: Solid 1px rgba(138, 138, 138, 0.226);
@@ -154,7 +161,7 @@
     transition: 1s;
     width: auto;
     justify-content: center;
-    
+    animation: element-blur-animation 1s forwards;    
 }
 
 .about-logo {
@@ -184,6 +191,7 @@
     padding-left: 20px;
     padding-bottom: 0px;
     padding-top: 5px;
+    animation: element-blur-animation 1s forwards;
 }
 
 /* Ummaaaa! */
@@ -335,7 +343,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    animation: site-tab-animation 0.5s forwards;
+    animation: element-blur-animation .6s forwards;
     font-family: Open Sans;
     margin-top: 50px;
     transition: 1s;
@@ -365,7 +373,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    animation: site-tab-animation 0.5s forwards;
+    animation: element-blur-animation 1s forwards;
     font-family: Open Sans;
     transition: 1s;
 }
@@ -395,7 +403,7 @@
     flex-direction: row;
     background: var(--home-projects-project-bg);
     border-radius: 15px;
-    animation: site-tab-animation 0.5s forwards;
+    animation: element-blur-animation 1s forwards;
     font-family: Open Sans;
     border: Solid 1px rgba(138, 138, 138, 0.226);
     transition: 1s;

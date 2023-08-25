@@ -21,7 +21,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    animation: bg-blur-animation 1.5s ease;
+    animation: bg-blur-animation 2s ease;
 }
 
 @media screen and (max-width: 750px) {

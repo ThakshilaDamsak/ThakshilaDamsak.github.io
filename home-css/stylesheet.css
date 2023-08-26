@@ -5,9 +5,9 @@
 }
 
 @keyframes element-blur-animation {
-    0% {opacity: 0; filter: blur(5px); scale:1.08;}
-    10% {opacity: 0; filter: blur(5px); scale:1.08;}
-    90% {opacity: 1; filter: blur(0px); scale:1;}
+    0% {opacity: 0; scale:1.03;}
+    10% {opacity: 0; scale:1.03;}
+    90% {opacity: 1; scale:1;}
     100% {}
 }
 

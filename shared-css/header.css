@@ -558,6 +558,7 @@ a {
     font-size: 13px; 
     appearance: none; 
     transition: 0.2s;
+    cursor:pointer;
 }
 
 .color-selector select:hover{

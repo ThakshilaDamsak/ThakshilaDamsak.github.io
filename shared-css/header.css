@@ -739,7 +739,7 @@ input:checked + .slider:before {
     cursor: default;
   }
 
-  .tooltip b, .tooltip iconify-icon{
+  .tooltip b, .tooltip iconify-icon, .tooltip span{
     cursor: default !important;
   }
   

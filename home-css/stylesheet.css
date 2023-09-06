@@ -131,7 +131,7 @@
 
 .h-buttons span {
     padding: 5px 10px;
-
+    cursor: pointer;
 }
 
 
@@ -411,16 +411,13 @@
     height: 80px;
     box-shadow: none;
     transition: 0.7s;
+    cursor:pointer;
 }
 
 .project:hover {
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.13);
     background: var(--home-projects-project-hover-background);
     transition: 0.2s;
-}
-
-.project :hover {
-    cursor:pointer;
 }
 
 .project-logo {

@@ -372,7 +372,6 @@ html{
 }
 
 p, img, svg, span {
-    cursor:default;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -736,10 +735,16 @@ input:checked + .slider:before {
 .tooltip {
     position: relative;
     display: inline-block;
+    cursor: default;
+  }
+
+  .tooltip b, .tooltip iconify-icon{
+    cursor: default !important;
   }
   
   /* Tooltip text */
   .tooltip .tooltiptext {
+    cursor: default;
     visibility: hidden;
     width: 150px;
     bottom: 100%;
@@ -772,6 +777,7 @@ input:checked + .slider:before {
   .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+    cursor: default;
 } 
 
 

@@ -185,7 +185,7 @@
 
 @keyframes bg-blur-animation {
     0% {opacity: 0; filter: blur(10px); scale:1.08;}
-    50% {opacity: 0; filter: blur(10px); scale:1.08;}
+    50% {opacity: 0; scale:1.08;}
     100% {opacity: 1; filter: blur(0px); scale:1;}
 }
 

@@ -96,19 +96,25 @@
 .heading button {
     border: none;
     background: var(--home-heading-button-background);
-    border-radius: 15px;
     cursor: pointer;
     font-weight: normal;
     margin-top:105px;
-    margin-left: 10px;
-    margin-right: 10px;
     align-items: center;
     justify-content: center;
     text-align: center;
     transition: 1s;
     border-style: solid;
-    border-width: 1px;
     border-color: rgba(138, 138, 138, 0.226);
+}
+
+#button1 {
+    border-radius: 10px 0 0 10px;
+    border-width: 1px;
+}
+
+#button2 {
+    border-radius: 0 10px 10px 0;
+    border-width: 1px 1px 1px 0;
 }
 
 .heading button:hover {
@@ -509,9 +515,6 @@
 
     .heading button{
         font-size: 20px;
-        margin-left: 5px;
-        margin-right: 5px;
-        border-radius: 10px;
     }
 
 }

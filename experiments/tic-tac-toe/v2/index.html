@@ -1,0 +1,219 @@
+<html>
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  h1, h3 {
+    text-align: center;
+    color: #333333;
+  }
+
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+
+  td {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 36px;
+    cursor: pointer;
+  }
+
+  .x {
+    color: blue;
+  }
+
+  .o {
+    color: red;
+  }
+
+  #message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+  }
+
+  #reset {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+<h1>Bing AI Tic Tac Toe</h1>
+<h3>A tic-tac-toe game coded by Bing AI.</h3>
+<table id="board">
+<tr>
+<td id="cell_0"></td>
+<td id="cell_1"></td>
+<td id="cell_2"></td>
+</tr>
+<tr>
+<td id="cell_3"></td>
+<td id="cell_4"></td>
+<td id="cell_5"></td>
+</tr>
+<tr>
+<td id="cell_6"></td>
+<td id="cell_7"></td>
+<td id="cell_8"></td>
+</tr>
+</table>
+<div id="message">Press play to start</div>
+<button id="play">Play</button>
+<script>
+
+// Global variables
+var board = document.getElementById("board");
+var cells = board.getElementsByTagName("td");
+var message = document.getElementById("message");
+var play = document.getElementById("play"); // Get the play button
+var turn = "X"; // X goes first
+var gameOver = false; // Game is not over at the beginning
+var mode = "human"; // Default mode is human vs human
+
+// Main function, executed when the script is loaded
+function main() {
+
+  // Add event listeners to the cells
+  for (var i = 0; i < cells.length; i++) {
+    cells[i].addEventListener("click", cellClicked);
+  }
+
+  // Add event listener to the play button
+  play.addEventListener("click", startGame); // Start the game when the play button is clicked
+
+  // Disable the board
+  disableBoard();
+}
+
+// Function to start the game
+function startGame() {
+
+  // Prompt the user to choose the mode
+  mode = prompt("Choose your mode:\n1. Human vs Human\n2. Human vs Computer\n3. Computer vs Computer");
+
+  // Validate the mode
+  if (mode == "1" || mode == "2" || mode == "3") {
+    // Valid mode
+    if (mode == "1") {
+      // Human vs Human
+      mode = "human";
+      message.textContent = "X's turn";
+      turn = "X";
+      gameOver = false;
+
+      // Clear the board
+      for (var i = 0; i < cells.length; i++) {
+        cells[i].textContent = "";
+        cells[i].className = "";
+      }
+      
+      // Enable the board
+      enableBoard();
+      
+    } else if (mode == "2") {
+      // Human vs Computer
+      
+      // Choose the human player randomly
+      var human = Math.random() < 0.5 ? "X" : "O";
+      
+      if (human == "X") {
+        // Human is X, computer is O
+        mode = "computerO";
+        message.textContent = "You are X, computer is O.\nX's turn";
+        turn = "X";
+        gameOver = false;
+
+        // Clear the board
+        for (var i = 0; i < cells.length; i++) {
+          cells[i].textContent = "";
+          cells[i].className = "";
+        }
+        
+        // Enable the board
+        enableBoard();
+        
+      } else {
+        // Human is O, computer is X
+        mode = "computerX";
+        message.textContent = "You are O, computer is X.\nX's turn";
+        turn = "X";
+        gameOver = false;
+
+        // Clear the board
+        for (var i = 0; i < cells.length; i++) {
+          cells[i].textContent = "";
+          cells[i].className = "";
+        }
+        
+        // Disable the board
+        disableBoard();
+        
+        // Let the computer make a move after 1 second
+        setTimeout(computerMove, 1000);
+      }
+      
+    } else {
+      // Computer vs Computer
+      mode = "computer";
+      message.textContent = "Computer X vs Computer O.\nX's turn";
+      turn = "X";
+      gameOver = false;
+
+      // Clear the board
+      for (var i = 0; i < cells.length; i++) {
+        cells[i].textContent = "";
+        cells[i].className = "";
+      }
+      
+      // Disable the board
+      disableBoard();
+      
+      // Let the computer make a move after 1 second
+      setTimeout(computerMove, 1000);
+    }
+    
+    // Change the play button to play again button
+    play.textContent = "Play again"; 
+    
+  } else {
+    // Invalid mode
+    alert("Invalid mode. Please enter 1, 2 or 3.");
+    startGame(); // Restart the game
+  }
+}
+
+// Function to check if the game is over
+function checkGameOver() {
+
+  ...
+  
+  if (gameOver) {
+    // If the game is over, disable the board and enable the play again button
+    disableBoard();
+    play.disabled = false;
+    
+  } else {
+    // If the game is not over, disable the play again button until it is over
+    play.disabled = true;
+    
+  }
+
+}
+
+// Execute the main function when the script is loaded
+main();
+
+</script>
+</body>
+</html>

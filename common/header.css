@@ -209,6 +209,81 @@ html{
     --human-ambient-opacity: 70%;
   }
 
+  :root.frost {
+
+    --bg-image:url(../images/damsak-logo.jpg);
+
+    --home-heading-background: rgb(225, 245, 247, .50);
+    --home-about-bg: rgb(247, 239, 250, .50);
+    --home-projects-bg: rgb(202, 253, 223, .50);
+
+
+    --root-grayscale: 0%;
+
+    --header-bg-color: rgba(255, 255, 255, 0.795);
+    --header-a: black;
+    --header-links-a-color: rgb(107, 107, 107);
+    --header-links-a-hover-color: rgb(0, 0, 0);
+    --header-links-a-bg-color: rgba(0, 46, 49, 0);
+    --header-links-a-hover-bg-color:rgba(68, 68, 68, 0.048);
+    --logo-filter: 0%;
+    --logo-opacity: 65%;
+
+    --home-name-color: rgb(6, 143, 197);
+    --home-bio-color: rgb(122, 181, 236);
+    --home-heading-button-color: rgb(218, 238, 255);
+    --home-heading-button-background: rgb(39, 173, 226);
+    --home-heading-button-color-hover: white;
+    --home-heading-button-background-hover: rgb(0, 119, 255);
+    --home-heading-svg-filter: none;
+    --home-heading-svg-opacity: 35%;
+    --heading-text-shadow: rgba(0, 132, 255, 0.438);
+
+    --home-about-p-a-color: rgb(107, 0, 102);
+    --home-about-span-color: rgb(185, 0, 176);
+    --home-umma-overlay-bg: rgb(255, 223, 255);
+    --home-about-text-shadow : rgba(195, 0, 255, 0.418);
+    --home-about-span-shadow : rgba(0, 0, 0, 0.377);
+
+    --home-projects-title-bg: rgba(255, 255, 255, 0.63);
+    --home-projects-title-p-color: rgb(0, 107, 66);
+    --home-projects-project-bg: rgba(255, 255, 255, 0.473);
+    --home-projects-project-hover-background: rgba(255, 255, 255, 0.589);
+    --home-projects-logo-img-bg: rgba(255, 255, 255, 0.377);
+    --home-projects-project-name-color:rgb(0, 107, 32) ;
+    --home-projects-project-text-color: rgb(0, 107, 9);
+    --projects-text-shadow: rgba(5, 139, 0, 0.555);
+
+    --footer-bg: rgba(255, 255, 255, 0.795);
+    --footer-a: rgba(0, 0, 0, 0.747);
+    --footer-social-links-i-hover: rgb(0, 0, 0);
+    --footer-copyright-p:rgba(0, 40, 85, 0.747);
+    --footer-site-info-color:rgb(88, 88, 88) ;
+    --footer-site-info-color-bg:rgb(255, 255, 255);
+    --footer-tooltip-footer-color: rgb(102, 102, 102);
+    --footer-tooltip-footer-bg: rgb(247, 247, 247);
+    --footer-show-span:rgb(114, 114, 114);
+
+    --bg-bg:rgba(243, 243, 243, 0.671);
+    --bg-backdrop-filter: 0%;
+
+    --home-bg: linear-gradient(to left bottom, rgba(242, 253, 255, 0.6), rgba(238, 248, 255, 0.6));
+    --home-a:black;
+    --error-about-p-a-color: rgb(107, 0, 102);
+
+    --home-heading-shadow:rgba(0, 150, 187, 0.192);
+    --home-about-shadow:rgba(187, 0, 171, 0.192);
+    --home-projects-shadow:rgba(0, 187, 93, 0.24);
+
+    --human-ambient-opacity: 100%;
+
+
+    .heading,
+		.about,
+		.projects {
+			backdrop-filter: blur(20px) saturate(3);
+		}
+  }
 
   :root.aqua {
 

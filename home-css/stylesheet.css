@@ -456,7 +456,7 @@
     flex-direction: column;
     gap: 1px;
     transition: 1s;
-    overflow-y:scroll;
+    overflow-y:auto;
     margin-top: auto;
     margin-bottom: auto;
 }

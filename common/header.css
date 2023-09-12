@@ -426,6 +426,15 @@ a {
     }
   }
 
+.page-loading {
+  margin-top: 40vh;
+  margin-bottom: 50vh;
+  color: var(--header-a);
+  font-family: Work Sans;
+  font-weight: bold;
+}
+
+
 /* Navigation bar */
 
 .header {

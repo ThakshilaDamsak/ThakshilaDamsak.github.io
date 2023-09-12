@@ -15,6 +15,14 @@
     justify-content: center;
 }
 
+.page-loading-home {
+    margin-top: 25vh;
+    margin-bottom: 50vh;
+    color: var(--header-a);
+    font-family: Work Sans;
+    font-weight: bold;
+}
+
 .heading {
     display: grid;
     grid-template-areas:

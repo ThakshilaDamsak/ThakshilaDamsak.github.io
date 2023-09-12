@@ -112,39 +112,16 @@
 <!--Content of the page.-->
 
     <!--Home-->
-            <div class="home">
+            <div class="home" id="page-content">
 
                 <div class="bg">
                     <div class="overlay"> </div>
-                    <div class="background-img" id="floater"> </div>
-                    <div class="gradient-overlay"> </div>
                 </div>
 
-
-                <script>
-                    function parallax() {
-                        var s = document.getElementById("floater");
-                        var yPos = 0 - window.pageYOffset/-35;	
-                    s.style.top = 0 + yPos + "%";
-                    }       
-
-                    window.addEventListener("scroll", function(){
-                        parallax();	
-                    });
-                </script>
-
-                <!--Content of the page.-->
-
-                <div class="cntnt">
-                <div class="page-content" id="page-content">
-
-                    <div class="page-loading-home">
-                        <span> Loading... </span>
-                    </div>
-
+                <div class="page-loading-home">
+                    <span> Loading... </span>
                 </div>
 
-            </div>
             </div>
 
 

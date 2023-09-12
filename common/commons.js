@@ -1,5 +1,5 @@
 // Fetch the content of the footer HTML file
-fetch('/shared-css/menubar.html')
+fetch('/common/menubar.html')
 .then(response => response.text())
 .then(html => {
 // Insert the footer HTML into the container
@@ -15,7 +15,7 @@ document.body.appendChild(newScript);
 });
 
 // Fetch the content of the footer HTML file
-fetch('/shared-css/footer.html')
+fetch('/common/footer.html')
     .then(response => response.text())
     .then(html => {
     // Insert the footer HTML into the container

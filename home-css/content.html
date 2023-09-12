@@ -1,24 +1,19 @@
-<div class="bg" id="bg">
+<div class="bg">
     <div class="overlay"> </div>
-    <div class="background-img" id="floater"> <img src="/images/background-4.svg" alt="background"> </div>
+    <div class="background-img" id="floater"></div>
     <div class="gradient-overlay"> </div>
 </div>
 
-<script>
-        // Fetch the content of the background HTML file
-fetch('/home-css/background.html')
-    .then(response => response.text())
-    .then(html => {
-    // Insert the footer HTML into the container
-    document.getElementById('bg').innerHTML = html;
 
-    // Execute JavaScript code within the footer
-    const scriptElements = Array.from(document.getElementById('bg').getElementsByTagName('script'));
-    scriptElements.forEach(script => {
-        const newScript = document.createElement('script');
-        newScript.textContent = script.textContent;
-        document.body.appendChild(newScript);
-    });
+<script>
+    function parallax() {
+        var s = document.getElementById("floater");
+        var yPos = 0 - window.pageYOffset/-35;	
+    s.style.top = 0 + yPos + "%";
+    }       
+
+    window.addEventListener("scroll", function(){
+        parallax();	
     });
 </script>
 

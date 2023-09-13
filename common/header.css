@@ -446,10 +446,6 @@ html{
     position: relative;
 }
 
-#header, #footer {
-  display: none;
-}
-
 p, img, svg, span {
     -webkit-user-select: none;
     -moz-user-select: none;

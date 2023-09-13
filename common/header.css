@@ -503,10 +503,8 @@ a {
 
 .page-loading {
   margin-top: 40vh;
-  margin-bottom: 50vh;
+  margin-bottom: 45vh;
   color: var(--header-a);
-  font-family: Work Sans;
-  font-weight: bold;
 }
 
 .pl {
@@ -514,6 +512,9 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+
+  font-family: Work Sans;
+  font-weight: bold;
 }
 
 .loading-spinner {

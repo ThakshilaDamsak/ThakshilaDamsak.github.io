@@ -2,6 +2,8 @@
     padding-top: 28vh;
     padding-bottom: 28vh;
     transform: translateZ(0);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 @keyframes element-blur-animation {

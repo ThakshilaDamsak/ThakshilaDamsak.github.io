@@ -532,6 +532,18 @@ a {
   animation: spin 2s linear infinite;
 }
 
+.cache {
+  visibility: hidden;
+  opacity: 0%;
+  position: absolute;
+  height: 10vh;
+}
+
+.cache img {
+  position: absolute;
+  height: 10vh;
+}
+
 @keyframes spin {
   0% {}
   100% {transform:rotate(360deg);}

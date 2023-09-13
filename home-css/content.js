@@ -6,10 +6,17 @@ const imageElements = Array.from(imageContainer.getElementsByTagName('img'));
 
 // Create an array of promises for each image element
 const imagePromises = imageElements.map(image => {
-  // Return a new promise that resolves when the image loads
+  // Return a new promise that resolves when the image loads or is already cached
   return new Promise((resolve, reject) => {
-    image.addEventListener('load', resolve);
-    image.addEventListener('error', reject); // add an error handler
+    // Check if the image is already cached
+    if (image.complete) {
+      // Resolve immediately
+      resolve();
+    } else {
+      // Add event listeners for load and error
+      image.addEventListener('load', resolve);
+      image.addEventListener('error', reject);
+    }
   })
   .catch(error => {
     // Handle the error
@@ -21,7 +28,7 @@ const imagePromises = imageElements.map(image => {
 
 // Wait for all the promises to resolve
 Promise.all(imagePromises).then(() => {
-  // All the images have loaded or failed gracefully
+  // All the images have loaded or failed gracefully or were already cached
   console.log('All images handled');
 
   // Fetch the content of the content HTML file
@@ -40,3 +47,4 @@ Promise.all(imagePromises).then(() => {
       });
     });
 });
+

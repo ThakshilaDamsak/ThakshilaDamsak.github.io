@@ -45,7 +45,7 @@
     <link rel="stylesheet" type="text/css" href="/common/background.css">
     <link rel="stylesheet" type="text/css" href="/common/footer.css">
 
-    <script src="/home-css/content.js" defer="true"></script>
+    <script src="/home-css/content.js" defer></script>
     <script src="/common/theme.js"></script>
     <script src="/common/commons.js"></script>
 
@@ -117,13 +117,13 @@
 
                 <div class="bg">
                     <div class="overlay"> </div>
-                    <img src="/images/background-4.svg" alt="Background image" id="background-image" style="visibility: hidden; opacity: 0%;">
+                    <img src="/images/background-4.svg" alt="Background image" id="background-image" style="visibility: hidden; opacity: 0%; position: absolute; height: 100vh;">
                 </div>
 
-                <div class="page-loading-home">
+                <div class="page-loading-home pl">
+                    <dev class="loading-spinner"></dev>
                     <span> Loading... </span>
                 </div>
-
             </div>
 
 

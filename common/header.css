@@ -509,6 +509,28 @@ a {
   font-weight: bold;
 }
 
+.pl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.loading-spinner {
+  border: 5px;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border-width: 5px;
+  border-color: var(--header-a) transparent var(--footer-show-span) transparent;
+  border-style:double;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {transform:;}
+  100% {transform:rotate(360deg);}
+}
 
 /* Navigation bar */
 

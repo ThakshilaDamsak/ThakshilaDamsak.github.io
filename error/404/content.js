@@ -45,4 +45,3 @@ Promise.all(imagePromises).then(() => {
       alert('Something went wrong. Please try again.');
     });
 });
-

@@ -16,11 +16,8 @@
 }
 
 .page-loading-home {
-    margin-top: 50vh;
-    margin-bottom: 50vh;
-    color: var(--header-a);
-    font-family: Work Sans;
-    font-weight: bold;
+    margin-top:45vh;
+    margin-bottom: 45vh;
 }
 
 .heading {

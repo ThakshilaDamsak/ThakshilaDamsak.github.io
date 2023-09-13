@@ -504,7 +504,6 @@ a {
 .page-loading {
   margin-top: 40vh;
   margin-bottom: 45vh;
-  color: var(--header-a);
 }
 
 .pl {
@@ -513,6 +512,7 @@ a {
   align-items: center;
   gap: 10px;
 
+  color: var(--header-a);
   font-family: Work Sans;
   font-weight: bold;
 }

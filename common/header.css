@@ -528,7 +528,7 @@ a {
 }
 
 @keyframes spin {
-  0% {transform:;}
+  0% {}
   100% {transform:rotate(360deg);}
 }
 

@@ -18,7 +18,14 @@ Promise.all(imagePromises).then(() => {
   console.log('All images loaded');
 
   // Fetch the content of the content HTML file
-  fetch('/home-css/content.html')
+  fetch('/home-css/content.html', {
+    // Add cache-control headers to avoid caching
+    headers: {
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0'
+    }
+  })
     .then(response => response.text())
     .then(html => {
       // Insert the content HTML into the container
@@ -31,5 +38,10 @@ Promise.all(imagePromises).then(() => {
         newScript.textContent = script.textContent;
         document.body.appendChild(newScript);
       });
+    })
+    .catch(error => {
+      // Handle the error
+      console.error(error);
+      alert('Something went wrong. Please try again.');
     });
 });

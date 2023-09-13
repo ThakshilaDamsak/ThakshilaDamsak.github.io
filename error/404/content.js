@@ -7,15 +7,22 @@ const imageElements = Array.from(imageContainer.getElementsByTagName('img'));
 // Create an array of promises for each image element
 const imagePromises = imageElements.map(image => {
   // Return a new promise that resolves when the image loads
-  return new Promise(resolve => {
+  return new Promise((resolve, reject) => {
     image.addEventListener('load', resolve);
+    image.addEventListener('error', reject); // add an error handler
+  })
+  .catch(error => {
+    // Handle the error
+    console.error(error);
+    alert('Something went wrong. Please try again.');
+    // You can also try to reload the image here, or skip it and resolve anyway
   });
 });
 
 // Wait for all the promises to resolve
 Promise.all(imagePromises).then(() => {
-  // All the images have loaded
-  console.log('All images loaded');
+  // All the images have loaded or failed gracefully
+  console.log('All images handled');
 
   // Fetch the content of the content HTML file
   fetch('/error/404/content.html')

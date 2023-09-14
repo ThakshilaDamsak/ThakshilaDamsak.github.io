@@ -841,7 +841,7 @@ input:checked + .slider:before {
     
     .logo img{
         width: 120px;
-        margin-top: 4px;
+        margin-top: 0px;
         margin-bottom: -4px;
     }
     .color-chooser-name span{

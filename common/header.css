@@ -540,6 +540,49 @@ a {
   height: 10vh;
 }
 
+.box1 {
+  margin-top: 5px;
+  
+  width: 130px;
+  height: 45px;
+  transition: 0.5s;
+  background-color: var(--header-links-a-hover-bg-color);
+  border-radius: 10px;
+}
+
+.box2 {
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  margin-right: 5px;
+  height: 30px;
+  width: 200px;
+  margin-bottom: -5px;
+  background-color: var(--header-links-a-hover-bg-color);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.box3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 15px;
+  transition: 0.5s;
+
+  margin-right: 5px;
+  height: 40px;
+  width: 75px;
+  margin-bottom: -5px;
+  background-color: var(--header-links-a-hover-bg-color);
+  border-radius: 10px;
+}
+
 @keyframes spin {
   0% {}
   100% {transform:rotate(360deg);}
@@ -565,12 +608,13 @@ a {
 }
 
 .menu {
-    display: flex;
-    margin-left: 20px;
-    padding: 0 0;
-    align-items: center;
-    margin-top: auto;
-    margin-bottom: auto;
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 0 0;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .links {
@@ -788,7 +832,11 @@ input:checked + .slider:before {
 @media screen and (max-width: 430px) {
     
     .logo {
-        padding: 5px 10px;
+        padding: 1px 10px;
+    }
+
+    .box1 {
+      width: 100px;
     }
     
     .logo img{

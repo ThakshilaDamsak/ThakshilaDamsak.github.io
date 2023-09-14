@@ -4,6 +4,7 @@
     background-color: var(--footer-bg);
     backdrop-filter: blur(20px) saturate(3);
     width: 100%;
+    min-height: 40px;
     position: fixed;
     bottom: 0;
     display: flex;
@@ -160,6 +161,7 @@
 @media screen and (max-width: 705px) {
     .footer {
         flex-direction: column;
+        min-height: 28px;
     }
     .copyright {
         margin-right: auto;

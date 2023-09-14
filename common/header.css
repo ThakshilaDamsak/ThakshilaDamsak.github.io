@@ -594,6 +594,21 @@ a {
   margin-top: 5px;
 }
 
+.box5 {
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  margin-right: 5px;
+  height: 20px;
+  width: 200px;
+  background-color: var(--header-links-a-hover-bg-color);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
 @keyframes spin {
   0% {}
   100% {transform:rotate(360deg);}

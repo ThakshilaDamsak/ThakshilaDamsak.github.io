@@ -33,7 +33,7 @@ html{
     --header-links-a-color: rgb(107, 107, 107);
     --header-links-a-hover-color: rgb(0, 0, 0);
     --header-links-a-bg-color: rgba(0, 46, 49, 0);
-    --header-links-a-hover-bg-color:rgba(68, 68, 68, 0.048);
+    --header-links-a-hover-bg-color:rgba(68, 68, 68, 0.075);
     --logo-filter: 0%;
     --logo-opacity: 65%;
 
@@ -225,7 +225,7 @@ html{
     --header-links-a-color: rgb(107, 107, 107);
     --header-links-a-hover-color: rgb(0, 0, 0);
     --header-links-a-bg-color: rgba(0, 46, 49, 0);
-    --header-links-a-hover-bg-color:rgba(68, 68, 68, 0.048);
+    --header-links-a-hover-bg-color:rgba(68, 68, 68, 0.075);
     --logo-filter: 0%;
     --logo-opacity: 65%;
 
@@ -351,7 +351,7 @@ html{
     --header-links-a-color: rgb(107, 107, 107);
     --header-links-a-hover-color: rgb(0, 0, 0);
     --header-links-a-bg-color: rgba(0, 46, 49, 0);
-    --header-links-a-hover-bg-color:rgba(68, 68, 68, 0.048);
+    --header-links-a-hover-bg-color:rgba(68, 68, 68, 0.075);
     --logo-filter: 0%;
     --logo-opacity: 65%;
 

@@ -560,7 +560,6 @@ a {
   margin-right: 5px;
   height: 30px;
   width: 200px;
-  margin-bottom: -5px;
   background-color: var(--header-links-a-hover-bg-color);
   border-radius: 10px;
   transition: 0.5s;
@@ -578,9 +577,21 @@ a {
   margin-right: 5px;
   height: 40px;
   width: 75px;
-  margin-bottom: -5px;
+  margin-bottom: auto;
   background-color: var(--header-links-a-hover-bg-color);
   border-radius: 10px;
+}
+
+.box4 {
+  width: 10px;
+  height: 10px;
+  transition: 0.5s;
+  background-color: var(--header-links-a-hover-bg-color);
+  border-radius: 10px;
+}
+
+.bx {
+  margin-top: 5px;
 }
 
 @keyframes spin {

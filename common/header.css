@@ -535,7 +535,7 @@ a {
   height: 10vh;
 }
 
-.cache img {
+.cache img, .cache iconify-icon {
   position: absolute;
   height: 10vh;
 }
@@ -604,6 +604,21 @@ a {
   margin-right: 5px;
   height: 20px;
   width: 200px;
+  background-color: var(--header-links-a-hover-bg-color);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.box6 {
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  margin-right: 5px;
+  height: 20px;
+  width: 225px;
   background-color: var(--header-links-a-hover-bg-color);
   border-radius: 10px;
   transition: 0.5s;

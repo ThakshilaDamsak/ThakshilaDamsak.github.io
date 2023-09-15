@@ -40,9 +40,9 @@
     <meta name="twitter:description" content="I am a human." />
     <meta name="twitter:image" content="https://i.imgur.com/KwAPx6l.png" />
 
-    <link rel="stylesheet" type="text/css" href="../../shared-css/header.css">
+    <link rel="stylesheet" type="text/css" href="/common/header.css">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="../../shared-css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/common/footer.css">
 
     <script src="/common/commons.js"></script>
 
@@ -63,37 +63,83 @@
 
         <!--Navigation bar-->
         <div class="header">
+
             <div class="logo">
-                <a href="../../"><img src="../../images/logo-long-bk.svg" loading="eager" alt="Thakshila Damsak [logo]" ></a>
+                <a href="/"><img src="/images/logo-long-bk.svg" loading="eager" alt="Thakshila Damsak [logo]" ></a>
+                
                 <div class="menu">
-                    <div class="links" style="display: none;">
-                        <a href="../../#">Home</a>
-                        <a href="../../#about">About</a>
-                        <a href="../../#projects">Projects</a>
+                    <div class="links" id="menubar">
+                      <div class="box2"></div>
+            
                     </div>
-                    <div class="color-chooser" style="display: none;">
-                        <main class="color-chooser-container">
-                            <div class="color-chooser-name"><span>Theme</span></div>
-                            <div class="color-selector">
-                            <select name="theme-select" id="theme-select">
-                              <option value="auto" title="Follows system color scheme">Pastel &diams;</option>
-                              <option value="light">Pastel Light</option>
-                              <option value="dark">Pastel Dark</option>
-                              <option value="frost" title="Resource-Intensive">Mist</option>
-                              <option value="charcoal" title="Follows system color scheme">Charcoal &diams;</option>
-                              <option value="cyberthenuk">THENUK</option>
-                            </select>
-                        </div>
-                          </main>
+                    <div class="color-chooser" id="color-chooser">
+                      <div class="box3"></div>
                     </div>
+            
                     <div class="ham">
-                        <a href="../../menu/">
+                        <a href="/menu/">
                             <i><iconify-icon icon="line-md:menu" loading="eager"></iconify-icon></i>
                         </a>
                 </div>
                 
                 </div>
             </div>
+            
+            <script>
+            // Fetch the content of the header HTML file
+            fetch('/common/themes.html')
+              .then(response => response.text())
+              .then(html => {
+                // Insert the header HTML into the container
+                document.getElementById('color-chooser').innerHTML = html;
+            
+                // Execute JavaScript code within the header
+                const scriptElements = Array.from(document.getElementById('color-chooser').getElementsByTagName('script'));
+                scriptElements.forEach(script => {
+                  const newScript = document.createElement('script');
+                  newScript.textContent = script.textContent;
+                  document.body.appendChild(newScript);
+                });
+            
+                // Set the theme after the header is loaded
+                const setTheme = theme => {
+                  document.documentElement.className = theme;
+                  localStorage.setItem('theme', theme);
+                };
+            
+                const savedTheme = localStorage.getItem('theme');
+            
+                if (savedTheme) {
+                  setTheme(savedTheme);
+                  document.getElementById('theme-select').value = savedTheme;
+                }
+            
+                document.getElementById('theme-select').addEventListener('change', function() {
+                  setTheme(this.value);
+                });
+              });
+            
+            
+            
+            
+            
+                // Fetch the content of the footer HTML file
+            fetch('/common/menubar.html')
+            .then(response => response.text())
+            .then(html => {
+            // Insert the footer HTML into the container
+            document.getElementById('menubar').innerHTML = html;
+            
+            // Execute JavaScript code within the footer
+            const scriptElements = Array.from(document.getElementById('menubar').getElementsByTagName('script'));
+            scriptElements.forEach(script => {
+            const newScript = document.createElement('script');
+            newScript.textContent = script.textContent;
+            document.body.appendChild(newScript);
+            });
+            });
+            </script>
+
         </div>
 
 
@@ -149,79 +195,37 @@
 
 <!--Footer-->
                     <div class="footer">
-                        <div class="no-social-links" style="display: none;">
-                            <div class="social-link1 tooltip-footer">
-                                <a href="https://www.youtube.com/channel/UCQmB571Z3-ECIbbf4vesKNw">
-                                    <i class="fa-brands fa-youtube"></i>
-                                    <span class="tooltiptext-footer">Youtube Channel</span>
-                                </a>
-                            </div>
-                            
-                            <div class="social-link2 tooltip-footer">
-                                <a href="https://www.facebook.com/Thakshiladamsak" target="_blank">
-                                    <i class="fa-brands fa-facebook"></i>
-                                    <span class="tooltiptext-footer">Facebook</span>
-                                </a>
-                            </div>
-                            
-                            <div class="social-link3 tooltip-footer">
-                                <a href="https://www.instagram.com/thakshiladamsak/" target="_blank">
-                                    <i class="fa-brands fa-instagram"></i>
-                                    <span class="tooltiptext-footer">Instagram</span>
-                                </a>
-                            </div>
-                            
-                            <div class="social-link4 tooltip-footer">
-                                <a href="https://www.reddit.com/u/thakshila_damsak" target="_blank">
-                                    <i class="fa-brands fa-reddit"></i>
-                                    <span class="tooltiptext-footer">Reddit</span>
-                                </a>
-                            </div>
-                            
-                            <div class="social-link5 tooltip-footer">
-                                <a href="https://www.github.com/thakshiladamsak" target="_blank">
-                                    <i class="fa-brands fa-github"></i>
-                                    <span class="tooltiptext-footer">Github</span>
-                                </a>
-                            </div>
-                            
-                            <div class="social-link6 tooltip-footer">
-                                <a href="https://discord.gg/YryrKZTQh7" target="_blank">
-                                    <i class="fa-brands fa-discord"></i>
-                                    <span class="tooltiptext-footer">Discord Server</span>
-                                </a>
-                            </div>
-                            
-                            <div class="social-link7 tooltip-footer">
-                                <a rel="me" href="https://mastodon.social/@thakshiladamsak" target ="blank">
-                                    <i class="fa-brands fa-mastodon"></i>
-                                    <span class="tooltiptext-footer">Mastodon</span>
-                                </a>
-                            </div>
+                        <div class="social-links" id="social-links">
 
+                            <div class="box6"></div>
+                        
                         </div>
-                        <div class="eml" style="margin-left: 20px;">
+                        <div class="eml">
                         <div class="email tooltip-footer">
                             <a href="mailto:thakshiladamsak@hotmail.com" target="_blank">thakshiladamsak@hotmail.com</a>
                             <span class="tooltiptext-footer">E-Mail me</span>
                         </div></div>
+                        
                         <div class="copyright">
-                            <center><p id="cpyrt">&copy; <span id="year"></span> Thakshila Damsak</p></center>
+                            <div class="tooltip-footer">
+                                <p id="cpyrt">&copy; <span id="year"></span> Thakshila Damsak</p>
+                                  <span class="tooltiptext-footer">Click to see site info.</span>
+                              </div>
                         </div>
-
+                        
                         <script>
                             var currentYear = new Date().getFullYear();
                             document.getElementById("year").innerHTML = currentYear;
                         </script>
-
-                        <div id="site-info" class="hidden" style="display: none;">
-                            <p><a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io">v8.1 </a>| <a href="https://thakshiladamsak.github.io/">beta</a> | This website is designed and developed by <span title="It's me"> Thakshila Damsak.</span> Also special thanks to <a href="https://www.kaveeshasandaruwan.tk" target="_blank" title="Visit his Website">KAVEESHA</a>.</p>
+                        
+                        <div id="site-info" class="hidden">
+                            <p>v23.4 | <a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io" target="_blank">GitHub Repository</a></p>
                         </div>
-
+                        
                         <script>
                             const copyright = document.getElementById("cpyrt");
                             const tooltip = document.getElementById("site-info");
-
+                        
                             copyright.addEventListener("click", function() {
                             if (tooltip.classList.contains("hidden")) {
                                 tooltip.classList.remove("hidden");
@@ -235,8 +239,24 @@
                                 tooltip.classList.remove("show");
                             }
                             });
+                        
+                            // Fetch the content of the footer HTML file
+                        fetch('/common/social-links.html')
+                            .then(response => response.text())
+                            .then(html => {
+                            // Insert the footer HTML into the container
+                            document.getElementById('social-links').innerHTML = html;
+                        
+                            // Execute JavaScript code within the footer
+                            const scriptElements = Array.from(document.getElementById('social-links').getElementsByTagName('script'));
+                            scriptElements.forEach(script => {
+                                const newScript = document.createElement('script');
+                                newScript.textContent = script.textContent;
+                                document.body.appendChild(newScript);
+                            });
+                            });
                         </script>
-
+                                                
                     </div>
             </div>
         </div>

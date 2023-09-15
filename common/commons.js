@@ -1,11 +1,11 @@
-// Fetch the content of the footer HTML file
+// Fetch the content of the header HTML file
 fetch('/common/header.html')
     .then(response => response.text())
     .then(html => {
-    // Insert the footer HTML into the container
+    // Insert the header HTML into the container
     document.getElementById('header').innerHTML = html;
 
-    // Execute JavaScript code within the footer
+    // Execute JavaScript code within the header
     const scriptElements = Array.from(document.getElementById('header').getElementsByTagName('script'));
     scriptElements.forEach(script => {
         const newScript = document.createElement('script');

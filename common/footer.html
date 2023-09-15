@@ -1,53 +1,6 @@
-<div class="social-links">
+<div class="social-links" id="social-links">
 
-    <div class="social-link1 tooltip-footer">
-        <a rel="me" href="https://mastodon.social/@thakshiladamsak" target ="blank">
-            <iconify-icon icon="mdi:mastodon"></iconify-icon>
-            <span class="tooltiptext-footer">Mastodon</span>
-        </a>
-    </div>
-
-    <div class="social-link2 tooltip-footer">
-        <a href="https://kbin.social/u/ThakshilaDamsak" target="_blank">
-            <iconify-icon icon="tabler:brand-kbin"></iconify-icon>
-            <span class="tooltiptext-footer">Kbin</span>
-        </a>
-    </div>
-
-    <div class="social-link3 tooltip-footer">
-        <a href="https://pixelfed.social/i/web/profile/583001554733313498" target="_blank">
-            <iconify-icon icon="ri:pixelfed-fill"></iconify-icon>
-            <span class="tooltiptext-footer">Pixelfed</span>
-        </a>
-    </div>
-
-    <div class="social-link4 tooltip-footer">
-        <a href="https://www.reddit.com/u/thakshila_damsak" target="_blank">
-            <iconify-icon icon="ic:baseline-reddit"></iconify-icon>
-            <span class="tooltiptext-footer">Reddit</span>
-        </a>
-    </div>
-
-    <div class="social-link5 tooltip-footer">
-        <a href="https://www.youtube.com/channel/UCQmB571Z3-ECIbbf4vesKNw" target="_blank">
-            <iconify-icon icon="akar-icons:youtube-fill"></iconify-icon>
-            <span class="tooltiptext-footer">Youtube Channel</span>
-        </a>
-    </div>
-    
-    <div class="social-link6 tooltip-footer">
-        <a href="https://www.facebook.com/Thakshiladamsak" target="_blank">
-            <iconify-icon icon="ic:baseline-facebook"></iconify-icon>
-            <span class="tooltiptext-footer">Facebook</span>
-        </a>
-    </div>
-    
-    <div class="social-link7 tooltip-footer">
-        <a href="https://www.instagram.com/thakshiladamsak/" target="_blank">
-            <iconify-icon icon="uil:instagram-alt"></iconify-icon>
-            <span class="tooltiptext-footer">Instagram</span>
-        </a>
-    </div>
+    <div class="box6"></div>
 
 </div>
 <div class="eml">
@@ -69,7 +22,7 @@
 </script>
 
 <div id="site-info" class="hidden">
-    <p>v23.4 | <a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io" target="_blank">GitHub Repository</a></p>
+    <p>v23.5 | <a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io" target="_blank">GitHub Repository</a></p>
 </div>
 
 <script>
@@ -88,6 +41,22 @@
         tooltip.classList.add("hidden");
         tooltip.classList.remove("show");
     }
+    });
+
+    // Fetch the content of the footer HTML file
+fetch('/common/social-links.html')
+    .then(response => response.text())
+    .then(html => {
+    // Insert the footer HTML into the container
+    document.getElementById('social-links').innerHTML = html;
+
+    // Execute JavaScript code within the footer
+    const scriptElements = Array.from(document.getElementById('social-links').getElementsByTagName('script'));
+    scriptElements.forEach(script => {
+        const newScript = document.createElement('script');
+        newScript.textContent = script.textContent;
+        document.body.appendChild(newScript);
+    });
     });
 </script>
 

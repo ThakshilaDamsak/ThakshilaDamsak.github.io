@@ -221,6 +221,8 @@
 @media screen and (max-width: 705px) {
     .ham {
         display: flex;
+        padding-right: 0px;
+        padding-left: auto;
     }
 
     .tooltiptext-footer {

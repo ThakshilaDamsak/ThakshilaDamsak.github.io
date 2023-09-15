@@ -13,6 +13,10 @@
     transition: 1s;
     text-align: center;
     z-index: 99;
+
+    border-width: 1px 0px 0px 0px;
+    border-color: rgba(138, 138, 138, 0.226);
+    border-style: solid;
 }
 
 .footer a {

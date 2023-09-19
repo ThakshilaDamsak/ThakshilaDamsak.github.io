@@ -6,14 +6,22 @@
 
 
 <script>
+    var scroll_ok = true; // declare a flag variable
+    setInterval (function () { // reset the flag every 33ms
+        scroll_ok = true;
+    }, 33);
+
     function parallax() {
         var s = document.getElementById("floater");
-        var yPos = 0 - window.pageYOffset/-35;	
-    s.style.top = 0 + yPos + "%";
+        var yPos = 0 - window.pageYOffset/-50;	
+        s.style.top = 0 + yPos + "%";
     }       
 
     window.addEventListener("scroll", function(){
-        parallax();	
+        if (scroll_ok === true) { // check the flag before calling parallax
+            parallax();	
+            scroll_ok = false; // set the flag to false after calling parallax
+        }
     });
 </script>
 

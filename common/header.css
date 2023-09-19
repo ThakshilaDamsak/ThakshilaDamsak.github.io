@@ -213,9 +213,9 @@ html{
 
     --bg-image:url(../images/damsak-logo.jpg);
 
-    --home-heading-background: rgb(225, 245, 247, .50);
-    --home-about-bg: rgb(247, 239, 250, .50);
-    --home-projects-bg: rgb(202, 253, 223, .50);
+    --home-heading-background: rgba(225, 245, 247, .75);
+    --home-about-bg: rgb(247, 239, 250, .75);
+    --home-projects-bg: rgb(202, 253, 223, .75);
 
 
     --root-grayscale: 0%;
@@ -236,7 +236,7 @@ html{
     --home-heading-button-color-hover: white;
     --home-heading-button-background-hover: rgb(0, 119, 255);
     --home-heading-svg-filter: none;
-    --home-heading-svg-opacity: 35%;
+    --home-heading-svg-opacity: 25%;
     --heading-text-shadow: rgba(0, 132, 255, 0.438);
 
     --home-about-p-a-color: rgb(107, 0, 102);

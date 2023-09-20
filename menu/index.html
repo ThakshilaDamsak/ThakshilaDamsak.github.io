@@ -46,11 +46,28 @@
     <script>
         const theme = localStorage.getItem('theme');
         document.documentElement.className = theme;
+
+        // Fetch the content of the menubar HTML file
+        fetch('/common/menubar.html')
+        .then(response => response.text())
+        .then(html => {
+        // Insert the menubar HTML into the container
+        document.getElementById('menubar').innerHTML = html;
+
+        // Execute JavaScript code within the menubar
+        const scriptElements = Array.from(document.getElementById('menubar').getElementsByTagName('script'));
+        scriptElements.forEach(script => {
+        const newScript = document.createElement('script');
+        newScript.textContent = script.textContent;
+        document.body.appendChild(newScript);
+        });
+        });
+
       </script>
 
     <div class="header">
         <div class="logo">
-            <a href="../"><img src="../images/logo-long-bk.svg" alt="Thakshila Damsak [logo]" title="Home"></a>
+            <a href="/"><img src="/images/logo-long-bk.svg" alt="Thakshila Damsak [logo]" title="Home"></a>
        
             <div class="color-chooser" id="color-chooser">
 
@@ -68,6 +85,22 @@
 
     <div class="home">
         <div class="menus" id="menubar">
+
+            <div class="page-loading-home pl">
+                <dev class="loading-spinner"></dev>
+                <span> Loading... </span>
+            </div>
+
+            <div class="cache" id="image-container"> 
+                <img src="/images/logo-long-bk.svg" alt="[Header Logo]" loading="eager">
+                <iconify-icon icon="mdi:mastodon"></iconify-icon>
+                <iconify-icon icon="tabler:brand-kbin"></iconify-icon>
+                <iconify-icon icon="ri:pixelfed-fill"></iconify-icon>
+                <iconify-icon icon="ic:baseline-reddit"></iconify-icon>
+                <iconify-icon icon="akar-icons:youtube-fill"></iconify-icon>
+                <iconify-icon icon="ic:baseline-facebook"></iconify-icon>
+                <iconify-icon icon="uil:instagram-alt"></iconify-icon>
+            </div>
 
         </div>
     </div>

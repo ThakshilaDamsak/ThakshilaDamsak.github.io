@@ -1,8 +1,47 @@
+.parallax {
+    z-index: 1;
+    height: 100vh;
+  
+    overflow-x: hidden;
+    overflow-y: auto;
+  
+    perspective: 10px;
+
+    scroll-behavior: smooth;
+    transition: .5s;
+  }
+  
+  .parallax-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .layer1 {
+    transform: translateZ(0);
+  }
+  
+  .layer2 {
+    transform: translateZ(-1.3px);
+    scale: 1.03;
+  }
+  
+  .layer3 {
+    transform: translateZ(-2px);
+  }
+
 .page-content {
     padding-top: 28vh;
     padding-bottom: 28vh;
     transform: translateZ(0);
     width: 100%;
+    height: fit-content;
+}
+
+.cntnt {
+    height: fit-content;
 }
 
 body {

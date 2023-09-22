@@ -632,6 +632,7 @@ a {
 /* Navigation bar */
 
 .header {
+    top: 0;
     background-color: var(--header-bg-color);
     backdrop-filter: blur(20px) saturate(3);
     position: fixed;

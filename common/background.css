@@ -1,28 +1,40 @@
 .home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 1s;
+    transition: .5s;
 }
 
-.background-img {
-    background: var(--bg-image);
-    background-size:110vw;
-    background-position: center;
-    background-repeat: repeat;
-    z-index: -3;
+.bg {
+    z-index: -2;
     background-color: var(--bg-bg);
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+
     animation: bg-blur-animation 2s ease;
+    object-fit: contain;
+    overflow: hidden;
+    width: 120vw;
+    height: 500vh;
+    margin-left: -2vw;
+
+    scale: 1.05;
+
+    transition: .5s;
 }
+
+.background-img {
+    content: var(--bg-image);
+    width: 120vw;
+    margin-left: -5vw;
+    grid-area: image;
+    margin-bottom: -3vh;
+    margin-top: -3vh;
+    object-fit: contain;
+
+    transition: .5s;
+}
+
 
 @media screen and (max-width: 750px) {
     .background-img {
@@ -38,9 +50,9 @@
 
 
 @keyframes bg-blur-animation {
-    0% {opacity: 0; filter: blur(10px); scale:1.08;}
-    50% {opacity: 0; filter: blur(10px); scale:1.08;}
-    100% {opacity: 1; filter: blur(0px); scale:1;}
+    0% {opacity: 0; filter: blur(10px); scale:1.1;}
+    50% {opacity: 0; filter: blur(10px); scale:1.1;}
+    100% {opacity: 1; filter: blur(0px);;}
 }
 
 .page-stuff {
@@ -49,7 +61,7 @@
 }
 
 .overlay {
-    z-index: -2;
+    z-index: -1;
     background-color: var(--bg-bg);
     position: absolute;
     top: 0;
@@ -60,4 +72,15 @@
     align-items: center;
     justify-content: center;
     backdrop-filter: invert(var(--bg-backdrop-filter));
+
+    height: 500vh;
+    scale: 1.1;
+}
+
+.bg-container {
+    overflow: hidden;
+    width: 110vw;
+    height: 226vh;
+    margin-left:-5vw;
+    margin-top: -5vh;
 }

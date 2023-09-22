@@ -1,6 +1,6 @@
 <div class="parallax">
 
-<div class="bg-container parallax-layer layer2">
+<div class="bg-container parallax-layer layer2" id="bg">
 
 <div class="bg">
     <div class="background-img" id="floater"></div>
@@ -18,7 +18,7 @@
 <!--Content of the page.-->
 
 <div class="cntnt">
-<div class="page-content parallax-layer layer1"  id="home">
+<div class="page-content parallax-layer layer1"  id="home" id="page-content">
 
     <div class="h-card">
         <div class="heading">
@@ -181,3 +181,12 @@
 
 </div>
 </div>
+
+<script>
+// get the height of the page-content element
+var pageContent = document.getElementById("page-content");
+var pageContentHeight = pageContent.clientHeight;
+// set the height of the bg element to the same value
+var bg = document.getElementById("bg");
+bg.style.height = pageContentHeight + "px";
+</script>

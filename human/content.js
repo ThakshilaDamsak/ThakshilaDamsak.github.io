@@ -47,21 +47,3 @@ Promise.all(imagePromises).then(() => {
       });
     });
 });
-
-
-
-window.onload = function() {
-  var currentURL = window.location.href;
-  if (!currentURL.endsWith("#Oh-ma-Gaad-Noo-Wayyyayyaayyy")) {
-  var newURL = currentURL + "#Oh-ma-Gaad-Noo-Wayyyayyaayyy";
-  history.replaceState({}, null, newURL);
-  }
-  };
-  
-  window.onpopstate = function(event) {
-  var currentURL = window.location.href;
-  if (currentURL.endsWith("##Oh-ma-Gaad-Noo-Wayyyayyaayyy")) {
-  var newURL = currentURL.replace("##Oh-ma-Gaad-Noo-Wayyyayyaayyy", "");
-  history.replaceState({}, null, newURL);
-  }
-  };

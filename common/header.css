@@ -998,9 +998,9 @@ input:checked + .slider:before {
 } 
 
 
-/* Tooltip container */
+/*------Tooltip container------*/
   
-  /* Tooltip text */
+  /*------Tooltip text-------*/
   .love-tooltip .love-tooltiptext {
     visibility: hidden;
     width: auto;
@@ -1038,4 +1038,51 @@ input:checked + .slider:before {
 iconify-icon {
   margin-bottom: -2px;
   scale: 1.1;
+}
+
+
+/*-----Upside Down Tooltip------*/
+.colorizer-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.colorizer-tooltiptext, .colorizer-tooltiptext b, .colorizer-tooltiptext iconify-icon, .colorizer-tooltiptext span{
+  cursor: default !important;
+}
+
+.colorizer-tooltip b {
+  font-weight: bold;
+}
+
+/* Tooltip text */
+.colorizer-tooltip .colorizer-tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  top: 100%;
+  left: 50%; 
+  margin-left: -85px;
+  margin-top: 10px;
+  background-color: var(--footer-tooltip-footer-bg);
+  color: var(--footer-tooltip-footer-color);
+  box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.116);
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.295);
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: Work Sans;
+  font-weight: 100;
+
+  border-width: 1px;
+  border: Solid 1px rgba(138, 138, 138, 0.226);
+  border-style: solid;
+ 
+  position: absolute;
+  z-index: 2;
+  
+  opacity: 0;
+  transition: 0.2s;
+
+  filter: none;
 }

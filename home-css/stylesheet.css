@@ -428,7 +428,7 @@ body {
     width: 280px;
     height: 80px;
     box-shadow: none;
-    transition: 0s;
+    transition: 0.7s;
     cursor:pointer;
 }
 

@@ -370,6 +370,8 @@ body {
     border: Solid 1px rgba(138, 138, 138, 0.226);
     transition: 1s;
     box-shadow: 0px 5px 40px 1px var(--home-projects-shadow);
+    gap: 10px;
+    padding-bottom: 10px;
 }
 
 .projects-title-bg {
@@ -408,7 +410,8 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     gap: 10px;
     transition: 1s;
 }
@@ -425,8 +428,12 @@ body {
     width: 280px;
     height: 80px;
     box-shadow: none;
-    transition: 0.7s;
+    transition: 0s;
     cursor:pointer;
+}
+
+.long-pp {
+    width: 572px !important;
 }
 
 .project:hover {
@@ -492,6 +499,10 @@ body {
 @media screen and (max-width: 660px) {
     .my-projects {
         flex-direction: column;
+    }
+
+    .long-pp {
+        width: 280px !important;
     }
 }
 

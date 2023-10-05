@@ -73,7 +73,7 @@
     width:fit-content;
     max-width: 1100px;
     border-radius: 24px;
-    animation: bg-blur-animation 1s ease;
+    animation: bg-blur-animation 0.5s ease;
     margin-top: auto;
 }
 
@@ -184,10 +184,18 @@
 }
 
 @keyframes bg-blur-animation {
-    0% {opacity: 0; filter: blur(10px); scale:1.08;}
-    50% {opacity: 0; scale:1.08;}
-    100% {opacity: 1; filter: blur(0px); scale:1;}
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: scale(1.08);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: scale(1);
+    }
 }
+
 
 @media screen and (max-width: 840px) {
     .human-page-title {

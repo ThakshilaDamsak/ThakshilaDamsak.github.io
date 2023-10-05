@@ -10,9 +10,9 @@ body {
 }
 
 @keyframes element-blur-animation {
-    0% {opacity: 0; scale:1.03;}
-    10% {opacity: 0; scale:1.03;}
-    90% {opacity: 1; scale:1;}
+    0% {opacity: 0; transform: scale(1.03);}
+    10% {opacity: 0; transform: scale(1.03);}
+    90% {opacity: 1; transform: scale(1);}
 }
 
 .h-card {
@@ -152,6 +152,10 @@ body {
 
 /* About */
 
+#about {
+    margin-top: 15vh;
+    margin-bottom: auto;
+}
 .about {
     display: flex;
     flex-direction: row;

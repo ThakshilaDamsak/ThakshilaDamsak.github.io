@@ -23,6 +23,7 @@
     justify-content: center;
     overflow: hidden;
     animation: bg-blur-animation 2s ease;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 750px) {
@@ -39,9 +40,9 @@
 
 
 @keyframes bg-blur-animation {
-    0% {opacity: 0; filter: blur(10px); scale:1.08;}
-    50% {opacity: 0; filter: blur(10px); scale:1.08;}
-    100% {opacity: 1; filter: blur(0px); scale:1;}
+    0% {opacity: 0; filter: blur(10px); transform: scale(1.08);}
+    50% {opacity: 0; filter: blur(10px); transform: scale(1.08);}
+    100% {opacity: 1; filter: blur(0px); transform: scale(1);}
 }
 
 .page-stuff {

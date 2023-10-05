@@ -45,6 +45,13 @@ Promise.all(imagePromises).then(() => {
         newScript.textContent = script.textContent;
         document.body.appendChild(newScript);
       });
+
+      // Focus and scroll to the element specified by the URL fragment
+      const fragment = window.location.hash.substring(1);
+      const element = document.getElementById(fragment);
+      if (element) {
+        element.focus();
+        element.scrollIntoView();
+      }
     });
 });
-

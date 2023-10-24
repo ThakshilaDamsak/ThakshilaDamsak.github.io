@@ -548,6 +548,8 @@ a {
   transition: 0.5s;
   background-color: var(--header-links-a-hover-bg-color);
   border-radius: 10px;
+  animation: loading-box 2s 1s ease infinite;
+
 }
 
 .box2 {
@@ -563,6 +565,8 @@ a {
   background-color: var(--header-links-a-hover-bg-color);
   border-radius: 10px;
   transition: 0.5s;
+  animation: loading-box 2s 1.1s ease infinite;
+
 }
 
 .box3 {
@@ -580,6 +584,8 @@ a {
   margin-bottom: auto;
   background-color: var(--header-links-a-hover-bg-color);
   border-radius: 10px;
+  animation: loading-box 2s 1.2s ease infinite;
+
 }
 
 .box4 {
@@ -588,6 +594,8 @@ a {
   transition: 0.5s;
   background-color: var(--header-links-a-hover-bg-color);
   border-radius: 10px;
+  animation: loading-box 2s 1.3s ease infinite;
+
 }
 
 .bx {
@@ -607,6 +615,7 @@ a {
   background-color: var(--header-links-a-hover-bg-color);
   border-radius: 10px;
   transition: 0.5s;
+  animation: loading-box 2s 1.4s ease infinite;
 }
 
 .box6 {
@@ -622,6 +631,13 @@ a {
   background-color: var(--header-links-a-hover-bg-color);
   border-radius: 10px;
   transition: 0.5s;
+  animation: loading-box 2s 1.5s ease infinite;
+}
+
+@keyframes loading-box {
+  0% {opacity: 100%;}
+  50% {opacity: 60%;}
+  100% {opacity: 100%;}
 }
 
 @keyframes spin {

@@ -132,7 +132,7 @@ body {
 }
 
 .button {
-    transition: all 0.35s ease-in-out;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
     overflow: hidden;
     width: 130px;

@@ -22,7 +22,17 @@
 </script>
 
 <div id="site-info" class="hidden">
-    <p>v25.10 | <a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io" target="_blank">GitHub Repository</a></p>
+    <p>
+        
+        <span class="tooltip">
+            <span>
+                v25.10
+            </span>
+            {% assign commit_message = site.data.commit_message.message %}
+            <span class="tooltiptext" id="commit_message"><b>{{ commit_message }}</b></span>
+        </span>
+
+         | <a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io" target="_blank">GitHub Repository</a></p>
 </div>
 
 <script>

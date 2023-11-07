@@ -21,7 +21,6 @@
     right: 0;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     animation: bg-blur-animation 2s ease;
     overflow: hidden;
 }
@@ -40,8 +39,8 @@
 
 
 @keyframes bg-blur-animation {
-    0% {opacity: 0; filter: blur(10px); transform: scale(1.08);}
-    50% {opacity: 0; filter: blur(10px); transform: scale(1.08);}
+    0% {display: none; opacity: 0; filter: blur(10px); transform: scale(1.08);}
+    50% {display: block; opacity: 0; filter: blur(10px); transform: scale(1.08);}
     100% {opacity: 1; filter: blur(0px); transform: scale(1);}
 }
 
@@ -62,4 +61,5 @@
     align-items: center;
     justify-content: center;
     backdrop-filter: invert(var(--bg-backdrop-filter));
+    overflow: hidden;
 }

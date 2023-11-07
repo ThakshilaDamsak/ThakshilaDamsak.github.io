@@ -431,6 +431,7 @@ body {
     box-shadow: 0px 5px 40px 1px var(--home-projects-shadow);
     gap: 10px;
     padding-bottom: 10px;
+    overflow: hidden;
 }
 
 .projects-title-bg {
@@ -496,7 +497,7 @@ body {
 }
 
 .project:hover {
-    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.13);
     background: var(--home-projects-project-hover-background);
     transition: 0.2s;
 }

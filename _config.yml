@@ -1,2 +1,1 @@
 include: [".well-known"]
-{% assign commit_message = site.data.commit_message.message %}

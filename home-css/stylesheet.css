@@ -558,30 +558,38 @@ body {
     transition: 1s;
 }
 
-.scrolling {
+.scrolling-hor-1 {
     white-space: nowrap;
     position: relative;
+    transition: transform 0.2s ease-in-out;  
+    transform: translateX(0%);
 }
 
-.project:hover .scrolling { 
-    animation: scroll 5s linear infinite;  
-    transition: all 0.5s ease-in-out;  
+.scrolling-hor-1::after{
+    content:attr(data-content);
+    margin-left: 15px;
+    position: absolute;
 }
 
-@media (pointer: coarse) {
-    .scrolling{
-        animation: scroll 5s linear infinite;  
-        transition: all 0.5s ease-in-out;  
-    }
+.scrolling-hor-1 { 
+    animation: scroll 8s ease-in-out infinite;  
+    transition: transform 0.2s ease-in-out;  
 }
 
 @keyframes scroll { 
     0% { transform: translateX(0);}
-    10% {opacity: 1;} 
-    75% {transform: translateX(-20%);} 
-    85% { transform: translateX(0);}
+    40% {transform: translateX(-15%);} 
+    50% {transform: translateX(-15%);} 
+    80% { transform: translateX(0);}
     100% { transform: translateX(0);}
 }
+
+/* |----Continueus Scrolling----|
+@keyframes scroll { 
+    0% { transform: translateX(0);}
+    80% {transform: translateX(-107%);}
+    100% {transform: translateX(-107%);}
+} */
 
 @media screen and (max-width: 660px) {
     .my-projects {

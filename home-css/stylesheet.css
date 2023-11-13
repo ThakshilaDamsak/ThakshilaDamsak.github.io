@@ -528,6 +528,8 @@ body {
     overflow-y: auto;
     margin-top: auto;
     margin-bottom: auto;
+    overflow: hidden;
+    align-self: flex-start;
 }
 
 .project-name {
@@ -554,6 +556,31 @@ body {
     text-shadow: 1px 1px 10px var(--projects-text-shadow);
     color: var(--home-projects-project-text-color);
     transition: 1s;
+}
+
+.scrolling {
+    white-space: nowrap;
+    position: relative;
+}
+
+.project:hover .scrolling { 
+    animation: scroll 5s linear infinite;  
+    transition: all 0.5s ease-in-out;  
+}
+
+@media (pointer: coarse) {
+    .scrolling{
+        animation: scroll 5s linear infinite;  
+        transition: all 0.5s ease-in-out;  
+    }
+}
+
+@keyframes scroll { 
+    0% { transform: translateX(0);}
+    10% {opacity: 1;} 
+    75% {transform: translateX(-20%);} 
+    85% { transform: translateX(0);}
+    100% { transform: translateX(0);}
 }
 
 @media screen and (max-width: 660px) {

@@ -44,6 +44,12 @@
     100% {opacity: 1; filter: blur(0px); transform: scale(1);}
 }
 
+@keyframes overlay-blur-animation {
+    0% {transform: scale(1.08);}
+    50% {transform: scale(1.08);}
+    100% {transform: scale(1);}
+}
+
 .page-stuff {
     display: flex;
     height: 100vh;
@@ -62,4 +68,5 @@
     justify-content: center;
     backdrop-filter: invert(var(--bg-backdrop-filter));
     overflow: hidden;
+    animation: overlay-blur-animation 2s ease;
 }

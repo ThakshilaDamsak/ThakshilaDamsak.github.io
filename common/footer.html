@@ -23,12 +23,12 @@
 
 <div id="site-info" class="hidden">
     
-        <span>v27.13 | Updated</span>
+        <span>v27.14 | Updated</span>
 
         <span class="tooltip">
           <span id="time-passed">[loading...]</span>
             <span class="tooltiptext"><b id="full-date">[loading...]</b></span>
-        </span>.
+        </span>
 
          | <a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io" target="_blank">GitHub Repository</a></p>
 </div>
@@ -91,22 +91,22 @@ fetch('/common/social-links.html')
     // Calculate the relative time based on the time difference
     let relativeTime;
     if (timeDifference < minute) {
-      relativeTime = "just now";
+      relativeTime = "just now.";
     } else if (timeDifference < hour) {
       const minutes = Math.floor(timeDifference / minute);
-      relativeTime = `${minutes} minute${minutes > 1 ? "s" : ""} ago`;
+      relativeTime = `${minutes} minute${minutes > 1 ? "s" : ""} ago.`;
     } else if (timeDifference < day) {
       const hours = Math.floor(timeDifference / hour);
-      relativeTime = `${hours} hour${hours > 1 ? "s" : ""} ago`;
+      relativeTime = `${hours} hour${hours > 1 ? "s" : ""} ago.`;
     } else if (timeDifference < week) {
       const days = Math.floor(timeDifference / day);
-      relativeTime = `${days} day${days > 1 ? "s" : ""} ago`;
+      relativeTime = `${days} day${days > 1 ? "s" : ""} ago.`;
     } else if (timeDifference < month) {
       const weeks = Math.floor(timeDifference / week);
-      relativeTime = `${weeks} week${weeks > 1 ? "s" : ""} ago`;
+      relativeTime = `${weeks} week${weeks > 1 ? "s" : ""} ago.`;
     } else {
       const months = Math.floor(timeDifference / month);
-      relativeTime = `${months} month${months > 1 ? "s" : ""} ago`;
+      relativeTime = `${months} month${months > 1 ? "s" : ""} ago.`;
     }
   
     // Update the content of the <span> elements

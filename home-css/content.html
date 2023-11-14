@@ -82,7 +82,7 @@ function parallax() {
                   
                 </div>
                 
-                <div id="umma-overlay" class="hidden">
+                <div id="umma-overlay" style="display: none;">
                     <div class="umma-text" id="umma-text">
                       <p>Want a kiss? 😗</p>
                       <button onclick="window.open('https://youtu.be/1P5yyeeYF9o', '_blank');" id="umma-button">Yes kiss me</button>
@@ -90,22 +90,15 @@ function parallax() {
                   </div>
     
                   <script>
-    const umma = document.getElementById("umma");
-    const tooltip = document.getElementById("umma-overlay");
-
-    umma.addEventListener("click", function() {
-    if (tooltip.classList.contains("hidden")) {
-        tooltip.classList.remove("hidden");
-        tooltip.classList.add("show");
-        setTimeout(function() {
-        tooltip.classList.add("hidden");
-        tooltip.classList.remove("show");
-        }, 6000);
-    } else {
-        tooltip.classList.add("hidden");
-        tooltip.classList.remove("show");
-    }
-    });
+                    const text = document.getElementById("umma");
+                    const overlay = document.getElementById("umma-overlay");
+    
+                    text.addEventListener("click", function() {
+                    overlay.style.display = "flex";
+                    setTimeout(function() {
+                        overlay.style.display = "none";
+                    }, 5000); // hide the overlay after 5 seconds
+                    });
                   </script>
     
                 <script>

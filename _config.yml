@@ -1,7 +1,1 @@
 include: [".well-known"]
-include: ['_includes', '_layouts', '_sass', 'assets', '.nojekyll']
-exclude:
-  - '*.html'
-  - '*.css'
-  - '*.js'
-hash_assets: true

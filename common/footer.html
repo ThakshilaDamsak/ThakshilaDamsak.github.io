@@ -23,11 +23,11 @@
 
 <div id="site-info" class="hidden">
     
-        <span>v27.19 | Updated</span>
+        <span>v27.21 | Updated</span>
 
         <span class="tooltip">
-          <span id="time-passed">[loading...]</span>
-            <span class="tooltiptext"><b id="full-date">[loading...]</b></span>
+          <span id="time-passed-boom" class="time-passed-boom">[loading...]</span>
+            <span class="tooltiptext full-date-boom"><b id="full-date-boom">[loading...]</b></span>
         </span>
 
          | <a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io" target="_blank">GitHub Repository</a></p>
@@ -67,27 +67,34 @@ fetch('/common/social-links.html')
     });
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
+
+
+
+  // Check if the elements already exist
+  const timePassedElement = document.getElementById("time-passed-boom");
+  const dateElement = document.getElementById("full-date-boom");
+
+  if (timePassedElement && dateElement) {
     // Get the current date
     const currentDate = new Date();
-  
+
     // Get the last modified date of the page
     const lastModifiedDate = new Date(document.lastModified);
-  
+
     // Format the date as "yyyy.MM.dd at hh:mm a" (using user's time zone)
     const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: 'numeric', minute: 'numeric', hour12: true };
     const formattedDate = lastModifiedDate.toLocaleString(undefined, options);
-  
+
     // Calculate the time difference in milliseconds
     const timeDifference = currentDate - lastModifiedDate;
-  
+
     // Define time intervals in milliseconds
     const minute = 60 * 1000;
     const hour = 60 * minute;
     const day = 24 * hour;
     const week = 7 * day;
     const month = 30 * day;
-  
+
     // Calculate the relative time based on the time difference
     let relativeTime;
     if (timeDifference < minute) {
@@ -108,14 +115,12 @@ fetch('/common/social-links.html')
       const months = Math.floor(timeDifference / month);
       relativeTime = `${months} month${months > 1 ? "s" : ""} ago.`;
     }
-  
+
     // Update the content of the <span> elements
-    const timePassedElement = document.getElementById("time-passed");
     timePassedElement.textContent = relativeTime;
-  
-    const dateElement = document.getElementById("full-date");
     dateElement.textContent = formattedDate;
-  });
+  };
+
   
 </script>
 

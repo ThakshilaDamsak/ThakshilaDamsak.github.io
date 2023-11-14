@@ -23,7 +23,7 @@
 
 <div id="site-info" class="hidden">
     
-        <span>v27.14 | Updated</span>
+        <span>v27.15 | Updated</span>
 
         <span class="tooltip">
           <span id="time-passed">[loading...]</span>
@@ -35,19 +35,19 @@
 
 <script>
     const copyright = document.getElementById("cpyrt");
-    const tooltip = document.getElementById("site-info");
+    const overlay = document.getElementById("site-info");
 
     copyright.addEventListener("click", function() {
-    if (tooltip.classList.contains("hidden")) {
-        tooltip.classList.remove("hidden");
-        tooltip.classList.add("show");
+    if (overlay.classList.contains("hidden")) {
+      overlay.classList.remove("hidden");
+      overlay.classList.add("show");
         setTimeout(function() {
-        tooltip.classList.add("hidden");
-        tooltip.classList.remove("show");
+          overlay.classList.add("hidden");
+          overlay.classList.remove("show");
         }, 6000);
     } else {
-        tooltip.classList.add("hidden");
-        tooltip.classList.remove("show");
+      overlay.classList.add("hidden");
+      overlay.classList.remove("show");
     }
     });
 

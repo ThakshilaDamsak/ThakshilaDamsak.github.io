@@ -64,5 +64,11 @@ Promise.all(iconPromises).then(() => { // change imagePromises to iconPromises
         newScript.textContent = script.textContent;
         document.body.appendChild(newScript);
       });
+        // Update the relative time and the full date
+        const currentDate = new Date();
+        const lastModifiedDate = new Date(document.lastModified);
+
+        const timeDifference = currentDate - lastModifiedDate;
+        // ... Rest of the code to calculate and update the relative time and the full date
     });
 });

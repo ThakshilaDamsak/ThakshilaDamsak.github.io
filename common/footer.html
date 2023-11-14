@@ -23,9 +23,10 @@
 
 <div id="site-info" class="hidden">
     
-        <span>v27.8 | Updated</span>             <span id="time-passed"></span>
+        <span>v27.9 | Updated</span>
 
         <span class="tooltip">
+          <span id="time-passed"></span>
             <span class="tooltiptext"><b id="full-date"></b></span>
         </span>.
 
@@ -68,13 +69,7 @@ fetch('/common/social-links.html')
     });
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
-    // Get the current date
-    const currentDate = new Date();
-  
-    // Get the last modified date of the page
-    const lastModifiedDate = new Date(document.lastModified);
-  
+    document.addEventListener("DOMContentLoaded", function() {  
     // Format the date as "yyyy.MM.dd at hh:mm a" (using user's time zone)
     const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: 'numeric', minute: 'numeric', hour12: true };
     const formattedDate = lastModifiedDate.toLocaleString(undefined, options);
@@ -114,7 +109,7 @@ fetch('/common/social-links.html')
     const timePassedElement = document.getElementById("time-passed");
     timePassedElement.textContent = relativeTime;
   
-    const dateElement = document.getElementById("date");
+    const dateElement = document.getElementById("full-date");
     dateElement.textContent = formattedDate;
   });
   

@@ -23,7 +23,7 @@
 
 <div id="site-info" class="hidden">
     
-        <span>v27.9 | Updated</span>
+        <span>v27.11 | Updated</span>
 
         <span class="tooltip">
           <span id="time-passed"></span>
@@ -32,8 +32,6 @@
 
          | <a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io" target="_blank">GitHub Repository</a></p>
 </div>
-
-<script src="/common/updateDate.js"></script>
 
 <script>
     const copyright = document.getElementById("cpyrt");
@@ -69,7 +67,13 @@ fetch('/common/social-links.html')
     });
     });
 
-    document.addEventListener("DOMContentLoaded", function() {  
+    document.addEventListener("DOMContentLoaded", function() {
+    // Get the current date
+    const currentDate = new Date();
+  
+    // Get the last modified date of the page
+    const lastModifiedDate = new Date(document.lastModified);
+  
     // Format the date as "yyyy.MM.dd at hh:mm a" (using user's time zone)
     const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: 'numeric', minute: 'numeric', hour12: true };
     const formattedDate = lastModifiedDate.toLocaleString(undefined, options);

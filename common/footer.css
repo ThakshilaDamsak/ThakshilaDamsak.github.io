@@ -98,36 +98,22 @@
     font-family: Open Sans;
     font-size: 15px;
     animation: fadein 0.5s 0s, fadeout 1s 5.72s;
- }
-
-    @keyframes fadein {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      
-      @keyframes fadeout {
-        from {
-          opacity: 1;
-        }
-        to {
-          opacity: 0;
-        }
-      }
-            
+ }           
   
   .hidden {
-    display: none;
-  }
-  
-  .show {
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
     display: block;
   }
 
-.show a{
+  .show {
+    opacity: 1;
+    transition: .3s;
+    display: block;
+  }
+
+.show a, .hidden a {
     font-size: 15px;
     font-family: Open Sans;
     text-decoration: underline;

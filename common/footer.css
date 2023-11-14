@@ -97,7 +97,6 @@
     padding: 10px;
     font-family: Open Sans;
     font-size: 15px;
-    animation: fadein 0.5s 0s, fadeout 1s 5.72s;
  }           
   
   .hidden {

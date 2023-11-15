@@ -247,7 +247,7 @@
     visibility: hidden;
     width: 100px;
     bottom: 120%;
-    left: 50%;
+    left: 30%;
     margin-left: -40px;
     margin-bottom: 5px;
     background-color: var(--footer-tooltip-footer-bg);
@@ -275,3 +275,7 @@
     opacity: 1;
     margin-bottom: 10px;
 } 
+
+.tooltip-footer span {
+    pointer-events: none;
+}

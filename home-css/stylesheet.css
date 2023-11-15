@@ -556,6 +556,36 @@ body {
     text-shadow: 1px 1px 10px var(--projects-text-shadow);
     color: var(--home-projects-project-text-color);
     transition: 1s;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-text p {
+    visibility: visible;
+    transition: 0.2s;
+    opacity: 1;
+}
+
+.project:hover .project-text p {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.project-text span {
+    visibility: hidden;
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: 0.2s;
+    opacity: 0;
+    transform: translateY(5px);
+}
+
+.project:hover .project-text span {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 .scrolling-hor-1 {

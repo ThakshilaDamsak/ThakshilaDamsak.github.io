@@ -249,7 +249,7 @@
     bottom: 120%;
     left: 50%;
     margin-left: -45px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     background-color: var(--footer-tooltip-footer-bg);
     color: var(--footer-tooltip-footer-color);
     box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.116);

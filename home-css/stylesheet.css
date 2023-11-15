@@ -565,6 +565,7 @@ body {
     visibility: visible;
     transition: 0.2s;
     opacity: 1;
+    transition: 0.2s;
 }
 
 .project:hover .project-text p {
@@ -587,6 +588,7 @@ body {
     visibility: visible;
     opacity: 1;
     transform: translateY(0px);
+    transition: 0.2s 0.1s;
 }
 
 .scrolling-hor-1 {

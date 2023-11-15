@@ -526,10 +526,11 @@ body {
     gap: 1px;
     transition: 1s;
     overflow-y: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    padding-top: auto;
+    padding-bottom: auto;
     overflow: hidden;
-    align-self: flex-start;
+    align-items:flex-start;
+    justify-content: center;
 }
 
 .project-name {
@@ -595,11 +596,12 @@ body {
     transform: translateX(0%);
 }
 
+/*
 .scrolling-hor-1::after{
     content:attr(data-content);
     margin-left: 15px;
     position: absolute;
-}
+}*/
 
 .scrolling-hor-1 { 
     animation: scroll 8s ease-in-out infinite;  

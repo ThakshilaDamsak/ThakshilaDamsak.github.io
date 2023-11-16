@@ -86,6 +86,12 @@ html{
     --home-projects-shadow:rgba(0, 187, 93, 0.24);
 
     --human-ambient-opacity: 100%;
+
+    --button-color: rgb(218, 238, 255);
+    --button-background: rgb(39, 173, 226);
+    --button-color-hover: white;
+    --button-background-hover: rgb(0, 119, 255);
+    --button-shadow-color: rgba(35, 83, 105, .7);
   }
   
   @media (prefers-color-scheme: dark) {
@@ -146,6 +152,12 @@ html{
       --error-about-p-a-color: rgb(253, 180, 255);
 
       --human-ambient-opacity: 70%;
+
+      --button-color: rgb(35, 83, 105);
+      --button-background: rgb(85, 198, 255);
+      --button-color-hover: rgb(0, 0, 0);
+      --button-background-hover: rgb(46, 171, 255);
+      --button-shadow-color: rgba(35, 83, 105, .7);
     }
   }
 

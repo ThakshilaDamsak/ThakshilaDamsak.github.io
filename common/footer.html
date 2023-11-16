@@ -23,7 +23,7 @@
 
 <div id="site-info" class="hidden">
     
-        <span>v28.5 | Updated</span>
+        <span>v28.6 | Updated</span>
 
         <span class="tooltip-footer">
           <span id="time-passed-boom" class="time-passed-boom">[loading...]</span>
@@ -51,21 +51,28 @@
     }
     });
 
-    // Fetch the content of the footer HTML file
-fetch('/common/social-links.html')
-    .then(response => response.text())
-    .then(html => {
-    // Insert the footer HTML into the container
+// Get social-links
+
+ // Fetch the content of the social-links HTML file
+ fetch('/common/social-links.html')
+  .then(response => response.text())
+  .then(html => {
+    // Insert the social-links HTML into the container
     document.getElementById('social-links').innerHTML = html;
 
-    // Execute JavaScript code within the footer
+    // Execute JavaScript code within the container
     const scriptElements = Array.from(document.getElementById('social-links').getElementsByTagName('script'));
     scriptElements.forEach(script => {
-        const newScript = document.createElement('script');
-        newScript.textContent = script.textContent;
-        document.body.appendChild(newScript);
+      const newScript = document.createElement('script');
+      newScript.textContent = script.textContent;
+      // Add a load event listener to the new script element
+      newScript.addEventListener('load', function() {
+        // Execute the function that updates the content of the page
+        this.textContent();
+      });
+      document.body.appendChild(newScript);
     });
-    });
+  });
 
 
 

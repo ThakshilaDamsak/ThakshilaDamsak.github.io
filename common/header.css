@@ -87,6 +87,8 @@ html{
 
     --human-ambient-opacity: 100%;
 
+    --project-logo-bg: rgb(255, 255, 255);
+
     --button-color: rgb(218, 238, 255);
     --button-background: rgb(39, 173, 226);
     --button-color-hover: white;
@@ -152,6 +154,8 @@ html{
       --error-about-p-a-color: rgb(253, 180, 255);
 
       --human-ambient-opacity: 70%;
+
+      --project-logo-bg: rgb(50, 52, 53);
 
       --button-color: rgb(35, 83, 105);
       --button-background: rgb(85, 198, 255);
@@ -1076,7 +1080,7 @@ iconify-icon {
 }
 
 
-/*-----Upside Down Tooltip------*/
+/*-----Colorizer Down Tooltip------*/
 .colorizer-tooltip {
   position: relative;
   display: inline-block;
@@ -1122,3 +1126,56 @@ iconify-icon {
 
   filter: none;
 }
+
+/*-----Upside Down Tooltip------*/
+.ud-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.ud-tooltiptext, .ud-tooltiptext b, .ud-tooltiptext iconify-icon, .ud-tooltiptext span{
+  cursor: default !important;
+  pointer-events: none;
+}
+
+.ud-tooltip b {
+  font-weight: bold;
+}
+
+/* Tooltip text */
+.ud-tooltip .ud-tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  top: 100%;
+  left: 50%; 
+  margin-left: -85px;
+  margin-top: 5px;
+  background-color: var(--footer-tooltip-footer-bg);
+  color: var(--footer-tooltip-footer-color);
+  box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.116);
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.295);
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: Work Sans;
+  font-weight: 100;
+
+  border-width: 1px;
+  border: Solid 1px rgba(138, 138, 138, 0.226);
+  border-style: solid;
+ 
+  position: absolute;
+  z-index: 2;
+  
+  opacity: 0;
+  transition: 0.2s;
+
+  filter: none;
+}
+
+.ud-tooltip:hover .ud-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 10px;
+} 

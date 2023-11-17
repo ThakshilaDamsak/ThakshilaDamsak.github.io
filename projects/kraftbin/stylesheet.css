@@ -202,7 +202,8 @@
 }
 
 .spacer1 {
-    height: 30vh;
+    height: 5px;
+    display: flex;
 }
 
 .project-about {

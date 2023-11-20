@@ -25,6 +25,11 @@
     overflow: hidden;
 }
 
+#floater {
+    will-change: transform;
+}
+
+
 @media screen and (max-width: 750px) {
     .background-img {
         background-size:150vw;
@@ -42,6 +47,12 @@
     0% {display: none; opacity: 0; filter: blur(10px); transform: scale(1.08);}
     50% {display: block; opacity: 0; filter: blur(10px); transform: scale(1.08);}
     100% {opacity: 1; filter: blur(0px); transform: scale(1);}
+}
+
+@keyframes bg-scroll-animation {
+    0% {    transform: translateY(50px);    }
+    50% {    transform: translateY(0%);    }
+    100% {    transform: translateY(50px);    }
 }
 
 @keyframes overlay-blur-animation {

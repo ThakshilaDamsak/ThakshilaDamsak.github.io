@@ -8,13 +8,17 @@
 <script>
 function parallax() {
     const floater = document.getElementById("floater");
-    const yPos = -window.pageYOffset / -50;	
-    floater.style.top = `${yPos}%`;
+    const yPos = -window.pageYOffset / -140;	
+    floater.style.transform = `translate3d(0, ${yPos}%, 0)`;
 }       
 
-    window.addEventListener("scroll", function(){
-        parallax();	
-    });
+function animate() {
+    parallax();
+    requestAnimationFrame(animate);
+}
+
+requestAnimationFrame(animate);
+
 </script>
 
 <!--Content of the page.-->

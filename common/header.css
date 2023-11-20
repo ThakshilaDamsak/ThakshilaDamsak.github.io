@@ -1198,6 +1198,8 @@ textarea:focus, input:focus{
   outline: none;
   }
 
+
+
   
 /*-----Selector-----*/
 
@@ -1227,4 +1229,5 @@ select:hover{
 select:focus {
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.226);
   border: Solid 2px rgb(0, 162, 255);
+  outline: none;
 }

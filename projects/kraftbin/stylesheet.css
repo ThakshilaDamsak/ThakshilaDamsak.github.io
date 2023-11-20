@@ -9,6 +9,36 @@
     align-items: center;
 }
 
+.banner {
+    display: flex;
+    color: var(--header-links-a-hover-color);
+    background-color: rgba(255, 115, 0, 0.555);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: fixed;
+    bottom: 50px;
+    right: 8px;
+    margin-left: 8px;
+    z-index: 100;
+    backdrop-filter: blur(20px) saturate(3);
+
+    border-width: 2px;
+    border-color: rgba(255, 115, 0, 0.582);
+    border-style: solid;
+    transition: .2s;
+    border-radius: 24px;
+
+    font-size: 14px;
+    text-align: center;
+}
+
+.banner a {
+    text-decoration: underline;
+    color: var(--header-links-a-hover-color);
+    transition: .2s;
+}
+
 .background-img {
     background:var(--home-bg);
     background-position-x: center;

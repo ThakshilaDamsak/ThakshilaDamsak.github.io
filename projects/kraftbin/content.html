@@ -225,61 +225,65 @@
     <div class="section-content">
       <div class="info">
         <div class="title project-name-name">
-          <p>Lorem, ipsum dolor.</p>
+          <p>Familiar</p>
         </div>
         <div class="discription project-name-discription">
           <p>KraftBin is a customizable, cleaner and familiar look for Kbin. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt nisi necessitatibus aspernatur cum sunt totam optio blanditiis vel perspiciatis expedita!</p>
         </div>
       </div>
-      <div class="image image2">
-        <img src="https://github.com/ThakshilaDamsak/KraftBin/assets/95128171/69a3a4c6-48b5-4027-b343-1548d59528e2" alt="[Image 1]">
-      </div>
-    </div>
-  </div>
+      <div class="image image2 familiar">
+        <div class="vote">
+          <div class="vote-up">
+            <input  type="checkbox" class="vote-up-check-input" />
+            <span class="vote-up-check-text"><iconify-icon icon="fa-solid:arrow-up"></iconify-icon></span>
+          </div>
+          <div class="vote-down">
+            <input  type="checkbox" class="vote-down-check-input" />
+            <span class="vote-down-check-text"><iconify-icon icon="fa-solid:arrow-down"></iconify-icon></span>
+          </div>
 
-  <div class="pages page-odd">
-    <div class="section-content">
-      <div class="image image2">
-        <img src="https://github.com/ThakshilaDamsak/KraftBin/assets/95128171/b6177c5b-a215-4149-95ec-bf767a13582c" alt="[Image 1]">
-      </div>
-      <div class="info">
-        <div class="title project-name-name">
-          <p>Lorem, ipsum dolor.</p>
-        </div>
-        <div class="discription project-name-discription">
-          <p>KraftBin is a customizable, cleaner and familiar look for Kbin. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt nisi necessitatibus aspernatur cum sunt totam optio blanditiis vel perspiciatis expedita!</p>
-        </div>
-      </div>
-    </div>
-  </div>
+          <script>
+            // Get the checkboxes and store them in variables
+          var voteUp = document.querySelector(".vote-up-check-input");
+          var voteDown = document.querySelector(".vote-down-check-input");
 
-  <div class="pages page-even">
-    <div class="section-content">
-      <div class="info">
-        <div class="title project-name-name">
-          <p>Lorem, ipsum dolor.</p>
-        </div>
-        <div class="discription project-name-discription">
-          <p>KraftBin is a customizable, cleaner and familiar look for Kbin. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt nisi necessitatibus aspernatur cum sunt totam optio blanditiis vel perspiciatis expedita!</p>
-        </div>
-      </div>
-      <div class="image image2">
-        <img src="https://github.com/ThakshilaDamsak/KraftBin/assets/95128171/4f3f3920-44a4-4862-ae8c-6fe03f39c188" alt="[Image 1]">
-      </div>
-    </div>
-  </div>
+          // Add a click event listener to the vote up checkbox
+          voteUp.addEventListener("click", function() {
+            // If the vote up checkbox is checked, uncheck the vote down checkbox
+            if (voteUp.checked) {
+              voteDown.checked = false;
+            }
+          });
 
-  <div class="pages page-odd">
-    <div class="section-content">
-      <div class="image image1">
-        <img src="https://github.com/ThakshilaDamsak/KraftBin/assets/95128171/a2b929c9-32b3-4692-8e77-9d8fa473d8cf" alt="[Image 1]">
-      </div>
-      <div class="info">
-        <div class="title project-name-name">
-          <p>Lorem, ipsum dolor.</p>
+          // Add a click event listener to the vote down checkbox
+          voteDown.addEventListener("click", function() {
+            // If the vote down checkbox is checked, uncheck the vote up checkbox
+            if (voteDown.checked) {
+              voteUp.checked = false;
+            }
+          });
+
+          </script>
+
         </div>
-        <div class="discription project-name-discription">
-          <p>KraftBin is a customizable, cleaner and familiar look for Kbin. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt nisi necessitatibus aspernatur cum sunt totam optio blanditiis vel perspiciatis expedita!</p>
+        <div class="post">
+          <div class="post-title">
+            <p><span>Discover Fediverse Content!</span>
+            <a href="https://codeberg.org/Kbin/kbin-core/src/branch/develop/public/kbin-og.png" target="_blank">(codeberg.org)</a></p>
+          </div>
+          <div class="post-image">
+            <img src="https://codeberg.org/Kbin/kbin-core/raw/branch/develop/public/kbin-og.png" alt="">
+          </div>
+          <div class="post-text">Create and moderate communities, meet people with similar interests, and develop your passions.</div>
+          <div class="post-footer">
+            <div class="post-footer-details"><b>ThakshilaDamsak</b>, <span id="kraftbin-relative-time" class="kraftbin-relative-time post-date">[loading...]</span><b class="space">Kbin </b></div>
+            <div class="post-footer-menu">
+              <span><iconify-icon icon="fa6-solid:photo-film"></iconify-icon></span>
+              <span>comment</span>
+              <span>boost</span>
+              <span>more</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

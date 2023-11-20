@@ -87,14 +87,16 @@ html{
 
     --human-ambient-opacity: 100%;
 
+    --project-header-background: var(--bg-bg);
     --project-logo-bg: rgba(255, 255, 255, 0.842);
 
-    --button-color: rgb(218, 238, 255);
-    --button-background: rgb(39, 173, 226);
+    --button-color: rgb(255, 218, 250);
+    --button-background: rgb(226, 39, 217);
     --button-color-hover: white;
-    --button-background-hover: rgb(0, 119, 255);
-    --button-shadow-color: rgba(35, 83, 105, .7);
+    --button-background-hover: rgb(225, 0, 255);
+    --button-shadow-color: rgb(255, 0, 221);
 
+    --kraftbin-post-color: rgba(255, 255, 255, 0.842);
     --kraftbin-toggle-color: blueviolet;
   }
   
@@ -158,12 +160,15 @@ html{
       --human-ambient-opacity: 70%;
 
       --project-logo-bg: rgb(50, 52, 53, 0.842);
-
-      --button-color: rgb(35, 83, 105);
-      --button-background: rgb(85, 198, 255);
+    
+      --project-header-background: var(--header-links-a-hover-bg-color);
+      --kraftbin-post-color: rgba(31, 31, 31, 0.753);
+  
+      --button-color: rgb(97, 35, 105);
+      --button-background: rgb(249, 85, 255);
       --button-color-hover: rgb(0, 0, 0);
-      --button-background-hover: rgb(46, 171, 255);
-      --button-shadow-color: rgba(35, 83, 105, .7);
+      --button-background-hover: rgb(255, 46, 255);
+      --button-shadow-color: rgb(255, 0, 200);
     }
   }
 
@@ -226,12 +231,15 @@ html{
     --human-ambient-opacity: 70%;
 
     --project-logo-bg: rgb(50, 52, 53, 0.842);
+    
+    --project-header-background: var(--header-links-a-hover-bg-color);
+    --kraftbin-post-color: rgba(31, 31, 31, 0.753);
 
-    --button-color: rgb(35, 83, 105);
-    --button-background: rgb(85, 198, 255);
+    --button-color: rgb(97, 35, 105);
+    --button-background: rgb(249, 85, 255);
     --button-color-hover: rgb(0, 0, 0);
-    --button-background-hover: rgb(46, 171, 255);
-    --button-shadow-color: rgba(35, 83, 105, .7);
+    --button-background-hover: rgb(255, 46, 255);
+    --button-shadow-color: rgb(255, 0, 200);
   }
 
   :root.frost {
@@ -302,6 +310,18 @@ html{
 
     --human-ambient-opacity: 100%;
 
+    --project-header-background: var(--bg-bg);
+    --project-logo-bg: rgba(255, 255, 255, 0.842);
+
+    --button-color: rgb(218, 238, 255);
+    --button-background: rgb(39, 173, 226);
+    --button-color-hover: white;
+    --button-background-hover: rgb(0, 119, 255);
+    --button-shadow-color: rgba(35, 83, 105, .7);
+
+    --kraftbin-post-color: rgba(255, 255, 255, 0.842);
+    --kraftbin-toggle-color: blueviolet;
+
 
     .heading,
 		.about,
@@ -331,6 +351,12 @@ html{
     --home-projects-shadow:var(--home-heading-shadow);
 
     --kraftbin-toggle-color: var(--home-name-color);
+
+    --button-color: rgb(218, 238, 255);
+    --button-background: rgb(39, 173, 226);
+    --button-color-hover: white;
+    --button-background-hover: rgb(0, 119, 255);
+    --button-shadow-color: rgb(0, 174, 255);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -351,6 +377,12 @@ html{
       --home-projects-project-bg: rgba(65, 138, 187, 0.329);
       --home-projects-project-hover-background: rgba(79, 170, 255, 0.253);
       --home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
+
+      --button-color: rgb(35, 83, 105);
+      --button-background: rgb(85, 198, 255);
+      --button-color-hover: rgb(0, 0, 0);
+      --button-background-hover: rgb(46, 171, 255);
+      --button-shadow-color: rgb(0, 174, 255);
     }
   }
   
@@ -430,6 +462,18 @@ html{
     --home-projects-shadow:var(--home-heading-shadow);
 
     --human-ambient-opacity: 100%;
+
+    --project-header-background: var(--bg-bg);
+    --project-logo-bg: rgba(255, 255, 255, 0.842);
+
+    --button-color: rgb(218, 238, 255);
+    --button-background: rgb(39, 173, 226);
+    --button-color-hover: white;
+    --button-background-hover: rgb(0, 119, 255);
+    --button-shadow-color: rgba(35, 83, 105, .7);
+
+    --kraftbin-post-color: rgba(255, 255, 255, 0.842);
+    --kraftbin-toggle-color: blueviolet;
   }
 
 
@@ -442,6 +486,7 @@ html{
 
   body {
     background: white;
+    transition: .2s;
   }
 
 ::-webkit-scrollbar {
@@ -1174,8 +1219,8 @@ input[type=text] {
   padding: 2px 5px;
   box-sizing: border-box;
 
-  border-width: 0px 0px 2px 0px;
-  border-color: rgba(138, 138, 138, 0.226);
+  border-width: 1px 1px 2px 1px;
+  border-color: rgba(138, 138, 138, 0.226) rgba(138, 138, 138, 0.226) rgba(138, 138, 138, 0.226) rgba(138, 138, 138, 0.226);
   border-style: solid;
   border-radius: 5px;
 
@@ -1186,12 +1231,12 @@ input[type=text] {
 
 input[type=text]:hover {
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.226);
-  border-color: rgb(0, 162, 255);
+  border-color: rgba(138, 138, 138, 0.226) rgba(138, 138, 138, 0.226) rgb(0, 162, 255) rgba(138, 138, 138, 0.226);
 }
 
 input[type=text]:focus {
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.226);
-  border-color: rgb(0, 162, 255);
+  border-color: rgba(138, 138, 138, 0.226) rgba(138, 138, 138, 0.226) rgb(0, 162, 255) rgba(138, 138, 138, 0.226);
 }
 
 textarea:focus, input:focus{

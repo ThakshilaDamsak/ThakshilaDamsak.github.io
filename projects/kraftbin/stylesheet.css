@@ -72,13 +72,14 @@
     width: 90%;
     flex-direction: row;
     margin-top: 50px;
-    background-color: var(--header-links-a-hover-bg-color);
+    background-color: var(--project-header-background);
     border-radius: 24px;
     box-shadow: 0 10px 25px -15px rgba(0, 0, 0, 0.13);
 
     border-width: 1px;
     border-color: rgba(138, 138, 138, 0.226);
     border-style: solid;
+    transition: .2s;
 }
 
 .project-title {
@@ -344,7 +345,7 @@
 .cleaner-image-header {
     display: flex;
     width: 100%;
-    background-color: var(--project-logo-bg);
+    background-color: var(--kraftbin-post-color);
     justify-content: center;
     align-items: center;
     padding-left: 20px;
@@ -425,7 +426,7 @@ p.cleaner-image-header-username {
 }
 
 .cleaner-image-post, .cleaner-image-sidebar {
-    background-color: var(--project-logo-bg);
+    background-color: var(--kraftbin-post-color);
     border-radius: 10px;
     display: flex;
     box-shadow: 0 10px 10px -10px rgba(88, 88, 88, 0.219);
@@ -517,8 +518,8 @@ p.tc-grid-header-right-title {
 }
 
 .tc-grid-container {
-    padding-top: 40px;
-    padding-bottom: 15px;
+    padding-top: 45px;
+    padding-bottom: 5px;
     display: grid;
     grid-template-columns: 300px 100px;
     height: 505px;
@@ -544,8 +545,6 @@ p.tc-grid-header-right-title {
     gap: 5px;
     justify-content: center;
     align-items: center;
-    height: 625px;
-
 }
 
 .tc-grid-grid-1-item, .tc-grid-grid-2-item {
@@ -577,6 +576,268 @@ p.tc-grid-header-right-title {
     width: 100px;
     margin-right: 8px;
 }
+
+/*------Post------*/
+.familiar {
+    flex-direction: row;
+    background-color: var(--header-links-a-hover-bg-color);
+    display: flex;
+    width: 650px;
+    height: 500px;
+    position: relative;
+    font-family: Open Sans;
+}
+
+.vote {
+    display: flex;
+    width: 90px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    gap: 10px;
+    padding: auto;
+    margin-left: -3px;
+}
+
+.vote-up {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    color: var(--header-links-a-color);
+    border-radius: 30px;
+    transition: 0.2s;
+} 
+
+.vote-up input {
+    height: 25px;
+    width: 64px;
+    display: flex;
+    opacity: 0;
+}
+
+.vote-up span {
+    position: absolute;
+    background-color: var(--kraftbin-post-color);
+    text-align: center;
+    pointer-events: none;
+    height: 25px;
+    width: 65px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+
+    border-width: 1px;
+    border-color: rgba(138, 138, 138, 0.226);
+    border-style: solid;
+    border-radius: 30px;
+
+    transition: .2s;
+}
+
+.vote-up:hover {
+    color: var(--header-links-a-hover-color);
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.226);
+}
+
+.vote-up-check-text iconify-icon {
+    display: flex;
+    scale: 90%;
+    margin-top: -1px;
+}
+
+.vote-up-check-input:checked ~ .vote-up-check-text {
+    color: var(--home-projects-project-name-color);
+  }
+  
+/*-------Vote Down------*/
+
+.vote-down {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    color: var(--header-links-a-color);
+    border-radius: 30px;
+    transition: 0.2s;
+} 
+
+.vote-down input {
+    height: 25px;
+    width: 64px;
+    display: flex;
+    opacity: 0;
+}
+
+.vote-down span {
+    position: absolute;
+    background-color: var(--kraftbin-post-color);
+    text-align: center;
+    pointer-events: none;
+    height: 25px;
+    width: 65px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+
+    border-width: 1px;
+    border-color: rgba(138, 138, 138, 0.226);
+    border-style: solid;
+    border-radius: 30px;
+
+    transition: .2s;
+}
+
+.vote-down:hover {
+    color: var(--header-links-a-hover-color);
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.226);
+}
+
+.vote-down-check-text iconify-icon {
+    display: flex;
+    scale: 90%;
+    margin-top: -1px;
+}
+
+.vote-down-check-input:checked ~ .vote-down-check-text {
+    color: var(--home-about-p-a-color);
+  }
+
+  /*-------Vote Buttons-------*/
+  .vote-up-check-text:before {
+    content: '419';
+    display: flex;
+  }
+  
+  .vote-up-check-input:checked ~ .vote-up-check-text:before {
+    content: '420';
+  }
+
+  .vote-down-check-text:before {
+    content: '68';
+    display: flex;
+  }
+  
+  .vote-down-check-input:checked ~ .vote-down-check-text:before {
+    content: '69';
+  }
+
+
+.post {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--kraftbin-post-color);
+    width: 87%;
+    padding: 10px;
+    justify-content: space-between;
+    transition: .2s;
+}
+
+.post-title {
+    margin-bottom: 5px;
+    flex-direction: row;
+    width: 100%;
+    transition: .2s;
+}
+
+.post-title p {
+    display: flex;
+    transition: .2s;
+}
+
+.post-title span {
+    display: flex;
+    width: auto;
+    font-size: 20px;
+    color: var(--header-links-a-color);
+    transition: .2s;
+}
+
+.post-title a {
+    display: flex;
+    width: auto;
+    font-size: 10px;
+    margin: 5px;
+    margin-top: 8px;
+    color: var(--header-links-a-color);
+    transition: .2s;
+}
+
+.post-title span:hover, .post-title a:hover {
+    color: var(--header-links-a-hover-color);
+}
+
+.post-image {
+    border-radius: 20px;
+    align-self: center;
+    overflow: hidden;
+}
+
+.post-image img {
+    height: 350px;
+    width: auto;
+    transition: .2s ease-out;
+}
+
+.post-image img:hover {
+    scale: 1.015;
+}
+
+.post-text {
+    font-size: 15px;
+    color: var(--header-links-a-hover-color);
+}
+
+.post-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-footer-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    color: var(--header-links-a-color);
+    transition: 0.2s;
+}
+
+.post-footer-details b {
+    color: var(--header-links-a-color);
+    transition: 0.2s;
+}
+
+.post-footer-details b:hover {
+    color: var(--header-links-a-hover-color);
+}
+
+.space, .post-date {
+    margin-left: 4px;
+}
+
+.post-footer-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    color: var(--header-links-a-color);
+    transition: 0.2s;
+    gap: 10px;
+}
+
+.post-footer-menu span {
+    color: var(--header-links-a-color);
+    transition: 0.2s;
+}
+
+.post-footer-menu span:hover {
+    color: var(--header-links-a-hover-color);
+}
+
 
 /*------------------------*/
 /* toggle from w3schools */

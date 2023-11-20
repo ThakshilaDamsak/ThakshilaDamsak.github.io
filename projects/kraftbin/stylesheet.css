@@ -391,7 +391,7 @@ img.cleaner-image-header-logo {
     margin-right: 5px;
     display: flex;
     border-radius: 50%;
-    background-color: blueviolet;
+    background-color: rgb(183, 43, 226);
 }
 
 p.cleaner-image-header-username {
@@ -509,12 +509,22 @@ img.tc-grid-header-image {
     margin-right: 5px;
     display: flex;
     border-radius: 50%;
-    background-color: blueviolet;
+    background-color: rgb(211, 43, 226);
 }
 
 p.tc-grid-header-right-title {
     margin-right: 40px;
     display: flex;
+}
+
+.tc-grid-header-right-title a {
+    text-decoration: none;
+    color: var(--header-links-a-color);
+    transition: .2s;
+}
+
+.tc-grid-header-right-title a:hover {
+    color: var(--header-links-a-hover-color);
 }
 
 .tc-grid-container {
@@ -730,7 +740,7 @@ p.tc-grid-header-right-title {
     flex-direction: column;
     background-color: var(--kraftbin-post-color);
     width: 87%;
-    padding: 10px;
+    padding: 15px;
     justify-content: space-between;
     transition: .2s;
 }
@@ -788,6 +798,7 @@ p.tc-grid-header-right-title {
 .post-text {
     font-size: 15px;
     color: var(--header-links-a-hover-color);
+    text-align: justify;
 }
 
 .post-footer {

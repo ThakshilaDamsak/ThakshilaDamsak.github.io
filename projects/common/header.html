@@ -1,0 +1,84 @@
+<div class="logo">
+    <a href="/"><img src="/images/logo-long-bk.svg" loading="eager" alt="Thakshila Damsak [logo]" ></a>
+    <a href="/" class="header-path">/projects/</a>
+    
+    <div class="menu">
+        <div class="links" id="menubar">
+          <div class="box2"></div>
+
+        </div>
+
+
+        <span class="colorizer-tooltip">
+          <div class="color-chooser" id="color-chooser">
+            <div class="box3"></div>
+          </div>
+          <span class="colorizer-tooltiptext">Change the theme using <b>Colorizer!</b></span>
+      </span>
+
+        <div class="ham">
+            <a href="/menu/">
+                <i><iconify-icon icon="line-md:menu" loading="eager"></iconify-icon></i>
+            </a>
+    </div>
+    
+    </div>
+</div>
+
+<script>
+// Fetch the content of the header HTML file
+fetch('/common/themes.html')
+  .then(response => response.text())
+  .then(html => {
+    // Insert the header HTML into the container
+    document.getElementById('color-chooser').innerHTML = html;
+
+    // Execute JavaScript code within the header
+    const scriptElements = Array.from(document.getElementById('color-chooser').getElementsByTagName('script'));
+    scriptElements.forEach(script => {
+      const newScript = document.createElement('script');
+      newScript.textContent = script.textContent;
+      document.body.appendChild(newScript);
+    });
+
+    // Set the theme after the header is loaded
+    const setTheme = theme => {
+      document.documentElement.className = theme;
+      localStorage.setItem('theme', theme);
+    };
+
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.getElementById('theme-select').value = savedTheme;
+    }
+
+    document.getElementById('theme-select').addEventListener('change', function() {
+      setTheme(this.value);
+    });
+  });
+
+
+// Get menubar
+ // Fetch the content of the social-links HTML file
+ fetch('/common/menubar.html')
+  .then(response => response.text())
+  .then(html => {
+    // Insert the social-links HTML into the container
+    document.getElementById('menubar').innerHTML = html;
+
+    // Execute JavaScript code within the container
+    const scriptElements = Array.from(document.getElementById('menubar').getElementsByTagName('script'));
+    scriptElements.forEach(script => {
+      const newScript = document.createElement('script');
+      newScript.textContent = script.textContent;
+      // Add a load event listener to the new script element
+      newScript.addEventListener('load', function() {
+        // Execute the function that updates the content of the page
+        this.textContent();
+      });
+      document.body.appendChild(newScript);
+    });
+  });
+</script>

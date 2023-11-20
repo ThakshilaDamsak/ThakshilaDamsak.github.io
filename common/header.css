@@ -738,7 +738,18 @@ a {
 .header a {
     text-decoration: none;
     color: var(--header-a);
-    font-size: 20px;
+    font-family: Work Sans;
+}
+
+.header-path {
+  font-size: 15px;
+  margin-left: 10px;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.header-path:hover {
+  color: var(--header-links-a-hover-color);
 }
 
 .menu {

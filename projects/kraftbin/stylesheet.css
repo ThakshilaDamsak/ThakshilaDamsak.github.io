@@ -32,6 +32,7 @@
 
     font-size: 14px;
     text-align: center;
+    box-shadow: 0px 3px 10px -5px orangered;
 }
 
 .banner a {

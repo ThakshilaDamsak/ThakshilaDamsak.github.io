@@ -77,5 +77,4 @@
     backdrop-filter: invert(var(--bg-backdrop-filter));
     overflow: hidden;
     animation: overlay-blur-animation 2s ease;
-    transition-property: background-color, filter;
 }

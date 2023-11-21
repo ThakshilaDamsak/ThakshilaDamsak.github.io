@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     box-shadow: 0px -8px 12px 0px rgba(0, 0, 0, 0.048);
-    transition: 1s;
+    transition: .5s;
     text-align: center;
     z-index: 99;
 
@@ -133,7 +133,7 @@
 }
 
  span.time-passed-boom {
-    filter:sepia(100%);
+    filter:invert(30%);
 
 }
 

@@ -32,6 +32,7 @@
     <link rel="stylesheet" type="text/css" href="menu.css">
 
     <script src="/common/commons.js" defer></script>
+    <script src="/common/primary.js" defer></script>
 
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
@@ -63,6 +64,39 @@
         });
         });
 
+        // Fetch the content of the header HTML file
+  fetch('/common/themes.html')
+  .then(response => response.text())
+  .then(html => {
+    // Insert the header HTML into the container
+    document.getElementById('color-chooser').innerHTML = html;
+
+    // Execute JavaScript code within the header
+    const scriptElements = Array.from(document.getElementById('color-chooser').getElementsByTagName('script'));
+    scriptElements.forEach(script => {
+      const newScript = document.createElement('script');
+      newScript.textContent = script.textContent;
+      document.body.appendChild(newScript);
+    });
+
+    // Set the theme after the header is loaded
+    const setTheme = theme => {
+      document.documentElement.className = theme;
+      localStorage.setItem('theme', theme);
+    };
+
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.getElementById('theme-select').value = savedTheme;
+    }
+
+    document.getElementById('theme-select').addEventListener('change', function() {
+      setTheme(this.value);
+    });
+  });
+
       </script>
 
     <div class="header">
@@ -70,7 +104,7 @@
             <a href="/"><img src="/images/logo-long-bk.svg" alt="Thakshila Damsak [logo]" title="Home"></a>
        
             <div class="color-chooser" id="color-chooser">
-
+                <div class="box3"></div>
             </div> 
             
             <div class="close-button">

@@ -54,7 +54,7 @@
     right: 0;
     align-items: center;
     justify-content: center;
-    transition: 1s;
+    transition: .5s;
     overflow: hidden;
 }
 

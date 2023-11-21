@@ -63,7 +63,7 @@
         </div>
 
         <!--Navigation bar-->
-        <div class="header">
+        <div class="header" id="header">
 
             <div class="logo">
                 <a href="/"><img src="/images/logo-long-bk.svg" loading="eager" alt="Thakshila Damsak [logo]" ></a>
@@ -85,61 +85,6 @@
                 
                 </div>
             </div>
-            
-            <script>
-            // Fetch the content of the header HTML file
-            fetch('/common/themes.html')
-              .then(response => response.text())
-              .then(html => {
-                // Insert the header HTML into the container
-                document.getElementById('color-chooser').innerHTML = html;
-            
-                // Execute JavaScript code within the header
-                const scriptElements = Array.from(document.getElementById('color-chooser').getElementsByTagName('script'));
-                scriptElements.forEach(script => {
-                  const newScript = document.createElement('script');
-                  newScript.textContent = script.textContent;
-                  document.body.appendChild(newScript);
-                });
-            
-                // Set the theme after the header is loaded
-                const setTheme = theme => {
-                  document.documentElement.className = theme;
-                  localStorage.setItem('theme', theme);
-                };
-            
-                const savedTheme = localStorage.getItem('theme');
-            
-                if (savedTheme) {
-                  setTheme(savedTheme);
-                  document.getElementById('theme-select').value = savedTheme;
-                }
-            
-                document.getElementById('theme-select').addEventListener('change', function() {
-                  setTheme(this.value);
-                });
-              });
-            
-            
-            
-            
-            
-                // Fetch the content of the footer HTML file
-            fetch('/common/menubar.html')
-            .then(response => response.text())
-            .then(html => {
-            // Insert the footer HTML into the container
-            document.getElementById('menubar').innerHTML = html;
-            
-            // Execute JavaScript code within the footer
-            const scriptElements = Array.from(document.getElementById('menubar').getElementsByTagName('script'));
-            scriptElements.forEach(script => {
-            const newScript = document.createElement('script');
-            newScript.textContent = script.textContent;
-            document.body.appendChild(newScript);
-            });
-            });
-            </script>
 
         </div>
 
@@ -195,7 +140,8 @@
                 </script>  
 
 <!--Footer-->
-                    <div class="footer">
+                <div class="footer" id="footer">
+                    
                         <div class="social-links" id="social-links">
 
                             <div class="box6"></div>
@@ -207,10 +153,10 @@
                             <span class="tooltiptext-footer">E-Mail me</span>
                         </div></div>
                         
-                        <div class="copyright">
+                        <div class="copyright" style="cursor:default; pointer-events: none;" >
                             <div class="tooltip-footer">
                                 <p id="cpyrt">&copy; <span id="year"></span> Thakshila Damsak</p>
-                                  <span class="tooltiptext-footer">Click to see site info.</span>
+                                  <span class="tooltiptext-footer" style="display: none;">Click to see site info.</span>
                               </div>
                         </div>
                         
@@ -222,41 +168,6 @@
                         <div id="site-info" class="hidden">
                             <p>v23.4 | <a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io" target="_blank">GitHub Repository</a></p>
                         </div>
-                        
-                        <script>
-                            const copyright = document.getElementById("cpyrt");
-                            const tooltip = document.getElementById("site-info");
-                        
-                            copyright.addEventListener("click", function() {
-                            if (tooltip.classList.contains("hidden")) {
-                                tooltip.classList.remove("hidden");
-                                tooltip.classList.add("show");
-                                setTimeout(function() {
-                                tooltip.classList.add("hidden");
-                                tooltip.classList.remove("show");
-                                }, 6000);
-                            } else {
-                                tooltip.classList.add("hidden");
-                                tooltip.classList.remove("show");
-                            }
-                            });
-                        
-                            // Fetch the content of the footer HTML file
-                        fetch('/common/social-links.html')
-                            .then(response => response.text())
-                            .then(html => {
-                            // Insert the footer HTML into the container
-                            document.getElementById('social-links').innerHTML = html;
-                        
-                            // Execute JavaScript code within the footer
-                            const scriptElements = Array.from(document.getElementById('social-links').getElementsByTagName('script'));
-                            scriptElements.forEach(script => {
-                                const newScript = document.createElement('script');
-                                newScript.textContent = script.textContent;
-                                document.body.appendChild(newScript);
-                            });
-                            });
-                        </script>
                                                 
                     </div>
             </div>

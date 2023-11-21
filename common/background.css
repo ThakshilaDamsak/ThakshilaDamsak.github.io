@@ -10,8 +10,9 @@
 .background-img {
     background: var(--bg-image);
     background-size:110vw;
-    background-position: center;
+    background-position:center;
     background-repeat: repeat;
+    position: absolute;
     z-index: -3;
     background-color: var(--bg-bg);
     position: absolute;
@@ -23,10 +24,6 @@
     justify-content: center;
     animation: bg-blur-animation 2s ease;
     overflow: hidden;
-}
-
-#floater {
-    will-change: transform;
 }
 
 
@@ -69,7 +66,7 @@
 .overlay {
     z-index: -2;
     background-color: var(--bg-bg);
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -80,4 +77,5 @@
     backdrop-filter: invert(var(--bg-backdrop-filter));
     overflow: hidden;
     animation: overlay-blur-animation 2s ease;
+    transition-property: background-color, filter;
 }

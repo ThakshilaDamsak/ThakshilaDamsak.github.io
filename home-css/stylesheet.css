@@ -513,6 +513,8 @@ body {
     border-radius: 14px 0 0 14px;
     box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.027);
     transition: 0.2s;
+    min-width: 80px;
+    align-items: center;
 }
 
 .project-logo img {

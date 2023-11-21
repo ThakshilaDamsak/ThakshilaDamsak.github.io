@@ -1,27 +1,120 @@
 <div class="bg">
-    <div class="overlay"> </div>
-    <div class="background-img" id="floater"></div>
+    <div class="overlay" id="floater2"> </div>
+    <div data-depth=".3" class="background-img parallax-background" id="floater"></div>
     <div class="gradient-overlay"> </div>
 </div>
 
+<!--Content of the page.-->
 
-<script>
-function parallax() {
+<!--Old Parallax Codes
+
+    ----1st one----
+    function parallax() {
     const floater = document.getElementById("floater");
-    const yPos = -window.pageYOffset / -140;	
-    floater.style.transform = `translate3d(0, ${yPos}%, 0)`;
+    const yPos = -window.pageYOffset / -50;	
+    floater.style.top = `${yPos}%`;
 }       
 
-function animate() {
-    parallax();
-    requestAnimationFrame(animate);
-}
+    window.addEventListener("scroll", function(){
+        parallax();	
+    });
+
+    ----2nd one----
+    function parallax() {
+    const floaters = document.querySelectorAll("#floater, #floater2");
+    const yPos = -window.pageYOffset / -140;	
+    floaters.forEach(floater => {
+        floater.style.transform = `translate3d(0, ${yPos}%, 0)`;
+    });
+}       
+
+    function animate() {
+        parallax();
+        requestAnimationFrame(animate);
+    }
+
+    // set the initial position of the background image
+    window.addEventListener("load", function() {
+        const floaters = document.querySelectorAll("#floater, #floater2");
+        const yPos = -window.pageYOffset / -140;	
+        floaters.forEach(floater => {
+            floater.style.backgroundPosition = `center ${yPos}%`;
+        });
+    });
 
 requestAnimationFrame(animate);
 
-</script>
 
-<!--Content of the page.-->
+-->
+
+<script>
+    //----New Parrallax Effect
+    //----by Renaud ROHLINGER  
+    //----From https://codepen.io/onirenaud/pen/oYZOJB
+
+    var windowHeight = window.innerHeight;
+
+        document.addEventListener('resize', function() {
+            windowHeight = window.innerHeight;
+        })
+
+        function outerHeight(el) {
+            var height = el.offsetHeight;
+            var style = getComputedStyle(el);
+
+            height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+            return height;
+        }
+
+        function parallax (el, speedFactor, outerHeight) {
+            var foo = document.querySelectorAll(el);
+
+            var getHeight;
+            var firstTop;
+            var paddingTop = 0;
+
+            //get the starting position of each element to have parallax applied to it		
+            foo.forEach(function(subEl){
+                firstTop = subEl.getBoundingClientRect().top;
+            });
+
+            if (outerHeight) {
+                getHeight = function(el) {
+                    return outerHeight(el);
+                };
+            } else {
+                getHeight = function(el) {
+                    return el.clientHeight;
+                };
+            }
+
+            // function to be called whenever the window is scrolled or resized
+            function update(){
+                var pos = window.scrollY;				
+
+                foo.forEach(function(subEl){
+                    var element = subEl;
+                    var top = element.getBoundingClientRect().top;
+                    var height = getHeight(element);
+            
+                    element.style.top = -(Math.round((firstTop - pos) * speedFactor)) + "px";
+                });
+            }		
+            document.addEventListener('scroll', update, true)
+            document.addEventListener('resize', update)
+            update()
+        };
+
+        parallax(".parallax-background", 0.22);
+
+
+        // Based on  https://github.com/alvarotrigo/fullPage.js/tree/master/pure%20javascript%20(Alpha)
+        // Use with caution, still in alpha. I'm trying to avoid jquery ^_^
+        fullpage.initialize('#fullpage', {
+            css3:false,
+            scrollBar:true
+        });
+</script>
 
 <div class="cntnt">
 <div class="page-content">
@@ -127,9 +220,9 @@ requestAnimationFrame(animate);
     
     <!-- My Projects -->
     
-        <div class="projects" id="projects">
+        <div class="projects">
             <div class="projects-title-bg">
-                <div class="projects-title"><p>My Projects</p></div>
+                <div class="projects-title" id="projects"><p>My Projects</p></div>
             </div>
             <div class="my-projects">
     

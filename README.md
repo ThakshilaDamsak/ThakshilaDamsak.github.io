@@ -1,14 +1,14 @@
 # My website
-#### Hello, this is my website. I made it for fun and to learn web development. Here are some things about it:
+#### This is my website. I made this site for fun, and to learn web development along the way.
 
-- I used HTML and CSS to make the website. **I did not use any frameworks or templates.**
+- I built this site from scratch using HTML, CSS and JS. **I did not use any frameworks, libraries or templates.**
 - **I designed the images and icons by myself** in Inkscape. But I used [Iconify.Design](https://iconify.design/) for the social media and hamburger menu icons.
 - However, **I got help from Bing chat and ChatGPT to write the JavaScript code.**
-- Also, **I got the [Tooltip](https://www.w3schools.com/css/css_tooltip.asp) from w3schools.**
+- Also, I adapted some codes for some elements from the w3schools, such as [Tooltip](https://www.w3schools.com/css/css_tooltip.asp) and [Toggle Switch](https://www.w3schools.com/howto/howto_css_switch.asp), and modified them to suit my website design and functionality.
 
-I hope you enjoy my website. You can contact me if you want to say something or ask something. Thanks for visiting!
+I hope you enjoy my website.
 
 
 ~<b title="The domain is not working anymore due to Freenom issues." target="_blank">www.thakshiladamsak.ml</b>~
 <br>
-<b title="Visit this until the main domain gets fixed." target="_blank">https://thakshiladamsak.github.io</b>
+<b target="_blank">https://thakshiladamsak.github.io</b>

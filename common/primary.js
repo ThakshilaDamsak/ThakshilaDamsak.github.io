@@ -4,7 +4,7 @@ function getCommitDate(url, absoluteDateId, relativeDateId) {
   fetch(url, {
     // Add the Authorization header with the token
     headers: {
-      Authorization: "token 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",
+      Authorization: "token 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",
     },
   })
     // Handle the response

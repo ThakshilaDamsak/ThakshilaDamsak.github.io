@@ -2,10 +2,6 @@
 function getCommitDate(url, absoluteDateId, relativeDateId) {
   // Use fetch() to make an HTTP request to the API
   fetch(url, {
-    // Add the Authorization header with the token
-    headers: {
-      Authorization: "token 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",
-    },
   })
     // Handle the response
     .then((response) => {

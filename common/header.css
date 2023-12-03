@@ -741,19 +741,32 @@ a {
 
 .header a {
     text-decoration: none;
-    color: var(--header-a);
+    color: var(--header-links-a-color);
     font-family: Work Sans;
 }
 
 .header-path {
+  display: flex;
   font-size: 15px;
-  margin-left: 10px;
   font-weight: bold;
   transition: .2s;
+  color: var(--header-links-a-color);
+
 }
 
 .header-path:hover {
   color: var(--header-links-a-hover-color);
+}
+
+#subdirectory {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+
+  margin-left: 10px;
+  transition: .2s;
+  color: var(--header-links-a-color);
 }
 
 .menu {

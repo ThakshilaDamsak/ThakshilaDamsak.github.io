@@ -70,13 +70,15 @@ function getCommitDate(url, absoluteDateId, relativeDateId) {
       };
       const formattedDate = date.toLocaleString(undefined, options);
 
-      // Get the elements by id
-      const absoluteDateElement = document.getElementById(absoluteDateId);
-      const relativeDateElement = document.getElementById(relativeDateId);
+      // Get the elements by class name
+      const absoluteDateElements = document.getElementsByClassName(absoluteDateId);
+      const relativeDateElements = document.getElementsByClassName(relativeDateId);
 
-      // Update the content of the elements
-      absoluteDateElement.textContent = formattedDate;
-      relativeDateElement.textContent = relativeTime;
+      // Loop through the elements and update their content
+      for (let i = 0; i < absoluteDateElements.length; i++) {
+        absoluteDateElements[i].textContent = formattedDate;
+        relativeDateElements[i].textContent = relativeTime;
+      }
     })
     // Handle any errors
     .catch((error) => {

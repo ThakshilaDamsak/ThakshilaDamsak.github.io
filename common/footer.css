@@ -175,7 +175,7 @@
         margin-top: 10px;
         padding-left: 0px;
     }
-    .social-links, .eml {
+    .footer .social-links, .footer .eml {
         display: none;
     }
     .copyright a, .copyright p{
@@ -201,7 +201,14 @@
     .show {
         display: none;
     }
+    
 }
+
+@media screen and (min-width: 705px) {
+    #mobile-menu-part {
+      display: none !important;
+    }
+  }
 
 @keyframes opacy {
     0% {transform:rotate(-90deg); opacity: 0;}
@@ -230,6 +237,15 @@
 
     .tooltiptext-footer {
         display: none;
+    }
+
+    .normal-color-chooser {
+        display: none;
+    }
+
+    .box3 {
+        height: 20px;
+        width: 20px;
     }
 }
 

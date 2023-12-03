@@ -22,7 +22,7 @@
   });
 
 
-  //Get ooter
+  //Get footer
 
   // Fetch the content of the social-links HTML file
   fetch('/common/footer.html')

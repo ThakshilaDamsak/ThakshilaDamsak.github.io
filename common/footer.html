@@ -21,9 +21,9 @@
     document.getElementById("year").innerHTML = currentYear;
 </script>
 
-<div id="site-info" class="hidden">
+<div id="site-info" class="site-info hidden">
     
-        <span>v29.9 | Updated</span>
+        <span>v30.1 | Updated</span>
 
         <span class="tooltip-footer">
           <span id="time-passed-boom" class="time-passed-boom">[loading...]</span>
@@ -34,45 +34,55 @@
 </div>
 
 <script>
-    const copyright = document.getElementById("cpyrt");
-    const siteInfo = document.getElementById("site-info");
+// Get the elements by class name instead of id
+const siteInfo = document.querySelectorAll(".site-info");
 
-    copyright.addEventListener("click", function() {
-    if (siteInfo.classList.contains("hidden")) {
-      siteInfo.classList.remove("hidden");
-      siteInfo.classList.add("show");
+// Add a click event listener to the document
+document.addEventListener("click", function(event) {
+  // Check if the clicked element is the cpyrt element
+  if (event.target.id === "cpyrt") {
+    // Loop through the siteInfo collection and toggle the classes
+    siteInfo.forEach(el => {
+      el.classList.toggle("hidden");
+      el.classList.toggle("show");
+      // If the element has the show class, set a timeout to hide it
+      if (el.classList.contains("show")) {
         setTimeout(function() {
-          siteInfo.classList.add("hidden");
-          siteInfo.classList.remove("show");
+          el.classList.add("hidden");
+          el.classList.remove("show");
         }, 6000);
-    } else {
-      siteInfo.classList.add("hidden");
-      siteInfo.classList.remove("show");
-    }
+      }
     });
+  }
+});
 
 // Get social-links
 
- // Fetch the content of the social-links HTML file
- fetch('/common/social-links.html')
+// Fetch the content of the social-links HTML file
+fetch('/common/social-links.html')
   .then(response => response.text())
   .then(html => {
-    // Insert the social-links HTML into the container
-    document.getElementById('social-links').innerHTML = html;
+    // Use querySelectorAll to get a collection of all the elements with the class name social-links
+    const socialLinks = document.querySelectorAll('.social-links');
+    // Loop through the collection and insert the social-links HTML into each container
+    socialLinks.forEach(container => {
+      container.innerHTML = html;
 
-    // Execute JavaScript code within the container
-    const scriptElements = Array.from(document.getElementById('social-links').getElementsByTagName('script'));
-    scriptElements.forEach(script => {
-      const newScript = document.createElement('script');
-      newScript.textContent = script.textContent;
-      // Add a load event listener to the new script element
-      newScript.addEventListener('load', function() {
-        // Execute the function that updates the content of the page
-        this.textContent();
+      // Execute JavaScript code within the container
+      const scriptElements = Array.from(container.getElementsByTagName('script'));
+      scriptElements.forEach(script => {
+        const newScript = document.createElement('script');
+        newScript.textContent = script.textContent;
+        // Add a load event listener to the new script element
+        newScript.addEventListener('load', function() {
+          // Execute the function that updates the content of the page
+          this.textContent();
+        });
+        document.body.appendChild(newScript);
       });
-      document.body.appendChild(newScript);
     });
   });
+
 
   getCommitDate(
     "https://api.github.com/repos/ThakshilaDamsak/thakshiladamsak.github.io/commits/main",

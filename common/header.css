@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
-
+@import url(/common/mobile-menu-footer.css);
 * {
     margin: 0;
     padding: 0;
@@ -725,10 +725,11 @@ a {
     backdrop-filter: blur(20px) saturate(3);
     position: fixed;
     width: 100%;
-    z-index: 99;
+    z-index: 100;
     box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.048);
     transition: .5s;
     min-height: 58px;
+    top: 0;
     
     border-width: 0px 0px 1px 0px;
     border-color: rgba(138, 138, 138, 0.226);
@@ -850,9 +851,10 @@ a {
 }
 
 .ham {
-    padding: 10px;
     padding-left: 20px;
-}
+    margin-bottom: -10px;
+    height: 35px;
+  }
 
 .color-selector select{
     display: flex;
@@ -970,20 +972,13 @@ input:checked + .slider:before {
         margin-top: 0px;
         margin-bottom: -4px;
     }
-    .color-chooser-name span{
-        font-size: 13px;
-    }
-
-    .color-selector select{
-        font-size: 11px;
-    }
 
     .switch {
       scale: 0.6;
     }
 
-    .color-chooser-container {
-      margin-left: 0px;
+    .ham {
+      margin-right: 5px;
     }
 
 
@@ -999,14 +994,6 @@ input:checked + .slider:before {
     scale: 0.5;
     padding: -20px;
   }
-
-  .color-chooser-name span{
-    font-size: 11px;
-}
-
-.color-selector select{
-    font-size: 8px;
-}
 
 .ambient-toggle {
   margin: -8px;

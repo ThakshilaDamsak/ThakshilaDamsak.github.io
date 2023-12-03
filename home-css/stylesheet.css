@@ -857,6 +857,10 @@ body {
         justify-content: flex-start;
     }
 
+    .about-title, .about-about {
+        padding-left: 15px;
+    }
+
  /*   .about-title {
         display: inline-block;
         padding: 20px;

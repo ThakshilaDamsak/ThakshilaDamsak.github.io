@@ -19,6 +19,7 @@ html{
     user-select: none;
     scrollbar-color: var(--home-about-p-a-color) var(--home-about-bg);
     scrollbar-width: thin;
+    -webkit-tap-highlight-color: transparent;
 }
 
 :root,
@@ -327,6 +328,7 @@ html{
 		.about,
 		.projects {
 			backdrop-filter: blur(20px) saturate(3);
+      -webkit-backdrop-filter: blur(20px) saturate(3);
 		}
   }
 
@@ -723,6 +725,7 @@ a {
 .header {
     background-color: var(--header-bg-color);
     backdrop-filter: blur(20px) saturate(3);
+    -webkit-backdrop-filter: blur(20px) saturate(3);
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -854,6 +857,7 @@ a {
     padding-left: 20px;
     margin-bottom: -10px;
     height: 35px;
+    -webkit-tap-highlight-color: transparent;
   }
 
 .color-selector select{

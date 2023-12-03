@@ -3,6 +3,7 @@
 .footer {
     background-color: var(--footer-bg);
     backdrop-filter: blur(20px) saturate(3);
+    -webkit-backdrop-filter: blur(20px) saturate(3);
     width: 100%;
     min-height: 40px;
     position: fixed;

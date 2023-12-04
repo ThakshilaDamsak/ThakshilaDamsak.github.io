@@ -264,29 +264,31 @@
 }
 
 .pages {
-    height: 100vh;
+    height: max-content;
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: auto;
-    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0;
     align-items: center;
     justify-content: center;
     font-family: Open Sans;
     transition: 1s;
-    margin-left: 20px;
-    margin-right: 30px;
 }
 
 .section-content {
     display: flex;
     flex-direction: row;
-    padding: auto;
     margin: auto;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
     font-family: Open Sans;
     transition: 1s;
+    gap: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
+    max-width: 1200px;
 } 
 
 .page-odd {
@@ -333,12 +335,12 @@
 }
 
 .info {
-    margin-left: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 5px;
     width: auto;
-    max-width: 500px;
+    margin: auto;
 }
 
 .title {
@@ -355,6 +357,8 @@
     display: flex;
     font-size: 18px;
     text-align: justify;
+    width: auto;
+    margin: auto;
 
     font-weight: normal;
     color: var(--header-links-a-color);
@@ -363,16 +367,21 @@
 
 .discription p {
     width: auto;
-    max-width: 500px;
-    text-wrap:wrap;
+    text-wrap:pretty;
 }
 
 .cleaner {
     flex-direction: column;
     background-color: var(--header-links-a-hover-bg-color);
     display: flex;
-    max-width: 700px;
-    height: 500px;
+    height: 450px;
+    width: 600px;
+    min-width: 600px;
+}
+
+.customizable {
+    width: fit-content;
+    min-width: fit-content;
 }
 
 .cleaner-image-header {
@@ -437,8 +446,8 @@ p.cleaner-image-header-username {
     flex-direction: row;
     height: 100%;
     margin: 5px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
     gap: 5px;
 }
 
@@ -466,8 +475,46 @@ p.cleaner-image-header-username {
 
 
     border-width: 1px;
-    border-color: rgba(138, 138, 138, 0.226);
+    border-color: rgba(138, 138, 138, 0.322);
     border-style: solid;
+    position: relative;
+    overflow: hidden;
+}
+
+.cleaner-image-post-votearia {
+    display: flex;
+    position: absolute;
+    background-color: rgba(110, 110, 110, 0.233);
+    height: 100%;
+    opacity: 20%;
+    left: 0;
+    width: 10%;
+
+    border-width: 0px 1px 0px 0px;
+    border-color: rgba(128, 128, 128, 0.5);
+    border-style: solid;
+    
+}
+
+.cleaner-image-post-image {
+    display: flex;
+    position: relative;
+    align-self: center;
+    justify-self: center;
+    margin: auto;
+    margin-left: 30%;
+    background-color: rgba(110, 110, 110, 0.233);
+    height: 60%;
+
+
+    opacity: 20%;
+    width: 50%;
+
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.5);
+    border-style: solid;
+    border-radius: 10px;
+    
 }
 
 .cleaner-image-sidebar {
@@ -478,14 +525,145 @@ p.cleaner-image-header-username {
     height: 50%;
 }
 
+@media screen and (max-width: 720px) {
+    .cleaner {
+        height: 400px;
+        width: 500px;
+        min-width: 500px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .cleaner {
+        height: 350px;
+        width: 400px;
+        min-width: 400px;
+    }
+
+    .cleaner-image-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .cleaner {
+        height: 300px;
+        width: 350px;
+        min-width: 350px;
+    }
+
+    .cleaner-image-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .cleaner {
+        height: 300px;
+        width: 300px;
+        min-width: 300px;
+    }
+
+    .cleaner-image-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .cleaner {
+        height: 300px;
+        width: 250px;
+        min-width: 250px;
+    }
+
+    .cleaner-image-container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
 /*-----tc-grid-----*/
 .tc-grid {
     flex-direction: column;
     background-color: var(--bg-bg);
     display: flex;
-    max-width: 700px;
     height: 500px;
+    width: 430px;
+    min-width: 430px;
     position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .tc-grid {
+        height: 500px;
+        width: 400px;
+        min-width: 0px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .tc-grid {
+        height: 400px;
+        width: 350px;
+    }
+
+    .tc-grid * {
+        font-size-adjust: .5;
+    }
+
+    .tc-grid-container {
+        gap: 1px !important;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .tc-grid {
+        height: 400px;
+        width: 320px;
+    }
+
+    .tc-grid * {
+        font-size-adjust: .45;
+    }
+
+    .kraftbin-switch {
+        scale: .65 !important;
+    }
+
+    .tc-grid-container {
+        gap: 0px !important;
+        padding-top: 35px !important;
+    }
+
+    .tc-grid img {
+        scale: .8;
+    }
+
+    .tc-grid-header {
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .tc-grid {
+        height: 400px;
+        width: 300px;
+    }
+
+    .tc-grid * {
+        font-size-adjust: .35;
+    }
+
+    .kraftbin-switch {
+        scale: .55 !important;
+    }
+
+    .tc-grid-container div {
+        margin: -4px !important;
+    }
 }
 
 .tc-grid-header {
@@ -565,8 +743,8 @@ p.tc-grid-header-right-title {
     padding-top: 45px;
     padding-bottom: 5px;
     display: grid;
-    grid-template-columns: 300px 100px;
-    height: 505px;
+    grid-template-columns: 70% 30%;
+    height: 100%;
     gap: 5px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -613,7 +791,7 @@ p.tc-grid-header-right-title {
 
 .customizable .tc-grid-container {
     padding-left: 20px;
-    padding-right: 10px;
+    padding-right: 15px;
 }
 
 .tc-grid-container input {
@@ -627,6 +805,7 @@ p.tc-grid-header-right-title {
     background-color: var(--header-links-a-hover-bg-color);
     display: flex;
     width: 650px;
+    min-width: 650px;
     height: 500px;
     position: relative;
     font-family: Open Sans;
@@ -987,4 +1166,25 @@ select.kraftbin-select:hover{
 select.kraftbin-select:focus{
     box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.226);
     border: Solid 2px rgb(0, 162, 255);
+}
+
+.image {
+    transition: 0.5s;
+    margin: auto;
+
+}
+
+    .discription p {
+        max-width: 500px;
+    }
+
+@media screen and (max-width: 1000px) {
+    .section-content {
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .pages {
+        height: max-content;
+    }
 }

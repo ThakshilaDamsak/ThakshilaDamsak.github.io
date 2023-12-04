@@ -265,11 +265,12 @@
 
 .pages {
     height: max-content;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     margin: 0;
     align-items: center;
     justify-content: center;

@@ -59,5 +59,20 @@ Promise.all(imagePromises).then(() => {
         // Set its display to none
         loadingElement.style.display = 'none';
       }, 1000);
+
+              // Get the hash value from the URL
+              const hash = window.location.hash;
+
+              // Check if the hash is not empty
+              if (hash) {
+                // Get the element with the id matching the hash
+                const element = document.getElementById(hash.slice(1));
+      
+                // Check if the element exists
+                if (element) {
+                  // Scroll to the element
+                  element.scrollIntoView();
+                }
+              }
     });
 });

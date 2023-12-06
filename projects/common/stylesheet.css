@@ -102,7 +102,7 @@
     .section {
         display: flex;
         flex-direction: column;
-        min-height: 87vh;
+        min-height: 90vh;
         align-items: center;
         justify-content: center;
     }

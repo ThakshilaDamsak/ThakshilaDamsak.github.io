@@ -18,7 +18,7 @@ body {
 .h-card {
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -31,6 +31,7 @@ body {
 .go-below a {
     color: var(--header-links-a-color);
     text-decoration: none;
+    font-family: Open Sans;
     transition: .2s;
 }
 
@@ -826,7 +827,6 @@ body {
 @media screen and (max-width: 340px) {
 
     .heading {
-        margin: 0 0 30px 0;
         margin-left: 10px;
         margin-right: 10px;
     }

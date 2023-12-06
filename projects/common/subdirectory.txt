@@ -1,1 +1,1 @@
-<a href="/" class="header-path">/projects/</a>
+<a href="/projects/" class="header-path">/projects/</a>

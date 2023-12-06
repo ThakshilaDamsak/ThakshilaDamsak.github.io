@@ -1,5 +1,5 @@
 .page-content {
-    padding-bottom: 150px;
+    padding-bottom: 40px;
     transform: translateZ(0);
     width: 100%;
 }
@@ -19,6 +19,22 @@ body {
     justify-content: center;
     height: 100vh;
     display: flex;
+    flex-direction: column;
+}
+
+.go-below {
+    margin-top: 20px;
+    margin-bottom: auto;
+}
+
+.go-below a {
+    color: var(--header-links-a-color);
+    text-decoration: none;
+    transition: .2s;
+}
+
+.go-below a:hover {
+    color: var(--header-links-a-hover-color);
 }
 
 .heading {
@@ -32,6 +48,7 @@ body {
     background: var(--home-heading-background);
     border-radius: 25px;
     margin: auto;
+    margin-bottom: 0px;
     animation: element-blur-animation .6s forwards;
     transition: 0.5s;
     border-style: solid;
@@ -203,9 +220,19 @@ body {
 
 /* About */
 
+.about-container {
+    min-height: 100vh;
+    height: max-content;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+}
+
 #about {
-    margin-top: 20vh;
-    margin-bottom: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .about {
     display: flex;

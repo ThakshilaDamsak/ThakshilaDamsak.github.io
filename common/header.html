@@ -76,8 +76,10 @@ button.addEventListener("click", function() {
 
   // Check the class name of the menu element
   if (menu.classList.contains("menu-show")) {
-    // If the menu is shown, apply the transform to the footer element
-    footer.style.transform = "translateY(30px)";
+    // If the menu is shown, apply the transform to the footer element only if the screen size is below 705px
+    if (window.innerWidth < 705) {
+      footer.style.transform = "translateY(30px)";
+    }
   } else {
     // If the menu is hidden, wait for 0.5 seconds and then remove the transform from the footer element
     setTimeout(function() {
@@ -85,6 +87,26 @@ button.addEventListener("click", function() {
     }, 500); // 500 milliseconds = 0.5 seconds
   }
 });
+
+// Add a resize event listener to the window
+window.addEventListener("resize", function() {
+  // Get the element with id "mobile-menu-part"
+  var menu = document.getElementById("mobile-menu-part");
+
+  // Get the element with class "footer"
+  var footer = document.querySelector(".footer");
+
+  // Check the class name of the menu element
+  if (menu.classList.contains("menu-show")) {
+    // If the menu is shown, check the screen size and apply the appropriate transform to the footer element
+    if (window.innerWidth < 705) {
+      footer.style.transform = "translateY(30px)";
+    } else {
+      footer.style.transform = "translateY(0px)";
+    }
+  }
+});
+
 
 
 

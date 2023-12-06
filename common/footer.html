@@ -28,7 +28,14 @@
 </script>
 
 <div id="site-info" class="site-info hidden site-details">
-  <div class="box6"></div>
+  <div class="site-info-stuff">
+    <span>v31.1 | Updated</span>
+    <span class="tooltip-footer">
+      <span id="time-passed-boom" class="time-passed-boom">[loading...]</span>
+        <span class="tooltiptext-footer full-date-boom"><b id="full-date-boom">[loading...]</b></span>
+    </span>
+     | <a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io" target="_blank">GitHub Repository</a></p>
+    </div>
 </div>
 
 <script>
@@ -63,34 +70,6 @@ fetch('/common/social-links.html')
     // Use querySelectorAll to get a collection of all the elements with the class name social-links
     const socialLinks = document.querySelectorAll('.social-links');
     // Loop through the collection and insert the social-links HTML into each container
-    socialLinks.forEach(container => {
-      container.innerHTML = html;
-
-      // Execute JavaScript code within the container
-      const scriptElements = Array.from(container.getElementsByTagName('script'));
-      scriptElements.forEach(script => {
-        const newScript = document.createElement('script');
-        newScript.textContent = script.textContent;
-        // Add a load event listener to the new script element
-        newScript.addEventListener('load', function() {
-          // Execute the function that updates the content of the page
-          this.textContent();
-        });
-        document.body.appendChild(newScript);
-      });
-    });
-  });
-
-
-  // Get site-info
-
-// Fetch the content of the site-info HTML file
-fetch('/common/site-info.html')
-  .then(response => response.text())
-  .then(html => {
-    // Use querySelectorAll to get a collection of all the elements with the class name social-links
-    const socialLinks = document.querySelectorAll('.site-details');
-    // Loop through the collection and insert the site-info HTML into each container
     socialLinks.forEach(container => {
       container.innerHTML = html;
 

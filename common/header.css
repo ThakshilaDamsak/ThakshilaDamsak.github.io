@@ -20,6 +20,7 @@ html{
     scrollbar-color: var(--home-about-p-a-color) var(--home-about-bg);
     scrollbar-width: thin;
     -webkit-tap-highlight-color: transparent;
+    scroll-padding-top: 70px
 }
 
 :root,
@@ -1330,7 +1331,7 @@ select:focus {
 
 /*-----Buttons-----*/
 
- .regular-button button {
+ .regular-button {
   font-size: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -1356,7 +1357,7 @@ select:focus {
   padding-right: 10px;
 }
 
-.regular-button button:hover {
+.regular-button:hover {
   box-shadow: 0px 5px 10px -5px var(--button-shadow-color);
   transition:0.2s;
   filter: invert(10%);

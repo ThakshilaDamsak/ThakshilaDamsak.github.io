@@ -1,5 +1,6 @@
 .page-content {
     padding-bottom: 40px;
+    padding-top: 60px;
     transform: translateZ(0);
     width: 100%;
 }
@@ -17,7 +18,7 @@ body {
 .h-card {
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
 }

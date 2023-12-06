@@ -18,23 +18,40 @@
 
 <span class="site-details site-details-mobile" id="site-details-popup">
   <div class="site-info-stuff">
-  <div class="box6"></div>
-  </div>
+    <span><span class="site-version-number">Loading...</span> | Updated</span>
+    <span class="tooltip-footer">
+      <span id="time-passed-boom" class="time-passed-boom">[loading...]</span>
+        <span class="tooltiptext-footer full-date-boom"><b id="full-date-boom">[loading...]</b></span>
+    </span>
+     | <a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io" target="_blank">GitHub Repository <iconify-icon icon="fluent:open-12-regular"></iconify-icon> </a></p>
+    </div>
 </span>
 
 <script>
     var currentYear = new Date().getFullYear();
     document.getElementById("year").innerHTML = currentYear;
+
+    // Declare a variable to store the version number (you can manually change this)
+var versionNumber = 'v31.5';
+
+// Get all the elements with class name "site-version-number"
+var versionElements = document.querySelectorAll('.site-version-number');
+
+// Loop through each element and set its innerHTML to the version number
+versionElements.forEach(element => {
+  element.innerHTML = versionNumber;
+});
+
 </script>
 
 <div id="site-info" class="site-info hidden site-details">
   <div class="site-info-stuff">
-    <span>v31.1 | Updated</span>
+    <span><span class="site-version-number">Loading...</span> | Updated</span>
     <span class="tooltip-footer">
       <span id="time-passed-boom" class="time-passed-boom">[loading...]</span>
         <span class="tooltiptext-footer full-date-boom"><b id="full-date-boom">[loading...]</b></span>
     </span>
-     | <a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io" target="_blank">GitHub Repository</a></p>
+     | <a href="https://github.com/ThakshilaDamsak/ThakshilaDamsak.github.io" target="_blank">GitHub Repository </a></p>
     </div>
 </div>
 

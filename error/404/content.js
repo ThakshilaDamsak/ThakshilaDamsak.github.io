@@ -45,9 +45,22 @@ Promise.all(imagePromises).then(() => {
         newScript.textContent = script.textContent;
         document.body.appendChild(newScript);
       });
+
+      // Get the element with id "page-loading-home"
+      const loadingElement = document.getElementById('loading-container');
+
+      // Set its visibility to collapsed
+      loadingElement.style.visibility = 'hidden';
+      loadingElement.style.opacity = '0';
+      loadingElement.style.transform = 'scale(115%)';
+
+      // Set a timeout of 1 second
+      setTimeout(() => {
+        // Set its display to none
+        loadingElement.style.display = 'none';
+      }, 1000);
     });
 });
-
 
 
 window.onload = function() {

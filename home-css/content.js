@@ -46,12 +46,18 @@ Promise.all(imagePromises).then(() => {
         document.body.appendChild(newScript);
       });
 
-      // Focus and scroll to the element specified by the URL fragment
-      const fragment = window.location.hash.substring(1);
-      const element = document.getElementById(fragment);
-      if (element) {
-        element.focus();
-        element.scrollIntoView();
-      }
+      // Get the element with id "page-loading-home"
+      const loadingElement = document.getElementById('loading-container');
+
+      // Set its visibility to collapsed
+      loadingElement.style.visibility = 'hidden';
+      loadingElement.style.opacity = '0';
+      loadingElement.style.transform = 'scale(115%)';
+
+      // Set a timeout of 1 second
+      setTimeout(() => {
+        // Set its display to none
+        loadingElement.style.display = 'none';
+      }, 1000);
     });
 });

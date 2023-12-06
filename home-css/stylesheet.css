@@ -20,11 +20,6 @@ body {
     justify-content: center;
 }
 
-.page-loading-home {
-    margin-top:45vh;
-    margin-bottom: 45vh;
-}
-
 .heading {
     display: grid;
     grid-template-areas:

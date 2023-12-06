@@ -72,11 +72,6 @@
        /* background: linear-gradient(to left top, rgba(103, 0, 134, 0.192), rgba(255, 246, 238, 0)); */
     }
 
-    .page-loading-home {
-        position: absolute;
-        top: 45%;
-    }
-
     .loading-content {
         height: 100%;
         width: 100%;

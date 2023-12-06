@@ -76,6 +76,7 @@ html{
     --footer-show-span:rgb(114, 114, 114);
 
     --bg-bg:rgba(243, 243, 243, 0.671);
+    --loading-bg:rgb(243, 243, 243);
     --bg-backdrop-filter: 0%;
 
     --home-bg: linear-gradient(to left bottom, rgba(242, 253, 255, 0.6), rgba(238, 248, 255, 0.6));
@@ -152,6 +153,7 @@ html{
       --footer-show-span:rgb(230, 230, 230);
 
       --bg-bg:rgba(31, 31, 31, 0.753);
+      --loading-bg:rgb(31, 31, 31);
       --bg-backdrop-filter:70%;
 
       --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
@@ -223,6 +225,7 @@ html{
     --footer-show-span:rgb(230, 230, 230);
 
     --bg-bg:rgba(31, 31, 31, 0.753);
+    --loading-bg:rgb(31, 31, 31);
     --bg-backdrop-filter:70%;
 
     --home-bg:linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
@@ -299,6 +302,7 @@ html{
     --footer-show-span:rgb(114, 114, 114);
 
     --bg-bg:rgba(243, 243, 243, 0.671);
+    --loading-bg:rgb(243, 243, 243);
     --bg-backdrop-filter: 0%;
 
     --home-bg: linear-gradient(to left bottom, rgba(242, 253, 255, 0.6), rgba(238, 248, 255, 0.6));
@@ -453,6 +457,7 @@ html{
     --footer-show-span:rgb(114, 114, 114);
 
     --bg-bg:rgba(254, 255, 236, 0.938);
+    --loading-bg:rgb(243, 243, 243);
     --bg-backdrop-filter: 0%;
 
     --home-bg: linear-gradient(to left bottom, rgba(255, 251, 242, 0.6), rgba(255, 246, 238, 0.6));
@@ -575,9 +580,38 @@ a {
     }
   }
 
+.page-loading-home {
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  background-color: var(--loading-bg);
+
+  visibility: visible;
+  opacity: 1;
+
+  transition: .5s ease;
+  
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
 .page-loading {
-  margin-top: 40vh;
-  margin-bottom: 45vh;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  background-color: var(--bg-bg);
+
+  visibility: visible;
+  opacity: 1;
+
+  transition: .5s ease;
+  
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .pl {

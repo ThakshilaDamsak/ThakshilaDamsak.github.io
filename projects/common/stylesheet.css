@@ -102,7 +102,7 @@
     .section {
         display: flex;
         flex-direction: column;
-        min-height: 90vh;
+        min-height: 87vh;
         align-items: center;
         justify-content: center;
     }
@@ -149,6 +149,7 @@
 
     .projects-grid1 {
         grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 20px;
     }
     
     .projects-grid2 {

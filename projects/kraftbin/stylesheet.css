@@ -95,7 +95,17 @@
         font-family: Open Sans;
         transition: 1s;
         flex-direction: column;
+        position: relative;
     }
+
+.project-header-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-around;
+}
 
 .project-header {
     align-items: center;
@@ -104,7 +114,6 @@
     max-width: 1200px;
     width: 90%;
     flex-direction: row;
-    margin-top: 50px;
     background-color: var(--project-header-background);
     border-radius: 24px;
     box-shadow: 0 10px 25px -15px rgba(0, 0, 0, 0.13);
@@ -113,22 +122,34 @@
     border-color: rgba(138, 138, 138, 0.226);
     border-style: solid;
     transition: .2s;
+
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.project-header * {
+    transition: .2s;
+}
+
+.project-details {
+    display: flex;
+    margin-left: 0;
+    margin-right: auto;
+    gap: 10px;
 }
 
 .project-title {
     width: 100%;
     display: flex;
+    gap: 30px;
 }
 
 .project-logo {
-    margin-left: 10px;
-    margin-right: 5px;
-    margin: 20px;
     background-color: var(--project-logo-bg) ;
     border-radius: 10px;
     width: 100px;
     height: 100px;
-    width: 100px;
     min-height: 100px;
     min-width: 100px;
     align-items: center;
@@ -139,29 +160,25 @@
     border-width: 1px;
     border-color: rgba(138, 138, 138, 0.226);
     border-style: solid;
+    position: relative;
 }
 
 .project-logo img {
     position: relative;
-    height: 80px;
-    margin-top: 10px;
-    margin-left: 10px;
+    height: 80%;
+    margin: 10px;
     filter:drop-shadow(0 10px 5px rgba(132, 0, 172, 0.123)) ;
 }
 
 .project-name{
-    margin-left: 5px;
-    margin-right: auto;
     padding: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto;
     text-align: left;
 }
 
 .project-name-name {
     font-size: 30px;
     font-weight: bold;
-    margin-right: 30px;
     color: var(--header-links-a-hover-color);
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.178);
 }
@@ -169,14 +186,12 @@
 .project-name-discription {
     font-size: 15px;
     font-weight: normal;
-    margin-right: 30px;
     color: var(--header-links-a-color);
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.185);
 }
 
 .actions {
     display: flex;
-    margin-right: 20px;
     padding: auto;
     margin-top: auto;
     margin-bottom: auto;
@@ -242,6 +257,70 @@
 
 .kraftbin-relative-time {
     filter: invert(20%);
+}
+
+@media screen and (max-width: 635px) {
+    .project-title {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .actions {
+        padding: auto;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        border-width: 1px 0 0 0 ;
+        padding-top: 10px;
+        width: 100%;
+        padding-bottom: 0px;
+        border-color: rgba(138, 138, 138, 0.192);
+        border-style: solid;
+    }
+
+    .project-name-name {
+        margin-right: 0px;
+    }
+    
+    .project-name-discription {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+.project-name-name {
+    font-size: 25px;
+}
+
+.project-header {
+    padding: 15px;
+}
+
+.project-name-discription {
+    font-size: 13px;
+}
+
+.project-logo {
+    height: 80px;
+    width: 80px;
+    min-height: 80px;
+    min-width: 80px;
+}
+
+.action-buttons button {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.last-updated {
+    font-size: 13px;
+}
+
+
 }
 
 .spacer1 {
@@ -524,67 +603,6 @@ p.cleaner-image-header-username {
 
 .cleaner-image-post {
     height: 50%;
-}
-
-@media screen and (max-width: 720px) {
-    .cleaner {
-        height: 400px;
-        width: 500px;
-        min-width: 500px;
-    }
-}
-
-@media screen and (max-width: 590px) {
-    .cleaner {
-        height: 350px;
-        width: 400px;
-        min-width: 400px;
-    }
-
-    .cleaner-image-container {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-}
-
-@media screen and (max-width: 470px) {
-    .cleaner {
-        height: 300px;
-        width: 340px;
-        min-width: 340px;
-    }
-
-    .cleaner-image-container, .cleaner-image-posts, .cleaner-image-sidebars {
-        gap: 3px;
-
-    }
-
-    .cleaner-image-container * {
-        border-radius: 7px !important;
-    }
-
-}
-
-@media screen and (max-width: 410px) {
-    .cleaner {
-        height: 300px;
-        width: 300px;
-        min-width: 300px;
-    }
-}
-
-@media screen and (max-width: 370px) {
-    .cleaner {
-        height: 300px;
-        width: auto;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .cleaner-image-container {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
 }
 
 /*-----tc-grid-----*/
@@ -1104,15 +1122,33 @@ p.tc-grid-header-right-title {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
+    .cleaner {
+        height: 400px;
+        width: 500px;
+        min-width: 500px;
+    }
+
     .familiar {
         width: 500px;
         min-width: 500px;
         height: 410px;
     }
 
-    .familiar * {
-        font-size-adjust: 0.45;
+    .post-title span {
+        font-size: 18px;
+    }
+
+    .post-text {
+        font-size: 14px;
+    }
+
+    .post-footer-details {
+        font-size: 10px;
+    }
+
+    .post-footer-menu {
+        font-size: 10px;
     }
 
     .post-image img {
@@ -1122,35 +1158,83 @@ p.tc-grid-header-right-title {
 }
 
 @media screen and (max-width: 590px) {
+    .cleaner {
+        height: 350px;
+        width: 400px;
+        min-width: 400px;
+    }
+
+    .cleaner-image-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+
     .familiar {
-        width: 375px;
-        min-width: 375px;
-        height: 280px;
+        width: 400px;
+        min-width: 400px;
+        height: 330px;
         position: relative;
         align-items: center;
         justify-content: center;
     }
 
     .familiar-image-content {
-        scale: .6;
+        scale: .799;
         position: relative;
-        width: 625px;
-        min-width: 625px;
-        height: 470px;
+        width: 500px;
+        min-width: 500px;
+        height: 410px;
     }
 
-    .vote {
-        padding-top: 15px;
+    .post-title span {
+        font-size: 18px;
+    }
+
+    .post-text {
+        font-size: 14px;
+    }
+
+    .post-footer-details {
+        font-size: 10px;
+    }
+
+    .post-footer-menu {
+        font-size: 10px;
     }
 
     .post-image img {
-        height: 300px;
+        height: 250px;
         width: auto;
     }
 
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
+    .cleaner {
+        height: 300px;
+        width: 340px;
+        min-width: 340px;
+    }
+
+    .cleaner-image-container, .cleaner-image-posts, .cleaner-image-sidebars {
+        gap: 3px;
+
+    }
+
+    .cleaner-image-container * {
+        border-radius: 7px !important;
+    }
+
+    .cleaner-image-post-votearia {
+        border-radius: 0px !important;
+    }
+
+
+
+    .info {
+        margin-top: 35px;
+    }
 
     .familiar {
         width: 300px;
@@ -1170,8 +1254,20 @@ p.tc-grid-header-right-title {
         height: 410px;
     }
 
-    .familiar-image-content * {
-        font-size-adjust: .45;
+    .post-title span {
+        font-size: 18px;
+    }
+
+    .post-text {
+        font-size: 14px;
+    }
+
+    .post-footer-details {
+        font-size: 10px;
+    }
+
+    .post-footer-menu {
+        font-size: 10px;
     }
 
     .vote {
@@ -1184,26 +1280,45 @@ p.tc-grid-header-right-title {
     }
 }
 
-@media screen and (max-width: 345px) {
+@media screen and (max-width: 410px) {
+    .cleaner {
+        height: 300px;
+        width: 300px;
+        min-width: 300px;
+    }
+
+
     .familiar {
-        width: 250px;
-        min-width: 250px;
-        height: 204px;
+        width: 260px;
+        min-width: 260px;
+        height: 213px;
         position: relative;
         align-items: center;
         justify-content: center;
     }
 
     .familiar-image-content {
-        scale: .5;
+        scale: .52;
         position: relative;
         width: 500px;
         min-width: 500px;
         height: 410px;
     }
 
-    .familiar-image-content * {
-        font-size-adjust: .45;
+    .post-title span {
+        font-size: 18px;
+    }
+
+    .post-text {
+        font-size: 14px;
+    }
+
+    .post-footer-details {
+        font-size: 10px;
+    }
+
+    .post-footer-menu {
+        font-size: 10px;
     }
 
     .vote {
@@ -1216,7 +1331,61 @@ p.tc-grid-header-right-title {
     }
 }
 
+@media screen and (max-width: 370px) {
+    .cleaner {
+        height: 300px;
+        width: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
+    .cleaner-image-container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .familiar {
+        width: 260px;
+        min-width: 260px;
+        height: 213px;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .familiar-image-content {
+        scale: .52;
+        position: relative;
+        width: 500px;
+        min-width: 500px;
+        height: 410px;
+    }
+
+    .post-title span {
+        font-size: 18px;
+    }
+
+    .post-text {
+        font-size: 14px;
+    }
+
+    .post-footer-details {
+        font-size: 10px;
+    }
+
+    .post-footer-menu {
+        font-size: 10px;
+    }
+
+    .vote {
+        padding-top: 15px;
+    }
+
+    .post-image img {
+        height: 250px;
+        width: auto;
+    }
+}
 
 /*------------------------*/
 /* toggle from w3schools */
@@ -1335,8 +1504,12 @@ select.kraftbin-select:focus{
 
 @media screen and (max-width: 1000px) {
     .section-content {
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: max-content;
+    }
+
+    .spacer1 {
+        height: 50px;
     }
 
     .project-name-name {
@@ -1345,7 +1518,7 @@ select.kraftbin-select:focus{
     }
 
     .page-odd .section-content {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .pages {

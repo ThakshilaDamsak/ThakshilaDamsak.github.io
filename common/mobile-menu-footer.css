@@ -195,6 +195,13 @@
     transition: 0.5s;
 }
 
+.mobile-menu .copyright p::after {
+    content: url('https://api.iconify.design/ph/info-bold.svg?width=10');
+    display: inline-flex;
+    margin-left: 10px;
+    scale: 1.7;
+  }
+
 .mobile-menu .copyright a {
     font-family: Work Sans;
     font-size: 19px;
@@ -326,4 +333,59 @@
 
 .change .bar3 {
   transform: translate(0, -7px) rotate(45deg);
+}
+
+ /* popup text */
+ .site-details-mobile {
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    transition: 0.2s;
+    bottom: 25px;
+
+    background-color: var(--footer-tooltip-footer-bg);
+    color: var(--footer-tooltip-footer-color);
+    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.116);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: Work Sans;
+
+    border-width: 1px;
+    border: Solid 1px rgba(138, 138, 138, 0.226);
+    border-style: solid;
+
+    margin: 0 15px 0 15px;
+   
+    position: absolute;
+  }
+
+  .site-info-stuff a {
+    text-decoration: underline;
+    transition: 0.2s;
+  }
+
+  .site-info-stuff a:hover {
+    opacity: 0.7;
+  }
+
+  .site-info-stuff a::after {
+    content: url('https://api.iconify.design/majesticons/open.svg?width=10');
+    margin-left: 5px;
+    scale: 1.6;
+}
+
+  .site-info-stuff {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .siteinfotext-footer-show {
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 10px;
 }

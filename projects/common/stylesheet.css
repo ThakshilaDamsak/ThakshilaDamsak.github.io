@@ -37,7 +37,7 @@
         transition: 0.5s;
         align-items: center;
         justify-content: center;
-       /* background: linear-gradient(to left top, rgba(103, 0, 134, 0.192), rgba(255, 246, 238, 0)); */
+        background: linear-gradient(to left top, rgba(185, 124, 255, 0.116), rgba(238, 238, 255, 0)); 
     }
 
     .loading-content {

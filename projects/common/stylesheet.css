@@ -165,7 +165,7 @@
         border-radius: 24px;
         box-shadow: 0 10px 25px -13px rgba(0, 0, 0, 0.13);
     
-        border-width: 2px;
+        border-width: 1px;
         border-color: rgba(138, 138, 138, 0.226);
         border-style: solid;
         transition: .2s;
@@ -177,7 +177,17 @@
         justify-self: center;
     }
 
-    .project:hover {
+    .project-outline {
+        border-color: transparent;
+        border-width: 2px;
+        border-style: solid;
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 25px;
+    }
+
+    .project-outline:hover {
         border-color: rgb(0, 162, 255);
     }
 

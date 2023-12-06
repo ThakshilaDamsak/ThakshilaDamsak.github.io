@@ -78,14 +78,14 @@ button.addEventListener("click", function() {
   if (menu.classList.contains("menu-show")) {
     // If the menu is shown, apply the transform to the footer element
     footer.style.transform = "translateY(30px)";
-    footer.style.transition = ".5s cubic-bezier(.77,0,.18,1)";
-
   } else {
-    // If the menu is hidden, remove the transform from the footer element
-    footer.style.transform = "translateY(0px)";
-    footer.style.transition = ".5s .5s cubic-bezier(.77,0,.18,1)";
+    // If the menu is hidden, wait for 0.5 seconds and then remove the transform from the footer element
+    setTimeout(function() {
+      footer.style.transform = "translateY(0px)";
+    }, 500); // 500 milliseconds = 0.5 seconds
   }
 });
+
 
 
 

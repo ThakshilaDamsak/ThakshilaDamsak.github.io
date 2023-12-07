@@ -1,23 +1,37 @@
 /* Footer */
 
 .footer {
-    background-color: var(--footer-bg);
-    backdrop-filter: blur(20px) saturate(3);
-    -webkit-backdrop-filter: blur(20px) saturate(3);
+    background-color: transparent;
+    backdrop-filter: saturate(1);
+    -webkit-backdrop-filter: saturate(1);
     width: 100%;
     min-height: 40px;
     position: fixed;
     bottom: 0;
     display: flex;
     align-items: center;
-    box-shadow: 0px -8px 12px 0px rgba(0, 0, 0, 0.048);
+    box-shadow: 0px -8px 12px 0px rgba(0, 0, 0, 0);
     transition :.5s;
     text-align: center;
     z-index: 99;
 
     border-width: 1px 0px 0px 0px;
+    border-color: rgba(138, 138, 138, 0);
+    border-style: solid;
+}
+
+.footer-acrylic {
+    border-width: 1px 0px 0px 0px;
     border-color: rgba(138, 138, 138, 0.226);
     border-style: solid;
+    box-shadow: 0px -8px 12px 0px rgba(0, 0, 0, 0.048);
+    background-color: var(--footer-bg);
+    backdrop-filter: blur(20px) saturate(3);
+    -webkit-backdrop-filter: blur(20px) saturate(3);
+
+    visibility: visible;
+    margin-bottom: 0px;
+    opacity: 1;
 }
 
 .footer a {
@@ -179,6 +193,19 @@
     .footer .social-links, .footer .eml {
         display: none;
     }
+
+    .footer {
+        visibility: hidden;
+        margin-bottom: -20px;
+        opacity: 0;
+    }
+
+    .footer-acrylic {
+        visibility: visible;
+        margin-bottom: 0px;
+        opacity: 1;
+    }
+
     .copyright a, .copyright p{
         font-size: 15px;
     }

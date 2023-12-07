@@ -32,7 +32,7 @@ Promise.all(imagePromises).then(() => {
   console.log('All images handled');
 
   // Fetch the content of the content HTML file
-  fetch('/home-css/content.html')
+  fetch('./content.html')
     .then(response => response.text())
     .then(html => {
       // Insert the content HTML into the container
@@ -60,20 +60,21 @@ Promise.all(imagePromises).then(() => {
         loadingElement.style.display = 'none';
       }, 1000);
 
-                    // Get the hash value from the URL
-                    const hash = window.location.hash;
 
-                    // Check if the hash is not empty
-                    if (hash) {
-                      // Get the element with the id matching the hash
-                      const element = document.getElementById(hash.slice(1));
-            
-                      // Check if the element exists
-                      if (element) {
-                        // Scroll to the element
-                        element.scrollIntoView();
-                      }
-                    }
-                    
+        // Get the hash value from the URL
+        const hash = window.location.hash;
+
+        // Check if the hash is not empty
+        if (hash) {
+          // Get the element with the id matching the hash
+          const element = document.getElementById(hash.slice(1));
+
+          // Check if the element exists
+          if (element) {
+            // Scroll to the element
+            element.scrollIntoView();
+          }
+        }
+
     });
 });

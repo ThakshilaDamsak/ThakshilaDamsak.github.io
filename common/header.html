@@ -59,6 +59,27 @@
 </div>
 
 <script>
+// Get the header and footer elements
+var header = document.getElementById("header");
+var footer = document.getElementById("footer");
+
+// Add a scroll event listener to the window
+window.addEventListener("scroll", function() {
+  // Get the scroll position from the top
+  var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+  // If the scroll position is zero, remove the acrylic-header and acrylic-footer classes
+  if (scrollPos == 0) {
+    header.classList.remove("acrylic-header");
+    footer.classList.remove("footer-acrylic");
+  }
+  // Otherwise, add the acrylic-header and acrylic-footer classes
+  else {
+    header.classList.add("acrylic-header");
+    footer.classList.add("footer-acrylic");
+  }
+});
+
 // Get the button element with id "hamburger"
 var button = document.getElementById("hamburger");
 
@@ -80,11 +101,21 @@ button.addEventListener("click", function() {
     if (window.innerWidth < 705) {
       footer.style.transform = "translateY(30px)";
     }
+    // Also, add the acrylic-header class to the header element
+    header.classList.add("acrylic-header");
   } else {
     // If the menu is hidden, wait for 0.5 seconds and then remove the transform from the footer element
     setTimeout(function() {
       footer.style.transform = "translateY(0px)";
     }, 500); // 500 milliseconds = 0.5 seconds
+    // Also, check the scroll position and remove the acrylic-header class from the header element if it is zero
+    var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollPos == 0) {
+
+      setTimeout(function() {
+        header.classList.remove("acrylic-header");
+    }, 800);
+    }
   }
 });
 

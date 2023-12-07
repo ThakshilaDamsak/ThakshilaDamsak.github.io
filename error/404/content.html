@@ -14,7 +14,7 @@
             <li>You can go back to the home page and find something that actually exists. Just click on anything that looks fun on this website. You never know what you might get.</li> 
         </ul> 
         <div class="js">
-            <button onclick="window.location.href='/'" id="go-home"></button>
+            <button onclick="window.location.href='/'" id="go-home"><span id="go-home-text">Go Home!</span></button>
         </div> 
         </div>     
         </div>
@@ -23,9 +23,21 @@
 </div>
 
 <script>
-    var button = document.getElementById("go-home");
-        button.innerHTML = "Sweet Home Alabama";
+    var buttonGoHome = document.getElementById("go-home");
+    var textGoHome = document.getElementById("go-home-text");
+
+        textGoHome.innerHTML = "Sweet Home Alabama <3";
+        buttonGoHome.style.width = "265px"
         setTimeout(function() {
-        button.innerHTML = "Go Home!";
-    }, 3000);
+            textGoHome.innerHTML = "Go Home!";
+            buttonGoHome.style.width = "115px";
+        }, 3000);
+
+        setTimeout(function() {
+            textGoHome.style.opacity = "0";
+        }, 2500);
+
+        setTimeout(function() {
+            textGoHome.style.opacity = "1";
+        }, 3500);
 </script>

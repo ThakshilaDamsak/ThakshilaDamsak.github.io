@@ -144,17 +144,19 @@
         gap: 10px;
         max-width: 1200px;
         position: relative;
+
+        column-gap: 10px;
+        break-inside: avoid;
+
     }
 
 
     .projects-grid1 {
         columns: 1;
-        column-gap: 10px;
     }
     
     .projects-grid2 {
         columns: 3;
-        column-gap: 10px;
     }
 
     .project-outline {

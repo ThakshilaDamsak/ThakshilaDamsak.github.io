@@ -6,9 +6,6 @@
     background-color: var(--footer-bg);
     backdrop-filter: blur(20px) saturate(3);
     -webkit-backdrop-filter: blur(20px) saturate(3);
-    visibility: visible;
-    margin-bottom: 0px;
-    opacity: 1;
 }
 
 .home {

@@ -545,6 +545,10 @@ a {
     user-select: none;
 }
 
+.container {
+  overflow: hidden;
+}
+
 @keyframes site-tab-animation {
     0% {transform: translateY(50px); opacity: 0;}
     100% {transform: translateY(0px); opacity: 1;}
@@ -770,7 +774,7 @@ a {
     width: 100%;
     z-index: 100;
     box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0);
-    transition: .5s;
+    transition: .2s;
     min-height: 58px;
     top: 0;
     

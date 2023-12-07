@@ -16,7 +16,7 @@
       </div>
 </div>
 
-<span class="site-details site-details-mobile" id="site-details-popup">
+<span class="site-details site-details-mobile siteinfotext-footer-hide" id="site-details-popup">
   <div class="site-info-stuff">
     <span><span class="site-version-number">Loading...</span> | Updated</span>
     <span class="tooltip-footer">
@@ -32,7 +32,7 @@
     document.getElementById("year").innerHTML = currentYear;
 
     // Declare a variable to store the version number (you can manually change this)
-var versionNumber = 'v32.16';
+var versionNumber = 'v32.17';
 
 // Get all the elements with class name "site-version-number"
 var versionElements = document.querySelectorAll('.site-version-number');
@@ -114,15 +114,33 @@ fetch('/common/social-links.html')
 </script>
 
 <script>
-  // Get the button element with id "hamburger"
-var button = document.getElementById("site-details");
+// Get the element with the class "tooltip-footer" inside the element with the class "menu-footer" and the class "copyright"
+var button = document.querySelector(".menu-footer .copyright .tooltip-footer");
 
 // Add a click event listener to the button
-button.addEventListener("click", function() {
+button.addEventListener("click", function(event) {
   // Get the element with id "mobile-menu-part"
   var menu = document.getElementById("site-details-popup");
 
   // Toggle between the class names "hidden" and "show"
+  menu.classList.toggle("siteinfotext-footer-hide");
   menu.classList.toggle("siteinfotext-footer-show");
+
+  // Stop the event from bubbling up to the document
+  event.stopPropagation();
 });
+
+// Get the element that you want to show or hide
+var element = document.getElementById("site-details-popup");
+
+// Add a click event listener to the document
+document.addEventListener("click", function(event) {
+  // Check if the clicked element is outside of the element
+  if (!element.contains(event.target)) {
+    // Remove the class that shows the element
+    element.classList.remove("siteinfotext-footer-show");
+    element.classList.add("siteinfotext-footer-hide");
+  }
+});
+
 </script>

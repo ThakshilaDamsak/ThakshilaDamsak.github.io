@@ -338,12 +338,10 @@
 
  /* popup text */
  .site-details-mobile {
-    visibility: hidden;
     align-items: center;
     justify-content: center;
     display: flex;
     position: absolute;
-    opacity: 0;
     transition: 0.2s;
     bottom: 25px;
 
@@ -359,10 +357,8 @@
     border-width: 1px;
     border: Solid 1px rgba(138, 138, 138, 0.226);
     border-style: solid;
-
+    
     margin: 0 15px 0 15px;
-   
-    position: absolute;
   }
 
   .site-info-stuff a {
@@ -379,6 +375,12 @@
     padding-right: 15px;
   }
   
+  .siteinfotext-footer-hide {
+    visibility: hidden;
+    opacity: 0;
+    margin-bottom: 0px;
+  }
+
   .siteinfotext-footer-show {
     visibility: visible;
     opacity: 1;

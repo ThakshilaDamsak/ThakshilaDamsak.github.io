@@ -461,6 +461,11 @@ html{
     --loading-bg:rgb(243, 243, 243);
     --bg-backdrop-filter: 0%;
 
+
+    .projects-page .section .project {
+      background-color: rgba(243, 243, 243, 0.671);
+    }
+
     --home-bg: linear-gradient(to left bottom, rgba(255, 251, 242, 0.6), rgba(255, 246, 238, 0.6));
     --home-a:black;
     --error-about-p-a-color: rgb(107, 0, 102);

@@ -72,11 +72,16 @@ window.addEventListener("scroll", function() {
   if (scrollPos == 0) {
     header.classList.remove("acrylic-header");
     footer.classList.remove("footer-acrylic");
+    header.classList.add("transclucent-header");
+    footer.classList.add("footer-transclucent");
+
   }
   // Otherwise, add the acrylic-header and acrylic-footer classes
   else {
     header.classList.add("acrylic-header");
     footer.classList.add("footer-acrylic");
+    header.classList.remove("transclucent-header");
+    footer.classList.remove("footer-transclucent");
   }
 });
 
@@ -103,6 +108,7 @@ button.addEventListener("click", function() {
     }
     // Also, add the acrylic-header class to the header element
     header.classList.add("acrylic-header");
+    header.classList.remove("transclucent-header");
   } else {
     // If the menu is hidden, wait for 0.5 seconds and then remove the transform from the footer element
     setTimeout(function() {
@@ -114,7 +120,8 @@ button.addEventListener("click", function() {
 
       setTimeout(function() {
         header.classList.remove("acrylic-header");
-    }, 800);
+        header.classList.add("transclucent-header");
+    }, 700);
     }
   }
 });

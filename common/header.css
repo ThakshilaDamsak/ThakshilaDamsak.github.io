@@ -531,6 +531,22 @@ html{
     position: relative;
 }
 
+/* ------Template for Changing Header and Footer elements color------ //
+
+.transclucent-header, .footer-transclucent {
+  --footer-a: green;
+  --header-links-a-color: green;
+  --footer-copyright-p: green;
+}
+
+.transclucent-header .logo img {
+  filter: invert(24%) sepia(35%) saturate(5148%) hue-rotate(84deg) brightness(102%) contrast(113%);
+}
+
+ //--------Calculate filter using this - https://codepen.io/sosuke/pen/Pjoqqp ---------//
+
+*/
+
 p, img, svg, span {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -774,7 +790,7 @@ a {
     width: 100%;
     z-index: 100;
     box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0);
-    transition: .2s;
+    transition: .3s;
     min-height: 58px;
     top: 0;
     

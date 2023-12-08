@@ -41,9 +41,9 @@
           </div>
           <div class="hr"></div>
           <div class="inputactions">
-            <div class="colorpicker-container">
-              <input class="target colorpicker" type="color" value="#d028c8" />
-              <div class="colorpicker-icon"><span><iconify-icon icon="pepicons-pop:color-picker-circle-filled"></iconify-icon></span></div>
+            <div class="colorpicker-container" style="cursor: pointer;">
+              <input class="target colorpicker" id="color-picker" style="cursor: pointer;" type="color" value="#d028c8" />
+              <div class="colorpicker-icon" id="color-picker-butt"><span><iconify-icon icon="pepicons-pop:color-picker-circle-filled"></iconify-icon></span></div>
             </div>
               <button class="execute regular-button">Compute Filters</button>
           </div>
@@ -81,6 +81,20 @@
 
   </div>
 </div>
+
+<script>
+  // get the image element by its id
+var image = document.getElementById("color-picker-butt");
+
+// get the color picker element by its id
+var colorPicker = document.getElementById("color-picker");
+
+// add a click event listener to the image element
+image.addEventListener("click", function() {
+  // trigger a click event on the color picker element
+  colorPicker.click();
+});
+</script>
 
 <script>
 // Get the button element

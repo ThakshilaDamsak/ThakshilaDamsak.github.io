@@ -189,7 +189,7 @@
     }
 
     .headerimage {
-        background-color: var(--project-logo-bg);
+        background-color: var(--generator-image-bg);
         border-radius: 15px;
         box-shadow: 0 10px 25px -15px rgba(0, 0, 0, 0.13);
     
@@ -216,7 +216,7 @@
         align-items: center;
         justify-content: center;
 
-        background-color: var(--project-logo-bg);
+        background-color: var(--generator-title-bg);
         border-radius: 15px;
         box-shadow: 0 10px 25px -15px rgba(0, 0, 0, 0.13);
     
@@ -225,6 +225,14 @@
         border-style: solid;
         transition: .2s;
         padding: 10px;
+    }
+
+    .titlearea * {
+        color : var(--generator-text-color) !important;
+    }
+
+    .titlearea a:hover {
+        color: var(--header-links-a-hover-color) !important;
     }
 
     .title {

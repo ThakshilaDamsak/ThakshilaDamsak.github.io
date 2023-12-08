@@ -125,10 +125,15 @@
     }
 
 
-    .generator-page p, .generator-page a, .generator-page span, .generator-page li, .generator-page u, .generator-page i {
+    .generator-page p, .generator-page span, .generator-page li, .generator-page u, .generator-page i {
         color: var(--header-links-a-hover-color);
         text-decoration: none;
     }
+    .generator-page a {
+        color: var(--header-links-a-color);
+        text-decoration: underline;
+    }
+
 
     .generator-page a:hover {
         color: var(--header-links-a-hover-color);

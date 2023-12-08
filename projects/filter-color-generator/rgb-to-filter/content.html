@@ -1,7 +1,7 @@
 <!---------This style should be added to force the footer background--------->
 
 <style>
-  @media screen and (max-height: 520px) {
+  @media screen and (max-height: 620px) {
 
     .content .footer {
         border-width: 1px 0px 0px 0px;
@@ -16,15 +16,30 @@
 </style>
 
 <div class="generator-page">
-  <div class="titlearea">
-    <div class="title">Filter Color Generator</div>
-    <div class="description">Generate CSS filters for pixel colors.</div>
-    <div class="description"><a href="https://stackoverflow.com/a/43960991/604861" target="_blank">Source</a></div>
+  <div class="headerarea">
+    <div class="headerimage">
+      <img src="/images/CSS-FIlter-Color.svg" alt="[Project Logo]">
+    </div>
+    <div class="titlearea">
+      <div class="title">Filter Color Generator</div>
+      <div class="description">Generate CSS filters for pixel colors.</div>
+      <div class="description"><a href="https://stackoverflow.com/a/43960991/604861" target="_blank">Source<sup>2</sup></a></div>
+    </div>
   </div>
   <div class="generator">
     <div class="inputarea">
-      <input class="target" type="text" placeholder="r, g, b" value="250, 150, 50" />
-      <button class="execute regular-button">Compute Filters</button>
+        <div class="inputtitle">
+            <span>Enter</span>
+            <select id="color-method" onchange="location = this.value;">
+                <option value="/projects/filter-color-generator/hex-to-filter/">HEX</option>
+                <option value="rgb" selected="">RGB</option>
+            </select>
+            <span>Value</span>
+        </div>
+        <div class="inputactions">
+            <input class="target" type="text" placeholder="r, g, b" value="208, 40, 200" />
+            <button class="execute regular-button">Compute Filters</button>
+        </div>
     </div>
     <div class="previewarea">
       <div class="previewarea-item">
@@ -42,35 +57,71 @@
 
     </div>
     <div class="outputarea">
-      <div class="filteroutput" id="lossDetail">
-        <p class="filterDetail">Click "Compute Filters"</p>
+      <div class="filteroutput">
+        <p class="filterDetail" id="filterDetail"><i class="placeholder">Click "Compute Filters"</i></p>
       </div>
       <div class="filterStuff">
-      <p class="lossDetail"></p>
-      <button class="regular-button" onclick="copyEvent('lossDetail')">Copy</button>
+      <p class="lossDetail"><iconify-icon icon="icon-park-solid:up-two"></iconify-icon></p>
+      <button class="regular-button" id="copy-button"><span class="buttontext">Copy</span></button>
       </div>
     </div>
 
 </div>
 </div>
 
-
 <script>
-  function copyEvent(id)
-  {
-      var str = document.getElementById(id);
-      window.getSelection().selectAllChildren(str);
-      document.execCommand("copy")
+// Get the button element
+var btn = document.querySelector ("#copy-button");
+var btntext = document.querySelector (".buttontext")
 
-      setTimeout(function() {
-          document.getSelection().removeAllRanges();
-      }, 1500);
+// Add a click event listener to the button
+btn.addEventListener ("click", function () {
+  // Get the p#filterDetail element
+  var p = document.getElementById ("filterDetail");
+
+  // Check if the p element has the .placeholder class as a child element
+  var placeholder = p.querySelector (".placeholder");
+
+  // If yes, then add the .highlight class to the .placeholder element
+  if (placeholder) {
+    placeholder.classList.add ("highlight");
+    setTimeout(() => {
+        placeholder.classList.remove ("highlight");
+        }, 1000);
+  } else {
+    // If no, then do the copy action code as before
+    // Check if the p element has any text content
+    if (p.textContent) {
+      // Copy the text content to the clipboard
+      navigator.clipboard.writeText (p.textContent);
+      btntext.style.opacity = "0";
+
+      setTimeout(() => {
+          btntext.innerHTML = "Copied!";
+        }, 100);
+
+        setTimeout(() => {
+          btntext.style.opacity = "1";
+        }, 200);
+
+        setTimeout(() => {
+          btntext.style.opacity = "0";
+        }, 800);
+
+        setTimeout(() => {
+          btntext.innerHTML = "Copy";
+        }, 900);
+
+      setTimeout(() => {
+          btntext.style.opacity = "1";
+        }, 1000);
+    }
   }
+});
 </script>
 
-
 <script>
-"use strict";
+    "use strict";
 
 class Color {
     constructor(r, g, b) { this.set(r, g, b); }

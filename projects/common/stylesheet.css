@@ -152,7 +152,7 @@
 
 
     .projects-grid1 {
-        columns: 1;
+        columns: 2;
     }
     
     .projects-grid2 {
@@ -293,6 +293,14 @@
         overflow: auto;
     }
 
+    .project-about span {
+        width: 100%;
+    }
+    .project-about span a {
+        width: fit-content;
+        height: fit-content;
+    }
+
     .tall {
         height: 150px;
     }
@@ -355,6 +363,14 @@
         content: 'Illustrations';
     }
 
+    div.badge-tools  {
+        background-color: rgb(0, 38, 255);
+    }
+
+    div.badge-tools::after  {
+        content: 'Tools';
+    }
+
 
     @media screen and (max-width: 1000px) {
         .projects-grid2 {
@@ -363,7 +379,7 @@
     }
 
     @media screen and (max-width: 680px) {
-        .projects-grid2 {
+        .projects-grid2, .projects-grid1 {
             columns: 1;
         }
     }

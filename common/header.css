@@ -461,11 +461,6 @@ html{
     --loading-bg:rgb(243, 243, 243);
     --bg-backdrop-filter: 0%;
 
-
-    .projects-page .section .project {
-      background-color: rgba(243, 243, 243, 0.671);
-    }
-
     --home-bg: linear-gradient(to left bottom, rgba(255, 251, 242, 0.6), rgba(255, 246, 238, 0.6));
     --home-a:black;
     --error-about-p-a-color: rgb(107, 0, 102);
@@ -487,6 +482,10 @@ html{
 
     --kraftbin-post-color: rgba(255, 255, 255, 0.842);
     --kraftbin-toggle-color: blueviolet;
+
+    .projects-page .section .project {
+      background-color: rgba(243, 243, 243, 0.671);
+    }
   }
 
 
@@ -542,8 +541,6 @@ html{
 .transclucent-header .logo img {
   filter: invert(24%) sepia(35%) saturate(5148%) hue-rotate(84deg) brightness(102%) contrast(113%);
 }
-
- //--------Calculate filter using this - https://codepen.io/sosuke/pen/Pjoqqp ---------//
 
 */
 
@@ -1341,12 +1338,11 @@ textarea:focus, input:focus{
     border: Solid 2px rgba(138, 138, 138, 0.226);
     border-radius: 5px; 
     font-size: 13px; 
-    appearance:none; 
+    appearance:menulist-button; 
     transition: 0.2s;
     cursor:pointer;
     height: min-content;
     margin: auto;
-    margin-right: 9px;
 }
 
 select:hover{

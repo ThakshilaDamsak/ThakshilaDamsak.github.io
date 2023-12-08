@@ -1,7 +1,7 @@
 <!---------This style should be added to force the footer background--------->
 
 <style>
-  @media screen and (max-height: 620px) {
+  @media screen and (max-height: 495px) {
 
     .content .footer {
         border-width: 1px 0px 0px 0px;
@@ -21,51 +21,53 @@
       <img src="/images/CSS-FIlter-Color.svg" alt="[Project Logo]">
     </div>
     <div class="titlearea">
-      <div class="title">Filter Color Generator</div>
-      <div class="description">Generate CSS filters for pixel colors.</div>
-      <div class="description"><a href="https://codepen.io/sosuke/pen/Pjoqqp" target="_blank">Source<sup>1</sup></a></div>
+      <div class="title">Color Filter Generator</div>
+      <div class="description">Generate CSS filters for black icons.</div>
+      <div class="description"><a href="/projects/color-filter-generator/about/what-the-heck/">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a></div>
     </div>
-  </div>
-
-  <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Some text in the Modal..</p>
-    </div>
-  
   </div>
 
   <div class="generator">
-    <div class="inputarea">
-        <div class="inputtitle">
-            <span>Enter</span>
-            <select id="color-method" onchange="location = this.value;">
-              <option value="hex" selected="">HEX</option>
-              <option value="/projects/filter-color-generator/rgb-to-filter/">RGB</option>
-          </select>
-            <span>Value</span>
-        </div>
-        <div class="inputactions">
-            <input class="target" type="text" placeholder="#hex" value="#d028c8" />
-            <button class="execute regular-button">Compute Filters</button>
-        </div>
-    </div>
-    <div class="previewarea">
-      <div class="previewarea-item">
-        <div class="previewarea-title">
-            <p>Real pixel, color applied through CSS <code>background-color</code>:</p>
-        </div>
-            <div class="pixel realPixel"></div>
+    <div class="input-preview-area">
+      <div class="inputarea">
+          <div class="inputtitle">
+              <span>Enter</span>
+              <select id="color-method" onchange="location = this.value;">
+                <option value="picker" selected="">Picker</option>
+                <option value="/projects/color-filter-generator/hex-to-filter/">HEX</option>
+                <option value="/projects/color-filter-generator/rgb-to-filter/">RGB</option>
+            </select>
+              <span>Value</span>
+          </div>
+          <div class="hr"></div>
+          <div class="inputactions">
+            <div class="colorpicker-container">
+              <input class="target colorpicker" type="color" value="#d028c8" />
+              <div class="colorpicker-icon"><span><iconify-icon icon="pepicons-pop:color-picker-circle-filled"></iconify-icon></span></div>
+            </div>
+              <button class="execute regular-button">Compute Filters</button>
+          </div>
       </div>
-      <div class="previewarea-item">
-        <div class="previewarea-title">
-            <p>Filtered pixel, color applied through CSS <code>filter</code>:</p>
+      <div class="previewarea">
+        <div class="previewarea-item">
+          <div class="previewarea-title">
+            <span>
+              <p class="preview-title">Real pixel</p>
+              <p class="preview-text">Color applied through CSS background-color:</p>
+            </span>
+          </div>
+              <div class="pixel realPixel"></div>
         </div>
-            <div class="pixel filterPixel"></div>
+        <div class="previewarea-item">
+          <div class="previewarea-title">
+            <span>
+              <p class="preview-title">Filtered pixel</p>
+              <p class="preview-text">Color applied through CSS filter:</p>
+            </span>
+          </div>
+              <div class="pixel filterPixel"></div>
+        </div>
       </div>
-
     </div>
     <div class="outputarea">
       <div class="filteroutput">
@@ -77,36 +79,8 @@
       </div>
     </div>
 
+  </div>
 </div>
-</div>
-
-<script>
-  // Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("openModal");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-} 
-</script>
 
 <script>
 // Get the button element

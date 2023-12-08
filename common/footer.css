@@ -180,7 +180,7 @@
 
 }
 
-@media screen and (max-width: 705px) {
+@media screen and (max-width: 800px) {
     .footer {
         flex-direction: column;
         min-height: 28px;
@@ -232,7 +232,7 @@
     
 }
 
-@media screen and (min-width: 705px) {
+@media screen and (min-width: 800px) {
     #mobile-menu-part {
       display: none !important;
     }
@@ -256,7 +256,7 @@
     background-color: rgb(0, 0, 0);
 }
 
-@media screen and (max-width: 705px) {
+@media screen and (max-width: 800px) {
     .ham {
         display: flex;
         padding-right: 0px;

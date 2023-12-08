@@ -102,8 +102,8 @@ button.addEventListener("click", function() {
 
   // Check the class name of the menu element
   if (menu.classList.contains("menu-show")) {
-    // If the menu is shown, apply the transform to the footer element only if the screen size is below 705px
-    if (window.innerWidth < 705) {
+    // If the menu is shown, apply the transform to the footer element only if the screen size is below 800px
+    if (window.innerWidth < 800) {
       footer.style.transform = "translateY(30px)";
     }
     // Also, add the acrylic-header class to the header element
@@ -137,7 +137,7 @@ window.addEventListener("resize", function() {
   // Check the class name of the menu element
   if (menu.classList.contains("menu-show")) {
     // If the menu is shown, check the screen size and apply the appropriate transform to the footer element
-    if (window.innerWidth < 705) {
+    if (window.innerWidth < 800) {
       footer.style.transform = "translateY(30px)";
     } else {
       footer.style.transform = "translateY(0px)";

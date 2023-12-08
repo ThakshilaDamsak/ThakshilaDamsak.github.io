@@ -1,7 +1,7 @@
 <!---------This style should be added to force the footer background--------->
 
 <style>
-  @media screen and (max-height: 620px) {
+  @media screen and (max-height: 495px) {
 
     .content .footer {
         border-width: 1px 0px 0px 0px;
@@ -21,40 +21,51 @@
       <img src="/images/CSS-FIlter-Color.svg" alt="[Project Logo]">
     </div>
     <div class="titlearea">
-      <div class="title">Filter Color Generator</div>
-      <div class="description">Generate CSS filters for pixel colors.</div>
-      <div class="description"><a href="https://stackoverflow.com/a/43960991/604861" target="_blank">Source<sup>2</sup></a></div>
+      <div class="title">Color Filter Generator</div>
+      <div class="description">Generate CSS filters for black icons.</div>
+      <div class="description"><a href="/projects/color-filter-generator/about/what-the-heck/">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a></div>
     </div>
   </div>
-  <div class="generator">
-    <div class="inputarea">
-        <div class="inputtitle">
-            <span>Enter</span>
-            <select id="color-method" onchange="location = this.value;">
-                <option value="/projects/filter-color-generator/hex-to-filter/">HEX</option>
-                <option value="rgb" selected="">RGB</option>
-            </select>
-            <span>Value</span>
-        </div>
-        <div class="inputactions">
-            <input class="target" type="text" placeholder="r, g, b" value="208, 40, 200" />
-            <button class="execute regular-button">Compute Filters</button>
-        </div>
-    </div>
-    <div class="previewarea">
-      <div class="previewarea-item">
-        <div class="previewarea-title">
-            <p>Real pixel, color applied through CSS <code>background-color</code>:</p>
-        </div>
-            <div class="pixel realPixel"></div>
-      </div>
-      <div class="previewarea-item">
-        <div class="previewarea-title">
-            <p>Filtered pixel, color applied through CSS <code>filter</code>:</p>
-        </div>
-            <div class="pixel filterPixel"></div>
-      </div>
 
+
+  <div class="generator">
+    <div class="input-preview-area">
+      <div class="inputarea">
+          <div class="inputtitle">
+              <span>Enter</span>
+              <select id="color-method" onchange="location = this.value;">
+                <option value="/projects/color-filter-generator/picker-to-filter/">Picker</option>
+                <option value="/projects/color-filter-generator/hex-to-filter/">HEX</option>
+                <option value="rgb" selected="">RGB</option>
+              </select>
+              <span>Value</span>
+          </div>
+          <div class="hr"></div>
+          <div class="inputactions">
+            <input class="target" type="text" placeholder="r, g, b" value="208, 40, 200" />
+              <button class="execute regular-button">Compute Filters</button>
+          </div>
+      </div>
+      <div class="previewarea">
+        <div class="previewarea-item">
+          <div class="previewarea-title">
+            <span>
+              <p class="preview-title">Real pixel</p>
+              <p class="preview-text">Color applied through CSS background-color:</p>
+            </span>
+          </div>
+              <div class="pixel realPixel"></div>
+        </div>
+        <div class="previewarea-item">
+          <div class="previewarea-title">
+            <span>
+              <p class="preview-title">Filtered pixel</p>
+              <p class="preview-text">Color applied through CSS filter:</p>
+            </span>
+          </div>
+              <div class="pixel filterPixel"></div>
+        </div>
+      </div>
     </div>
     <div class="outputarea">
       <div class="filteroutput">
@@ -66,7 +77,8 @@
       </div>
     </div>
 
-</div>
+  </div>
+
 </div>
 
 <script>

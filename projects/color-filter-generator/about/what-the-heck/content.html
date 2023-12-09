@@ -28,10 +28,15 @@
 
   <div class="generator">
     <div class="input-preview-area">
-      <div class="inputarea">
+      <div class="inputarea infotext">
           <div class="info">
             <h2>About</h2>
-            <p>Welcome to Color Filter, a small website that lets you convert any color to a CSS filter that you can apply to black images and icons. With Color Filter, you can easily create custom style sheets and give your website a unique look.</p>
+            <p style="display: inline;">Color Filter Generator is a small website that lets you convert any color to a CSS filter that you can apply to black images and icons. You can easily create and copy CSS color filters and give your
+              <u class="tooltip">
+                <u style="text-decoration:dotted; text-decoration-line: underline;">website</u>
+                <span class="tooltiptext">or whatever you create</span>
+              </u>
+              a unique look.</p>
             <br>
             <p>Example:</p>
             <br>
@@ -47,34 +52,34 @@
                 <div class="img">
                   <img src="/images/logo-long-bk.svg" alt="[Image]">
                 </div>
-                <span>Nomral Image</span>
+                <span>Colored Image</span>
 
                 <div class="tooltip">
                   <sup><u style="text-decoration:dotted; text-decoration-line: underline;">With Pink Color Filter</u></sup>
-                  <span class="tooltiptext">filter: invert(23%) sepia(46%) saturate(5952%) hue-rotate(290deg) brightness(95%) contrast(90%);</span>
+                  <span class="tooltiptext"><code class="codeblock" data-attr="CSS" style="background-color: transparent; border: none;" >filter: invert(23%) sepia(46%) saturate(5952%) hue-rotate(290deg) brightness(95%) contrast(90%);</code></span>
                 </div>
 
               </div>
             </div>
             <br>
             <h2>How it works</h2>
-            <p>Color Filter uses a simple algorithm to calculate the hue, saturation, and brightness values of any color you choose and generate a corresponding CSS filter. You can copy and paste the filter code into your style sheet and use it for any black image or icon on your website.</p>
+            <p>Color Filter Generator uses a simple algorithm to calculate the hue, saturation, brightness,… values of any color you choose and generate a corresponding CSS filter. You can copy and paste the filter code into your style sheet and use it for any black image or icon on your website.</p>
             <br>
             <h2>FAQs</h2>
             <br>
-            <h4>Q: Why do I need to use black images or icons?</h4>
-            <p>A: Color Filter works best with black images or icons because they have no hue or saturation. If your image or icon is not black, you can prepend <code>brightness(0) saturate(100%)</code> to your filter property, which will turn it to black before applying the color filter.</p>
+            <h4>Why do I need to use black images or icons?</h4>
+            <p>Color Filter works best with black images or icons because they have no hue or saturation. If your image or icon is not black, you can prepend <code>brightness(0) saturate(100%)</code> to your filter property, which will turn it to black before applying the color filter.</p>
             <br>
-            <h4>Q: How can I choose a color for the filter?</h4>
-            <p>A: You can choose a color for the filter by using one of the three methods available on the website:</p>
+            <h4>How can I choose a color for the filter?</h4>
+            <p>You can choose a color for the filter by using one of the three methods available on the website:</p>
             <ul>
               <li>Color picker: You can use the color picker tool to select any color from the palette.</li>
               <li>Hex code: You can enter the hex code of the color you want in the input box. For example, if you want a red filter, you can enter <code>#FF0000</code> as the hex code.</li>
               <li>RGB values: You can enter the red, green, and blue values of the color you want in the input boxes. For example, if you want a red filter, you can enter <code>255</code> for red, <code>0</code> for green, and <code>0</code> for blue.</li>
             </ul>
             <p>After choosing a color, you can copy and paste the filter code into your style sheet.</p>            <br>
-            <h4>Q: Can I use Color Filter for other purposes besides coloring images or icons?</h4>
-            <p>A: Yes, you can use Color Filter for any element that supports the CSS filter property, such as text, backgrounds, borders, etc. However, keep in mind that the filter will affect the entire element, not just the color. For example, if you apply a filter to a text element, it will also change the brightness and contrast of the text.</p>
+            <h4>Can I use Color Filter for other purposes besides coloring images or icons?</h4>
+            <p>Yes, you can use Color Filter for any element that supports the CSS filter property, such as text, backgrounds, borders, etc. However, keep in mind that the filter will affect the entire element, not just the color. For example, if you apply a filter to a text element, it will also change the brightness and contrast of the text.</p>
             <br>
             <p>This website uses JavaScript codes adapted from the following sources:</p>
             <br>

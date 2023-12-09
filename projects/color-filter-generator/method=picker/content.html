@@ -33,15 +33,18 @@
           <div class="inputtitle">
               <span>Enter</span>
               <select id="color-method" onchange="location = this.value;">
-                <option value="/projects/color-filter-generator/picker-to-filter/">Picker</option>
-                <option value="hex" selected="">HEX</option>
-                <option value="/projects/color-filter-generator/rgb-to-filter/">RGB</option>
+                <option value="picker" selected="">Picker</option>
+                <option value="/projects/color-filter-generator/method=hex/">HEX</option>
+                <option value="/projects/color-filter-generator/method=rgb/">RGB</option>
             </select>
               <span>Value</span>
           </div>
           <div class="hr"></div>
           <div class="inputactions">
-              <input class="target" type="text" placeholder="#hex" value="#d028c8" />
+            <div class="colorpicker-container" style="cursor: pointer;">
+              <input class="target colorpicker" id="color-picker" style="cursor: pointer;" type="color" value="#d028c8" />
+              <div class="colorpicker-icon" id="color-picker-butt"><span><iconify-icon icon="pepicons-pop:color-picker-circle-filled"></iconify-icon></span></div>
+            </div>
               <button class="execute regular-button">Compute Filters</button>
           </div>
       </div>
@@ -78,6 +81,20 @@
 
   </div>
 </div>
+
+<script>
+  // get the image element by its id
+var image = document.getElementById("color-picker-butt");
+
+// get the color picker element by its id
+var colorPicker = document.getElementById("color-picker");
+
+// add a click event listener to the image element
+image.addEventListener("click", function() {
+  // trigger a click event on the color picker element
+  colorPicker.click();
+});
+</script>
 
 <script>
 // Get the button element

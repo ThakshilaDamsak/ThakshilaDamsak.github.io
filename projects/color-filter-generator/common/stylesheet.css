@@ -417,11 +417,18 @@
         max-width: 1200px;
       }
 
-      .filteroutput, .filteroutput p, .filteroutput * {
+      .filteroutput, .filteroutput p{
         -webkit-user-select:text !important;
         -moz-user-select: text !important;
         -ms-user-select: text !important;
         user-select: text !important;
+      }
+
+      .filteroutput .placeholder {
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
       }
 
       .filterStuff .regular-button {
@@ -465,7 +472,6 @@
         align-items: center;
         width: fit-content;
         height: fit-content;
-        background-color: var(--generator-image-bg);
         border-radius: 10px;
 
         border-width: 1px;
@@ -473,6 +479,8 @@
         border-style: solid;
         overflow: hidden;
         height: 30px;
+        width: 120px;
+        position: relative;
       }
 
       input.colorpicker {
@@ -483,18 +491,26 @@
         border-style: none;
         overflow: hidden;
         width: 100px;
-        margin-left: -5px;
-        margin-top: -5px;
+        scale: 2;
         height: 40px;
+        outline: none;
       }
 
       .colorpicker-icon {
         display: flex;
+        position: absolute;
+        right: 0;
         font-size: 20px;
-        width: 40px;
+        width: 35px;
+        height: 100%;
         align-items: center;
         justify-content: center;
         padding: auto;
+        background-color: var(--generator-image-bg);
+
+        border-width: 0px 0px 0px 1px;
+        border-color: rgba(138, 138, 138, 0.534);
+        border-style: solid;
       }
 
       .colorpicker-icon span {
@@ -558,6 +574,7 @@
       .what-images img {
         height: 50px;
         width: auto;
+        margin-bottom: -5px;
       }
 
       .image2 img {
@@ -566,6 +583,10 @@
 
       ul {
         margin-left: 25px;        
+      }
+
+      .infotext {
+        background-color: var(--project-logo-bg);
       }
 
       .source-links sup {

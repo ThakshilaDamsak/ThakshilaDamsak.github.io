@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 @import url(/common/mobile-menu-footer.css);
 * {
     margin: 0;
@@ -1112,6 +1113,20 @@ input:checked + .slider:before {
 
 }
 
+@media screen and (max-width: 470px) {
+
+  #subdirectory {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #subdirectory * {
+    font-size: 13px;
+  }
+
+}
+
 
 
 
@@ -1415,3 +1430,103 @@ select:focus {
   color: var(--button-color-hover);
   background: var(--button-background-hover);
 }
+
+
+/* -----Codes----- */
+
+.container code {
+  display: inline;
+  font-family: 'PT Mono', monospace;
+  font-size: 75%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--header-links-a-hover-bg-color);
+  height: fit-content;
+  width: fit-content;
+  padding: 2px;
+
+  z-index: 1;
+
+  border: Solid 1px rgba(138, 138, 138, 0.226);
+  border-radius: 5px; 
+
+  -webkit-user-select:text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+code.codeblock {
+  display: block;
+  background-color: var(--header-links-a-hover-bg-color);
+  font-family: 'PT Mono', monospace;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--header-links-a-hover-bg-color);
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
+
+  z-index: 1;
+
+  border: Solid 1px rgba(138, 138, 138, 0.226);
+  border-radius: 10px; 
+}
+
+code.codeblock * {
+  font-family: 'PT Mono', monospace;
+
+  -webkit-user-select:text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+code.codeblock::before {
+  content: attr(data-attr);
+  display: block;
+  background-color: var(--header-links-a-hover-bg-color);
+  font-family: 'PT Mono', monospace;
+  color: var(--header-links-a-hover-color);
+  position:relative;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--header-links-a-hover-bg-color);
+  height: fit-content;
+  width: auto;
+  padding: 5px;
+  margin-bottom: 5px;
+
+  z-index: 1;
+
+  border: Solid 1px rgba(138, 138, 138, 0.226);
+  border-radius: 5px;
+}
+
+p > code,
+li > code,
+dd > code,
+td > code {
+  word-wrap: break-word ;
+  box-decoration-break: clone ;
+  padding: .1rem .3rem .2rem;
+  border-radius: .2rem;
+}
+
+u {
+  text-underline-offset: 4px;
+}
+
+/* -----Code Block Html----- 
+
+<code class="codeblock" data-attr="JavaScript">
+  <p>This is a long code. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita quibusdam fuga repellat delectus illo. Iusto ea, similique itaque pariatur distinctio dolor. Dolore, error culpa?</p>
+  <p>This is a long code. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita quibusdam fuga repellat delectus illo. Iusto ea, similique itaque pariatur distinctio dolor. Dolore, error culpa?</p>
+</code>
+
+*/

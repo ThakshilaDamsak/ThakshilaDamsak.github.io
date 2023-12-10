@@ -22,7 +22,7 @@
     <div class="page-title">
       <div class="title"><h1>My Projects</h1></div>
       <div class="sort">
-        <button class="regular-button sortbutton" id="sortbutt" style="font-size: 15px; padding: 2px; padding-left: 8px; padding-right: 8px; border-radius: 5px;"><span id="sortbuttontxt">Sort by Badge</span></button>
+        <button class="regular-button sortbutton sort-butt-state1" id="sortbutt" style="font-size: 15px; padding: 2px; padding-left: 8px; padding-right: 8px; border-radius: 5px;"><span id="sortbuttontxt">Sort by Badge</span></button>
       </div>
     </div>
 
@@ -165,23 +165,23 @@
 
 <script>
 // Get the buttons with the class .sort-button
-let buttons = document.getElementsByClassName("sortbutton");
+const buttons = document.querySelectorAll(".sortbutton");
 
 // Get the page elements with the ids .page1 and .page2
-let page2 = document.getElementById("page2");
-let grid1 = document.getElementById("project-pages")
-let below = document.getElementById("go-below")
-let grid2 = document.getElementById("github-projects")
-let section1 = document.getElementsByClassName("section1")
-let sortbutt = document.getElementById("sortbutt")
-let sortbuttontxt = document.getElementById("sortbuttontxt")
-let footerStyles = document.querySelector(".footer-transclucent")
-let subdirectory = document.getElementById("subdirectory")
+const page2 = document.getElementById("page2");
+const grid1 = document.getElementById("project-pages");
+const below = document.getElementById("go-below");
+const grid2 = document.getElementById("github-projects");
+const section1 = document.querySelector(".section1");
+const sortbutt = document.getElementById("sortbutt");
+const sortbuttontxt = document.getElementById("sortbuttontxt");
+const footerStyles = document.querySelector(".footer-transclucent");
+const subdirectory = document.getElementById("subdirectory");
 
 // Define a function that changes the page state and the URL
-function changePageState() {
+const changePageState = () => {
   // Get the current path without the hash
-  let path = window.location.pathname;
+  const path = window.location.pathname;
 
   // Get the current hash, if any
   let hash = window.location.hash;
@@ -194,23 +194,23 @@ function changePageState() {
   } else {
     // If no, add it to the hash
     hash = "#sort-projects";
-    history.pushState(null, "", path + hash);
+    history.pushState(null, "", `${path}${hash}`);
   }
 
   // Toggle the display of pages
   togglePages();
-}
+};
 
-function changePageStateStartup() {
+const changePageStateStartup = () => {
   // Get the current path without the hash
-  let path = window.location.pathname;
+  const path = window.location.pathname;
 
   // Get the current hash, if any
   let hash = window.location.hash;
 
   // Check if the hash is #sort-projects
   if (hash === "#sort-projects") {
-    // If yes, remove it from the hash
+    // If yes, keep it in the hash
     hash = "#sort-projects";
   } else {
     // If no, add it to the hash
@@ -219,37 +219,37 @@ function changePageStateStartup() {
 
   // Toggle the display of pages
   togglePages();
-}
+};
 
 // Function to toggle the display of pages
-function togglePages() {
+const togglePages = () => {
   // Get the full URL of the current page
-  let url = window.location.href;
+  const url = window.location.hash;
 
   // Check if the URL contains the #sort-projects parameter
-  if (url.includes("#sort-projects")) {
-    // If yes, hide page1 and show page2
+  if (url == "#sort-projects") {
     grid1.style.display = "none";
     below.style.display = "none";
     grid2.style.display = "none";
     page2.style.display = "flex";
     sortbuttontxt.style.opacity = "0";
 
-    footerStyles.classList.add("footer-acrylic-force");
+    footerStyles.classList.toggle("footer-acrylic-force");
 
-    subdirectory.innerHTML = '<a onclick="changePageState()" class="header-path" style="cursor:pointer;">/projects/</a>';
+    subdirectory.innerHTML = '<a class="header-path">/projects/</a>';
+    subdirectory.onclick = changePageState;
+    subdirectory.style.cursor = "pointer";
 
-    setTimeout(function() {
-            sortbuttontxt.innerHTML = "Go Back";
-            sortbutt.style.width = "73px";
-        }, 100);
+    setTimeout(() => {
+      sortbuttontxt.textContent = "Go Back";
+      sortbutt.style.width = "73px";
+    }, 100);
 
-    setTimeout(function() {
-        sortbuttontxt.style.opacity = "1";
+    setTimeout(() => {
+      sortbuttontxt.style.opacity = "1";
     }, 500);
 
-    } else {
-    // If no, show page1 and hide page2
+  } else {
     page1.style.display = "flex";
     grid1.style.display = "block";
     below.style.display = "flex";
@@ -258,46 +258,24 @@ function togglePages() {
     sortbutt.style.width = "115px";
     sortbuttontxt.style.opacity = "0";
 
-    footerStyles.classList.remove("footer-acrylic-force");
+    footerStyles.classList.toggle("footer-acrylic-force");
 
     subdirectory.innerHTML = '';
+    subdirectory.onclick = null;
+    subdirectory.style.cursor = "default";
 
-    setTimeout(function() {
-      sortbuttontxt.innerHTML = "Sort by Badge";
-        }, 200);
+    setTimeout(() => {
+      sortbuttontxt.textContent = "Sort by Badge";
+    }, 200);
 
-    setTimeout(function() {
-        sortbuttontxt.style.opacity = "1";
+    setTimeout(() => {
+      sortbuttontxt.style.opacity = "1";
     }, 500);
   }
-}
-
-// Get the element that contains the content that is loaded later
-let container = document.getElementById("page2");
-
-// Create a new MutationObserver object
-let observer = new MutationObserver(function (mutations) {
-  // Loop through each mutation
-  mutations.forEach(function (mutation) {
-    // Check if the mutation added nodes to the container
-    if (mutation.addedNodes.length > 0) {
-      // Call the function to change the page state and the URL
-      togglePages();
-    }
-  });
-});
-
-// Set the observer options
-let config = {
-  childList: true, // observe direct children
-  subtree: true, // and lower descendants/projects/ too
 };
 
-// Start observing the container for changes
-observer.observe(container, config);
-
-// Add an event listener to the window object to handle the popstate event
-window.addEventListener("popstate", togglePages);
+// Add an event listener to the window object to handle the hashchange event
+window.addEventListener("hashchange", togglePages);
 
 // Loop through each button and add an event listener
 for (let button of buttons) {
@@ -309,6 +287,18 @@ if (window.location.hash === "#sort-projects") {
   // If yes, call the function to change the page state and the URL
   changePageStateStartup();
 }
+
+// Wait for the DOM to be loaded before adding the event listener to the element that is loaded later
+document.addEventListener("DOMContentLoaded", () => {
+  // Get the element with the id .domevent
+  const domevent = document.getElementById("domevent");
+
+  // Add an event listener to the element
+  domevent.addEventListener("click", () => {
+    // Do something when the element is clicked
+    console.log("You clicked the domevent element!");
+  });
+});
 
 </script>
 

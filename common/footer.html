@@ -32,7 +32,7 @@
     document.getElementById("year").innerHTML = currentYear;
 
     // Declare a variable to store the version number (you can manually change this)
-var versionNumber = 'v42.1';
+var versionNumber = 'v42.8';
 
 // Get all the elements with class name "site-version-number"
 var versionElements = document.querySelectorAll('.site-version-number');
@@ -57,7 +57,7 @@ versionElements.forEach(element => {
 
 <script>
 // Get the elements by class name instead of id
-const siteInfo = document.querySelectorAll(".site-info");
+let siteInfo = document.querySelectorAll(".site-info");
 
 // Add a click event listener to the document
 document.addEventListener("click", function(event) {

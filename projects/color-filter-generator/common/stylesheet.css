@@ -600,15 +600,60 @@
             border-radius: 5px;
         }
 
-      @media  screen and (max-width: 435px) {
-        .headerarea {
-            flex-direction: column;
+        button.sortbutt-state1 {
+          width: 115px !important;
+          transition: .2s !important;
         }
+
+        button.sortbutt-state2 {
+          width: 65px !important;
+          transition: .2s !important;
+        }
+
+      @media  screen and (max-width: 435px) {
+
       }
 
       @media  screen and (max-width: 370px) {
         .inputactions {
             flex-direction: column;
+        }
+      }
+
+      @media  screen and (max-width: 461px) {
+        .headerarea {
+            gap: 0px;
+        }
+
+        .headerimage {
+          border-radius: 15px 0 0 15px;
+        }
+
+        .titlearea {
+          border-radius: 0 15px 15px 0;
+        }
+        
+        .title {
+          font-size: 5vw;
+        }
+
+        .description {
+          font-size: 3vw;
+        }
+
+        .titlearea {
+          min-height: 65px;
+
+        }
+
+        .headerimage img {
+          width: 21vw;
+          height: auto;
+        }
+
+        .headerimage {
+          width: 21vw;
+          height: 85px;
         }
       }
 

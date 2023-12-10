@@ -220,7 +220,7 @@
       generator1.style.display = "none";
       generator2.style.display = "flex";
       footerStyles.classList.add("footer-acrylic-force");
-      about.innerHTML = '<a onclick="togglePages()">Go back! <iconify-icon icon="pajamas:go-back"></iconify-icon></a>';
+      about.innerHTML = '<a onclick="togglePages()" style="cursor:pointer;">Go back! <iconify-icon icon="pajamas:go-back"></iconify-icon></a>';
       subdirectory.innerHTML = '<a href="/projects/" class="header-path">/projects/</a><a onclick="changePageState()" style="cursor:pointer;" class="header-path">color-filter-generator/</a>';
   
       } else {
@@ -229,36 +229,9 @@
       generator2.style.display = "none";
       footerStyles.classList.remove("footer-acrylic-force");
       subdirectory.innerHTML = '<a href="/projects/" class="header-path">/projects/</a>';
-      about.innerHTML = '<a href="#what-da-hail">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a>';      
+      about.innerHTML = '<a onclick="togglePages()" style="cursor:pointer;">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a>';      
     }
   }
-  
-  // Get the element that contains the content that is loaded later
-  let container = document.getElementById("generator2");
-  
-  // Create a new MutationObserver object
-  let observer = new MutationObserver(function (mutations) {
-    // Loop through each mutation
-    mutations.forEach(function (mutation) {
-      // Check if the mutation added nodes to the container
-      if (mutation.addedNodes.length > 0) {
-        // Call the function to change the page state and the URL
-        togglePages();
-      }
-    });
-  });
-  
-  // Set the observer options
-  let config = {
-    childList: true, // observe direct children
-    subtree: true, // and lower descendants/projects/ too
-  };
-  
-  // Start observing the container for changes
-  observer.observe(container, config);
-  
-  // Add an event listener to the window object to handle the popstate event
-  window.addEventListener("popstate", togglePages);
   
   // Loop through each button and add an event listener
   for (let button of buttons) {

@@ -45,8 +45,8 @@
                 <input class="colorpicker" id="color-picker" style="cursor: pointer;" type="color" value="#d028c8" />
                 <div class="colorpicker-icon" id="color-picker-butt"><span><iconify-icon icon="pepicons-pop:color-picker-circle-filled"></iconify-icon></span></div>
               </div>
-              <input class="target" id="target"  type="text" style="display: none;" placeholder="#hex" value="#d028c8" />
-              <input class="input" id="input" style="display: none;" type="text" placeholder="r, g, b" value="208, 40, 200" />
+              <input class="target" id="target" type="text" style="visibility: hidden; position: absolute;" placeholder="#hex" value="#d028c8" />
+              <input class="input" id="input" type="text" style="display: none;" placeholder="r, g, b" value="208, 40, 200" />
               <button class="execute regular-button">Compute Filters</button>
           </div>
       </div>
@@ -160,12 +160,12 @@
 var image = document.getElementById("color-picker-butt");
 
 // get the color picker element by its id
-var colorPicker = document.getElementById("color-picker");
+var cPicker = document.getElementById("color-picker");
 
 // add a click event listener to the image element
 image.addEventListener("click", function() {
   // trigger a click event on the color picker element
-  colorPicker.click();
+  cPicker.click();
 });
 </script>
 
@@ -278,7 +278,6 @@ select.addEventListener("change", function() {
   let rgbinput = document.getElementById("input");
   let footerStyles = document.getElementById("footer");
   let about = document.getElementById("about");
-  let selectBox = document.getElementById("color-method");
 
   // Use a switch statement to handle different values
   switch (value) {
@@ -310,7 +309,9 @@ select.addEventListener("change", function() {
       generator1.style.display = "flex";
       generator2.style.display = "none";
       cpcontainer.style.display = "flex";
-      hextarget.style.display = "none";
+      hextarget.style.display = "flex";
+      hextarget.style.visibility = "hidden";
+      hextarget.style.position = "absolute";
       rgbinput.style.display = "none";
       selectBox.value = "#picker";
       footerStyles.classList.remove("footer-acrylic-force");

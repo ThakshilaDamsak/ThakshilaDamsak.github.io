@@ -175,7 +175,8 @@ let grid2 = document.getElementById("github-projects")
 let section1 = document.getElementsByClassName("section1")
 let sortbutt = document.getElementById("sortbutt")
 let sortbuttontxt = document.getElementById("sortbuttontxt")
-let footerStyles = document.getElementById("footer")
+let footerStyles = document.querySelector(".footer-transclucent")
+let subdirectory = document.getElementById("subdirectory")
 
 // Define a function that changes the page state and the URL
 function changePageState() {
@@ -189,13 +190,14 @@ function changePageState() {
   if (hash === "#sort-projects") {
     // If yes, remove it from the hash
     hash = "";
+    history.pushState(history.back());
   } else {
     // If no, add it to the hash
     hash = "#sort-projects";
+    history.pushState(null, "", path + hash);
   }
 
   // Change the URL without reloading the page
-  history.pushState(null, "", path + hash);
 
   // Toggle the display of pages
   togglePages();
@@ -235,12 +237,9 @@ function togglePages() {
     page2.style.display = "flex";
     sortbuttontxt.style.opacity = "0";
 
-    footerStyles.style.borderColor = "rgba(138, 138, 138, 0.226)";
-    footerStyles.style.boxShadow = "0px -8px 12px 0px rgba(0, 0, 0, 0.048)";
-    footerStyles.style.backgroundColor = "var(--footer-bg)";
-    footerStyles.style.backdropFilter = "blur(20px) saturate(3)";
-    footerStyles.style.webkitBackdropFilter = "blur(20px) saturate(3)";
+    footerStyles.classList.add("footer-acrylic-force");
 
+    subdirectory.innerHTML = '<a onclick="history.back()" class="header-path" style="cursor:pointer;">/projects/</a>';
 
     setTimeout(function() {
             sortbuttontxt.innerHTML = "Go Back";
@@ -261,11 +260,9 @@ function togglePages() {
     sortbutt.style.width = "115px";
     sortbuttontxt.style.opacity = "0";
 
-    footerStyles.style.borderColor = "rgba(138, 138, 138, 0)";
-    footerStyles.style.boxShadow = "0px rgba(0, 0, 0, 0)";
-    footerStyles.style.backgroundColor = "transparent";
-    footerStyles.style.backdropFilter = "saturate(1)";
-    footerStyles.style.webkitBackdropFilter = "saturate(1)";
+    footerStyles.classList.remove("footer-acrylic-force");
+
+    subdirectory.innerHTML = '';
 
     setTimeout(function() {
       sortbuttontxt.innerHTML = "Sort by Badge";
@@ -295,7 +292,7 @@ let observer = new MutationObserver(function (mutations) {
 // Set the observer options
 let config = {
   childList: true, // observe direct children
-  subtree: true, // and lower descendants too
+  subtree: true, // and lower descendants/projects/ too
 };
 
 // Start observing the container for changes

@@ -23,25 +23,30 @@
     <div class="titlearea">
       <div class="title">Color Filter Generator</div>
       <div class="description">Generate CSS filters for black icons.</div>
-      <div class="description"><a href="/projects/color-filter-generator/about/what-the-heck/">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a></div>
+      <div class="description" id="about"><a href="#what-da-hail">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a></div>
     </div>
   </div>
 
-  <div class="generator">
+  <div class="generator g1" id="generator1">
     <div class="input-preview-area">
       <div class="inputarea">
           <div class="inputtitle">
               <span>Enter</span>
-              <select id="color-method" onchange="location = this.value;">
-                <option value="/projects/color-filter-generator/method=picker/">Picker</option>
-                <option value="hex" selected="">HEX</option>
-                <option value="/projects/color-filter-generator/method=rgb/">RGB</option>
+              <select id="color-method">
+                <option value="#picker">Picker</option>
+                <option value="#hex">HEX</option>
+                <option value="#rgb">RGB</option>
             </select>
               <span>Value</span>
           </div>
           <div class="hr"></div>
           <div class="inputactions">
-              <input class="target" type="text" placeholder="#hex" value="#d028c8" />
+              <div class="colorpicker-container" id="cp-container-:)" style="cursor: pointer;">
+                <input class="colorpicker" id="color-picker" style="cursor: pointer;" type="color" value="#d028c8" />
+                <div class="colorpicker-icon" id="color-picker-butt"><span><iconify-icon icon="pepicons-pop:color-picker-circle-filled"></iconify-icon></span></div>
+              </div>
+              <input class="target" id="target"  type="text" style="display: none;" placeholder="#hex" value="#d028c8" />
+              <input class="input" id="input" style="display: none;" type="text" placeholder="r, g, b" value="208, 40, 200" />
               <button class="execute regular-button">Compute Filters</button>
           </div>
       </div>
@@ -77,7 +82,359 @@
     </div>
 
   </div>
+
+  
+  <div class="generator" id="generator2" style="display: none;">
+    <div class="input-preview-area">
+      <div class="inputarea infotext">
+          <div class="info">
+            <h2>About</h2>
+            <p style="display: inline;">Color Filter Generator is a small website that lets you convert any color to a CSS filter that you can apply to black images and icons. You can easily create and copy CSS color filters and give your
+              <u class="tooltip">
+                <u style="text-decoration:dotted; text-decoration-line: underline;">website</u>
+                <span class="tooltiptext">or whatever you create</span>
+              </u>
+              a unique look.</p>
+            <br>
+            <p>Example:</p>
+            <br>
+            <div class="what-images">
+              <div class="image1">
+                <div class="img">
+                  <img src="/images/logo-long-bk.svg" alt="[Image]">
+                </div>
+                <span>Nomral Image</span>
+                <sup><p>Without Filter</p></sup>
+              </div>
+              <div class="image2">
+                <div class="img">
+                  <img src="/images/logo-long-bk.svg" alt="[Image]">
+                </div>
+                <span>Colored Image</span>
+
+                <div class="tooltip">
+                  <sup><u style="text-decoration:dotted; text-decoration-line: underline;">With Pink Color Filter</u></sup>
+                  <span class="tooltiptext"><code class="codeblock" data-attr="CSS" style="background-color: transparent; border: none;" >filter: invert(23%) sepia(46%) saturate(5952%) hue-rotate(290deg) brightness(95%) contrast(90%);</code></span>
+                </div>
+
+              </div>
+            </div>
+            <br>
+            <h2>How it works</h2>
+            <p>Color Filter Generator uses a simple algorithm to calculate the hue, saturation, brightness,… values of any color you choose and generate a corresponding CSS filter. You can copy and paste the filter code into your style sheet and use it for any black image or icon on your website.</p>
+            <br>
+            <h2>FAQs</h2>
+            <br>
+            <h4>Why do I need to use black images or icons?</h4>
+            <p>Color Filter works best with black images or icons because they have no hue or saturation. If your image or icon is not black, you can prepend <code>brightness(0) saturate(100%)</code> to your filter property, which will turn it to black before applying the color filter.</p>
+            <br>
+            <h4>How can I choose a color for the filter?</h4>
+            <p>You can choose a color for the filter by using one of the three methods available on the website:</p>
+            <ul>
+              <li>Color picker: You can use the color picker tool to select any color from the palette.</li>
+              <li>Hex code: You can enter the hex code of the color you want in the input box. For example, if you want a red filter, you can enter <code>#FF0000</code> as the hex code.</li>
+              <li>RGB values: You can enter the red, green, and blue values of the color you want in the input boxes. For example, if you want a red filter, you can enter <code>255</code> for red, <code>0</code> for green, and <code>0</code> for blue.</li>
+            </ul>
+            <p>After choosing a color, you can copy and paste the filter code into your style sheet.</p>            <br>
+            <h4>Can I use Color Filter for other purposes besides coloring images or icons?</h4>
+            <p>Yes, you can use Color Filter for any element that supports the CSS filter property, such as text, backgrounds, borders, etc. However, keep in mind that the filter will affect the entire element, not just the color. For example, if you apply a filter to a text element, it will also change the brightness and contrast of the text.</p>
+            <br>
+            <p>This website uses JavaScript codes adapted from the following sources:</p>
+            <br>
+            <ul class="source-links">
+            <li><a href="https://stackoverflow.com/a/43960991/604861" target="_blank">Stack Overflow. (2017, May 9). How to apply a color filter to a grayscale image using only CSS?.<sup>1</sup></a></li>
+            <li><a href="https://codepen.io/sosuke/pen/Pjoqqp" target="_blank">Sosuke. (2016, June 15). CSS Color Filter Generator [Codepen].<sup>2</sup></a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
 </div>
+
+
+<script>
+  // Get the buttons with the class .sort-button
+  let buttons = document.getElementsByClassName("description");
+  
+  // Get the page elements with the ids .page1 and .page2
+  let generator1 = document.getElementById("generator1");
+  let generator2 = document.getElementById("generator2");
+  let about = document.getElementById("about");
+  let footerStyles = document.getElementById("footer");
+  
+  // Define a function that changes the page state and the URL
+  function changePageState() {
+    // Get the current path without the hash
+    let path = window.location.pathname;
+  
+    // Get the current hash, if any
+    let hash = window.location.hash;
+  
+    // Check if the hash is #sort-projects
+    if (hash === "#what-da-hail") {
+      // If yes, remove it from the hash
+      hash = "";
+      history.back(null, "", path);
+    } else {
+      // If no, add it to the hash
+      hash = "#what-da-hail";
+      history.pushState(null, "", path + hash);
+    }
+  
+    // Change the URL without reloading the page
+  
+    // Toggle the display of pages
+    togglePages();
+  }
+  
+  function changePageStateStartup() {
+    // Get the current path without the hash
+    let path = window.location.pathname;
+  
+    // Get the current hash, if any
+    let hash = window.location.hash;
+  
+    // Check if the hash is #sort-projects
+    if (hash === "#what-da-hail") {
+      // If yes, remove it from the hash
+      hash = "#what-da-hail";
+    } else {
+      // If no, add it to the hash
+      hash = "#what-da-hail";
+    }
+  
+    // Toggle the display of pages
+    togglePages();
+  }
+  
+  // Function to toggle the display of pages
+  function togglePages() {
+    // Get the full URL of the current page
+    let url = window.location.href;
+  
+    // Check if the URL contains the #sort-projects parameter
+    if (url.includes("#what-da-hail")) {
+      // If yes, hide page1 and show page2
+      generator1.style.display = "none";
+      generator2.style.display = "flex";
+      footerStyles.classList.add("footer-acrylic-force");
+      about.innerHTML = '<a onclick="history.back(null, "", path)" style="cursor:pointer;">Go back! <iconify-icon icon="pajamas:go-back"></iconify-icon></a>';
+      subdirectory.innerHTML = '<a href="/projects/" class="header-path">/projects/</a><a onclick="history.back()" style="cursor:pointer;" class="header-path">color-filter-generator/</a>';
+  
+      } else {
+      // If no, show page1 and hide page2
+      generator1.style.display = "flex";
+      generator2.style.display = "none";
+      footerStyles.classList.remove("footer-acrylic-force");
+      subdirectory.innerHTML = '<a href="/projects/" class="header-path">/projects/</a>';
+      about.innerHTML = '<a href="#what-da-hail">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a>';      
+    }
+  }
+  
+  // Get the element that contains the content that is loaded later
+  let container = document.getElementById("generator2");
+  
+  // Create a new MutationObserver object
+  let observer = new MutationObserver(function (mutations) {
+    // Loop through each mutation
+    mutations.forEach(function (mutation) {
+      // Check if the mutation added nodes to the container
+      if (mutation.addedNodes.length > 0) {
+        // Call the function to change the page state and the URL
+        togglePages();
+      }
+    });
+  });
+  
+  // Set the observer options
+  let config = {
+    childList: true, // observe direct children
+    subtree: true, // and lower descendants/projects/ too
+  };
+  
+  // Start observing the container for changes
+  observer.observe(container, config);
+  
+  // Add an event listener to the window object to handle the popstate event
+  window.addEventListener("popstate", togglePages);
+  
+  // Loop through each button and add an event listener
+  for (let button of buttons) {
+    button.addEventListener("click", changePageState);
+  }
+  
+  // Check if the URL has the #sort-projects hash when the page loads
+  if (window.location.hash === "#what-da-hail") {
+    // If yes, call the function to change the page state and the URL
+    togglePages();
+  }
+  
+  </script>
+
+<script>
+  // Get the select element by its id
+let select = document.getElementById("color-method");
+
+// Add an event listener for the change event
+select.addEventListener("change", function() {
+  // Get the selected value
+  let value = select.value;
+
+  // Get the elements by their id
+  let generator1 = document.getElementById("generator1");
+  let generator2 = document.getElementById("generator2");
+  let hextarget = document.getElementById("target");
+  let cpcontainer = document.getElementById("cp-container-:)");
+  let rgbinput = document.getElementById("input");
+  let footerStyles = document.getElementById("footer");
+  let about = document.getElementById("about");
+
+  // Use a switch statement to handle different values
+  switch (value) {
+    case "#hex":
+      generator1.style.display = "flex";
+      generator2.style.display = "none";
+      hextarget.style.display = "flex";
+      hextarget.style.visibility = "visible";
+      hextarget.style.position = "relative";
+      cpcontainer.style.display = "none";
+      rgbinput.style.display = "none";
+      selectBox.value = "#hex";
+      footerStyles.classList.remove("footer-acrylic-force");
+      about.innerHTML = '<a href="#what-da-hail">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a>';
+      break;
+    case "#rgb":
+      generator1.style.display = "flex";
+      generator2.style.display = "none";
+      hextarget.style.display = "flex";
+      hextarget.style.visibility = "hidden";
+      hextarget.style.position = "absolute";
+      cpcontainer.style.display = "none";
+      rgbinput.style.display = "flex";
+      selectBox.value = "#rgb";
+      footerStyles.classList.remove("footer-acrylic-force");
+      about.innerHTML = '<a href="#what-da-hail">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a>';
+      break;
+    case "#picker":
+      generator1.style.display = "flex";
+      generator2.style.display = "none";
+      cpcontainer.style.display = "flex";
+      hextarget.style.display = "none";
+      rgbinput.style.display = "none";
+      selectBox.value = "#picker";
+      footerStyles.classList.remove("footer-acrylic-force");
+      about.innerHTML = '<a href="#what-da-hail">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a>';
+      break;
+    default:
+      // Handle any other value
+      break;
+  }
+});
+
+</script>
+
+
+<script>
+  // Get the input and target elements by their id
+let input = document.getElementById("input");
+let target = document.getElementById("target");
+
+// Define a function to convert a single RGB component to hex
+function componentToHex(c) {
+  let hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
+}
+
+// Define a function to convert RGB to hex
+function rgbToHex(r, g, b) {
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+// Define a function to get the RGB value from the input element
+function getRGB() {
+  // Get the value of the input element
+  let value = input.value;
+  // Split the value by comma and map each part to a number
+  let rgb = value.split(",").map(Number);
+  // Return an array of three numbers
+  return rgb;
+}
+
+// Define a function to validate the RGB value
+function isValidRGB(rgb) {
+  // Check if the array has three elements
+  if (rgb.length != 3) {
+    return false;
+  }
+  // Check if each element is a number between 0 and 255
+  for (let c of rgb) {
+    if (isNaN(c) || c < 0 || c > 255) {
+      return false;
+    }
+  }
+  // Return true if all checks pass
+  return true;
+}
+
+// Define a function to set the hex value to the target element
+function setHex() {
+  // Get the RGB value from the input element
+  let rgb = getRGB();
+  // Check if the RGB value is valid
+  if (isValidRGB(rgb)) {
+    // Convert the RGB value to hex
+    let hex = rgbToHex(rgb[0], rgb[1], rgb[2]);
+    // Set the value of the target element to the hex value
+    target.value = hex;
+  } else {
+    // Set the value of the target element to "NaNaNa" if the RGB value is invalid
+    target.value = "NaNaNa";
+  }
+}
+
+// Add an event listener to the input element that fires when the value changes
+input.addEventListener("input", setHex);
+
+
+
+// Get the color picker element by its id
+let colorPicker = document.getElementById("color-picker");
+
+// Define a function to set the hex value from the color picker to the target element
+function setHexFromPicker() {
+  // Get the hex value from the color picker element
+  let hex = colorPicker.value;
+  // Set the value of the target element to the hex value
+  target.value = hex;
+}
+
+// Add an event listener to the color picker element that fires when the value changes
+colorPicker.addEventListener("input", setHexFromPicker);
+
+// Define a function to sync the input and target elements based on their display property
+function syncInputAndTarget() {
+  // Get the display property of the input element
+  let inputDisplay = input.style.display;
+  // Get the display property of the color picker element
+  let pickerDisplay = colorPicker.style.display;
+  // Check if the input element is flex
+  if (inputDisplay == "flex") {
+    // Call the setHex function to sync the input and target elements
+    setHex();
+  }
+  // Check if the color picker element is flex
+  if (pickerDisplay == "flex") {
+    // Call the setHexFromPicker function to sync the color picker and target elements
+    setHexFromPicker();
+  }
+}
+
+// Add an event listener to the window that fires when the page loads
+window.addEventListener("load", syncInputAndTarget);
+
+</script>
 
 <script>
 // Get the button element

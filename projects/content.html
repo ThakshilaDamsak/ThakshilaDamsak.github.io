@@ -190,14 +190,12 @@ function changePageState() {
   if (hash === "#sort-projects") {
     // If yes, remove it from the hash
     hash = "";
-    history.pushState(history.back());
+    history.pushState(null, "", path);
   } else {
     // If no, add it to the hash
     hash = "#sort-projects";
     history.pushState(null, "", path + hash);
   }
-
-  // Change the URL without reloading the page
 
   // Toggle the display of pages
   togglePages();
@@ -239,7 +237,7 @@ function togglePages() {
 
     footerStyles.classList.add("footer-acrylic-force");
 
-    subdirectory.innerHTML = '<a onclick="history.back()" class="header-path" style="cursor:pointer;">/projects/</a>';
+    subdirectory.innerHTML = '<a onclick="changePageState()" class="header-path" style="cursor:pointer;">/projects/</a>';
 
     setTimeout(function() {
             sortbuttontxt.innerHTML = "Go Back";

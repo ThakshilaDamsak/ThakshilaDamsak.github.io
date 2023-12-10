@@ -107,8 +107,7 @@ button.addEventListener("click", function() {
       footer.style.transform = "translateY(30px)";
     }
     // Also, add the acrylic-header class to the header element
-    header.classList.add("acrylic-header");
-    header.classList.remove("transclucent-header");
+    header.classList.add("acrylic-header-force");
   } else {
     // If the menu is hidden, wait for 0.5 seconds and then remove the transform from the footer element
     setTimeout(function() {
@@ -119,8 +118,7 @@ button.addEventListener("click", function() {
     if (scrollPos == 0) {
 
       setTimeout(function() {
-        header.classList.remove("acrylic-header");
-        header.classList.add("transclucent-header");
+        header.classList.remove("acrylic-header-force");
     }, 700);
     }
   }

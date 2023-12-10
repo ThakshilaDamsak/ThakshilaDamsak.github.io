@@ -48,7 +48,7 @@
     }
 
     .page-content {
-        margin-top: 20px;
+        margin-top: 60px;
         margin-bottom: 40px;
         padding: auto;
         align-items: center;
@@ -102,9 +102,9 @@
     .section {
         display: flex;
         flex-direction: column;
-        min-height: 97vh;
+        min-height: 100vh;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         width: 100%;
     }
 
@@ -141,6 +141,7 @@
         width: fit-content;
         margin: auto;
         margin: 30px;
+        margin-bottom: 10px;
         gap: 10px;
         max-width: 1200px;
         position: relative;
@@ -150,13 +151,9 @@
 
     }
 
-
-    .projects-grid1 {
-        columns: 2;
-    }
-    
-    .projects-grid2 {
-        columns: 3;
+    .go-below {
+        display: flex;
+        margin-bottom: 30px;
     }
 
     .project-outline {
@@ -259,7 +256,6 @@
         padding-right: 8px;
         border-radius: 10px;
         color: white;
-        background-color: rgb(0, 140, 255);
         box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 0.397);
     }
 
@@ -305,81 +301,145 @@
         height: 150px;
     }
 
-    div.badge-popular::after {
+    .filters {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        color: white;
+        border-radius: 30px;
+        transition: 0.2s;
+    } 
+    
+    .filter input {
+        height: 25px;
+        width: 89px;
+        display: flex;
+        opacity: 0;
+    }
+    
+    .filter span {
+        position: absolute;
+        text-align: center;
+        pointer-events: none;
+        height: 25px;
+        width: 90px;
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    
+        border-width: 2px;
+        border-color: rgba(138, 138, 138, 0.226);
+        border-style: solid;
+        border-radius: 10px;
+    
+        transition: .2s;
+    }
+    
+    .filter:hover span {
+        border-color: var(--header-links-a-hover-color);
+        box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.226);
+    }
+    
+    .filter-check-input:checked ~ .filter-check-text {
+        border-color: var(--header-links-a-hover-color);
+      }
+
+      .filter-check-input:checked ~ span.badge-thenuk {
+        border-color: rgb(255, 0, 170) !important;
+    }
+
+    .filter:hover span.badge-thenuk {
+        border-color: rgb(255, 0, 170) !important;
+    }
+
+    .badge-popular::after {
         content: 'Popular';
     }
 
-    div.badge-userstyle::after  {
+    .badge-userstyle::after  {
         content: 'Userstyle';
     }
 
-    div.badge-collection::after  {
+    .badge-collection::after  {
         content: 'Collection';
     }
 
-    div.badge-unfinished::after  {
+    .badge-unfinished::after  {
         content: 'Unfinished';
     }
 
-    div.badge-thenuk::after  {
+    .badge-thenuk::after  {
         content: 'Thenuk';
     }
 
 
-    div.badge-popular {
+    .badge-popular {
         background-color: rgb(183, 0, 255);
     }
 
-    div.badge-userstyle  {
+    .badge-userstyle  {
         background-color: rgb(0, 140, 255);
     }
 
-    div.badge-collection  {
+    .badge-collection  {
         background-color: rgb(4, 126, 0);
     }
 
-    div.badge-unfinished  {
+    .badge-unfinished  {
         background-color: rgb(255, 72, 0);
     }
 
-    div.badge-thenuk  {
+    .badge-thenuk  {
         background-color: rgb(238, 255, 0);
-        color: black;
+        color: black !important;
     }
 
-    div.badge-website  {
+    .badge-website  {
         background-color: rgb(255, 0, 157);
     }
 
-    div.badge-website::after  {
+    .badge-website::after  {
         content: 'Website';
     }
 
-    div.badge-illustrations  {
+    .badge-illustrations  {
         background-color: rgb(195, 0, 255);
     }
 
-    div.badge-illustrations::after  {
+    .badge-illustrations::after  {
         content: 'Illustrations';
     }
 
-    div.badge-tools  {
+    .badge-tools  {
         background-color: rgb(0, 38, 255);
     }
 
-    div.badge-tools::after  {
+    .badge-tools::after  {
         content: 'Tools';
     }
 
 
-    @media screen and (max-width: 1000px) {
-        .projects-grid2 {
-            columns: 2;
+    @media screen and (max-width: 745px) {
+        .filters {
+            display: grid;
+            grid-template-columns: repeat(4, 90px);
+            gap: 10px;
         }
     }
 
-    @media screen and (max-width: 680px) {
-        .projects-grid2, .projects-grid1 {
-            columns: 1;
+    @media screen and (max-width: 679px) {
+        .filters {
+            grid-template-columns: repeat(3, 90px);
+            gap: 10px;
         }
     }

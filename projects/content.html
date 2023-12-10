@@ -1,5 +1,5 @@
 <style>
-  @media screen and (max-height: 585px) {
+  @media screen and (max-height: 565px) {
 
   .content .footer {
       border-width: 1px 0px 0px 0px;
@@ -13,225 +13,512 @@
 }
 </style>
 
-<div class="projects-page">
 
-  <div class="section">
+<div class="projects-page page1" id="page1">
+
+
+  <div class="section section1">
+
     <div class="page-title">
       <div class="title"><h1>My Projects</h1></div>
-      <div class="description"><p>Project Pages</p></div>
+      <div class="sort">
+        <button class="regular-button sortbutton" id="sortbutt" style="font-size: 15px; padding: 2px; padding-left: 8px; padding-right: 8px; border-radius: 5px;"><span id="sortbuttontxt">Sort by Badge</span></button>
+      </div>
     </div>
 
-      <div class="my-projects projects-grid1">
+    <div class="sort-page" id="page2" style="display: none;">
 
-        <div class="project-outline">
-          <div class="project" onclick="window.location.href='/projects/color-filter-generator/';">
-            <img class="ambient" src="/images/CSS-FIlter-Color-Background.svg">
+          <div class="page-title">
+            <div class="sort-switches">
+              <div class="filters">
+                <div class="filter">
+                  <input type="checkbox" class="filter-check-input" id="badge-tools" />
+                  <span class="filter-check-text badge-tools"></span>
+                </div>
+                <div class="filter">
+                  <input type="checkbox" class="filter-check-input" id="badge-website" />
+                  <span class="filter-check-text badge-website"></span>
+                </div>
+                <div class="filter">
+                  <input type="checkbox" class="filter-check-input" id="badge-userstyle" />
+                  <span class="filter-check-text badge-userstyle"></span>
+                </div>
+                <div class="filter">
+                  <input type="checkbox" class="filter-check-input" id="badge-collection" />
+                  <span class="filter-check-text badge-collection"></span>
+                </div>
+                <div class="filter">
+                  <input type="checkbox" class="filter-check-input" id="badge-unfinished" />
+                  <span class="filter-check-text badge-unfinished"></span>
+                </div>
+                <div class="filter">
+                  <input type="checkbox" class="filter-check-input" id="badge-thenuk" />
+                  <span class="filter-check-text badge-thenuk"></span>
+                </div>
+                <div class="filter">
+                  <input type="checkbox" class="filter-check-input" id="badge-illustrations" />
+                  <span class="filter-check-text badge-illustrations"></span>
+                </div>
+            </div>
+      
+            <div class="my-projects projects-grid3" id="all-projects">
+      
+              <div class="project-outline" style="opacity: .5; border: none;">
+                <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
+                  <div class="project-image">
+                  </div>
+                  <div class="project-details" style="height: 150px;">
+                    <div class="project-name"><h2></h2></div>
+                    <div class="project-description"><span></span></div>
+                    <div class="project-about"><span></span></div>
+                  </div>
+                </div>
+      
+                </div>
+                <div class="project-outline" style="opacity: .5; border: none;">
+                  <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
+                    <div class="project-image">
+                    </div>
+                    <div class="project-details" style="height: 150px;">
+                      <div class="project-name"><h2></h2></div>
+                      <div class="project-description"><span></span></div>
+                      <div class="project-about"><span></span></div>
+                    </div>
+                  </div>
+                  </div>
+      
+            </div>
+        </div>
+       
+      </div>
+    </div>
+
+      <div class="my-projects projects-grid1" id="project-pages">
+        
+        <div class="project-outline" style="opacity: .5; border: none;">
+          <div class="project" style="box-shadow: none;  cursor:wait;">
             <div class="project-image">
-              <img src="/images/CSS-FIlter-Color-Background.svg" alt="[Project Logo]">
-              <div class="project-badges">
-                <div class="badge-tools"></div>
-                <div class="badge-website"></div>
+            </div>
+            <div class="project-details" style="height: 150px;">
+              <div class="project-name"><h2></h2></div>
+              <div class="project-description"><span></span></div>
+              <div class="project-about"><span></span></div>
+            </div>
+          </div>
+          </div>
+
+          <div class="project-outline" style="opacity: .5; border: none;">
+            <div class="project" style="box-shadow: none;  cursor:wait;">
+              <div class="project-image">
+              </div>
+              <div class="project-details" style="height: 150px;">
+                <div class="project-name"><h2></h2></div>
+                <div class="project-description"><span></span></div>
+                <div class="project-about"><span></span></div>
               </div>
             </div>
-            <div class="project-details">
-              <div class="project-name"><h2>Color Filter Generator</h2></div>
-              <div class="project-description"><span>Colorize black icons.</span></div>
-              <div class="project-about"><span>Color Filter is a website that allows you to convert any color to a CSS filter that you can use to color black images and icons on your website.</span></div>
             </div>
-          </div>
-        </div>
 
-        <div class="project-outline">
-        <div class="project" onclick="window.location.href='/projects/kraftbin/';">
-          <img class="ambient" src="https://codeberg.org/Kbin/kbin-core/raw/branch/develop/public/kbin-og.png">
-          <div class="project-image">
-            <img src="https://codeberg.org/Kbin/kbin-core/raw/branch/develop/public/kbin-og.png" alt="[Project Logo]">
-            <div class="project-badges">
-              <div class="badge-popular"></div>
-              <div class="badge-userstyle"></div>
-            </div>
-          </div>
-          <div class="project-details">
-            <div class="project-name"><h2>KraftBin</h2></div>
-            <div class="project-description"><span>Customizable, Cleaner and Familiar look for Kbin.</span></div>
-            <div class="project-about"><span>KraftBin is a userstyle that you can use with an extension like Stylus. It makes Kbin more familiar and customizable.</span></div>
-          </div>
-        </div>
-      </div>
-        
       </div>
 
-      <div class="go-below">
+      <div class="go-below" id="go-below">
         <a href="./#github-projects">See more projects...
         <iconify-icon icon="mingcute:down-fill"></iconify-icon></a>
       </div>
   </div>
 
-  <div id="github-projects"></div>
-  <div class="section">
+  <div class="section section2" id="github-projects">
       <div class="page-title">
         <div class="title"><h1>My GitHub Projects</h1></div>
         <div class="description"><p>GitHub Repositories</p></div>
       </div>
 
-      <div class="my-projects projects-grid2">
-        
-        <div class="project-outline">
-        <div class="project" onclick="window.open('https://github.com/ThakshilaDamsak/Plasma-Customizations', '_blank');">
-          <img class="ambient" src="https://dade2.net/wp-content/uploads/2021/06/kde-wallpaper-featured.jpg">
-          <div class="project-image">
-            <img src="https://dade2.net/wp-content/uploads/2021/06/kde-wallpaper-featured.jpg" alt="[Project Logo]">
-            <div class="project-badges">
-              <div class="badge-collection"></div>
-            </div>
-          </div>
-          <div class="project-details">
-            <div class="project-name"><h2>Plasma Customizations</h2></div>
-            <div class="project-description"><span>My KDE Plasma customizations.</span></div>
-            <div class="project-about"><span>This is a repo of my KDE Plasma customizations. This incudes content I created, customized and curated for my KDE Plasma setup.</span></div>
-          </div>
-        </div>
-        </div>
-
-        <div class="project-outline">
-        <div class="project" onclick="window.open('https://github.com/ThakshilaDamsak/Colorizer', '_blank');">
-          <img class="ambient" src="/images/damsak-logo.jpg">
-          <div class="project-image">
-            <img src="/images/damsak-logo.jpg" alt="[Project Logo]">
-            <div class="project-badges">
-              <div class="badge-unfinished"></div>
-            </div>
-          </div>
-          <div class="project-details">
-            <div class="project-name"><h2>Colorizer</h2></div>
-            <div class="project-description"><span>Custom color theme tester for this website.</span></div>
-            <div class="project-about"><span>Colorizer is another Stylus userstyle I decided to make for testing color themes on my website. This is not fully developed.</span></div>
-          </div>
-        </div>
-        </div>
-
-        <div class="project-outline">
-        <div class="project" onclick="window.open('https://thakshiladamsak.github.io/cyberthenuk', '_blank');">
-          <img class="ambient" src="https://thakshiladamsak.github.io/cyberthenuk/logo2.png">
-          <div class="project-image">
-            <img src="https://thakshiladamsak.github.io/cyberthenuk/logo2.png" alt="[Project Logo]" >
-            <div class="project-badges">
-              <div class="badge-thenuk"></div>
-              <div class="badge-website"></div>
-            </div>
-          </div>
-          <div class="project-details">
-            <div class="project-name"><h2>CYBERTHENUK</h2></div>
-            <div class="project-description"><span>Path of Enlightenment!</span></div>
-            <div class="project-about"><span>A small scam-looking website for the purest being in the universe. Jaya Maha Thenuk!</span></div>
-          </div>
-        </div>   
-        </div> 
-
-        <div class="project-outline">
-          <div class="project" onclick="window.open('https://www.github.com/ThakshilaDamsak/cyberthenuk-images', '_blank');">
-            <img class="ambient" src="/images/cyberthenuk.png">
+      <div class="my-projects projects-grid2" id="my-github-projects">
+        <div class="project-outline" style="opacity: .5; border: none;">
+          <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
             <div class="project-image">
-              <img src="/images/cyberthenuk.png" alt="[Project Logo]" style="height: 100%; width: auto; filter: drop-shadow(0 8px 25px  rgba(0, 0, 0, 0.26));">
-              <div class="project-badges">
-                <div class="badge-thenuk"></div>
-                <div class="badge-collection"></div>
-              </div>
             </div>
-            <div class="project-details">
-              <div class="project-name"><h2>CYBERTHENUK Images</h2></div>
-              <div class="project-description"><span>Glitch Aura Harmony!</span></div>
-              <div class="project-about"><span>A collection of images featuring the purest being in the universe. Oh My Thenuk! Mmmm Yeah! JMT!</span></div>
+            <div class="project-details" style="height: 150px;">
+              <div class="project-name"><h2></h2></div>
+              <div class="project-description"><span></span></div>
+              <div class="project-about"><span></span></div>
             </div>
-          </div>   
-          </div> 
+          </div>
+          </div>
 
-          <div class="project-outline">
-            <div class="project" onclick="window.open('https://www.github.com/ThakshilaDamsak/fat-tux', '_blank');">
-              <img class="ambient" src="/images/LessFatTux.png">
+          <div class="project-outline" style="opacity: .5; border: none;">
+            <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
               <div class="project-image">
-                <img src="/images/LessFatTux.png" alt="[Project Logo]" style="height: 100%; width: auto; filter: drop-shadow(0 8px 25px  rgba(0, 0, 0, 0.26));">
-                <div class="project-badges">
-                  <div class="badge-illustrations"></div>
-                </div>
               </div>
-              <div class="project-details">
-                <div class="project-name"><h2>Fat Tux</h2></div>
-                <div class="project-description"><span>A simple Tux logo.</span></div>
-                <div class="project-about"><span>Two simple illustrations of the Linux Tux logo made using Inkscape.</span></div>
+              <div class="project-details" style="height: 150px;">
+                <div class="project-name"><h2></h2></div>
+                <div class="project-description"><span></span></div>
+                <div class="project-about"><span></span></div>
               </div>
-            </div>   
-            </div> 
-
-            <div class="project-outline">
-              <div class="project" onclick="window.open('https://www.github.com/ThakshilaDamsak/windows-11-icons', '_blank');">
-                <img class="ambient" src="/images/win-11-icons.webp" style="filter: blur(20px) saturate(1.5);">
-                <div class="project-image">
-                  <img src="/images/win-11-icons.webp" alt="[Project Logo]">
-                  <div class="project-badges">
-                    <div class="badge-illustrations"></div>
-                  </div>
-                </div>
-                <div class="project-details">
-                  <div class="project-name"><h2>Windows 11 Icons</h2></div>
-                  <div class="project-description"><span>Taskbar Icons for Plasma Customization.</span></div>
-                  <div class="project-about"><span>These are Windows 11 Taskbar icons that I created for KDE Plasma Customizations back in the day.</span></div>
-                </div>
-              </div>   
-              </div> 
-
-              <div class="project-outline">
-                <div class="project" onclick="window.open('https://www.github.com/ThakshilaDamsak/IDKraftBin', '_blank');">
-                  <img class="ambient" src="https://codeberg.org/Kbin/kbin-core/raw/branch/develop/public/kbin-og.png">
-                  <div class="project-image">
-                    <img src="https://codeberg.org/Kbin/kbin-core/raw/branch/develop/public/kbin-og.png" alt="[Project Logo]">
-                    <div class="project-badges">
-                      <div class="badge-userstyle"></div>
-                    </div>
-                  </div>
-                  <div class="project-details">
-                    <div class="project-name"><h2>IDKraftBin</h2></div>
-                    <div class="project-description"><span>Another Kbin userstyle.</span></div>
-                    <div class="project-about"><span>IDKraftBin is a cstomized version of NeighborlyFedora's Idkbin userstyle. I made this to be compatible with my KraftBin userstyle.</span></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project-outline">
-                <div class="project" onclick="window.open('https://www.github.com/ThakshilaDamsak/thakshiladamsak.github.io', '_blank');">
-                  <img class="ambient" src="/images/logo-long-bk.svg" style="filter: blur(20px) saturate(1) invert(var(--logo-filter));">
-                  <div class="project-image">
-                    <img src="/images/logo-long-bk.svg" alt="[Project Logo]" style="filter: drop-shadow(0 8px 25px  rgba(0, 0, 0, 0.26)) invert(var(--logo-filter));">
-                    <div class="project-badges">
-                      <div class="badge-website"></div>
-                    </div>
-                  </div>
-                  <div class="project-details">
-                    <div class="project-name"><h2>This Website</h2></div>
-                    <div class="project-description"><span>Source code of this website.</Source></span></div>
-                    <div class="project-about"><span>This is the GitHub repository of this website. Here you can view the source code of this website.</span></div>
-                  </div>
-                </div>
-              </div>
+            </div>
+            </div>
 
       </div>
   </div>
   
 </div>
 
-<!--
 <script>
-  var elem = document.querySelector('.projects-grid2');
-var msnry = new Masonry( elem, {
-  // options
-  itemSelector: '.project-outline',
-  columnWidth: 10
+// Get the buttons with the class .sort-button
+let buttons = document.getElementsByClassName("sortbutton");
+
+// Get the page elements with the ids .page1 and .page2
+let page2 = document.getElementById("page2");
+let grid1 = document.getElementById("project-pages")
+let below = document.getElementById("go-below")
+let grid2 = document.getElementById("github-projects")
+let section1 = document.getElementsByClassName("section1")
+let sortbutt = document.getElementById("sortbutt")
+let sortbuttontxt = document.getElementById("sortbuttontxt")
+let footerStyles = document.getElementById("footer")
+
+// Define a function that changes the page state and the URL
+function changePageState() {
+  // Get the current path without the hash
+  let path = window.location.pathname;
+
+  // Get the current hash, if any
+  let hash = window.location.hash;
+
+  // Check if the hash is #sort-projects
+  if (hash === "#sort-projects") {
+    // If yes, remove it from the hash
+    hash = "";
+  } else {
+    // If no, add it to the hash
+    hash = "#sort-projects";
+  }
+
+  // Change the URL without reloading the page
+  history.pushState(null, "", path + hash);
+
+  // Toggle the display of pages
+  togglePages();
+}
+
+function changePageStateStartup() {
+  // Get the current path without the hash
+  let path = window.location.pathname;
+
+  // Get the current hash, if any
+  let hash = window.location.hash;
+
+  // Check if the hash is #sort-projects
+  if (hash === "#sort-projects") {
+    // If yes, remove it from the hash
+    hash = "#sort-projects";
+  } else {
+    // If no, add it to the hash
+    hash = "#sort-projects";
+  }
+
+  // Toggle the display of pages
+  togglePages();
+}
+
+// Function to toggle the display of pages
+function togglePages() {
+  // Get the full URL of the current page
+  let url = window.location.href;
+
+  // Check if the URL contains the #sort-projects parameter
+  if (url.includes("#sort-projects")) {
+    // If yes, hide page1 and show page2
+    grid1.style.display = "none";
+    below.style.display = "none";
+    grid2.style.display = "none";
+    page2.style.display = "flex";
+    sortbuttontxt.style.opacity = "0";
+
+    footerStyles.style.borderColor = "rgba(138, 138, 138, 0.226)";
+    footerStyles.style.boxShadow = "0px -8px 12px 0px rgba(0, 0, 0, 0.048)";
+    footerStyles.style.backgroundColor = "var(--footer-bg)";
+    footerStyles.style.backdropFilter = "blur(20px) saturate(3)";
+    footerStyles.style.webkitBackdropFilter = "blur(20px) saturate(3)";
+
+
+    setTimeout(function() {
+            sortbuttontxt.innerHTML = "Go Back";
+            sortbutt.style.width = "73px";
+        }, 100);
+
+    setTimeout(function() {
+        sortbuttontxt.style.opacity = "1";
+    }, 500);
+
+    } else {
+    // If no, show page1 and hide page2
+    page1.style.display = "flex";
+    grid1.style.display = "block";
+    below.style.display = "flex";
+    grid2.style.display = "flex";
+    page2.style.display = "none";
+    sortbutt.style.width = "115px";
+    sortbuttontxt.style.opacity = "0";
+
+    footerStyles.style.borderColor = "rgba(138, 138, 138, 0)";
+    footerStyles.style.boxShadow = "0px rgba(0, 0, 0, 0)";
+    footerStyles.style.backgroundColor = "transparent";
+    footerStyles.style.backdropFilter = "saturate(1)";
+    footerStyles.style.webkitBackdropFilter = "saturate(1)";
+
+    setTimeout(function() {
+      sortbuttontxt.innerHTML = "Sort by Badge";
+        }, 200);
+
+    setTimeout(function() {
+        sortbuttontxt.style.opacity = "1";
+    }, 500);
+  }
+}
+
+// Get the element that contains the content that is loaded later
+let container = document.getElementById("page2");
+
+// Create a new MutationObserver object
+let observer = new MutationObserver(function (mutations) {
+  // Loop through each mutation
+  mutations.forEach(function (mutation) {
+    // Check if the mutation added nodes to the container
+    if (mutation.addedNodes.length > 0) {
+      // Call the function to change the page state and the URL
+      togglePages();
+    }
+  });
 });
 
-// element argument can be a selector string
-//   for an individual element
-var msnry = new Masonry( '.project-outline', {
-  
-});
+// Set the observer options
+let config = {
+  childList: true, // observe direct children
+  subtree: true, // and lower descendants too
+};
+
+// Start observing the container for changes
+observer.observe(container, config);
+
+// Add an event listener to the window object to handle the popstate event
+window.addEventListener("popstate", togglePages);
+
+// Loop through each button and add an event listener
+for (let button of buttons) {
+  button.addEventListener("click", changePageState);
+}
+
+// Check if the URL has the #sort-projects hash when the page loads
+if (window.location.hash === "#sort-projects") {
+  // If yes, call the function to change the page state and the URL
+  changePageStateStartup();
+}
+
 </script>
--->
+
+<script>
+// Get all the elements that have the .my-projects class
+let projects = document.getElementsByClassName("my-projects");
+
+// Define a function that sets the column property based on the number of elements, screen width, and display state
+function setColumns() {
+  // Loop through each element
+  for (let project of projects) {
+    // Get the number of elements in the project
+    let numElements = project.children.length;
+
+    // Get the display value of the project element
+    let displayValue = window.getComputedStyle(project).display;
+
+    // Set the column property based on the number of elements, screen width, and display value
+    let screenWidth = window.innerWidth;
+    if (displayValue == "none") {
+      // If the display value is none, set the column count to 0
+      project.style.columnCount = 0;
+    } else if (displayValue == "flex") {
+      // If the display value is flex, set the column count to 1
+      project.style.columnCount = 1;
+    } else {
+      // If the display value is anything else, use the original logic
+      if (numElements > 3) {
+        if (screenWidth < 680) {
+          project.style.columnCount = 1;
+        } else if (screenWidth < 1000) {
+          project.style.columnCount = 2;
+        } else {
+          project.style.columnCount = 3;
+        }
+      } else if (numElements == 2) {
+        if (screenWidth < 680) {
+          project.style.columnCount = 1;
+        } else {
+          project.style.columnCount = 2;// Get all the elements that have the .my-projects class
+let projects = document.getElementsByClassName("my-projects");
+
+// Define a function that sets the column property based on the number of elements and screen width
+function setColumns() {
+  // Loop through each element
+  for (let project of projects) {
+    // Get the number of elements in the project
+    let numElements = project.children.length;
+
+    // Set the column property based on the number of elements and screen width
+    let screenWidth = window.innerWidth;
+    if (numElements > 3) {
+      if (screenWidth < 680) {
+        project.style.columnCount = 1;
+      } else if (screenWidth < 1000) {
+        project.style.columnCount = 2;
+      } else {
+        project.style.columnCount = 3;
+      }
+    } else if (numElements == 2) {
+      if (screenWidth < 680) {
+        project.style.columnCount = 1;
+      } else {
+        project.style.columnCount = 2;
+      }
+    } else if (numElements == 1) {
+      project.style.columnCount = 1;
+    }
+  }
+}
+
+// Call the function when the page loads
+setColumns();
+
+// Add an event listener to the window object to call the function when the screen size changes
+window.addEventListener("resize", setColumns);
+
+// Add an event listener to each element to call the function when the content changes
+for (let project of projects) {
+  project.addEventListener("DOMSubtreeModified", setColumns);
+}
+        }
+      } else if (numElements == 1) {
+        project.style.columnCount = 1;
+      }
+    }
+  }
+}
+
+// Call the function when the page loads
+setColumns();
+
+// Add an event listener to the window object to call the function when the screen size changes
+window.addEventListener("resize", setColumns);
+
+// Add an event listener to each element to call the function when the content changes
+for (let project of projects) {
+  project.addEventListener("DOMSubtreeModified", setColumns);
+}
+
+</script>
+
+<script>
+// Get all the checkboxes
+let checkboxes = page2.querySelectorAll("input[type='checkbox']");
+
+// Add a change event listener to each checkbox
+checkboxes.forEach(checkbox => {
+  checkbox.addEventListener("change", function() {
+    // Get the id of the checkbox
+    let id = this.id;
+    // Get all the project-outline elements
+    let projects = page2.querySelectorAll(".project-outline");
+    // Check if the checkbox is checked or not
+    if (this.checked) {
+      // Loop through the project-outline elements
+      for (let project of projects) {
+        // Check if the project has a child element with the same class name as the checkbox id
+        let badge = project.querySelector("." + id);
+        // If not, hide the project
+        if (!badge) {
+          project.style.display = "none";
+        }
+        // Otherwise, show the project
+        else {
+          project.style.display = "flex";
+        }
+      }
+      // Loop through all the other checkboxes
+      for (let otherCheckbox of checkboxes) {
+        // If the other checkbox is not the same as the current one
+        if (otherCheckbox !== this) {
+          // Uncheck the other checkbox
+          otherCheckbox.checked = false;
+        }
+      }
+    }
+    // If the checkbox is unchecked
+    else {
+      // Loop through the project-outline elements
+      for (let project of projects) {
+        // Show the project
+        project.style.display = "flex";
+      }
+    }
+  });
+});
+
+</script>
+
+<script>
+// Fetch the content of the header HTML file
+fetch('./common/project-pages.html')
+  .then(response => response.text())
+  .then(html => {
+    // Insert the header HTML into the container
+    document.getElementById('project-pages').innerHTML = html;
+
+    // Execute JavaScript code within the header
+    const scriptElements = Array.from(document.getElementById('color-chooser').getElementsByTagName('script'));
+    scriptElements.forEach(script => {
+      const newScript = document.createElement('script');
+      newScript.textContent = script.textContent;
+      document.body.appendChild(newScript);
+    });
+  })
+
+  // Fetch the content of the header HTML file
+fetch('./common/github-projects.html')
+  .then(response => response.text())
+  .then(html => {
+    // Insert the header HTML into the container
+    document.getElementById('my-github-projects').innerHTML = html;
+
+    // Execute JavaScript code within the header
+    const scriptElements = Array.from(document.getElementById('color-chooser').getElementsByTagName('script'));
+    scriptElements.forEach(script => {
+      const newScript = document.createElement('script');
+      newScript.textContent = script.textContent;
+      document.body.appendChild(newScript);
+    });
+  })
+
+  // Fetch the content of the project-pages HTML file
+fetch('./common/project-pages.html')
+  .then(response => response.text())
+  .then(html1 => {
+    // Fetch the content of the github-projects HTML file
+    fetch('./common/github-projects.html')
+      .then(response => response.text())
+      .then(html2 => {
+        // Combine the HTML strings
+        let html = html1 + html2;
+
+        // Insert the HTML into the container
+        document.getElementById('all-projects').innerHTML = html;
+
+        // Execute JavaScript code within the HTML
+        const scriptElements = Array.from(document.getElementById('color-chooser').getElementsByTagName('script'));
+        scriptElements.forEach(script => {
+          const newScript = document.createElement('script');
+          newScript.textContent = script.textContent;
+          document.body.appendChild(newScript);
+        });
+      })
+  })
+
+</script>

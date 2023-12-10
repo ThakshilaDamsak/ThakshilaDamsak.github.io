@@ -154,6 +154,21 @@
 </div>
 
 
+
+<script>
+  // get the image element by its id
+var image = document.getElementById("color-picker-butt");
+
+// get the color picker element by its id
+var colorPicker = document.getElementById("color-picker");
+
+// add a click event listener to the image element
+image.addEventListener("click", function() {
+  // trigger a click event on the color picker element
+  colorPicker.click();
+});
+</script>
+
 <script>
   // Get the buttons with the class .sort-button
   let buttons = document.getElementsByClassName("description");
@@ -263,6 +278,7 @@ select.addEventListener("change", function() {
   let rgbinput = document.getElementById("input");
   let footerStyles = document.getElementById("footer");
   let about = document.getElementById("about");
+  let selectBox = document.getElementById("color-method");
 
   // Use a switch statement to handle different values
   switch (value) {

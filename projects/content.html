@@ -507,3 +507,101 @@ fetch('./common/project-pages.html')
   })
 
 </script>
+
+<script>
+  // Get all the elements that have the .my-projects class
+let myProjects = document.getElementsByClassName("my-projects");
+
+// Define a function that sets the column property based on the number of elements, screen width, and display state
+function setColumns() {
+  // Loop through each element
+  for (let project of myProjects) {
+    // Get the number of elements in the project
+    let numElements = project.children.length;
+
+    // Get the display value of the project element
+    let displayValue = window.getComputedStyle(project).display;
+
+    // Set the column property based on the number of elements, screen width, and display value
+    let screenWidth = window.innerWidth;
+    if (displayValue == "none") {
+      // If the display value is none, set the column count to 0
+      project.style.columnCount = 0;
+    } else if (displayValue == "flex") {
+      // If the display value is flex, set the column count to 1
+      project.style.columnCount = 1;
+    } else {
+      // If the display value is anything else, use the original logic
+      if (numElements > 3) {
+        if (screenWidth < 680) {
+          project.style.columnCount = 1;
+        } else if (screenWidth < 1000) {
+          project.style.columnCount = 2;
+        } else {
+          project.style.columnCount = 3;
+        }
+      } else if (numElements == 2) {
+        if (screenWidth < 680) {
+          project.style.columnCount = 1;
+        } else {
+          project.style.columnCount = 2;// Get all the elements that have the .my-projects class
+let myProjects = document.getElementsByClassName("projects-grid3");
+
+// Define a function that sets the column property based on the number of elements and screen width
+function setColumns() {
+  // Loop through each element
+  for (let project of myProjects) {
+    // Get the number of elements in the project
+    let numElements = project.children.length;
+
+    // Set the column property based on the number of elements and screen width
+    let screenWidth = window.innerWidth;
+    if (numElements > 3) {
+      if (screenWidth < 680) {
+        project.style.columnCount = 1;
+      } else if (screenWidth < 1000) {
+        project.style.columnCount = 2;
+      } else {
+        project.style.columnCount = 3;
+      }
+    } else if (numElements == 2) {
+      if (screenWidth < 680) {
+        project.style.columnCount = 1;
+      } else {
+        project.style.columnCount = 2;
+      }
+    } else if (numElements == 1) {
+      project.style.columnCount = 1;
+    }
+  }
+}
+
+// Call the function when the page loads
+setColumns();
+
+// Add an event listener to the window object to call the function when the screen size changes
+window.addEventListener("resize", setColumns);
+
+// Add an event listener to each element to call the function when the content changes
+for (let project of myProjects) {
+  project.addEventListener("DOMSubtreeModified", setColumns);
+}
+        }
+      } else if (numElements == 1) {
+        project.style.columnCount = 1;
+      }
+    }
+  }
+}
+
+// Call the function when the page loads
+setColumns();
+
+// Add an event listener to the window object to call the function when the screen size changes
+window.addEventListener("resize", setColumns);
+
+// Add an event listener to each element to call the function when the content changes
+for (let project of myProjects) {
+  project.addEventListener("DOMSubtreeModified", setColumns);
+}
+</script>

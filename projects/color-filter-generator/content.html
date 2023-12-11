@@ -15,17 +15,18 @@
   }
 </style>
 
-<div class="generator-page">
-  <div class="headerarea">
-    <div class="headerimage">
-      <img src="/images/CSS-FIlter-Color.svg" alt="[Project Logo]">
-    </div>
-    <div class="titlearea">
-      <div class="title">Color Filter Generator</div>
-      <div class="description">Generate CSS filters for black icons.</div>
-      <div class="description" id="about"><a href="#what-da-hail">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a></div>
-    </div>
+<div class="headerarea">
+  <div class="headerimage">
+    <img src="/images/CSS-FIlter-Color.svg" alt="[Project Logo]">
   </div>
+  <div class="titlearea">
+    <div class="title">Color Filter Generator</div>
+    <div class="description">Generate CSS filters for black icons.</div>
+    <div class="description" id="about"><a style="cursor: pointer;">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a></div>
+  </div>
+</div>
+
+<div class="generator-page">
 
   <div class="generator g1" id="generator1">
     <div class="input-preview-area">
@@ -171,94 +172,70 @@ image.addEventListener("click", function() {
 </script>
 
 <script>
-  // Get the buttons with the class .sort-button
-  let buttons = document.getElementsByClassName("description");
-  
   // Get the page elements with the ids .page1 and .page2
   let generator1 = document.getElementById("generator1");
   let generator2 = document.getElementById("generator2");
   let about = document.getElementById("about");
   let footerStyles = document.getElementById("footer");
   
-  // Define a function that changes the page state and the URL
-  function changePageState() {
-    // Get the current path without the hash
-    let path = window.location.pathname;
-  
-    // Get the current hash, if any
-    let hash = window.location.hash;
-  
-    // Check if the hash is #sort-projects
-    if (hash === "#what-da-hail") {
-      // If yes, remove it from the hash
-      hash = "";
-      history.pushState(null, "", path);
-    } else {
-      // If no, add it to the hash
-      hash = "#what-da-hail";
-      history.pushState(null, "", path + hash);
-    }
-  
-    // Change the URL without reloading the page
-  
-    // Toggle the display of pages
-    togglePages();
-  }
-  
-  function changePageStateStartup() {
-    // Get the current path without the hash
-    let path = window.location.pathname;
-  
-    // Get the current hash, if any
-    let hash = window.location.hash;
-  
-    // Check if the hash is #sort-projects
-    if (hash === "#what-da-hail") {
-      // If yes, remove it from the hash
-      hash = "#what-da-hail";
-    } else {
-      // If no, add it to the hash
-      hash = "#what-da-hail";
-    }
-  
-    // Toggle the display of pages
-    togglePages();
-  }
-  
-  // Function to toggle the display of pages
-  function togglePages() {
-    // Get the full URL of the current page
-    let url = window.location.href;
-  
-    // Check if the URL contains the #sort-projects parameter
-    if (url.includes("#what-da-hail")) {
-      // If yes, hide page1 and show page2
+  // Define a variable to keep track of the current state
+let currentState = 1;
+
+// Define a function that toggles the state based on the current state
+function togglePages() {
+  // If the current state is 1, switch to state 2
+  if (currentState == 1) {
+    // If yes, hide page1 and show page2
+    generator1.style.visibility = "hidden";
+    generator1.style.opacity = "0";
+    footerStyles.classList.add("footer-acrylic-force");
+    subdirectory.innerHTML = '<a href="/projects/" class="header-path">/projects/</a><a onclick="togglePages()" style="cursor:pointer;" class="header-path">color-filter-generator/</a>';
+    about.style.opacity = "0";
+
+
+    setTimeout(() => {
       generator1.style.display = "none";
       generator2.style.display = "flex";
-      footerStyles.classList.add("footer-acrylic-force");
-      about.innerHTML = '<a onclick="togglePages()" style="cursor:pointer;">Go back! <iconify-icon icon="pajamas:go-back"></iconify-icon></a>';
-      subdirectory.innerHTML = '<a href="/projects/" class="header-path">/projects/</a><a onclick="changePageState()" style="cursor:pointer;" class="header-path">color-filter-generator/</a>';
-  
-      } else {
-      // If no, show page1 and hide page2
-      generator1.style.display = "flex";
+    }, 100);
+
+    setTimeout(() => {
+      generator2.style.visibility = "visible";
+      generator2.style.opacity = "1";
+      about.style.opacity = "1";
+      about.innerHTML = '<a style="cursor:pointer;">Go back! <iconify-icon icon="pajamas:go-back"></iconify-icon></a>';
+    }, 200);
+
+    // Set the current state to 2
+    currentState = 2;
+  }
+  // If the current state is 2, switch to state 1
+  else if (currentState == 2) {
+    // If no, show page1 and hide page2
+    generator2.style.visibility = "hidden";
+    generator2.style.opacity = "0";
+    footerStyles.classList.remove("footer-acrylic-force");
+    subdirectory.innerHTML = '<a href="/projects/" class="header-path">/projects/</a>';
+    about.style.opacity = "0";
+
+    setTimeout(() => {
       generator2.style.display = "none";
-      footerStyles.classList.remove("footer-acrylic-force");
-      subdirectory.innerHTML = '<a href="/projects/" class="header-path">/projects/</a>';
-      about.innerHTML = '<a onclick="togglePages()" style="cursor:pointer;">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a>';      
-    }
+      generator1.style.display = "flex";
+    }, 100);
+
+    setTimeout(() => {
+      generator1.style.visibility = "visible";
+      generator1.style.opacity = "1";
+      about.style.opacity = "1";
+      about.innerHTML = '<a style="cursor:pointer;">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a>';
+    }, 200);
+
+    // Set the current state to 1
+    currentState = 1;
   }
-  
-  // Loop through each button and add an event listener
-  for (let button of buttons) {
-    button.addEventListener("click", changePageState);
-  }
-  
-  // Check if the URL has the #sort-projects hash when the page loads
-  if (window.location.hash === "#what-da-hail") {
-    // If yes, call the function to change the page state and the URL
-    changePageStateStartup();
-  }
+}
+
+about.addEventListener("click", togglePages);
+
   
   </script>
 

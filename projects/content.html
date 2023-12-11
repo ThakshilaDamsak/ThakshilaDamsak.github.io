@@ -189,10 +189,6 @@
 </div>
 
 <script>
-// Get the buttons with the class .sort-button
-const buttons = document.querySelectorAll(".sortbutton");
-
-// Get the page elements with the ids .page1 and .page2
 const page2 = document.getElementById("page2");
 const grid1 = document.getElementById("project-pages");
 const below = document.getElementById("go-below");
@@ -203,67 +199,81 @@ const sortbuttontxt = document.getElementById("sortbuttontxt");
 const footerStyles = document.querySelector(".footer-transclucent");
 const subdirectory = document.getElementById("subdirectory");
 
-// Define a function that changes the page state and the URL
-const changePageState = () => {
-  // Get the current path without the hash
-  const path = window.location.pathname;
+// Define a variable to keep track of the current state
+let currentState = 1;
 
-  // Get the current hash, if any
-  let hash = window.location.hash;
-
-  // Check if the hash is #sort-projects
-  if (hash === "#sort-projects") {
-    // If yes, remove it from the hash
-    hash = "";
-    history.pushState(null, "", path);
-  } else {
-    // If no, add it to the hash
-    hash = "#sort-projects";
-    history.pushState(null, "", `${path}${hash}`);
-  }
-
-  // Toggle the display of pages
-  togglePages();
-};
-
-const changePageStateStartup = () => {
-  // Get the current path without the hash
-  const path = window.location.pathname;
-
-  // Get the current hash, if any
-  let hash = window.location.hash;
-
-  // Check if the hash is #sort-projects
-  if (hash === "#sort-projects") {
-    // If yes, keep it in the hash
-    hash = "#sort-projects";
-  } else {
-    // If no, add it to the hash
-    hash = "#sort-projects";
-  }
-
-  // Toggle the display of pages
-  togglePages();
-};
-
-// Function to toggle the display of pages
-const togglePages = () => {
-  // Get the full URL of the current page
-  const url = window.location.hash;
-
-  // Check if the URL contains the #sort-projects parameter
-  if (url == "#sort-projects") {
-    grid1.style.display = "none";
-    below.style.display = "none";
-    grid2.style.display = "none";
-    page2.style.display = "flex";
+// Define a function that changes the state based on the current state
+function changePageState() {
+  // If the current state is 1, switch to state 2
+  if (currentState == 1) {
+    sortbutt.style.width = "115px";
     sortbuttontxt.style.opacity = "0";
 
-    footerStyles.classList.toggle("footer-acrylic-force");
+    page2.style.visibility = "hidden";
+    page2.style.opacity = "0";
+
+    footerStyles.classList.remove("footer-acrylic-force");
+
+    subdirectory.innerHTML = '';
+    subdirectory.onclick = null;
+    subdirectory.style.cursor = "default";
+
+    setTimeout(() => {
+      page2.style.display = "none";
+      grid1.style.display = "flex";
+      below.style.display = "flex";
+      grid2.style.display = "flex";
+    }, 50);
+
+    setTimeout(() => {
+      grid1.style.visibility = "visible"
+      below.style.visibility = "visible"
+      grid2.style.visibility = "visible"
+      grid1.style.opacity = "1"
+      below.style.opacity = "1"
+      grid2.style.opacity = "1"
+    }, 100);
+
+    setTimeout(() => {
+      sortbuttontxt.textContent = "Sort by Badge";
+    }, 200);
+
+    setTimeout(() => {
+      sortbuttontxt.style.opacity = "1";
+    }, 500);
+
+    // Set the current state to 2
+    currentState = 2;
+  }
+  // If the current state is 2, switch to state 1
+  else if (currentState == 2) {
+    grid1.style.visibility = "hidden"
+    below.style.visibility = "hidden"
+    grid2.style.visibility = "hidden"
+    grid1.style.opacity = "0"
+    below.style.opacity = "0"
+    grid2.style.opacity = "0"
+
+    sortbuttontxt.style.opacity = "0";
+
+    footerStyles.classList.add("footer-acrylic-force");
 
     subdirectory.innerHTML = '<a class="header-path">/projects/</a>';
     subdirectory.onclick = changePageState;
     subdirectory.style.cursor = "pointer";
+
+
+    setTimeout(() => {
+      grid1.style.display = "none";
+      below.style.display = "none";
+      grid2.style.display = "none";
+      page2.style.display = "flex";
+    }, 50);
+
+    setTimeout(() => {
+      page2.style.visibility = "visible";
+      page2.style.opacity = "1";
+    }, 100);
 
     setTimeout(() => {
       sortbuttontxt.textContent = "Go Back";
@@ -274,57 +284,14 @@ const togglePages = () => {
       sortbuttontxt.style.opacity = "1";
     }, 500);
 
-  } else {
-    page1.style.display = "flex";
-    grid1.style.display = "flex";
-    below.style.display = "flex";
-    grid2.style.display = "flex";
-    page2.style.display = "none";
-    sortbutt.style.width = "115px";
-    sortbuttontxt.style.opacity = "0";
-
-    footerStyles.classList.toggle("footer-acrylic-force");
-
-    subdirectory.innerHTML = '';
-    subdirectory.onclick = null;
-    subdirectory.style.cursor = "default";
-
-    setTimeout(() => {
-      sortbuttontxt.textContent = "Sort by Badge";
-    }, 200);
-
-    setTimeout(() => {
-      sortbuttontxt.style.opacity = "1";
-    }, 500);
+    // Set the current state to 1
+    currentState = 1;
   }
-};
-
-// Add an event listener to the window object to handle the hashchange event
-window.addEventListener("hashchange", togglePages);
-
-// Loop through each button and add an event listener
-for (let button of buttons) {
-  button.addEventListener("click", changePageState);
 }
 
-// Check if the URL has the #sort-projects hash when the page loads
-if (window.location.hash === "#sort-projects") {
-  // If yes, call the function to change the page state and the URL
-  changePageStateStartup();
-}
-
-// Wait for the DOM to be loaded before adding the event listener to the element that is loaded later
-document.addEventListener("DOMContentLoaded", () => {
-  // Get the element with the id .domevent
-  const domevent = document.getElementById("domevent");
-
-  // Add an event listener to the element
-  domevent.addEventListener("click", () => {
-    // Do something when the element is clicked
-    console.log("You clicked the domevent element!");
-  });
-});
-
+// Add an event listener to the sortbutt button that calls the changePageState function
+sortbutt.addEventListener("click", changePageState);
+window.onload = changePageState();
 </script>
 
 <script>

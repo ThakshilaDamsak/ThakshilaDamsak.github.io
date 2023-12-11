@@ -513,7 +513,7 @@ function adjustColumns() {
     let visibleCount = projectItem.querySelectorAll(".col-calc-flex > *:not([style*='display: none'])").length;
     // Set the column property based on the number of elements, visible elements, and screen width
     let screenWidth = window.innerWidth;
-    if (elementCount > 3) {
+    if (elementCount >= 3) {
       // If the total number of elements is greater than 3, use the original logic
       if (visibleCount >= 3) {
         if (screenWidth < 680) {
@@ -551,9 +551,7 @@ function adjustColumns() {
   }
 }
 // Call the function when the page loads
-document.addEventListener("DOMContentLoaded", function() {
   adjustColumns();
-});
 // Add an event listener to the window object to call the function when the screen size changes
 window.addEventListener("resize", adjustColumns);
 // Create a mutation observer to call the function when the content changes

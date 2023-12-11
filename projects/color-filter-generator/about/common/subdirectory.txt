@@ -1,1 +1,0 @@
-<a href="/projects/" class="header-path">/projects/</a><a href="/projects/color-filter-generator/" class="header-path">color-filter-generator/</a>

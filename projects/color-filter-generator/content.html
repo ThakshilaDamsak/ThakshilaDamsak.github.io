@@ -47,7 +47,7 @@
                 <div class="colorpicker-icon" id="color-picker-butt"><span><iconify-icon icon="pepicons-pop:color-picker-circle-filled"></iconify-icon></span></div>
               </div>
               <input class="target" id="target" type="text" style="visibility: hidden; position: absolute; opacity: 0;" placeholder="#hex" value="#d028c8" />
-              <input class="input" id="input" type="text" style="visibility: hidden; position: absolute; opacity: 0;" placeholder="r, g, b" value="208, 40, 200" />
+              <input class="input" id="input" type="text" style="visibility: hidden; position: absolute; opacity: 0;" placeholder="r,g,b or rgb(r,g,b)" value="208, 40, 200" />
               <button class="execute regular-button">Compute Filters</button>
           </div>
       </div>
@@ -124,6 +124,34 @@
             <br>
             <h2>How it works</h2>
             <p>Color Filter Generator uses a simple algorithm<sup>1</sup> to calculate the hue, saturation, brightness,… values of any color you choose and generate a corresponding CSS filter. You can copy and paste the filter code into your style sheet and use it for any black image or icon on your website.</p>
+            <br>
+            <h2>Why Filters</h2> 
+            <p>Filters are a great way to color your images or icons on your website. Here are some reasons why:</p> 
+            <ul> 
+              <li>Filters are flexible and customizable. You can change the color easily by changing the filter values.</li>
+              <li>Filters are efficient and lightweight. You only need one black image or icon for each design, and use different filters for different colors. This saves space and time on your website.</li> 
+              <li>Filters are creative and dynamic. You can use filters to create animations and transitions for your images or icons, by changing the filter values over time. You can also use filters to create interactive and responsive elements, by changing the filter values based on user input or events.</li> 
+            </ul> 
+            <p>Filters are a simple and powerful way to give your website a unique look. Try it out and see the difference for yourself!</p>
+            <br>
+            <p>Example:</p>
+            <br>
+            <div class="what-images">
+              <div class="image3">
+                <div class="img">
+                  <img src="/images/logo-long-bk.svg" alt="[Image]">
+                </div>
+                <span>Animation</span>
+                <p><code>@Keyframes</code></p>
+              </div>
+              <div class="image4">
+                <div class="img">
+                  <img src="/images/logo-long-bk.svg" alt="[Image]">
+                </div>
+                <span>Hover Effect</span>
+                <p><code>:Hover</code></p>
+              </div>
+            </div>
             <br>
             <h2>FAQs</h2>
             <br>
@@ -357,6 +385,11 @@ function hexToRGB(hex) {
 function getRGB() {
   // Get the value of the input element
   let value = input.value;
+  // Check if the value has the rgb() prefix
+  if (value.startsWith("rgb(")) {
+    // Remove the prefix and the parentheses
+    value = value.slice(4, -1);
+  }
   // Split the value by comma and map each part to a number
   let rgb = value.split(",").map(Number);
   // Return an array of three numbers

@@ -628,9 +628,35 @@
           transition: .2s !important;
         }
 
-      @media  screen and (max-width: 435px) {
 
-      }
+        .image3 img {
+          animation: colorShift 5s infinite;
+        }
+
+        .image4 img {
+          filter: invert(0%) sepia(0%) saturate(7489%) hue-rotate(297deg) brightness(101%) contrast(104%); 
+        }
+        .image4 img:hover {
+          filter: invert(31%) sepia(67%) saturate(1277%) hue-rotate(255deg) brightness(86%) contrast(88%);
+        }
+
+        @keyframes colorShift {
+          0% {
+            filter: invert(0%) sepia(0%) saturate(7489%) hue-rotate(297deg) brightness(101%) contrast(104%); 
+          }
+          25% {
+            filter: invert(29%) sepia(45%) saturate(7496%) hue-rotate(288deg) brightness(93%) contrast(93%);
+          }
+          50% {
+            filter: invert(32%) sepia(56%) saturate(850%) hue-rotate(243deg) brightness(95%) contrast(97%);
+          }
+          75% {
+            filter: invert(10%) sepia(99%) saturate(5522%) hue-rotate(262deg) brightness(100%) contrast(133%);
+          }
+          100% {
+            filter: invert(0%) sepia(0%) saturate(7489%) hue-rotate(297deg) brightness(101%) contrast(104%); 
+          }
+        }
 
       @media  screen and (max-width: 370px) {
         .inputactions {

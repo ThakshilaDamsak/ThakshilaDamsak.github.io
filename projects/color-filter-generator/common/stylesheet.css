@@ -593,12 +593,23 @@
         background-color: var(--project-logo-bg);
       }
 
-      .source-links sup {
+       p sup {
             background-color: rgba(155, 155, 155, 0.336);
-            padding-left: 5px;
-            padding-right: 5px;
-            border-radius: 5px;
+            padding-left: 3px;
+            padding-right: 3px;
+            border-radius: 3px;
+            font-size: 9px;
+            color: var(--header-links-a-hover-color);
         }
+
+         sup {
+          background-color: rgba(163, 163, 163, 0.212);
+          padding-left: 3px;
+          padding-right: 3px;
+          border-radius: 3px;
+          font-size: 10px;
+          color: var(--header-links-a-hover-color);
+      }
 
         button.sortbutt-state1 {
           width: 115px !important;

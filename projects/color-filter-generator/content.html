@@ -121,12 +121,12 @@
             </div>
             <br>
             <h2>How it works</h2>
-            <p>Color Filter Generator uses a simple algorithm to calculate the hue, saturation, brightness,… values of any color you choose and generate a corresponding CSS filter. You can copy and paste the filter code into your style sheet and use it for any black image or icon on your website.</p>
+            <p>Color Filter Generator uses a simple algorithm<sup>1</sup> to calculate the hue, saturation, brightness,… values of any color you choose and generate a corresponding CSS filter. You can copy and paste the filter code into your style sheet and use it for any black image or icon on your website.</p>
             <br>
             <h2>FAQs</h2>
             <br>
             <h4>Why do I need to use black images or icons?</h4>
-            <p>Color Filter works best with black images or icons because they have no hue or saturation. If your image or icon is not black, you can prepend <code>brightness(0) saturate(100%)</code> to your filter property, which will turn it to black before applying the color filter.</p>
+            <p>The algorithm is made for black images because they are common for icons. If your image or icon is not black, you can prepend <code>brightness(0) saturate(100%)</code> to your filter property, which will turn it to black before applying the color filter.<sup>2</sup></p>
             <br>
             <h4>How can I choose a color for the filter?</h4>
             <p>You can choose a color for the filter by using one of the three methods available on the website:</p>
@@ -139,7 +139,7 @@
             <h4>Can I use Color Filter for other purposes besides coloring images or icons?</h4>
             <p>Yes, you can use Color Filter for any element that supports the CSS filter property, such as text, backgrounds, borders, etc. However, keep in mind that the filter will affect the entire element, not just the color. For example, if you apply a filter to a text element, it will also change the brightness and contrast of the text.</p>
             <br>
-            <p>This website uses JavaScript codes adapted from the following sources:</p>
+            <p>This website is based on following sources:</p>
             <br>
             <ul class="source-links">
             <li><a href="https://stackoverflow.com/a/43960991/604861" target="_blank">Stack Overflow. (2017, May 9). How to apply a color filter to a grayscale image using only CSS?.<sup>1</sup></a></li>

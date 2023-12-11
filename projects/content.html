@@ -209,7 +209,6 @@ function changePageState() {
     sortbutt.style.width = "115px";
     sortbuttontxt.style.opacity = "0";
 
-    page2.style.visibility = "hidden";
     page2.style.opacity = "0";
 
     footerStyles.classList.remove("footer-acrylic-force");
@@ -223,9 +222,6 @@ function changePageState() {
       grid1.style.display = "block";
       below.style.display = "flex";
       grid2.style.display = "flex";
-      grid1.style.visibility = "visible"
-      below.style.visibility = "visible"
-      grid2.style.visibility = "visible"
     }, 50);
 
     setTimeout(() => {
@@ -247,9 +243,6 @@ function changePageState() {
   }
   // If the current state is 2, switch to state 1
   else if (currentState == 2) {
-    grid1.style.visibility = "hidden"
-    below.style.visibility = "hidden"
-    grid2.style.visibility = "hidden"
     grid1.style.opacity = "0"
     below.style.opacity = "0"
     grid2.style.opacity = "0"
@@ -268,7 +261,6 @@ function changePageState() {
       below.style.display = "none";
       grid2.style.display = "none";
       page2.style.display = "flex";
-      page2.style.visibility = "visible";
     }, 50);
 
     setTimeout(() => {
@@ -396,6 +388,7 @@ for (let project of projects) {
 <script>
 // Get all the checkboxes
 let checkboxes = page2.querySelectorAll("input[type='checkbox']");
+let projectContainer = page2.querySelector(".projects-grid3");
 
 // Add a change event listener to each checkbox
 checkboxes.forEach(checkbox => {
@@ -412,11 +405,29 @@ checkboxes.forEach(checkbox => {
         let badge = project.querySelector("." + id);
         // If not, hide the project
         if (!badge) {
-          project.style.display = "none";
+          projectContainer.style.opacity = "0";
+          
+          setTimeout(() => {
+            project.style.display = "none";
+          }, 200);
+
+          setTimeout(() => {
+            projectContainer.style.opacity = "1";
+          }, 300);
+
         }
         // Otherwise, show the project
         else {
-          project.style.display = "flex";
+          projectContainer.style.opacity = "0";
+
+
+          setTimeout(() => {
+            project.style.display = "flex";
+          }, 200);
+
+          setTimeout(() => {
+            projectContainer.style.opacity = "1";
+          }, 300);
         }
       }
       // Loop through all the other checkboxes
@@ -433,7 +444,15 @@ checkboxes.forEach(checkbox => {
       // Loop through the project-outline elements
       for (let project of projects) {
         // Show the project
-        project.style.display = "flex";
+        projectContainer.style.opacity = "0";
+
+        setTimeout(() => {
+            project.style.display = "flex";
+          }, 200);
+
+          setTimeout(() => {
+            projectContainer.style.opacity = "1";
+          }, 300);
       }
     }
   });

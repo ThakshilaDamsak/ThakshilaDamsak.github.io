@@ -447,6 +447,11 @@
         gap: 10px;
       }
 
+      button.execute {
+        height: 34px;
+        width: 150px;
+      }
+
       .lossDetail {
         display: block;
         align-items: center;
@@ -484,8 +489,8 @@
         border-color: rgba(138, 138, 138, 0.534);
         border-style: solid;
         overflow: hidden;
-        height: 30px;
-        width: 149px;
+        height: 32px;
+        width: 148px;
         position: relative;
       }
 

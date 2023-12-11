@@ -220,7 +220,7 @@ function changePageState() {
 
     setTimeout(() => {
       page2.style.display = "none";
-      grid1.style.display = "flex";
+      grid1.style.display = "block";
       below.style.display = "flex";
       grid2.style.display = "flex";
     }, 50);
@@ -551,7 +551,9 @@ function adjustColumns() {
   }
 }
 // Call the function when the page loads
-adjustColumns();
+document.addEventListener("DOMContentLoaded", function() {
+  adjustColumns();
+});
 // Add an event listener to the window object to call the function when the screen size changes
 window.addEventListener("resize", adjustColumns);
 // Create a mutation observer to call the function when the content changes

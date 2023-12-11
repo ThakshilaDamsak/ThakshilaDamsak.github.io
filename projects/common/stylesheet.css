@@ -304,6 +304,16 @@
         height: 150px;
     }
 
+    button.sortbutt-state1 {
+        width: 115px !important;
+        transition: .2s !important;
+      }
+
+      button.sortbutt-state2 {
+        width: 73px !important;
+        transition: .2s !important;
+      }
+
     .filters {
         display: flex;
         align-items: center;

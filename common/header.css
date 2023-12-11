@@ -104,8 +104,8 @@ html{
     --kraftbin-toggle-color: blueviolet;
 
     --generator-text-color: rgb(75, 1, 111);
-    --generator-title-bg: rgb(226, 167, 255);
-    --generator-image-bg: rgb(230, 179, 255);
+    --generator-title-bg: rgb(241, 212, 255);
+    --generator-image-bg: rgb(244, 222, 255);
 
   }
   
@@ -344,8 +344,8 @@ html{
     --kraftbin-toggle-color: blueviolet;
 
     --generator-text-color: rgb(75, 1, 111);
-    --generator-title-bg: rgb(226, 167, 255);
-    --generator-image-bg: rgb(230, 179, 255);
+    --generator-title-bg: rgb(241, 212, 255);
+    --generator-image-bg: rgb(244, 222, 255);
 
 
     .heading,
@@ -493,18 +493,18 @@ html{
     --project-header-background: var(--bg-bg);
     --project-logo-bg: rgba(255, 255, 255, 0.842);
 
-    --button-color: rgb(218, 238, 255);
-    --button-background: rgb(39, 173, 226);
+    --button-color: rgb(255, 236, 218);
+    --button-background: rgb(226, 114, 39);
     --button-color-hover: white;
-    --button-background-hover: rgb(0, 119, 255);
-    --button-shadow-color: rgba(35, 83, 105, .7);
+    --button-background-hover: rgb(255, 81, 0);
+    --button-shadow-color: rgb(255, 115, 0);
 
     --kraftbin-post-color: rgba(255, 255, 255, 0.842);
     --kraftbin-toggle-color: blueviolet;
 
     --generator-text-color: rgb(75, 1, 111);
-    --generator-title-bg: rgb(226, 167, 255);
-    --generator-image-bg: rgb(230, 179, 255);
+    --generator-title-bg: rgb(248, 238, 253);
+    --generator-image-bg: rgb(250, 239, 255);
 
     .projects-page .section .project {
       background-color: rgba(243, 243, 243, 0.671);

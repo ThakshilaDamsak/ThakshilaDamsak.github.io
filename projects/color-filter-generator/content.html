@@ -45,8 +45,8 @@
                 <input class="colorpicker" id="color-picker" style="cursor: pointer;" type="color" value="#d028c8" />
                 <div class="colorpicker-icon" id="color-picker-butt"><span><iconify-icon icon="pepicons-pop:color-picker-circle-filled"></iconify-icon></span></div>
               </div>
-              <input class="target" id="target" type="text" style="visibility: hidden; position: absolute;" placeholder="#hex" value="#d028c8" />
-              <input class="input" id="input" type="text" style="display: none;" placeholder="r, g, b" value="208, 40, 200" />
+              <input class="target" id="target" type="text" style="visibility: hidden; position: absolute; opacity: 0;" placeholder="#hex" value="#d028c8" />
+              <input class="input" id="input" type="text" style="visibility: hidden; position: absolute; opacity: 0;" placeholder="r, g, b" value="208, 40, 200" />
               <button class="execute regular-button">Compute Filters</button>
           </div>
       </div>
@@ -284,11 +284,15 @@ select.addEventListener("change", function() {
     case "#hex":
       generator1.style.display = "flex";
       generator2.style.display = "none";
-      hextarget.style.display = "flex";
       hextarget.style.visibility = "visible";
       hextarget.style.position = "relative";
-      cpcontainer.style.display = "none";
-      rgbinput.style.display = "none";
+      hextarget.style.opacity = "1";
+      cpcontainer.style.visibility = "hidden";
+      cpcontainer.style.position = "absolute";
+      cpcontainer.style.opacity = "0";
+      rgbinput.style.visibility = "hidden";
+      rgbinput.style.position = "absolute";
+      rgbinput.style.opacity = "0";
       selectBox.value = "#hex";
       footerStyles.classList.remove("footer-acrylic-force");
       about.innerHTML = '<a href="#what-da-hail">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a>';
@@ -296,29 +300,34 @@ select.addEventListener("change", function() {
     case "#rgb":
       generator1.style.display = "flex";
       generator2.style.display = "none";
-      hextarget.style.display = "flex";
       hextarget.style.visibility = "hidden";
       hextarget.style.position = "absolute";
-      cpcontainer.style.display = "none";
-      rgbinput.style.display = "flex";
+      hextarget.style.opacity = "0";
+      rgbinput.style.visibility = "visible";
+      rgbinput.style.position = "relative";
+      rgbinput.style.opacity = "1";
+      cpcontainer.style.visibility = "hidden";
+      cpcontainer.style.position = "absolute";
+      cpcontainer.style.opacity = "0";
       selectBox.value = "#rgb";
       footerStyles.classList.remove("footer-acrylic-force");
       about.innerHTML = '<a href="#what-da-hail">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a>';
       break;
-    case "#picker":
+    default :
       generator1.style.display = "flex";
       generator2.style.display = "none";
-      cpcontainer.style.display = "flex";
-      hextarget.style.display = "flex";
+      cpcontainer.style.visibility = "visible";
+      cpcontainer.style.position = "relative";
+      cpcontainer.style.opacity = "1";
       hextarget.style.visibility = "hidden";
       hextarget.style.position = "absolute";
-      rgbinput.style.display = "none";
+      hextarget.style.opacity = "0";
+      rgbinput.style.visibility = "hidden";
+      rgbinput.style.position = "absolute";
+      rgbinput.style.opacity = "0";
       selectBox.value = "#picker";
       footerStyles.classList.remove("footer-acrylic-force");
       about.innerHTML = '<a href="#what-da-hail">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a>';
-      break;
-    default:
-      // Handle any other value
       break;
   }
 });
@@ -327,9 +336,12 @@ select.addEventListener("change", function() {
 
 
 <script>
-  // Get the input and target elements by their id
+// Get the input and target elements by their id
 let input = document.getElementById("input");
 let target = document.getElementById("target");
+
+// Get the color picker element by its id
+let colorPicker = document.getElementById("color-picker");
 
 // Define a function to convert a single RGB component to hex
 function componentToHex(c) {
@@ -342,6 +354,27 @@ function rgbToHex(r, g, b) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
+// Define a function to convert a single hex component to decimal
+function hexToDecimal(h) {
+  return parseInt(h, 16);
+}
+
+// Define a function to convert hex to RGB
+function hexToRGB(hex) {
+  // Remove the leading #
+  hex = hex.slice(1);
+  // Split the hex string into three parts
+  let r = hex.slice(0, 2);
+  let g = hex.slice(2, 4);
+  let b = hex.slice(4, 6);
+  // Convert each part to decimal
+  r = hexToDecimal(r);
+  g = hexToDecimal(g);
+  b = hexToDecimal(b);
+  // Return an array of three numbers
+  return [r, g, b];
+}
+
 // Define a function to get the RGB value from the input element
 function getRGB() {
   // Get the value of the input element
@@ -350,6 +383,14 @@ function getRGB() {
   let rgb = value.split(",").map(Number);
   // Return an array of three numbers
   return rgb;
+}
+
+// Define a function to get the hex value from the target element
+function getHex() {
+  // Get the value of the target element
+  let value = target.value;
+  // Return a string
+  return value;
 }
 
 // Define a function to validate the RGB value
@@ -368,6 +409,27 @@ function isValidRGB(rgb) {
   return true;
 }
 
+// Define a function to validate the hex value
+function isValidHex(hex) {
+  // Check if the string has a leading #
+  if (hex[0] != "#") {
+    return false;
+  }
+  // Check if the string has six characters after the #
+  if (hex.length != 7) {
+    return false;
+  }
+  // Check if each character is a valid hex digit
+  for (let i = 1; i < hex.length; i++) {
+    let c = hex[i];
+    if (!c.match(/[0-9a-fA-F]/)) {
+      return false;
+    }
+  }
+  // Return true if all checks pass
+  return true;
+}
+
 // Define a function to set the hex value to the target element
 function setHex() {
   // Get the RGB value from the input element
@@ -378,19 +440,33 @@ function setHex() {
     let hex = rgbToHex(rgb[0], rgb[1], rgb[2]);
     // Set the value of the target element to the hex value
     target.value = hex;
+    // Set the value of the color picker element to the hex value
+    colorPicker.value = hex;
   } else {
     // Set the value of the target element to "NaNaNa" if the RGB value is invalid
     target.value = "NaNaNa";
   }
 }
 
-// Add an event listener to the input element that fires when the value changes
-input.addEventListener("input", setHex);
-
-
-
-// Get the color picker element by its id
-let colorPicker = document.getElementById("color-picker");
+// Define a function to set the RGB value to the input element
+function setRGB() {
+  // Get the hex value from the target element
+  let hex = getHex();
+  // Check if the hex value is valid
+  if (isValidHex(hex)) {
+    // Convert the hex value to RGB
+    let rgb = hexToRGB(hex);
+    // Join the RGB array with commas
+    let rgbString = rgb.join(",");
+    // Set the value of the input element to the RGB string
+    input.value = rgbString;
+    // Set the value of the color picker element to the hex value
+    colorPicker.value = hex;
+  } else {
+    // Set the value of the input element to "NaNaNa" if the hex value is invalid
+    input.value = "NaNaNa";
+  }
+}
 
 // Define a function to set the hex value from the color picker to the target element
 function setHexFromPicker() {
@@ -398,7 +474,15 @@ function setHexFromPicker() {
   let hex = colorPicker.value;
   // Set the value of the target element to the hex value
   target.value = hex;
+  // Set the value of the input element to the corresponding RGB value
+  setRGB();
 }
+
+// Add an event listener to the input element that fires when the value changes
+input.addEventListener("input", setHex);
+
+// Add an event listener to the target element that fires when the value changes
+target.addEventListener("input", setRGB);
 
 // Add an event listener to the color picker element that fires when the value changes
 colorPicker.addEventListener("input", setHexFromPicker);
@@ -413,6 +497,11 @@ function syncInputAndTarget() {
   if (inputDisplay == "flex") {
     // Call the setHex function to sync the input and target elements
     setHex();
+  }
+  // Check if the target element is flex
+  if (targetDisplay == "flex") {
+    // Call the setRGB function to sync the target and input elements
+    setRGB();
   }
   // Check if the color picker element is flex
   if (pickerDisplay == "flex") {

@@ -224,10 +224,10 @@ function togglePages() {
     setTimeout(() => {
       generator1.style.display = "none";
       generator2.style.display = "flex";
+      generator2.style.visibility = "visible";
     }, 100);
 
     setTimeout(() => {
-      generator2.style.visibility = "visible";
       generator2.style.opacity = "1";
       about.style.opacity = "1";
       about.innerHTML = '<a style="cursor:pointer;">Go back! <iconify-icon icon="pajamas:go-back"></iconify-icon></a>';
@@ -248,10 +248,10 @@ function togglePages() {
     setTimeout(() => {
       generator2.style.display = "none";
       generator1.style.display = "flex";
+      generator1.style.visibility = "visible";
     }, 100);
 
     setTimeout(() => {
-      generator1.style.visibility = "visible";
       generator1.style.opacity = "1";
       about.style.opacity = "1";
       about.innerHTML = '<a style="cursor:pointer;">Help! What is this! <iconify-icon icon="material-symbols:help"></iconify-icon></a>';

@@ -223,16 +223,16 @@ function changePageState() {
       grid1.style.display = "block";
       below.style.display = "flex";
       grid2.style.display = "flex";
-    }, 50);
-
-    setTimeout(() => {
       grid1.style.visibility = "visible"
       below.style.visibility = "visible"
       grid2.style.visibility = "visible"
+    }, 50);
+
+    setTimeout(() => {
       grid1.style.opacity = "1"
       below.style.opacity = "1"
       grid2.style.opacity = "1"
-    }, 100);
+    }, 200);
 
     setTimeout(() => {
       sortbuttontxt.textContent = "Sort by Badge";
@@ -268,10 +268,10 @@ function changePageState() {
       below.style.display = "none";
       grid2.style.display = "none";
       page2.style.display = "flex";
+      page2.style.visibility = "visible";
     }, 50);
 
     setTimeout(() => {
-      page2.style.visibility = "visible";
       page2.style.opacity = "1";
     }, 100);
 

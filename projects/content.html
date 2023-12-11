@@ -61,7 +61,7 @@
                 </div>
             </div>
       
-            <div class="my-projects projects-grid3" id="all-projects">
+            <div class="my-projects projects-grid3 col-calc-flex" id="all-projects">
       
               <div class="project-outline" style="opacity: .5; border: none;">
                 <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
@@ -73,19 +73,31 @@
                     <div class="project-about"><span></span></div>
                   </div>
                 </div>
-      
+              </div>
+              
+              <div class="project-outline" style="opacity: .5; border: none;">
+                <div class="project" style="box-shadow: none;  cursor:wait;">
+                  <div class="project-image">
+                  </div>
+                  <div class="project-details" style="height: 150px;">
+                    <div class="project-name"><h2></h2></div>
+                    <div class="project-description"><span></span></div>
+                    <div class="project-about"><span></span></div>
+                  </div>
                 </div>
-                <div class="project-outline" style="opacity: .5; border: none;">
-                  <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
-                    <div class="project-image">
-                    </div>
-                    <div class="project-details" style="height: 150px;">
-                      <div class="project-name"><h2></h2></div>
-                      <div class="project-description"><span></span></div>
-                      <div class="project-about"><span></span></div>
-                    </div>
+              </div>
+
+              <div class="project-outline" style="opacity: .5; border: none;">
+                <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
+                  <div class="project-image">
                   </div>
+                  <div class="project-details" style="height: 150px;">
+                    <div class="project-name"><h2></h2></div>
+                    <div class="project-description"><span></span></div>
+                    <div class="project-about"><span></span></div>
                   </div>
+                </div>
+              </div>
       
             </div>
         </div>
@@ -93,7 +105,7 @@
       </div>
     </div>
 
-      <div class="my-projects projects-grid1" id="project-pages">
+      <div class="my-projects projects-grid1 col-calc" id="project-pages">
         
         <div class="project-outline" style="opacity: .5; border: none;">
           <div class="project" style="box-shadow: none;  cursor:wait;">
@@ -133,7 +145,8 @@
         <div class="description"><p>GitHub Repositories</p></div>
       </div>
 
-      <div class="my-projects projects-grid2" id="my-github-projects">
+      <div class="my-projects projects-grid2 col-calc" id="my-github-projects">
+
         <div class="project-outline" style="opacity: .5; border: none;">
           <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
             <div class="project-image">
@@ -144,19 +157,31 @@
               <div class="project-about"><span></span></div>
             </div>
           </div>
-          </div>
+        </div>
 
-          <div class="project-outline" style="opacity: .5; border: none;">
-            <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
-              <div class="project-image">
-              </div>
-              <div class="project-details" style="height: 150px;">
-                <div class="project-name"><h2></h2></div>
-                <div class="project-description"><span></span></div>
-                <div class="project-about"><span></span></div>
-              </div>
+        <div class="project-outline" style="opacity: .5; border: none;">
+          <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
+            <div class="project-image">
             </div>
+            <div class="project-details" style="height: 150px;">
+              <div class="project-name"><h2></h2></div>
+              <div class="project-description"><span></span></div>
+              <div class="project-about"><span></span></div>
             </div>
+          </div>
+        </div>
+
+        <div class="project-outline" style="opacity: .5; border: none;">
+          <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
+            <div class="project-image">
+            </div>
+            <div class="project-details" style="height: 150px;">
+              <div class="project-name"><h2></h2></div>
+              <div class="project-description"><span></span></div>
+              <div class="project-about"><span></span></div>
+            </div>
+          </div>
+        </div>
 
       </div>
   </div>
@@ -251,7 +276,7 @@ const togglePages = () => {
 
   } else {
     page1.style.display = "flex";
-    grid1.style.display = "block";
+    grid1.style.display = "flex";
     below.style.display = "flex";
     grid2.style.display = "flex";
     page2.style.display = "none";
@@ -304,7 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <script>
 // Get all the elements that have the .my-projects class
-let projects = document.getElementsByClassName("my-projects");
+let projects = document.getElementsByClassName("col-calc");
 
 // Define a function that sets the column property based on the number of elements, screen width, and display state
 function setColumns() {
@@ -326,7 +351,7 @@ function setColumns() {
       project.style.columnCount = 1;
     } else {
       // If the display value is anything else, use the original logic
-      if (numElements > 3) {
+      if (numElements >= 3) {
         if (screenWidth < 680) {
           project.style.columnCount = 1;
         } else if (screenWidth < 1000) {
@@ -339,7 +364,7 @@ function setColumns() {
           project.style.columnCount = 1;
         } else {
           project.style.columnCount = 2;// Get all the elements that have the .my-projects class
-let projects = document.getElementsByClassName("my-projects");
+let projects = document.getElementsByClassName("col-calc");
 
 // Define a function that sets the column property based on the number of elements and screen width
 function setColumns() {
@@ -350,7 +375,7 @@ function setColumns() {
 
     // Set the column property based on the number of elements and screen width
     let screenWidth = window.innerWidth;
-    if (numElements > 3) {
+    if (numElements >= 3) {
       if (screenWidth < 680) {
         project.style.columnCount = 1;
       } else if (screenWidth < 1000) {
@@ -509,99 +534,69 @@ fetch('./common/project-pages.html')
 </script>
 
 <script>
-  // Get all the elements that have the .my-projects class
-let myProjects = document.getElementsByClassName("my-projects");
-
-// Define a function that sets the column property based on the number of elements, screen width, and display state
-function setColumns() {
-  // Loop through each element
-  for (let project of myProjects) {
-    // Get the number of elements in the project
-    let numElements = project.children.length;
-
-    // Get the display value of the project element
-    let displayValue = window.getComputedStyle(project).display;
-
-    // Set the column property based on the number of elements, screen width, and display value
-    let screenWidth = window.innerWidth;
-    if (displayValue == "none") {
-      // If the display value is none, set the column count to 0
-      project.style.columnCount = 0;
-    } else if (displayValue == "flex") {
-      // If the display value is flex, set the column count to 1
-      project.style.columnCount = 1;
-    } else {
-      // If the display value is anything else, use the original logic
-      if (numElements > 3) {
-        if (screenWidth < 680) {
-          project.style.columnCount = 1;
-        } else if (screenWidth < 1000) {
-          project.style.columnCount = 2;
-        } else {
-          project.style.columnCount = 3;
-        }
-      } else if (numElements == 2) {
-        if (screenWidth < 680) {
-          project.style.columnCount = 1;
-        } else {
-          project.style.columnCount = 2;// Get all the elements that have the .my-projects class
-let myProjects = document.getElementsByClassName("projects-grid3");
-
+// Get all the elements that have the .col-calc-flex class
+let projectElements = document.getElementsByClassName("col-calc-flex");
 // Define a function that sets the column property based on the number of elements and screen width
-function setColumns() {
+function adjustColumns() {
   // Loop through each element
-  for (let project of myProjects) {
+  for (let projectItem of projectElements) {
     // Get the number of elements in the project
-    let numElements = project.children.length;
-
-    // Set the column property based on the number of elements and screen width
+    let elementCount = projectItem.children.length;
+    // Get the number of visible elements in the project
+    let visibleCount = projectItem.querySelectorAll(".col-calc-flex > *:not([style*='display: none'])").length;
+    // Set the column property based on the number of elements, visible elements, and screen width
     let screenWidth = window.innerWidth;
-    if (numElements > 3) {
-      if (screenWidth < 680) {
-        project.style.columnCount = 1;
-      } else if (screenWidth < 1000) {
-        project.style.columnCount = 2;
-      } else {
-        project.style.columnCount = 3;
-      }
-    } else if (numElements == 2) {
-      if (screenWidth < 680) {
-        project.style.columnCount = 1;
-      } else {
-        project.style.columnCount = 2;
-      }
-    } else if (numElements == 1) {
-      project.style.columnCount = 1;
-    }
-  }
-}
-
-// Call the function when the page loads
-setColumns();
-
-// Add an event listener to the window object to call the function when the screen size changes
-window.addEventListener("resize", setColumns);
-
-// Add an event listener to each element to call the function when the content changes
-for (let project of myProjects) {
-  project.addEventListener("DOMSubtreeModified", setColumns);
-}
+    if (elementCount > 3) {
+      // If the total number of elements is greater than 3, use the original logic
+      if (visibleCount >= 3) {
+        if (screenWidth < 680) {
+          projectItem.style.columnCount = 1;
+        } else if (screenWidth < 1000) {
+          projectItem.style.columnCount = 2;
+        } else {
+          projectItem.style.columnCount = 3;
         }
-      } else if (numElements == 1) {
-        project.style.columnCount = 1;
+      } else if (visibleCount == 2) {
+        if (screenWidth < 680) {
+          projectItem.style.columnCount = 1;
+        } else {
+          projectItem.style.columnCount = 2;
+        }
+      } else if (visibleCount == 1) {
+        projectItem.style.columnCount = 1;
+      } else {
+        // If there are no visible elements, set the column count to 0
+        projectItem.style.columnCount = 0;
       }
+    } else if (elementCount == 3) {
+      // If the total number of elements is equal to 3, set the column count to 3
+      projectItem.style.columnCount = 3;
+    } else if (elementCount == 2) {
+      // If the total number of elements is equal to 2, set the column count to 2
+      projectItem.style.columnCount = 2;
+    } else if (elementCount == 1) {
+      // If the total number of elements is equal to 1, set the column count to 1
+      projectItem.style.columnCount = 1;
+    } else {
+      // If there are no elements, set the column count to 0
+      projectItem.style.columnCount = 0;
     }
   }
 }
-
 // Call the function when the page loads
-setColumns();
-
+adjustColumns();
 // Add an event listener to the window object to call the function when the screen size changes
-window.addEventListener("resize", setColumns);
-
-// Add an event listener to each element to call the function when the content changes
-for (let project of myProjects) {
-  project.addEventListener("DOMSubtreeModified", setColumns);
+window.addEventListener("resize", adjustColumns);
+// Create a mutation observer to call the function when the content changes
+let observer = new MutationObserver(adjustColumns);
+// Set the observer options
+let options = {
+  attributes: true, // Observe attribute changes
+  attributeFilter: ["style"], // Only observe style changes
+  subtree: true // Observe the descendants of the target element
+};
+// Loop through each element and attach the observer
+for (let projectItem of projectElements) {
+  observer.observe(projectItem, options);
 }
 </script>

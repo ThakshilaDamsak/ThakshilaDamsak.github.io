@@ -146,6 +146,9 @@
         max-width: 1200px;
         position: relative;
 
+        margin-left: auto;
+        margin-right: auto;
+
         column-gap: 10px;
         break-inside: avoid;
 

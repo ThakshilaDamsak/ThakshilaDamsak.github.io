@@ -102,10 +102,11 @@
     .section {
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
+        min-height: 70vh;
         align-items: center;
-        justify-content: start;
+        justify-content: center;
         width: 100%;
+        margin-bottom: 20vh;
     }
 
     .page-title {
@@ -152,6 +153,10 @@
         column-gap: 10px;
         break-inside: avoid;
 
+    }
+
+    .projects-grid1 {
+        margin-top: 10px;
     }
 
     .go-below {

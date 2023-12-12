@@ -109,6 +109,12 @@
         margin-bottom: 20vh;
     }
 
+    .sort-page {
+        justify-self: start;
+        margin-top: 0px;
+        margin-bottom: auto;
+    }
+
     .page-title {
         align-items: center;
         justify-content: center;

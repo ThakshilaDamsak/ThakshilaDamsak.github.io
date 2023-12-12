@@ -47,7 +47,7 @@
                 <div class="colorpicker-icon" id="color-picker-butt"><span><iconify-icon icon="pepicons-pop:color-picker-circle-filled"></iconify-icon></span></div>
               </div>
               <input class="target" id="target" type="text" style="visibility: hidden; position: absolute; opacity: 0;" placeholder="#hex" value="#d028c8" />
-              <input class="input" id="input" type="text" style="visibility: hidden; position: absolute; opacity: 0;" placeholder="r,g,b or rgb(r,g,b)" value="208, 40, 200" />
+              <input class="input" id="input" type="text" style="visibility: hidden; position: absolute; opacity: 0;" placeholder="rgb(r,g,b) or r,g,b " value="208, 40, 200" />
               <button class="execute regular-button">Compute Filters</button>
           </div>
       </div>
@@ -465,6 +465,8 @@ function setRGB() {
     let rgb = hexToRGB(hex);
     // Join the RGB array with commas
     let rgbString = rgb.join(",");
+    // Add the "rgb(" and ")" strings to the rgbString
+    rgbString = "rgb(" + rgbString + ")";
     // Set the value of the input element to the RGB string
     input.value = rgbString;
     // Set the value of the color picker element to the hex value

@@ -308,10 +308,55 @@ body {
     animation: heartBeat 2s ease infinite;
 }
 
+.bd {
+    margin-top: -3px;
+    position: relative;
+    overflow: hidden;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    border: none !important;
+}
+
+.bdtext {
+    display: flex;
+    color: rgb(255, 255, 255) !important;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 17px;
+    font-family: Open Sans;
+    font-weight: 800;
+    padding: auto;
+}
+
+.bdbg {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    height: auto;
+    width: 200px;
+    z-index: -1;
+    filter: invert(100%);
+    transition: .1s;
+}
+
+.tooltip:hover .bdbg {
+    left: 0px;
+    transition: 1s ease-out;
+}
+
+.bdt p {
+    color: var(--home-about-p-a-color);
+    font-weight: bold;
+}
+
 @keyframes heartBeat {
     0%, 20% { transform: scale(1);   text-shadow: 1px 1px 15px var(--home-about-text-shadow);}
     70% { transform: scale(1.2);     text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.295);}
-  }
+}
 
 #umma-overlay {
     position: fixed;

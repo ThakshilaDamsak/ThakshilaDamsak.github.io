@@ -1221,6 +1221,7 @@ input:checked + .slider:before {
     visibility: visible;
     opacity: 1;
     margin-bottom: 7px;
+    transition: 0.2s 2s;
 } 
 
 .love-tooltip span {

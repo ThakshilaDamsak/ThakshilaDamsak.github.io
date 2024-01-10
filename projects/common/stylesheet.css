@@ -109,6 +109,12 @@
         margin-bottom: 20vh;
     }
 
+    .section1 {
+        height: min-content;
+        min-height: 0px;
+        margin-bottom: 0px;
+    }
+
     .sort-page {
         justify-self: start;
         margin-top: 0px;
@@ -318,12 +324,32 @@
     button.sortbutt-state1 {
         width: 115px !important;
         transition: .2s !important;
-      }
+    }
 
-      button.sortbutt-state2 {
+    .sortbutt-state1 .sortbuttontxt, .sortbutt-state2 .sortbuttontxt {
+        animation: buttOpacity .2s ease;
+    }
+
+    @keyframes buttOpacity {
+        0% {}
+        100% {
+            opacity: 100% !important;
+        }
+    }
+
+    .sortbutton {
+        overflow: hidden;
+        height: 24px;
+    }
+
+    button.sortbutt-state2 {
         width: 73px !important;
         transition: .2s !important;
-      }
+    }
+
+    #subdirectory {
+        cursor: pointer;
+    }
 
     .filters {
         display: flex;

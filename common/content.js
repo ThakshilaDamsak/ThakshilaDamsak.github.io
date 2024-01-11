@@ -21,7 +21,21 @@ const imagePromises = imageElements.map(image => {
   .catch(error => {
     // Handle the error
     console.error(error);
-    alert('Something went wrong. Please try again.');
+    // Create the element
+    let imageAlert = document.createElement('div');
+    imageAlert.className = 'imageAlert';
+    imageAlert.innerHTML = '<span><iconify-icon icon="material-symbols:error"></iconify-icon> Some images may not load!</span>';
+    imageAlert.style.marginBottom = '0px';
+    // Append the element to the body
+    document.body.appendChild(imageAlert);
+    // Set a timer to hide the element after 5 seconds
+    setTimeout(() => {
+      imageAlert.style.opacity = '0';
+      imageAlert.style.transform = 'translateY(10px)';
+    }, 5000);
+    setTimeout(() => {
+      imageAlert.style.display = 'none';
+    }, 5200);
     // You can also try to reload the image here, or skip it and resolve anyway
   });
 });

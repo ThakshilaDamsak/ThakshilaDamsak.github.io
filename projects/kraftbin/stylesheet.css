@@ -1553,7 +1553,8 @@ select.kraftbin-select:focus{
     top: -70px;
     scale: 1.5;
     z-index: -1;
-    background-size: 30%;
+    background-size: 50%;
+    background-repeat: repeat-x;
     background-position: center;
     filter: blur(80px);
 }

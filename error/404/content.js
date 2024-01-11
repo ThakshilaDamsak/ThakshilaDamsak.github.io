@@ -105,7 +105,7 @@ function loadPage() {
   let loadingTooLong = document.createElement('div');
   loadingTooLong.className = 'loading-too-long';
   loadingTooLong.id = 'loading-too-long';
-  loadingTooLong.innerHTML = '<span>Maybe some third-party images slow down the page loading!</span><button onclick="forceLoadPage()" class="regular-button force-load-button"> Force load webpage </button>';
+  loadingTooLong.innerHTML = '<span>Maybe some third-party images slow down the page loading.</span><button onclick="forceLoadPage()" class="regular-button force-load-button"> Force load webpage! </button>';
   loadingContainer.appendChild(loadingTooLong);
 
 setTimeout(() => {

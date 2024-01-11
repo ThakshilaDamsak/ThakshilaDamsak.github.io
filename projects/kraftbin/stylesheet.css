@@ -121,6 +121,7 @@
     padding: 20px;
     margin-left: 30px;
     margin-right: 30px;
+    backdrop-filter: saturate(var(--kraftbin-project-backdrop));
 }
 
 .project-header * {

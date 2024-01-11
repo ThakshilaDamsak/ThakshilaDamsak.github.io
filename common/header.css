@@ -103,6 +103,7 @@ html{
     --kraftbin-post-color: rgba(255, 255, 255, 0.842);
     --kraftbin-toggle-color: blueviolet;
     --kraftbin-bg-effect: .3;
+    --kraftbin-project-backdrop: 2;
 
     --generator-text-color: rgb(75, 1, 111);
     --generator-title-bg: rgb(241, 212, 255);
@@ -175,6 +176,7 @@ html{
       --project-header-background: var(--header-links-a-hover-bg-color);
       --kraftbin-post-color: rgba(31, 31, 31, 0.753);
       --kraftbin-bg-effect: .1;
+      --kraftbin-project-backdrop: 1;
   
       --button-color: rgb(97, 35, 105);
       --button-background: rgb(249, 85, 255);
@@ -253,6 +255,7 @@ html{
     --project-header-background: var(--header-links-a-hover-bg-color);
     --kraftbin-post-color: rgba(31, 31, 31, 0.753);
     --kraftbin-bg-effect: .1;
+    --kraftbin-project-backdrop: 1;
 
     --button-color: rgb(97, 35, 105);
     --button-background: rgb(249, 85, 255);
@@ -346,6 +349,7 @@ html{
     --kraftbin-post-color: rgba(255, 255, 255, 0.842);
     --kraftbin-toggle-color: blueviolet;
     --kraftbin-bg-effect: .3;
+    --kraftbin-project-backdrop: 2;
 
     --generator-text-color: rgb(75, 1, 111);
     --generator-title-bg: rgb(241, 212, 255);
@@ -506,6 +510,7 @@ html{
     --kraftbin-post-color: rgba(255, 255, 255, 0.842);
     --kraftbin-toggle-color: rgb(226, 131, 43);
     --kraftbin-bg-effect: .15;
+    --kraftbin-project-backdrop: 20;
 
     --generator-text-color: rgb(75, 1, 111);
     --generator-title-bg: rgb(248, 238, 253);

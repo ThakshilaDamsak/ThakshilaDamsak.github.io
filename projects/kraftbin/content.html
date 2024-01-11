@@ -16,43 +16,47 @@
 </div>
 
 <div class="banner">
-  <span><iconify-icon icon="typcn:warning"></iconify-icon> This page is still under development.</span>
+  <span>
+    <iconify-icon icon="typcn:warning"></iconify-icon> This page is still under development.
+  </span>
 </div>
 
 <div class="project-header-container">
-<div class="project-header">
+  <div class="project-header">
 
-  <div class="project-title">
-    <div class="project-details">
-    <div class="project-logo">
-      <img src="https://codeberg.org/Kbin/kbin-core/raw/branch/develop/public/favicon.svg" alt="[Project Logo]">
-    </div>
-    <div class="project-name">
-      <div class="project-name-name">
-        <p>KraftBin</p>
+    <div class="project-title">
+      <div class="project-details">
+        <div class="project-logo">
+          <img src="https://codeberg.org/Kbin/kbin-core/raw/branch/develop/public/favicon.svg" alt="[Project Logo]">
+        </div>
+        <div class="project-name">
+          <div class="project-name-name">
+            <p>KraftBin</p>
+          </div>
+          <div class="project-name-discription">
+            Customizable, Cleaner and familiar look for Kbin.
+            <p>
+          </div>
+        </div>
       </div>
-      <div class="project-name-discription">
-        Customizable, Cleaner and familiar look for Kbin.
-        <p>
-      </div>
-    </div>
-  </div>
-    <div class="actions">
-      <div class="action-buttons">
-        <button onclick="window.open('https://userstyles.world/style/11353/kraftbin', '_blank');" id="action1">Install</button>
-        <button onclick="window.open('https://github.com/ThakshilaDamsak/KraftBin', '_blank');" id="action2">Github</button>
-      </div>
-      <div class="last-updated">
-        <p>Last Updated 
-          <span class="ud-tooltip">
-            <span id="kraftbin-relative-time" class="kraftbin-relative-time">[loading...]</span>
+      <div class="actions">
+        <div class="action-buttons">
+          <button onclick="window.open('https://userstyles.world/style/11353/kraftbin', '_blank');"
+            id="action1">Install</button>
+          <button onclick="window.open('https://github.com/ThakshilaDamsak/KraftBin', '_blank');"
+            id="action2">Github</button>
+        </div>
+        <div class="last-updated">
+          <p>Last Updated
+            <span class="ud-tooltip">
+              <span id="kraftbin-relative-time" class="kraftbin-relative-time">[loading...]</span>
               <span class="ud-tooltiptext kraftbin-absolute-time"><b id="kraftbin-absolute-time">[loading...]</b></span>
-          </span>
-        </p>
+            </span>
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <div class="spacer1"></div>
@@ -66,140 +70,145 @@
           <p>Customizable</p>
         </div>
         <div class="discription project-name-discription long-discrip">
-          <p><b>KraftBin</b> allows you to adjust the appearance and functionality of Kbin according to your preferences. You can choose from various options, such as disabling shadows and animations, changing the sidebar size, hiding unwanted elements, and setting the content and header max width. This way, you can create a personalized and optimal user experience.</p>
+          <p><b>KraftBin</b> allows you to adjust the appearance and functionality of Kbin according to your
+            preferences. You can choose from various options, such as disabling shadows and animations, changing the
+            sidebar size, hiding unwanted elements, and setting the content and header max width. This way, you can
+            create a personalized and optimal user experience.</p>
         </div>
       </div>
       <div class="image image1 customizable tc-grid">
         <div class="tc-grid-header">
-          <img src="https://codeberg.org/Kbin/kbin-core/raw/branch/develop/public/favicon.svg" class="tc-grid-header-image" alt="">
+          <img src="https://codeberg.org/Kbin/kbin-core/raw/branch/develop/public/favicon.svg"
+            class="tc-grid-header-image" alt="">
           <h4>KraftBin</h4>
           <p></p>
-          <p class="tc-grid-header-right-title"><a href="https://github.com/ThakshilaDamsak/KraftBin/issues/new">Feedback</a></p>
+          <p class="tc-grid-header-right-title"><a
+              href="https://github.com/ThakshilaDamsak/KraftBin/issues/new">Feedback</a></p>
         </div>
 
         <div class="tc-grid-container" id="stylus-demo">
-            <div class="tc-grid-grid-1-item">KraftBin Post Layout</div>
-            <div class="tc-grid-grid-2-item">
-              <label class="kraftbin-switch">
-                <input type="checkbox" checked="">
-                <span class="kraftbin-slider kraftbin-round"></span>
-              </label>
-            </div>
-            <div class="tc-grid-grid-1-item">Reduce Extra Motion</div>
-            <div class="tc-grid-grid-2-item">
-              <label class="kraftbin-switch">
-                <input type="checkbox">
-                <span class="kraftbin-slider kraftbin-round"></span>
-              </label>
-            </div>
-            <div class="tc-grid-grid-1-item">Corner Radius</div>
-            <div class="tc-grid-grid-2-item">
-              <input type="range" min="0" max="25" value="8"></input>
-           </div>
-            <div class="tc-grid-grid-1-item">Top Margin</div>
-            <div class="tc-grid-grid-2-item">
-              <select class="kraftbin-select">
-                <option value="none">Enabled</option>
-                <option value="none">Disabled</option>
-              </select>
-            </div>
-            <div class="tc-grid-grid-1-item">Extra Shadows</div>
-            <div class="tc-grid-grid-2-item">
-              <select class="kraftbin-select">
-                <option value="none">Normal</option>
-                <option value="none">Large</option>
-                <option value="none">Disabled</option>
-              </select>
-            </div>
-            <div class="tc-grid-grid-1-item">Sidebar</div>
-            <div class="tc-grid-grid-2-item">
-              <label class="kraftbin-switch">
-                <input type="checkbox" checked="">
-                <span class="kraftbin-slider kraftbin-round"></span>
-              </label>
-            </div>
-            <div class="tc-grid-grid-1-item">Sidebar Size</div>
-            <div class="tc-grid-grid-2-item">
-              <select class="kraftbin-select">
-                <option value="none">Small</option>
-                <option value="none">Medium</option>
-                <option value="none">Large</option>
-                <option value="none">Custom</option>
-              </select>
-            </div>
-            <div class="tc-grid-grid-1-item">Custom Sidebar Size</div>
-            <div class="tc-grid-grid-2-item">
-               <input type="text" placeholder="650px"></input>
-            </div>
-            <div class="tc-grid-grid-1-item">Random Magazines</div>
-            <div class="tc-grid-grid-2-item">
-              <label class="kraftbin-switch">
-                <input type="checkbox" checked="">
-                <span class="kraftbin-slider kraftbin-round"></span>
-              </label>
-            </div>
-            <div class="tc-grid-grid-1-item">Active Users</div>
-            <div class="tc-grid-grid-2-item">
-              <label class="kraftbin-switch">
-                <input type="checkbox" checked="">
-                <span class="kraftbin-slider kraftbin-round"></span>
-              </label>
-            </div>
-            <div class="tc-grid-grid-1-item">Random Posts</div>
-            <div class="tc-grid-grid-2-item">
-              <label class="kraftbin-switch">
-                <input type="checkbox" checked="">
-                <span class="kraftbin-slider kraftbin-round"></span>
-              </label>
-            </div>
-            <div class="tc-grid-grid-1-item">Random Threads</div>
-            <div class="tc-grid-grid-2-item">
-              <label class="kraftbin-switch">
-                <input type="checkbox" checked="">
-                <span class="kraftbin-slider kraftbin-round"></span>
-              </label>
-            </div>
-            <div class="tc-grid-grid-1-item">Kbin Promotion</div>
-            <div class="tc-grid-grid-2-item">
-              <select class="kraftbin-select">
-                <option value="none">Show</option>
-                <option value="none">Hide</option>
-              </select>
-            </div>
-            <div class="tc-grid-grid-1-item">Scroll-­to-top Button</div>
-            <div class="tc-grid-grid-2-item">
-              <select class="kraftbin-select">
-                <option value="none">Show</option>
-                <option value="none">Hide</option>
-              </select>
-            </div>
-            <div class="tc-grid-grid-1-item">Content Max Width</div>
-            <div class="tc-grid-grid-2-item">
-              <select class="kraftbin-select">
-                <option value="none">Default</option>
-                <option value="none">Kbin Default</option>
-                <option value="none">Reddit-like</option>
-                <option value="none">Full Width</option>
-                <option value="none">Custom</option>
-              </select>
-            </div>
-            <div class="tc-grid-grid-1-item">Custom Max Width</div>
-            <div class="tc-grid-grid-2-item">
-              <input type="text" placeholder="1500px"></input>
-           </div>
-            <div class="tc-grid-grid-1-item">Header Max Width</div>
-            <div class="tc-grid-grid-2-item">
-              <select class="kraftbin-select">
-                <option value="none">Full Width</option>
-                <option value="none">Same as Content</option>
-                <option value="none">Kbin Default</option>
-                <option value="none">Custom</option>
-              </select>
-            </div>
-            <div class="tc-grid-grid-1-item">Header Custom Max Width</div>
-            <div class="tc-grid-grid-2-item">
-              <input type="text" placeholder="1500px"></input>
-           </div>
+          <div class="tc-grid-grid-1-item">KraftBin Post Layout</div>
+          <div class="tc-grid-grid-2-item">
+            <label class="kraftbin-switch">
+              <input type="checkbox" checked="">
+              <span class="kraftbin-slider kraftbin-round"></span>
+            </label>
+          </div>
+          <div class="tc-grid-grid-1-item">Reduce Extra Motion</div>
+          <div class="tc-grid-grid-2-item">
+            <label class="kraftbin-switch">
+              <input type="checkbox">
+              <span class="kraftbin-slider kraftbin-round"></span>
+            </label>
+          </div>
+          <div class="tc-grid-grid-1-item">Corner Radius</div>
+          <div class="tc-grid-grid-2-item">
+            <input type="range" min="0" max="25" value="8"></input>
+          </div>
+          <div class="tc-grid-grid-1-item">Top Margin</div>
+          <div class="tc-grid-grid-2-item">
+            <select class="kraftbin-select">
+              <option value="none">Enabled</option>
+              <option value="none">Disabled</option>
+            </select>
+          </div>
+          <div class="tc-grid-grid-1-item">Extra Shadows</div>
+          <div class="tc-grid-grid-2-item">
+            <select class="kraftbin-select">
+              <option value="none">Normal</option>
+              <option value="none">Large</option>
+              <option value="none">Disabled</option>
+            </select>
+          </div>
+          <div class="tc-grid-grid-1-item">Sidebar</div>
+          <div class="tc-grid-grid-2-item">
+            <label class="kraftbin-switch">
+              <input type="checkbox" checked="">
+              <span class="kraftbin-slider kraftbin-round"></span>
+            </label>
+          </div>
+          <div class="tc-grid-grid-1-item">Sidebar Size</div>
+          <div class="tc-grid-grid-2-item">
+            <select class="kraftbin-select">
+              <option value="none">Small</option>
+              <option value="none">Medium</option>
+              <option value="none">Large</option>
+              <option value="none">Custom</option>
+            </select>
+          </div>
+          <div class="tc-grid-grid-1-item">Custom Sidebar Size</div>
+          <div class="tc-grid-grid-2-item">
+            <input type="text" placeholder="650px"></input>
+          </div>
+          <div class="tc-grid-grid-1-item">Random Magazines</div>
+          <div class="tc-grid-grid-2-item">
+            <label class="kraftbin-switch">
+              <input type="checkbox" checked="">
+              <span class="kraftbin-slider kraftbin-round"></span>
+            </label>
+          </div>
+          <div class="tc-grid-grid-1-item">Active Users</div>
+          <div class="tc-grid-grid-2-item">
+            <label class="kraftbin-switch">
+              <input type="checkbox" checked="">
+              <span class="kraftbin-slider kraftbin-round"></span>
+            </label>
+          </div>
+          <div class="tc-grid-grid-1-item">Random Posts</div>
+          <div class="tc-grid-grid-2-item">
+            <label class="kraftbin-switch">
+              <input type="checkbox" checked="">
+              <span class="kraftbin-slider kraftbin-round"></span>
+            </label>
+          </div>
+          <div class="tc-grid-grid-1-item">Random Threads</div>
+          <div class="tc-grid-grid-2-item">
+            <label class="kraftbin-switch">
+              <input type="checkbox" checked="">
+              <span class="kraftbin-slider kraftbin-round"></span>
+            </label>
+          </div>
+          <div class="tc-grid-grid-1-item">Kbin Promotion</div>
+          <div class="tc-grid-grid-2-item">
+            <select class="kraftbin-select">
+              <option value="none">Show</option>
+              <option value="none">Hide</option>
+            </select>
+          </div>
+          <div class="tc-grid-grid-1-item">Scroll-­to-top Button</div>
+          <div class="tc-grid-grid-2-item">
+            <select class="kraftbin-select">
+              <option value="none">Show</option>
+              <option value="none">Hide</option>
+            </select>
+          </div>
+          <div class="tc-grid-grid-1-item">Content Max Width</div>
+          <div class="tc-grid-grid-2-item">
+            <select class="kraftbin-select">
+              <option value="none">Default</option>
+              <option value="none">Kbin Default</option>
+              <option value="none">Reddit-like</option>
+              <option value="none">Full Width</option>
+              <option value="none">Custom</option>
+            </select>
+          </div>
+          <div class="tc-grid-grid-1-item">Custom Max Width</div>
+          <div class="tc-grid-grid-2-item">
+            <input type="text" placeholder="1500px"></input>
+          </div>
+          <div class="tc-grid-grid-1-item">Header Max Width</div>
+          <div class="tc-grid-grid-2-item">
+            <select class="kraftbin-select">
+              <option value="none">Full Width</option>
+              <option value="none">Same as Content</option>
+              <option value="none">Kbin Default</option>
+              <option value="none">Custom</option>
+            </select>
+          </div>
+          <div class="tc-grid-grid-1-item">Header Custom Max Width</div>
+          <div class="tc-grid-grid-2-item">
+            <input type="text" placeholder="1500px"></input>
+          </div>
         </div>
       </div>
     </div>
@@ -209,7 +218,8 @@
     <div class="section-content">
       <div class="image image2 cleaner">
         <div class="cleaner-image-header">
-          <img src="https://codeberg.org/Kbin/kbin-core/raw/branch/develop/public/favicon.svg" class="cleaner-image-header-logo" alt="">
+          <img src="https://codeberg.org/Kbin/kbin-core/raw/branch/develop/public/favicon.svg"
+            class="cleaner-image-header-logo" alt="">
           <h4>Kbin</h4>
           <p>/all</p>
           <div class="cleaner-image-header-user-logo"></div>
@@ -239,7 +249,9 @@
           <p>Cleaner</p>
         </div>
         <div class="discription project-name-discription">
-          <p><b>KraftBin</b> enhances the readability and aesthetics of Kbin by removing clutter and noise. You can disable federated warnings, hide the sidebar, and hide the scroll-to-top button. You can also use custom corner radius and Reddit-like post layout to create a smoother and more modern look.</p>
+          <p><b>KraftBin</b> enhances the readability and aesthetics of Kbin by removing clutter and noise. You can
+            disable federated warnings, hide the sidebar, and hide the scroll-to-top button. You can also use custom
+            corner radius and Reddit-like post layout to create a smoother and more modern look.</p>
         </div>
       </div>
     </div>
@@ -252,66 +264,101 @@
           <p>And Familiar</p>
         </div>
         <div class="discription project-name-discription">
-          <p><b>KraftBin</b> makes Kbin more user-friendly and intuitive by adopting elements from popular platforms, such as Reddit. You can use the Reddit-like post layout to view posts in a familiar and consistent format. You can also hide sidebar elements that are not relevant to your interests, such as random magazines, active users, random posts, and random threads.</p>
+          <p><b>KraftBin</b> makes Kbin more user-friendly and intuitive by adopting elements from popular platforms,
+            such as Reddit. You can use the Reddit-like post layout to view posts in a familiar and consistent format.
+            You can also hide sidebar elements that are not relevant to your interests, such as random magazines, active
+            users, random posts, and random threads.</p>
         </div>
       </div>
       <div class="image image2 familiar">
         <div class="familiar-image-content">
-        <div class="vote">
-          <div class="vote-up">
-            <input  type="checkbox" class="vote-up-check-input" />
-            <span class="vote-up-check-text"><iconify-icon icon="fa-solid:arrow-up"></iconify-icon></span>
+          <div class="vote">
+            <div class="vote-up">
+              <input type="checkbox" class="vote-up-check-input" />
+              <span class="vote-up-check-text">
+                <iconify-icon icon="fa-solid:arrow-up"></iconify-icon>
+              </span>
+            </div>
+            <div class="vote-down">
+              <input type="checkbox" class="vote-down-check-input" />
+              <span class="vote-down-check-text">
+                <iconify-icon icon="fa-solid:arrow-down"></iconify-icon>
+              </span>
+            </div>
+
+            <script>
+              // Get the checkboxes and store them in variables
+              var voteUp = document.querySelector(".vote-up-check-input");
+              var voteDown = document.querySelector(".vote-down-check-input");
+
+              // Add a click event listener to the vote up checkbox
+              voteUp.addEventListener("click", function () {
+                // If the vote up checkbox is checked, uncheck the vote down checkbox
+                if (voteUp.checked) {
+                  voteDown.checked = false;
+                }
+              });
+
+              // Add a click event listener to the vote down checkbox
+              voteDown.addEventListener("click", function () {
+                // If the vote down checkbox is checked, uncheck the vote up checkbox
+                if (voteDown.checked) {
+                  voteUp.checked = false;
+                }
+              });
+            </script>
+
           </div>
-          <div class="vote-down">
-            <input  type="checkbox" class="vote-down-check-input" />
-            <span class="vote-down-check-text"><iconify-icon icon="fa-solid:arrow-down"></iconify-icon></span>
-          </div>
-
-          <script>
-            // Get the checkboxes and store them in variables
-          var voteUp = document.querySelector(".vote-up-check-input");
-          var voteDown = document.querySelector(".vote-down-check-input");
-
-          // Add a click event listener to the vote up checkbox
-          voteUp.addEventListener("click", function() {
-            // If the vote up checkbox is checked, uncheck the vote down checkbox
-            if (voteUp.checked) {
-              voteDown.checked = false;
-            }
-          });
-
-          // Add a click event listener to the vote down checkbox
-          voteDown.addEventListener("click", function() {
-            // If the vote down checkbox is checked, uncheck the vote up checkbox
-            if (voteDown.checked) {
-              voteUp.checked = false;
-            }
-          });
-
-          </script>
-
-        </div>
-        <div class="post">
-          <div class="post-title">
-            <p><span>Discover Fediverse Content!</span>
-            <a href="https://codeberg.org/Kbin/kbin-core/src/branch/develop/public/kbin-og.png" target="_blank">(codeberg.org)</a></p>
-          </div>
-          <div class="post-image">
-            <img src="https://codeberg.org/Kbin/kbin-core/raw/branch/develop/public/kbin-og.png" alt="">
-          </div>
-          <div class="post-text">Create and moderate communities, meet people with similar interests, and develop your passions.</div>
-          <div class="post-footer">
-            <div class="post-footer-details"><b>ThakshilaDamsak</b>, 2 hours ago to <b class="space">Kbin </b></div>
-            <div class="post-footer-menu">
-              <span><iconify-icon icon="fa6-solid:photo-film"></iconify-icon></span>
-              <span>comment</span>
-              <span>boost</span>
-              <span>more</span>
+          <div class="post">
+            <div class="post-title">
+              <p><span>Discover Fediverse Content!</span>
+                <a href="https://codeberg.org/Kbin/kbin-core/src/branch/develop/public/kbin-og.png"
+                  target="_blank">(codeberg.org)</a></p>
+            </div>
+            <div class="post-image">
+              <img src="https://codeberg.org/Kbin/kbin-core/raw/branch/develop/public/kbin-og.png" alt="">
+            </div>
+            <div class="post-text">Create and moderate communities, meet people with similar interests, and develop your
+              passions.</div>
+            <div class="post-footer">
+              <div class="post-footer-details"><b>ThakshilaDamsak</b>, 2 hours ago to <b class="space">Kbin </b></div>
+              <div class="post-footer-menu">
+                <span>
+                  <iconify-icon icon="fa6-solid:photo-film"></iconify-icon>
+                </span>
+                <span>comment</span>
+                <span>boost</span>
+                <span>more</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="pages page-odd slideshowlist">
+    <div class="title slidesgowTitle">
+      <p>Screenshots</p>
+    </div>
+    <div class="left-slide">
+      <div class="slideshow sh1" id="sh1">
       </div>
+      <div class="slideshow slideshow2 sh2" id="sh2">
+      </div>
+      <div class="slideshow sh3" id="sh3">
+      </div>
+    </div>
+    <div class="right-slide">
+      <div class="slideshow sh3 slideshow-invert" id="sh4">
+      </div>
+      <div class="slideshow slideshow2 sh4 slideshow-invert" id="sh5">
+      </div>
+      <div class="slideshow sh5 slideshow-invert" id="sh6">
+      </div>
+    </div>
+    <div class="screenshot-button">
+      <button onclick="window.location.href='/projects/kraftbin/screenshots/';" class="regular-button screenshot-butt">View All Screenshots</button>
     </div>
   </div>
 
@@ -323,4 +370,26 @@
     "kraftbin-absolute-time",
     "kraftbin-relative-time"
   );
+</script>
+
+<script>
+  // Fetch the content of the header HTML file
+  fetch('/projects/kraftbin/screenshots/screenshots.html')
+    .then(response => response.text())
+    .then(html => {
+      // Insert the header HTML into the container
+      document.getElementById('sh1').innerHTML = html;
+      document.getElementById('sh2').innerHTML = html;
+      document.getElementById('sh3').innerHTML = html;
+    });
+
+      // Fetch the content of the header HTML file
+  fetch('/projects/kraftbin/screenshots/screenshots-left.html')
+    .then(response => response.text())
+    .then(html => {
+      // Insert the header HTML into the container
+      document.getElementById('sh4').innerHTML = html;
+      document.getElementById('sh5').innerHTML = html;
+      document.getElementById('sh6').innerHTML = html;
+    });
 </script>

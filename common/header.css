@@ -19,9 +19,8 @@ html{
     -ms-user-select: none;
     user-select: none;
     scrollbar-color: var(--home-about-p-a-color) var(--home-about-bg);
-    scrollbar-width: thin;
     -webkit-tap-highlight-color: transparent;
-    scroll-padding-top: 70px
+    scroll-padding-top: 70px;
 }
 
 :root,
@@ -116,7 +115,7 @@ html{
       --root-grayscale: 0%;
 
       --bg-image:url(../images/background-4.svg);
-      --header-bg-color: rgba(78, 78, 78, 0.76);
+      --header-bg-color: rgba(48, 48, 48, 0.808);
       --header-a: rgb(185, 185, 185);
       --header-links-a-color: rgb(185, 185, 185);
       --header-links-a-hover-color:rgb(255, 255, 255);
@@ -151,7 +150,7 @@ html{
       --home-projects-project-text-color: rgb(200, 255, 232);
       --projects-text-shadow: rgba(5, 139, 0, 0.555);
 
-      --footer-bg:rgba(78, 78, 78, 0.76);
+      --footer-bg: var(--header-bg-color);
       --footer-a:rgb(185, 185, 185);
       --footer-social-links-i-hover:rgb(255, 255, 255);
       --footer-copyright-p:rgb(185, 185, 185);
@@ -195,7 +194,7 @@ html{
     --root-grayscale: 0%;
 
     --bg-image:url(../images/background-4.svg);
-    --header-bg-color: rgba(78, 78, 78, 0.76);
+    --header-bg-color: rgba(48, 48, 48, 0.808);
     --header-a: rgb(185, 185, 185);
     --header-links-a-color: rgb(185, 185, 185);
     --header-links-a-hover-color:rgb(255, 255, 255);
@@ -230,7 +229,7 @@ html{
     --home-projects-project-text-color: rgb(200, 255, 232);
     --projects-text-shadow: rgba(5, 139, 0, 0.555);
 
-    --footer-bg:rgba(78, 78, 78, 0.76);
+    --footer-bg: var(--header-bg-color);
     --footer-a:rgb(185, 185, 185);
     --footer-social-links-i-hover:rgb(255, 255, 255);
     --footer-copyright-p:rgb(185, 185, 185);

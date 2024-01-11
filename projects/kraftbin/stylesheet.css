@@ -69,7 +69,7 @@
         transition: 0.5s;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(to left top, rgba(84, 0, 110, 0.11), rgba(255, 246, 238, 0));
+        background: linear-gradient(to left top, rgba(84, 0, 110, 0.164), rgba(255, 246, 238, 0));
     }
 
     .loading-content {
@@ -1658,3 +1658,17 @@ select.kraftbin-select:focus{
 .slidesgowTitle {
     margin-bottom: 20px;
 }
+
+
+.screenshot-butt {
+    font-size: 18px;
+    width: fit-content;
+    background-color: var(--header-a);
+    color: var(--header-bg-color);
+    box-shadow: 0px 0px 10px -5px var(--header-a);
+  }
+  
+  .screenshot-butt:hover {
+    background-color: var(--header-links-a-hover-color);
+    box-shadow: 0px 5px 10px -5px var(--header-a);
+  }

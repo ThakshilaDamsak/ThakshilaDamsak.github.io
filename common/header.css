@@ -116,7 +116,7 @@ html{
 
       --bg-image:url(../images/background-4.svg);
       --header-bg-color: rgba(48, 48, 48, 0.808);
-      --header-a: rgb(185, 185, 185);
+      --header-a: rgb(209, 209, 209);
       --header-links-a-color: rgb(185, 185, 185);
       --header-links-a-hover-color:rgb(255, 255, 255);
       --header-links-a-hover-bg-color:rgba(212, 212, 212, 0.11);
@@ -195,7 +195,7 @@ html{
 
     --bg-image:url(../images/background-4.svg);
     --header-bg-color: rgba(48, 48, 48, 0.808);
-    --header-a: rgb(185, 185, 185);
+    --header-a: rgb(209, 209, 209);
     --header-links-a-color: rgb(185, 185, 185);
     --header-links-a-hover-color:rgb(255, 255, 255);
     --header-links-a-hover-bg-color:rgba(212, 212, 212, 0.11);

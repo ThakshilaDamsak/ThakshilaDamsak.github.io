@@ -207,7 +207,7 @@
         gap: 10px;
     }
 
-    .project:hover {
+    .project:hover, .project-outline:hover .project {
         box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.404);
     }
 

@@ -1,253 +1,256 @@
 <div class="logo">
-    <a href="/"><img src="/images/logo-long-bk.svg" loading="eager" alt="Thakshila Damsak [logo]" ></a>
-    <span id="subdirectory"> </span>
+  <a href="/"><img src="/images/logo-long-bk.svg" loading="eager" alt="Thakshila Damsak [logo]"></a>
+  <span id="subdirectory"> </span>
 
-    <div class="menu">
-        <div class="links" id="menubar">
-          <div class="box2"></div>
+  <div class="menu">
+    <div class="links" id="menubar">
+      <div class="box2"></div>
 
-        </div>
+    </div>
 
 
-      <span class="colorizer-tooltip ">
-          <div class="color-chooser normal-color-chooser" id="color-chooser">
-            <div class="box3"></div>
-          </div>
-          <span class="colorizer-tooltiptext">Change the theme using <b>Colorizer!</b></span>
+    <span class="colorizer-tooltip ">
+      <div class="color-chooser normal-color-chooser" id="color-chooser">
+        <div class="box3"></div>
+      </div>
+      <span class="colorizer-tooltiptext">Change the theme using <b>Colorizer!</b></span>
+    </span>
+
+    <div class="ham">
+      <span id="hamburger" onclick="myFunction(this)" style="background-color: transparent; border: none;">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
       </span>
 
-        <div class="ham">
-            <span id="hamburger" onclick="myFunction(this)" style="background-color: transparent; border: none;">
-              <div class="bar1"></div>
-              <div class="bar2"></div>
-              <div class="bar3"></div>
-            </span>
+      <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+      </script>
+    </div>
 
-            <script>
-              function myFunction(x) {
-              x.classList.toggle("change");
-              }
-            </script>
-    </div>
-    
-    </div>
+  </div>
 </div>
 
 <div id="mobile-menu-part" class="menu-hidden">
-<div class="mobile-menu">
-  <div class="mobile-menu-content">
-    <div class="mobile-menu-stuff">
+  <div class="mobile-menu">
+    <div class="mobile-menu-content">
+      <div class="mobile-menu-stuff">
 
-      <span class="colorizer-tooltip">
-        <div class="color-chooser" id="mobile-color-chooser">
-          <div class="box3"></div>
+        <span class="colorizer-tooltip">
+          <div class="color-chooser" id="mobile-color-chooser">
+            <div class="box3"></div>
+          </div>
+          <span class="colorizer-tooltiptext">Change the theme using <b>Colorizer!</b></span>
+        </span>
+
+        <div class="mobile-links" id="mobile-menubar">
+          <div class="box2"></div>
         </div>
-        <span class="colorizer-tooltiptext">Change the theme using <b>Colorizer!</b></span>
-      </span>
 
-      <div class="mobile-links" id="mobile-menubar">
-        <div class="box2"></div>
+      </div>
+
+      <div class="menu-footer" id="menu-footer">
       </div>
 
     </div>
-
-  <div class="menu-footer" id="menu-footer"> 
   </div>
-
-</div>
-</div>
 </div>
 
 <script>
-// Get the header and footer elements
-var header = document.getElementById("header");
-var footer = document.getElementById("footer");
+  // Get the header and footer elements
+  var header = document.getElementById("header");
+  var footer = document.getElementById("footer");
 
-// Add a scroll event listener to the window
-window.addEventListener("scroll", function() {
-  // Get the scroll position from the top
-  var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
-
-  // If the scroll position is zero, remove the acrylic-header and acrylic-footer classes
-  if (scrollPos == 0) {
-    header.classList.remove("acrylic-header");
-    footer.classList.remove("footer-acrylic");
-    header.classList.add("transclucent-header");
-    footer.classList.add("footer-transclucent");
-
-  }
-  // Otherwise, add the acrylic-header and acrylic-footer classes
-  else {
-    header.classList.add("acrylic-header");
-    footer.classList.add("footer-acrylic");
-    header.classList.remove("transclucent-header");
-    footer.classList.remove("footer-transclucent");
-  }
-});
-
-// Get the button element with id "hamburger"
-var button = document.getElementById("hamburger");
-
-// Add a click event listener to the button
-button.addEventListener("click", function() {
-  // Get the element with id "mobile-menu-part"
-  var menu = document.getElementById("mobile-menu-part");
-
-  // Toggle between the class names "menu-hidden" and "menu-show"
-  menu.classList.toggle("menu-hidden");
-  menu.classList.toggle("menu-show");
-
-  // Get the element with class "footer"
-  var footer = document.querySelector(".footer");
-
-  // Check the class name of the menu element
-  if (menu.classList.contains("menu-show")) {
-    // If the menu is shown, apply the transform to the footer element only if the screen size is below 800px
-    if (window.innerWidth < 800) {
-      footer.style.transform = "translateY(30px)";
-    }
-    // Also, add the acrylic-header class to the header element
-    header.classList.add("acrylic-header-force");
-  } else {
-    // If the menu is hidden, wait for 0.5 seconds and then remove the transform from the footer element
-    setTimeout(function() {
-      footer.style.transform = "translateY(0px)";
-    }, 500); // 500 milliseconds = 0.5 seconds
-    // Also, check the scroll position and remove the acrylic-header class from the header element if it is zero
+  // Add a scroll event listener to the window
+  window.addEventListener("scroll", function () {
+    // Get the scroll position from the top
     var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+    // If the scroll position is zero, remove the acrylic-header and acrylic-footer classes
     if (scrollPos == 0) {
-
-      setTimeout(function() {
-        header.classList.remove("acrylic-header-force");
-    }, 700);
+      header.classList.remove("acrylic-header");
+      footer.classList.remove("footer-acrylic");
+      header.classList.add("transclucent-header");
+      footer.classList.add("footer-transclucent");
+      header.classList.remove("acrylic-header-force");
     }
-  }
-});
+    // Otherwise, add the acrylic-header and acrylic-footer classes
+    else {
+      header.classList.add("acrylic-header");
+      footer.classList.add("footer-acrylic");
+      header.classList.remove("transclucent-header");
+      footer.classList.remove("footer-transclucent");
+    }
+  });
 
-// Add a resize event listener to the window
-window.addEventListener("resize", function() {
-  // Get the element with id "mobile-menu-part"
-  var menu = document.getElementById("mobile-menu-part");
+  // Get the button element with id "hamburger"
+  var button = document.getElementById("hamburger");
 
-  // Get the element with class "footer"
-  var footer = document.querySelector(".footer");
+  // Add a click event listener to the button
+  button.addEventListener("click", function () {
+    // Get the element with id "mobile-menu-part"
+    var menu = document.getElementById("mobile-menu-part");
 
-  // Check the class name of the menu element
-  if (menu.classList.contains("menu-show")) {
-    // If the menu is shown, check the screen size and apply the appropriate transform to the footer element
-    if (window.innerWidth < 800) {
-      footer.style.transform = "translateY(30px)";
+    // Toggle between the class names "menu-hidden" and "menu-show"
+    menu.classList.toggle("menu-hidden");
+    menu.classList.toggle("menu-show");
+
+    // Get the element with class "footer"
+    var footer = document.querySelector(".footer");
+
+    // Check the class name of the menu element
+    if (menu.classList.contains("menu-show")) {
+      // If the menu is shown, apply the transform to the footer element only if the screen size is below 800px
+      if (window.innerWidth < 800) {
+        footer.style.transform = "translateY(30px)";
+      }
+      // Also, add the acrylic-header class to the header element
+      header.classList.add("acrylic-header-force");
     } else {
-      footer.style.transform = "translateY(0px)";
-    }
-  }
-});
+      // If the menu is hidden, wait for 0.5 seconds and then remove the transform from the footer element
+      setTimeout(function () {
+        footer.style.transform = "translateY(0px)";
+      }, 500); // 500 milliseconds = 0.5 seconds
+      // Also, check the scroll position and remove the acrylic-header class from the header element if it is zero
+      var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollPos == 0) {
 
-
-
-
-
-// Fetch the content of the header HTML file
-fetch('/common/themes.html')
-  .then(response => response.text())
-  .then(html => {
-    // Insert the header HTML into the container
-    document.getElementById('color-chooser').innerHTML = html;
-    document.getElementById('mobile-color-chooser').innerHTML = html;
-
-    // Execute JavaScript code within the header
-    const scriptElements = Array.from(document.getElementById('color-chooser').getElementsByTagName('script'));
-    scriptElements.forEach(script => {
-      const newScript = document.createElement('script');
-      newScript.textContent = script.textContent;
-      document.body.appendChild(newScript);
-    });
-    
-
-    
-    // Set the theme after the header is loaded
-const setTheme = theme => {
-  document.documentElement.className = theme;
-  localStorage.setItem('theme', theme);
-};
-
-const savedTheme = localStorage.getItem('theme');
-
-if (savedTheme) {
-  setTheme(savedTheme);
-  // Use querySelector to select the first element with class "theme-select"
-  document.querySelector('.theme-select').value = savedTheme;
-}
-
-// Use querySelectorAll to select all elements with class "theme-select"
-const elements = document.querySelectorAll('.theme-select');
-
-// Loop through the elements and add event listeners
-for (let element of elements) {
-  element.addEventListener('change', function() {
-    // Set the theme based on the value of the changed element
-    setTheme(this.value);
-    // Loop through the elements again and synchronize their values
-    for (let other of elements) {
-      other.value = this.value;
+        setTimeout(function () {
+          header.classList.remove("acrylic-header-force");
+        }, 700);
+      }
     }
   });
-}
+
+  // Add a resize event listener to the window
+  window.addEventListener("resize", function () {
+    // Get the element with id "mobile-menu-part"
+    var menu = document.getElementById("mobile-menu-part");
+
+    // Get the element with class "footer"
+    var footer = document.querySelector(".footer");
+
+    // Check the class name of the menu element
+    if (menu.classList.contains("menu-show")) {
+      // If the menu is shown, check the screen size and apply the appropriate transform to the footer element
+      if (window.innerWidth < 800) {
+        footer.style.transform = "translateY(30px)";
+      } else {
+        footer.style.transform = "translateY(0px)";
+      }
+    }
   });
 
 
-// Get menubar
- // Fetch the content of the social-links HTML file
- fetch('/common/menubar.html')
-  .then(response => response.text())
-  .then(html => {
-    // Insert the social-links HTML into the container
-    document.getElementById('menubar').innerHTML = html;
-    document.getElementById('mobile-menubar').innerHTML = html;
 
-    // Execute JavaScript code within the header
-    const scriptElements = Array.from(document.getElementById('color-chooser').getElementsByTagName('script'));
-    scriptElements.forEach(script => {
-      const newScript = document.createElement('script');
-      newScript.textContent = script.textContent;
-      document.body.appendChild(newScript);
-    });
-  });
 
-   // Fetch the content of the social-links HTML file
-   fetch('/common/footer.html')
-  .then(response => response.text())
-  .then(html => {
-    // Insert the social-links HTML into the container
-    document.getElementById('menu-footer').innerHTML = html;
 
-    // Execute JavaScript code within the container
-    const scriptElements = Array.from(document.getElementById('menu-footer').getElementsByTagName('script'));
-    scriptElements.forEach(script => {
-      const newScript = document.createElement('script');
-      newScript.textContent = script.textContent;
-      // Add a load event listener to the new script element
-      newScript.addEventListener('load', function() {
-        // Execute the function that updates the content of the page
-        this.textContent();
+  // Fetch the content of the header HTML file
+  fetch('/common/themes.html')
+    .then(response => response.text())
+    .then(html => {
+      // Insert the header HTML into the container
+      document.getElementById('color-chooser').innerHTML = html;
+      document.getElementById('mobile-color-chooser').innerHTML = html;
+
+      // Execute JavaScript code within the header
+      const scriptElements = Array.from(document.getElementById('color-chooser').getElementsByTagName('script'));
+      scriptElements.forEach(script => {
+        const newScript = document.createElement('script');
+        newScript.textContent = script.textContent;
+        document.body.appendChild(newScript);
       });
-      document.body.appendChild(newScript);
+
+
+
+      // Set the theme after the header is loaded
+      const setTheme = theme => {
+        document.documentElement.className = theme;
+        localStorage.setItem('theme', theme);
+      };
+
+      const savedTheme = localStorage.getItem('theme');
+
+      if (savedTheme) {
+        setTheme(savedTheme);
+        let elements = document.querySelectorAll('.theme-select');
+        // Loop through the elements and set their value
+        for (let element of elements) {
+          element.value = savedTheme;
+        }
+      }
+
+      // Use querySelectorAll to select all elements with class "theme-select"
+      const elements = document.querySelectorAll('.theme-select');
+
+      // Loop through the elements and add event listeners
+      for (let element of elements) {
+        element.addEventListener('change', function () {
+          // Set the theme based on the value of the changed element
+          setTheme(this.value);
+          // Loop through the elements again and synchronize their values
+          for (let other of elements) {
+            other.value = this.value;
+          }
+        });
+      }
     });
-  });
+
+
+  // Get menubar
+  // Fetch the content of the social-links HTML file
+  fetch('/common/menubar.html')
+    .then(response => response.text())
+    .then(html => {
+      // Insert the social-links HTML into the container
+      document.getElementById('menubar').innerHTML = html;
+      document.getElementById('mobile-menubar').innerHTML = html;
+
+      // Execute JavaScript code within the header
+      const scriptElements = Array.from(document.getElementById('color-chooser').getElementsByTagName('script'));
+      scriptElements.forEach(script => {
+        const newScript = document.createElement('script');
+        newScript.textContent = script.textContent;
+        document.body.appendChild(newScript);
+      });
+    });
+
+  // Fetch the content of the social-links HTML file
+  fetch('/common/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      // Insert the social-links HTML into the container
+      document.getElementById('menu-footer').innerHTML = html;
+
+      // Execute JavaScript code within the container
+      const scriptElements = Array.from(document.getElementById('menu-footer').getElementsByTagName('script'));
+      scriptElements.forEach(script => {
+        const newScript = document.createElement('script');
+        newScript.textContent = script.textContent;
+        // Add a load event listener to the new script element
+        newScript.addEventListener('load', function () {
+          // Execute the function that updates the content of the page
+          this.textContent();
+        });
+        document.body.appendChild(newScript);
+      });
+    });
 
 
   fetch('../common/subdirectory.txt')
-  .then(response => response.text())
-  .then(html => {
-    // Insert the header HTML into the container
-    document.getElementById('subdirectory').innerHTML = html;
+    .then(response => response.text())
+    .then(html => {
+      // Insert the header HTML into the container
+      document.getElementById('subdirectory').innerHTML = html;
 
-    // Execute JavaScript code within the header
-    const scriptElements = Array.from(document.getElementById('subdirectory').getElementsByTagName('script'));
-    scriptElements.forEach(script => {
-      const newScript = document.createElement('script');
-      newScript.textContent = script.textContent;
-      document.body.appendChild(newScript);
+      // Execute JavaScript code within the header
+      const scriptElements = Array.from(document.getElementById('subdirectory').getElementsByTagName('script'));
+      scriptElements.forEach(script => {
+        const newScript = document.createElement('script');
+        newScript.textContent = script.textContent;
+        document.body.appendChild(newScript);
+      });
     });
-  });
 </script>

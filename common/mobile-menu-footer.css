@@ -210,7 +210,7 @@
     transition: 0.5s;
 }
 
-@media screen and (max-width: 705px) {
+@media screen and (max-width: 720px) {
     .mobile-menu .menu-footer {
         flex-direction: column;
     }
@@ -287,7 +287,7 @@
     }
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 800px) {
 
     .mobile-menu .copyright a, .mobile-menu .copyright p{
         font-size: 15px;
@@ -387,7 +387,15 @@
     margin-bottom: 10px;
 }
 
-@media screen and (min-width: 705px) {
+@media screen and (min-width: 720px) {
+
+    .siteinfotext-footer-show {
+        right: 0;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
 
     .siteinfotext-footer-show {
         visibility: hidden;

@@ -1,0 +1,431 @@
+<style>
+  @media screen and (max-height: 565px) {
+
+    .content .footer {
+      border-width: 1px 0px 0px 0px;
+      border-color: rgba(138, 138, 138, 0.226);
+      border-style: solid;
+      box-shadow: 0px -8px 12px 0px rgba(0, 0, 0, 0.048);
+      background-color: var(--footer-bg);
+      backdrop-filter: blur(20px) saturate(3);
+      -webkit-backdrop-filter: blur(20px) saturate(3);
+    }
+  }
+</style>
+
+
+<div class="projects-page page1" id="page1">
+
+
+  <div class="page1content" id="page1content">
+    
+
+    <div class="section section2" id="github-projects">
+      <div class="page-title">
+        <div class="title">
+          <h1>Snippets</h1>
+        </div>
+        <div class="description">
+          <p>Snippets</p>
+        </div>
+      </div>
+
+      <div class="my-projects projects-grid2 col-calc" id="my-github-projects">
+
+        <div class="project-outline" style="opacity: .5; border: none;">
+          <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
+            <div class="project-image">
+            </div>
+            <div class="project-details" style="height: 150px;">
+              <div class="project-name">
+                <h2></h2>
+              </div>
+              <div class="project-description"><span></span></div>
+              <div class="project-about"><span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-outline" style="opacity: .5; border: none;">
+          <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
+            <div class="project-image">
+            </div>
+            <div class="project-details" style="height: 150px;">
+              <div class="project-name">
+                <h2></h2>
+              </div>
+              <div class="project-description"><span></span></div>
+              <div class="project-about"><span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-outline" style="opacity: .5; border: none;">
+          <div class="project" style="box-shadow: none;  cursor:wait; animation: loading-box 2s ease infinite;">
+            <div class="project-image">
+            </div>
+            <div class="project-details" style="height: 150px;">
+              <div class="project-name">
+                <h2></h2>
+              </div>
+              <div class="project-description"><span></span></div>
+              <div class="project-about"><span></span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const page2 = document.getElementById("page2");
+  const page1 = document.getElementById("page1content");
+  const sortbutt = document.getElementById("sortbutt");
+  const sortbuttontxt = document.getElementById("sortbuttontxt");
+  const footerStyles = document.querySelector(".footer-transclucent");
+  const subdirectory = document.getElementById("subdirectory");
+
+  // Define a variable to keep track of the current state
+  let currentState = 1;
+
+  // Define a function that changes the state based on the current state
+  function changePageState() {
+    // If the current state is 1, switch to state 2
+    if (currentState == 1) {
+      sortbutt.style.width = "115px";
+      sortbuttontxt.style.opacity = "0";
+      page2.style.opacity = "0";
+      footerStyles.classList.remove("footer-acrylic-force");
+
+      setTimeout(() => {
+        page2.style.display = "none";
+        page1.style.display = "block";
+      }, 50);
+
+      setTimeout(() => {
+        page1.style.opacity = "1"
+        sortbuttontxt.textContent = "Sort by Badge";
+      }, 200);
+
+      setTimeout(() => {
+        sortbuttontxt.style.opacity = "1";
+      }, 500);
+
+      // Set the current state to 2
+      currentState = 2;
+    }
+    // If the current state is 2, switch to state 1
+    else if (currentState == 2) {
+      page1.style.opacity = "0"
+      sortbuttontxt.style.opacity = "0";
+      footerStyles.classList.add("footer-acrylic-force");
+
+      setTimeout(() => {
+        page1.style.display = "none";
+        page2.style.display = "flex";
+      }, 50);
+
+      setTimeout(() => {
+        page2.style.opacity = "1";
+        sortbuttontxt.textContent = "Go Back";
+        sortbutt.style.width = "73px";
+      }, 100);
+
+      setTimeout(() => {
+        sortbuttontxt.style.opacity = "1";
+      }, 500);
+
+      // Set the current state to 1
+      currentState = 1;
+    }
+  }
+
+  // Add an event listener to the sortbutt button that calls the changePageState function
+  sortbutt.addEventListener("click", changePageState);
+  window.onload = changePageState();
+</script>
+
+<script>
+  // Get all the elements that have the .my-projects class
+  let projects = document.getElementsByClassName("col-calc");
+
+  // Define a function that sets the column property based on the number of elements, screen width, and display state
+  function setColumns() {
+    // Loop through each element
+    for (let project of projects) {
+      // Get the number of elements in the project
+      let numElements = project.children.length;
+
+      // Get the display value of the project element
+      let displayValue = window.getComputedStyle(project).display;
+
+      // Set the column property based on the number of elements, screen width, and display value
+      let screenWidth = window.innerWidth;
+      if (displayValue == "none") {
+        // If the display value is none, set the column count to 0
+        project.style.columnCount = 0;
+      } else if (displayValue == "flex") {
+        // If the display value is flex, set the column count to 1
+        project.style.columnCount = 1;
+      } else {
+        // If the display value is anything else, use the original logic
+        if (numElements >= 3) {
+          if (screenWidth < 680) {
+            project.style.columnCount = 1;
+          } else if (screenWidth < 1000) {
+            project.style.columnCount = 2;
+          } else {
+            project.style.columnCount = 3;
+          }
+        } else if (numElements == 2) {
+          if (screenWidth < 680) {
+            project.style.columnCount = 1;
+          } else {
+            project.style.columnCount = 2; // Get all the elements that have the .my-projects class
+            let projects = document.getElementsByClassName("col-calc");
+
+            // Define a function that sets the column property based on the number of elements and screen width
+            function setColumns() {
+              // Loop through each element
+              for (let project of projects) {
+                // Get the number of elements in the project
+                let numElements = project.children.length;
+
+                // Set the column property based on the number of elements and screen width
+                let screenWidth = window.innerWidth;
+                if (numElements >= 3) {
+                  if (screenWidth < 680) {
+                    project.style.columnCount = 1;
+                  } else if (screenWidth < 1000) {
+                    project.style.columnCount = 2;
+                  } else {
+                    project.style.columnCount = 3;
+                  }
+                } else if (numElements == 2) {
+                  if (screenWidth < 680) {
+                    project.style.columnCount = 1;
+                  } else {
+                    project.style.columnCount = 2;
+                  }
+                } else if (numElements == 1) {
+                  project.style.columnCount = 1;
+                }
+              }
+            }
+
+            // Call the function when the page loads
+            setColumns();
+
+            // Add an event listener to the window object to call the function when the screen size changes
+            window.addEventListener("resize", setColumns);
+
+            // Add an event listener to each element to call the function when the content changes
+            for (let project of projects) {
+              project.addEventListener("DOMSubtreeModified", setColumns);
+            }
+          }
+        } else if (numElements == 1) {
+          project.style.columnCount = 1;
+        }
+      }
+    }
+  }
+
+  // Call the function when the page loads
+  setColumns();
+
+  // Add an event listener to the window object to call the function when the screen size changes
+  window.addEventListener("resize", setColumns);
+
+  // Add an event listener to each element to call the function when the content changes
+  for (let project of projects) {
+    project.addEventListener("DOMSubtreeModified", setColumns);
+  }
+</script>
+
+<script>
+  // Get all the checkboxes
+  let checkboxes = page2.querySelectorAll("input[type='checkbox']");
+  let projectContainer = page2.querySelector(".projects-grid3");
+
+  // Add a change event listener to each checkbox
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", function () {
+      // Get the id of the checkbox
+      let id = this.id;
+      // Get all the project-outline elements
+      let projects = page2.querySelectorAll(".project-outline");
+      // Check if the checkbox is checked or not
+      if (this.checked) {
+        // Loop through the project-outline elements
+        for (let project of projects) {
+          // Check if the project has a child element with the same class name as the checkbox id
+          let badge = project.querySelector("." + id);
+          // If not, hide the project
+          if (!badge) {
+            projectContainer.style.opacity = "0";
+
+            setTimeout(() => {
+              project.style.display = "none";
+            }, 200);
+
+            setTimeout(() => {
+              projectContainer.style.opacity = "1";
+            }, 300);
+
+          }
+          // Otherwise, show the project
+          else {
+            projectContainer.style.opacity = "0";
+
+
+            setTimeout(() => {
+              project.style.display = "flex";
+            }, 200);
+
+            setTimeout(() => {
+              projectContainer.style.opacity = "1";
+            }, 300);
+          }
+        }
+        // Loop through all the other checkboxes
+        for (let otherCheckbox of checkboxes) {
+          // If the other checkbox is not the same as the current one
+          if (otherCheckbox !== this) {
+            // Uncheck the other checkbox
+            otherCheckbox.checked = false;
+          }
+        }
+      }
+      // If the checkbox is unchecked
+      else {
+        // Loop through the project-outline elements
+        for (let project of projects) {
+          // Show the project
+          projectContainer.style.opacity = "0";
+
+          setTimeout(() => {
+            project.style.display = "flex";
+          }, 200);
+
+          setTimeout(() => {
+            projectContainer.style.opacity = "1";
+          }, 300);
+        }
+      }
+    });
+  });
+</script>
+
+<script>
+  // Fetch the content of the header HTML file
+  fetch('./common/github-projects.html')
+    .then(response => response.text())
+    .then(html => {
+      // Insert the header HTML into the container
+      document.getElementById('my-github-projects').innerHTML = html;
+
+      // Execute JavaScript code within the header
+      const scriptElements = Array.from(document.getElementById('color-chooser').getElementsByTagName('script'));
+      scriptElements.forEach(script => {
+        const newScript = document.createElement('script');
+        newScript.textContent = script.textContent;
+        document.body.appendChild(newScript);
+      });
+    })
+
+  // Fetch the content of the project-pages HTML file
+  fetch('./common/project-pages.html')
+    .then(response => response.text())
+    .then(html1 => {
+      // Fetch the content of the github-projects HTML file
+      fetch('./common/github-projects.html')
+        .then(response => response.text())
+        .then(html2 => {
+          // Combine the HTML strings
+          let html = html1 + html2;
+
+          // Insert the HTML into the container
+          document.getElementById('all-projects').innerHTML = html;
+
+          // Execute JavaScript code within the HTML
+          const scriptElements = Array.from(document.getElementById('color-chooser').getElementsByTagName(
+            'script'));
+          scriptElements.forEach(script => {
+            const newScript = document.createElement('script');
+            newScript.textContent = script.textContent;
+            document.body.appendChild(newScript);
+          });
+        })
+    })
+</script>
+
+<script>
+  // Get all the elements that have the .col-calc-flex class
+  let projectElements = document.getElementsByClassName("col-calc-flex");
+  // Define a function that sets the column property based on the number of elements and screen width
+  function adjustColumns() {
+    // Loop through each element
+    for (let projectItem of projectElements) {
+      // Get the number of elements in the project
+      let elementCount = projectItem.children.length;
+      // Get the number of visible elements in the project
+      let visibleCount = projectItem.querySelectorAll(".col-calc-flex > *:not([style*='display: none'])").length;
+      // Set the column property based on the number of elements, visible elements, and screen width
+      let screenWidth = window.innerWidth;
+      if (elementCount >= 3) {
+        // If the total number of elements is greater than 3, use the original logic
+        if (visibleCount >= 3) {
+          if (screenWidth < 680) {
+            projectItem.style.columnCount = 1;
+          } else if (screenWidth < 1000) {
+            projectItem.style.columnCount = 2;
+          } else {
+            projectItem.style.columnCount = 3;
+          }
+        } else if (visibleCount == 2) {
+          if (screenWidth < 680) {
+            projectItem.style.columnCount = 1;
+          } else {
+            projectItem.style.columnCount = 2;
+          }
+        } else if (visibleCount == 1) {
+          projectItem.style.columnCount = 1;
+        } else {
+          // If there are no visible elements, set the column count to 0
+          projectItem.style.columnCount = 0;
+        }
+      } else if (elementCount == 3) {
+        // If the total number of elements is equal to 3, set the column count to 3
+        projectItem.style.columnCount = 3;
+      } else if (elementCount == 2) {
+        // If the total number of elements is equal to 2, set the column count to 2
+        projectItem.style.columnCount = 2;
+      } else if (elementCount == 1) {
+        // If the total number of elements is equal to 1, set the column count to 1
+        projectItem.style.columnCount = 1;
+      } else {
+        // If there are no elements, set the column count to 0
+        projectItem.style.columnCount = 0;
+      }
+    }
+  }
+  // Call the function when the page loads
+  adjustColumns();
+  // Add an event listener to the window object to call the function when the screen size changes
+  window.addEventListener("resize", adjustColumns);
+  // Create a mutation observer to call the function when the content changes
+  let observer = new MutationObserver(adjustColumns);
+  // Set the observer options
+  let options = {
+    attributes: true, // Observe attribute changes
+    attributeFilter: ["style"], // Only observe style changes
+    subtree: true // Observe the descendants of the target element
+  };
+  // Loop through each element and attach the observer
+  for (let projectItem of projectElements) {
+    observer.observe(projectItem, options);
+  }
+</script>

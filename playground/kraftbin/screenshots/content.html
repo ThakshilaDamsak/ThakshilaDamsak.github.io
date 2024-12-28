@@ -1,0 +1,39 @@
+<!---------This style should be added to force the footer background--------->
+
+<style>
+  .content .footer {
+    border-width: 1px 0px 0px 0px;
+    border-color: rgba(138, 138, 138, 0.226);
+    border-style: solid;
+    box-shadow: 0px -8px 12px 0px rgba(0, 0, 0, 0.048);
+    background-color: var(--footer-bg);
+    backdrop-filter: blur(20px) saturate(3);
+    -webkit-backdrop-filter: blur(20px) saturate(3);
+  }
+</style>
+
+<div class="image-grid-list">
+  <div class="title slidesgowTitle">
+    <p>Screenshots</p>
+  </div>
+  <div class="screenshot-grid" id="screenshotGrid">
+  </div>
+</div>
+
+<script>
+  // Fetch the content of the project-pages HTML file
+  fetch('/projects/kraftbin/screenshots/screenshots.html')
+    .then(response => response.text())
+    .then(html1 => {
+      // Fetch the content of the github-projects HTML file
+      fetch('/projects/kraftbin/screenshots/screenshots-left.html')
+        .then(response => response.text())
+        .then(html2 => {
+          // Combine the HTML strings
+          let html = html1 + html2;
+
+          // Insert the HTML into the container
+          document.getElementById('screenshotGrid').innerHTML = html;
+        })
+    })
+</script>

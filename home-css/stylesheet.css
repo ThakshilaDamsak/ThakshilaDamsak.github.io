@@ -10,9 +10,15 @@ body {
 }
 
 @keyframes element-blur-animation {
-    0% {opacity: 0; transform: scale(1.03);}
-    10% {opacity: 0; transform: scale(1.03);}
-    90% {opacity: 1; transform: scale(1);}
+    0%,
+    10% {
+        opacity: 0;
+        transform: scale(1.03);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .h-card {
@@ -32,7 +38,7 @@ body {
     color: var(--header-links-a-color);
     text-decoration: none;
     font-family: Open Sans;
-    transition: .2s;
+    transition: 0.2s;
 }
 
 .go-below a:hover {
@@ -42,8 +48,8 @@ body {
 .heading {
     display: grid;
     grid-template-areas:
-    "name"
-    "bio";
+        "name"
+        "bio";
     padding: 5px 65px 20px 20px;
     align-items: center;
     justify-content: center;
@@ -51,12 +57,12 @@ body {
     border-radius: 25px;
     margin: auto;
     margin-bottom: 0px;
-    animation: element-blur-animation .6s forwards;
+    animation: element-blur-animation 0.6s forwards;
     transition: 0.5s;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(138, 138, 138, 0.226);
-    width:fit-content;
+    width: fit-content;
     box-shadow: 0px 5px 40px 1px var(--home-heading-shadow);
     overflow: hidden;
     position: relative;
@@ -68,7 +74,7 @@ body {
     animation: element-blur-animation 1s forwards;
     font-family: Open Sans;
     font-size: 60px;
-    font-weight:700;
+    font-weight: 700;
     color: var(--home-name-color);
     padding-right: 90px;
     z-index: 2;
@@ -94,7 +100,7 @@ body {
     margin-top: -5px;
     transition: 0.5s;
     text-shadow: 1px 1px 10px var(--heading-text-shadow);
-    margin-bottom:105px;
+    margin-bottom: 105px;
 }
 
 .heading svg {
@@ -107,7 +113,7 @@ body {
     z-index: 1;
     border-radius: 24px;
     transition: 0.5s;
-    filter:var(--home-heading-svg-filter);
+    filter: var(--home-heading-svg-filter);
 }
 
 .heading button {
@@ -149,16 +155,16 @@ body {
     overflow: hidden;
     width: 140px;
     position: relative;
-  }
-  
-  .button span {
+}
+
+.button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.35s cubic-bezier(0, 0, 0.2, 1);
-  }
-  
-  #button1 i {
+}
+
+#button1 i {
     position: absolute;
     opacity: 0;
     top: 0;
@@ -167,18 +173,18 @@ body {
     margin-left: -25px;
     transition: 0.35s cubic-bezier(0, 0, 0.2, 1);
     scale: 90%;
-  }
-  
-  #button1:hover span {
-    padding-left: 38px;
-  }
+}
 
-  #button1:hover i {
+#button1:hover span {
+    padding-left: 38px;
+}
+
+#button1:hover i {
     opacity: 1;
     margin-left: 0;
-  }
-    
-  #button2 i {
+}
+
+#button2 i {
     position: absolute;
     opacity: 0;
     top: 0;
@@ -187,16 +193,16 @@ body {
     margin-left: -7px;
     transition: 0.35s cubic-bezier(0, 0, 0.2, 1);
     scale: 90%;
-  }
-  
-  #button2:hover span {
+}
+
+#button2:hover span {
     padding-right: 38px;
-  }
-  
-  #button2:hover i {
+}
+
+#button2:hover i {
     opacity: 1;
     margin-left: -33px;
-  }
+}
 
 .heading button:hover {
     box-shadow: 0px 5px 15px 0px var(--heading-text-shadow);
@@ -220,7 +226,6 @@ body {
     cursor: pointer;
 }
 
-
 /* About */
 
 .about-container {
@@ -242,7 +247,7 @@ body {
     flex-direction: row;
     background: var(--home-about-bg);
     border-radius: 25px;
-    animation: element-blur-animation .6s forwards;
+    animation: element-blur-animation 0.6s forwards;
     font-family: Open Sans;
     margin-top: 50vh;
     border: Solid 1px rgba(138, 138, 138, 0.226);
@@ -261,11 +266,11 @@ body {
     transition: 1s;
     width: auto;
     justify-content: center;
-    animation: element-blur-animation 1s forwards;    
+    animation: element-blur-animation 1s forwards;
 }
 
 .about-logo {
-    width:250%;
+    width: 250%;
     height: auto;
     transition: 0.5s;
 }
@@ -273,8 +278,8 @@ body {
 .about-logo img {
     width: 100%;
     height: 100%;
-    object-fit:cover;
-    object-position:center;
+    object-fit: cover;
+    object-position: center;
     border-radius: 24px 0 0 24px;
     box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.027);
     padding: 0px;
@@ -341,7 +346,7 @@ body {
     width: 200px;
     z-index: -1;
     filter: invert(100%);
-    transition: .1s;
+    transition: 0.1s;
 }
 
 .tooltip:hover .bdbg {
@@ -355,8 +360,15 @@ body {
 }
 
 @keyframes heartBeat {
-    0%, 20% { transform: scale(1);   text-shadow: 1px 1px 15px var(--home-about-text-shadow);}
-    70% { transform: scale(1.2);     text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.295);}
+    0%,
+    20% {
+        transform: scale(1);
+        text-shadow: 1px 1px 15px var(--home-about-text-shadow);
+    }
+    70% {
+        transform: scale(1.2);
+        text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.295);
+    }
 }
 
 #umma-overlay {
@@ -370,28 +382,29 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 24px;
-    animation: fadein 0.5s 0s, fadeout 1s 4.72s;
+    animation:
+        fadein 0.5s 0s,
+        fadeout 1s 4.72s;
     transition: 1s;
- }
+}
 
-    @keyframes fadein {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      
-      @keyframes fadeout {
-        from {
-          opacity: 1;
-        }
-        to {
-          opacity: 0;
-        }
-      }
-            
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
 
 #umma-text {
     padding: 10px;
@@ -429,9 +442,8 @@ body {
     box-shadow: 0px 3px 20px 0px rgba(255, 0, 242, 0.692);
     color: white;
     background: rgb(255, 0, 191);
-    transition:0.2s;
+    transition: 0.2s;
 }
-
 
 .about-about {
     text-align: justify;
@@ -444,25 +456,26 @@ body {
     transition: 1s;
 }
 
-
 .about i {
     transition: 1s;
 }
 
-.about p, .about a{
+.about p,
+.about a {
     color: var(--home-about-p-a-color);
     text-shadow: 1px 1px 15px var(--home-about-text-shadow);
     transition: 1s;
 }
 
-.about span, .about u {
+.about span,
+.about u {
     color: var(--home-about-span-color);
     text-shadow: 1px 1px 10px var(--home-about-span-shadow);
     transition: 1s;
 }
 
-.about u{
-    text-decoration-style:dotted;
+.about u {
+    text-decoration-style: dotted;
     text-decoration-thickness: 2px;
 }
 
@@ -476,7 +489,7 @@ body {
     text-decoration: underline;
 }
 
-.about a:hover{
+.about a:hover {
     text-decoration: underline;
     filter: sepia(100%);
 }
@@ -488,7 +501,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    animation: element-blur-animation .6s forwards;
+    animation: element-blur-animation 0.6s forwards;
     font-family: Open Sans;
     margin-top: 50px;
     transition: 1s;
@@ -508,7 +521,7 @@ body {
 .projects-title-bg {
     background: var(--home-projects-title-bg);
     border-radius: 24px 24px 0 0;
-    width:100%;
+    width: 100%;
     display: flex;
     flex-grow: 1;
     transition: 1s;
@@ -526,7 +539,7 @@ body {
     transition: 1s;
 }
 
-.projects-title p{
+.projects-title p {
     font-weight: bolder;
     text-align: center;
     font-size: 25px;
@@ -560,7 +573,7 @@ body {
     height: 80px;
     box-shadow: none;
     transition: 0.7s;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .long-pp {
@@ -577,8 +590,8 @@ body {
     transition: 0.5s;
     background-color: var(--home-projects-logo-img-bg);
     height: 100%;
-    object-fit:contain;
-    object-position:center;
+    object-fit: contain;
+    object-position: center;
     justify-content: center;
     text-align: center;
     border-radius: 14px 0 0 14px;
@@ -602,7 +615,7 @@ body {
     padding-top: auto;
     padding-bottom: auto;
     overflow: hidden;
-    align-items:flex-start;
+    align-items: flex-start;
     justify-content: center;
     transition: 0.2s;
 }
@@ -668,15 +681,13 @@ body {
 
 .project:hover .project-name:not(.project-short-name) {
     transform: translateY(10px);
-    transition: .2s linear;
+    transition: 0.2s linear;
 }
-
-
 
 .scrolling-hor-1 {
     white-space: nowrap;
     position: relative;
-    transition: transform 0.2s ease-in-out;  
+    transition: transform 0.2s ease-in-out;
     transform: translateX(0%);
 }
 
@@ -687,21 +698,31 @@ body {
     position: absolute;
 }*/
 
-.scrolling-hor-1 { 
-    animation: scroll 8s ease-in-out infinite;  
-    transition: transform 0.2s ease-in-out;  
+.scrolling-hor-1 {
+    animation: scroll 8s ease-in-out infinite;
+    transition: transform 0.2s ease-in-out;
 }
 
-@keyframes scroll { 
-    0% { transform: translateX(0);}
-    40% {transform: translateX(-15%);} 
-    50% {transform: translateX(-15%);} 
-    80% { transform: translateX(0);}
-    100% { transform: translateX(0);}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(-15%);
+    }
+    50% {
+        transform: translateX(-15%);
+    }
+    80% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 /* |----Continueus Scrolling----|
-@keyframes scroll { 
+@keyframes scroll {
     0% { transform: translateX(0);}
     80% {transform: translateX(-107%);}
     100% {transform: translateX(-107%);}
@@ -717,7 +738,6 @@ body {
     }
 }
 
-
 .more-projects {
     margin-top: 20px;
     display: flex;
@@ -731,7 +751,7 @@ body {
     margin-bottom: 5px;
     display: flex;
     min-width: 100px;
-  
+
     font-family: open Sans;
     text-align: center;
     color: var(--home-projects-title-p-color);
@@ -752,17 +772,17 @@ body {
     border-style: solid;
     border-width: 1px;
     border-color: rgba(138, 138, 138, 0.226);
-  }
-  
-  .more-projects button:hover {
+}
+
+.more-projects button:hover {
     box-shadow: 0px 10px 40px -5px var(--home-projects-shadow);
-    transition:0.2s;
+    transition: 0.2s;
     filter: saturate(1.5);
-  }
+}
 
 /* heading card responsive*/
 
-@media  (max-width: 835px) {
+@media (max-width: 835px) {
     .about {
         margin-left: 20px;
         margin-right: 20px;
@@ -770,7 +790,6 @@ body {
 }
 
 @media screen and (max-width: 786px) {
-
     .name {
         text-align: center;
         font-size: 45px;
@@ -786,15 +805,12 @@ body {
         height: 265px;
     }
 
-    .heading button{
+    .heading button {
         font-size: 20px;
     }
-
 }
 
-
-@media  (max-width: 646px) {
-
+@media (max-width: 646px) {
     .name {
         text-align: left;
         font-size: 45px;
@@ -813,21 +829,17 @@ body {
         height: 253px;
     }
 
-    .heading button{
+    .heading button {
         font-size: 20px;
         align-items: center;
-
     }
 
     .h-buttons {
         margin: 0px;
     }
-    
 }
 
-@media  (max-width: 537px) {
-
-
+@media (max-width: 537px) {
     .heading {
         margin-left: 20px;
         margin-right: 20px;
@@ -855,23 +867,20 @@ body {
         height: 329px;
     }
 
-    .heading button{
+    .heading button {
         font-size: 20px;
         align-items: center;
         width: auto;
         min-width: 100px;
-
     }
 
     .h-buttons {
         margin: 0px;
         justify-content: left;
     }
-    
 }
 
 @media screen and (max-width: 340px) {
-
     .heading {
         margin-left: 10px;
         margin-right: 10px;
@@ -919,16 +928,12 @@ body {
     }
 }
 
-
-
-
 /* about responsive */
 
 @media screen and (max-width: 790px) {
     .about-logo {
         width: 350%;
     }
-
 }
 
 @media screen and (max-width: 720px) {
@@ -938,7 +943,6 @@ body {
 }
 
 @media screen and (max-width: 715px) {
-
     .about-logo {
         width: 350%;
     }
@@ -946,7 +950,6 @@ body {
     .about-logo img {
         object-position: 30%;
     }
-
 }
 
 @media screen and (max-width: 605px) {
@@ -968,11 +971,12 @@ body {
         justify-content: flex-start;
     }
 
-    .about-title, .about-about {
+    .about-title,
+    .about-about {
         padding-left: 15px;
     }
 
- /*   .about-title {
+    /*   .about-title {
         display: inline-block;
         padding: 20px;
         padding-bottom: 0px;
@@ -985,8 +989,6 @@ body {
         padding-right: 5px;
         border-radius: 10px;
     } */
-
-
 }
 
 .no-display {
